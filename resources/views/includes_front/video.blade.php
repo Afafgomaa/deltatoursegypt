@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="row">
    <div class="col pb-4">
      <h4>viedo</h4>
         <div class="embed-responsive embed-responsive-16by9">
@@ -6,5 +6,4 @@
         </div>
     </div>
 </div>
-</div>
-                                
+</div>                    

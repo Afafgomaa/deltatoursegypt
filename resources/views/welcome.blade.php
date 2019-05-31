@@ -221,14 +221,16 @@
 </div>
 <div class="container">
 <div class="row center">
-<div class="col-md-12">
-<h1 class="text-center">STYLES OF EGYPT HOLIDAYS AND PACKAGES</h1>
-<p class="featured lead">From guided Egypt tours or family adventures to tailor-made holiday and special Egypt tours over Christmas and the New Year, we're bound to have a travel style to Egypt that's 
-perfect for you and suits All Budgets and travellers of all ages .</p>
-</div>
+	<div class="col-md-12">
+		<h1 class="text-center">STYLES OF EGYPT HOLIDAYS AND PACKAGES</h1>
+		<p class="featured lead">From guided Egypt tours or family adventures to tailor-made holiday and special Egypt tours over Christmas and the New Year, we're bound to have a travel style to Egypt that's 
+		perfect for you and suits All Budgets and travellers of all ages .</p>
+	</div>
 @include('includes_front.programs')
 @include('includes_front.video')
+@include('includes_front.blog')
+@include('includes_front.about_us')
 </div>
 </div>
-</div>
+</div><!--main-->
 @endsection

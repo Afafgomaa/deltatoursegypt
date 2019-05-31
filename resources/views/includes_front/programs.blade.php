@@ -1,4 +1,5 @@
 
+
 <div class="container py-2">
 
 					<ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
@@ -134,6 +135,4 @@
 					</div>
 
 				</div>
-
-			</div>
-            
+</div>

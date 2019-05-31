@@ -43,25 +43,7 @@ a:hover{
 
 
 
-.home_sites_box {
-    width: 100%;
-    height: 280px;
-    position: relative;
-    color: #000;
-    border: 10px #fff solid;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    text-align: center;
+.btn-blue{
+   background-color:#4c6fcf; 
 }
-
-.home_sites_box .img-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.48);
-    display: none;
-}
+  
