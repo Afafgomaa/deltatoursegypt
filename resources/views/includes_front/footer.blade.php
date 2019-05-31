@@ -1,7 +1,10 @@
 <footer id="footer" class="mt-0">
 	<div class="container">
 		<div class="footer-ribbon">
-			<span>Get in Touch</span>
+               <!-- BEGIN ProvideSupport.com Text Chat Link Code -->
+				<div id="scWpkU" style="display:inline"><table style="display:inline;border:0px;border-collapse:collapse;border-spacing:0;"><tbody><tr><td style="padding:0px;text-align:center;border:0px"><a href="#" onclick="psWpkUow(); return false;"><span id="psWpkUl">Live Chat Offline</span></a></td></tr><tr><td style="padding:0px;text-align:center;border:0px"><a href="https://admin.providesupport.com/pb/121dmhmtycqh01bsukfkahibz6" target="_blank"><img src="http://image.providesupport.com/lcbpsh.gif" width="140" height="17" style="border:0;display:block;margin:auto"></a></td></tr></tbody></table></div><div id="sdWpkU" style="display:none"><script type="text/javascript" src="http://image.providesupport.com/js/121dmhmtycqh01bsukfkahibz6/safe-textlink.js?ps_h=WpkU&amp;ps_t=1559265251795&amp;online-link-html=Live%20Chat%20Online&amp;offline-link-html=Live%20Chat%20Offline"></script></div><script type="text/javascript">var seWpkU=document.createElement("script");seWpkU.type="text/javascript";var seWpkUs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/121dmhmtycqh01bsukfkahibz6/safe-textlink.js?ps_h=WpkU&ps_t="+new Date().getTime()+"&online-link-html=Live%20Chat%20Online&offline-link-html=Live%20Chat%20Offline";setTimeout("seWpkU.src=seWpkUs;document.getElementById('sdWpkU').appendChild(seWpkU)",1)</script><noscript><div style="display:inline"><a href="http://www.providesupport.com?messenger=121dmhmtycqh01bsukfkahibz6">Live Chat</a></div></noscript>
+				<!-- END ProvideSupport.com Text Chat Link Code -->
+
 		</div>
 		<div class="row py-5 my-4">
 			<div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
@@ -11,10 +14,10 @@
 					</div>
 			<div class="alert alert-danger d-none" id="newsletterError"></div>
 				<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST" class="mr-4 mb-3 mb-md-0">
-					<div class="input-group input-group-rounded">
-						<input class="form-control form-control-sm bg-light" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
-					<span class="input-group-append">
-				<button class="btn btn-light text-color-dark" type="submit"><strong>GO!</strong></button>
+					<div class="input-group">
+						<input class="form-control " placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+					<span class="input-group-btn">
+				<button class="btn btn-default" type="submit"><strong>GO!</strong></button>
 					</span>
 			</div>
 			</form>
@@ -23,19 +26,20 @@
 			<div id="tweet" class="twitter" data-plugin-tweets="" data-plugin-options="{&quot;username&quot;: &quot;deltatoursegypt&quot;, &quot;count&quot;: 2}">
                 <ul>
                     <li>
-                        <span class="status"><i class="fa fa-twitter"></i> Oops, our twitter feed is unavailable right now. </span><span class="meta"> 
-                            <a href="http://twitter.com/deltatoursegypt">Follow us on Twitter</a></span>
+                        <span class="status"><i class="fab fa-twitter"></i> Oops, our twitter feed is unavailable right now. </span><span class="meta"> 
+                        <a href="http://twitter.com/deltatoursegypt">Follow us on Twitter</a></span>
                     </li>
                 </ul>
             </div>
 		</div>
-						<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-							<div class="contact-details">
-								<h5 class="text-3 mb-3">CONTACT US</h5>
-								<ul class="list list-icons list-icons-lg">
-									<li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
-									<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p></li>
-									<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+		<div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+			<div class="contact-details">
+				<h5 class="text-3 mb-3">CONTACT US</h5>
+					<ul class="list list-icons list-icons-lg">
+						<li>
+						  <i class="fa fa-map-marker"></i> <strong>Address:</strong> 17  Zaghloul  Street , Giza  , Egypt</li>
+						  <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:01001784742"><strong>Phone:</strong> (00202) 338844557 - 01001784742</a></p></li>
+						  <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:info@deltatoursegypt.com"><strong>Email:</strong> info@deltatoursegypt.com</a></p></li>
 								</ul>
 							</div>
 						</div>
@@ -52,26 +56,26 @@
 					</div>
 				</div>
 				<div class="footer-copyright">
-					<div class="container py-2">
-						<div class="row py-4">
-							<div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
-								<a href="index.html" class="logo pr-0 pr-lg-3">
-									<img alt="Porto Website Template" src="img/logo-footer.png" class="opacity-5" height="33">
-								</a>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<p>Â© Copyright 2019. All Rights Reserved at <a href="https://corpital.co/">corpital.co</a>.</p>
 							</div>
-							<div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
-								<p>© Copyright 2019. All Rights Reserved at <a href="https://corpital.co/" target="blank">corpital.co</a></p>
-							</div>
-							<div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+							<div class="col-md-6">
 								<nav id="sub-menu">
 									<ul>
-										<li><i class="fas fa-angle-right"></i><a href="page-faq.html" class="ml-1 text-decoration-none"> FAQ's</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="sitemap.html" class="ml-1 text-decoration-none"> Sitemap</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="contact-us.html" class="ml-1 text-decoration-none"> Contact Us</a></li>
-									</ul>
+										<li><a href="#">Egypt tours Packages</a></li>
+										<li><a href="#">Nile River Cruises</a></li>
+                                   
+									<li><a href="#">Talior Made</a></li>
+									
+									  <li><a href="#">Contact Us</a></li>
+									  
+								  </ul>
 								</nav>
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 			</footer>

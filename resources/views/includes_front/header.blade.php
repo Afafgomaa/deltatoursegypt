@@ -23,6 +23,9 @@
                                 <li class="nav-item nav-item-anim-icon d-none d-md-block">
 									<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Nile River Cruises</a>
 								</li>
+								<li class="nav-item nav-item-anim-icon d-none d-md-block">
+									<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Egypt Excursion</a>
+								</li>
 								<li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
 										<span class="ws-nowrap"><i class="fas fa-phone"></i> (002) 0100 178 4742</span>
 								</li>
@@ -57,19 +60,16 @@
 										<a  href="index.html">Tailor Made</a>	
 									</li>
                                     <li>
-										<a  href="index.html">contact us</a>	
+										<a  href="index.html">Egypt programs</a>	
 									</li>
                                     <li>
-										<a  href="index.html">Home</a>	
+										<a  href="index.html">tripe(group)</a>	
 									</li>
                                     <li>
-										<a  href="index.html">Home</a>	
+										<a  href="index.html">blog</a>	
 									</li>
                                     <li>
-										<a  href="index.html">Home</a>	
-									</li>
-                                    <li>
-										<a  href="index.html">Home</a>	
+										<a  href="index.html">about us</a>	
 									</li>
                                     			
 								</ul>

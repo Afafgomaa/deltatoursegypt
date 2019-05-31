@@ -1,1 +1,16 @@
+a:hover{
+    text-decoration: none;
+}
 
+.footer-copyright{
+    background:#060606 !important;
+    padding: 30px 0 10px;
+}
+.footer-copyright ul li {
+    float: right;
+    color: #fff 
+}
+.footer-copyright ul li a {
+    color: #fff !important;
+    font-size: 12px;
+}
