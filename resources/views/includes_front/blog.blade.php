@@ -1,30 +1,49 @@
-
-<div class="container pb-1 ">
-
-<div class="row pt-4">
-    <div class="col">
-        <div class="overflow-hidden mb-3">
-            <h2 class="font-weight-bold text-8 mb-0 appear-animation" data-appear-animation="maskUp">
-                Blog
-            </h2>
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="featured_articles_title">Blog</div>
+    </div>
+    <div class="row center">
+        <div class="col-md-3">
+                <div class="featured_articles_slider_box">
+                    <a href="/blog/Things-to-know-before-traveling-to-india">
+                        <div class="featured_articles_slider_box_image" title="" style="background-image: url('https://images.memphistours.com/large/10af95798f72c76ef7aff4131f6f37f2.jpg')">
+                            <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
+                        </div>
+                    </a>
+                </div>
         </div>
-    </div>
+                <div class="col-md-3">
+                <div class="featured_articles_slider_box">
+                    <a href="/blog/Things-to-know-before-traveling-to-india">
+                        <div class="featured_articles_slider_box_image" title="" style="background-image: url('https://images.memphistours.com/large/10af95798f72c76ef7aff4131f6f37f2.jpg')">
+                            <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="featured_articles_slider_box">
+                    <a href="/blog/Things-to-know-before-traveling-to-india">
+                        <div class="featured_articles_slider_box_image" title="" style="background-image: url('https://images.memphistours.com/large/10af95798f72c76ef7aff4131f6f37f2.jpg')">
+                            <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="featured_articles_slider_box">
+                    <a href="/blog/Things-to-know-before-traveling-to-india">
+                        <div class="featured_articles_slider_box_image" title="" style="background-image: url('https://images.memphistours.com/large/10af95798f72c76ef7aff4131f6f37f2.jpg')">
+                            <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+
+
+
+    </div><!--row-->
 </div>
 
-<div class="row">
-    <div class="col-lg-10">
-        <div class="overflow-hidden">
-            <h3>insider-tips-6-ultimate-things-to-do-in-zanzibar ?</h3>
-            <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-                Its waters are crystal clear. Its beaches pristine white sand. A typical vacation day in Zanzibar involves.... 
-            </p>
-        </div>
-    </div>
-    <div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500">
-        <a href="#" class="btn btn-modern btn-blue mt-1">Go To Blog</a>
-    </div>
-</div>
-</div>
-<br>
-<br>
+
 
