@@ -1,42 +1,56 @@
+<div class="special-offer">
+
 <div class="home_exceptional_container">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <div class="home_exceptional_title">
-                    Why choose Memphis Tours?                </div>
+                    Why Delta Tours Egypt?               
+                 </div>
                 <div class="home_exceptional_desc">
-                    We create customized travel packages for people who love to do, see, learn, and explore more—and we’re loved by over 6,000 travelers on TripAdvisor. Here’s why:                </div>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley        
+                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_1.png" width="71px" height="71px">
+                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-bolt.svg" alt="" 
+                        data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
-                            Authentic travel since 1955                        </div>
+                            Family Buisness
+                        </div>
                         <div class="home_exceptional_box_text">
-                            We’re a local family business and we know the region better than anyone. Let us welcome you to our homeland.                        </div>
+                           as we are a family business company and our ancestors were all working in 
+                           Tourism field The sense of Tourism love had been transferred through generations .                         
+                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_2.png" width="71px" height="71px">
+                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-cards-diamonds.svg" alt="" 
+							data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
-                            Over 200,000 incredible trips                        </div>
+                            40 years of Experience
+                         </div>
                         <div class="home_exceptional_box_text">
-                            Your vacation is our passion. We’re experienced at creating smoothly-planned itineraries that delight and amaze.                        </div>
+                            Since 1974 and we are in Travel Buisness 
+                            . we gained a lot of experience which enabels us to make your journey the trip of life time
+                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_3.png" width="71px" height="71px">
+                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-cup.svg" 
+										alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
@@ -49,7 +63,8 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_4.png" width="71px" height="71px">
+                       <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-display.svg" 
+										alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
@@ -62,7 +77,8 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_5.png" width="71px" height="71px">
+                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-heart.svg" 
+										alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
@@ -75,7 +91,8 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img src="/theme/Com2018/img/home_page_icon/ex_6.png" width="71px" height="71px">
+                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-ipod.svg" 
+										alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
@@ -87,4 +104,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

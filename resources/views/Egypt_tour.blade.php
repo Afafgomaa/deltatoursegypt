@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-<section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-black overlay-show overlay-op-8" style="background-image: url('images/budget_egypt.jpg');">
+<section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-primary overlay-show overlay-op-8" style="background-image: url('images/budget_egypt.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
@@ -268,7 +268,5 @@
 
     </div>
 </div>
-
-                            
 
 @endsection

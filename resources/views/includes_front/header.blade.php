@@ -5,7 +5,7 @@
 				<div class="header-column">
 					<div class="header-row">
 						<div class="header-logo">
-							<a href="{{asset('/')}}">
+							<a href="">
 								<img alt="Porto" width="222" height="108" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="{{asset('images/logodelta.fw.png')}}" style="display: inline-block; width: 222px; height: 108px; top: 0px;"></a>
 						</div>
 					</div>
@@ -15,7 +15,7 @@
 						<nav class="header-nav-top">
 							<ul class="nav nav-pills">
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Egypt Tours</a>
+									<a class="nav-link pl-0" href="{{route('Egypt_tour')}}"><i class="fas fa-angle-right"></i> Egypt Tours</a>
 								</li>
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
 									<a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Egypt Budget Tours</a>
@@ -57,19 +57,19 @@
 											</ul>
 									</li>
                                     <li>
-										<a  href="index.html">Tailor Made</a>	
+										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
 									</li>
                                     <li>
-										<a  href="index.html">Egypt programs</a>	
+										<a  href="#">Egypt programs</a>	
 									</li>
                                     <li>
-										<a  href="index.html">tripe(group)</a>	
+										<a  href="#">tripe(group)</a>	
 									</li>
                                     <li>
-										<a  href="index.html">blog</a>	
+										<a  href="#">blog</a>	
 									</li>
                                     <li>
-										<a  href="index.html">about us</a>	
+										<a  href="#">about us</a>	
 									</li>
                                     			
 								</ul>

@@ -150,3 +150,63 @@ a:hover{
     float: left;
     width: 100%;
 }
+
+.home_exceptional_title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1.4px;
+    text-align: center;
+    color: #184161;
+    margin-bottom: 15px;
+}
+.home_exceptional_desc {
+    font-size: 16px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #184161;
+    margin-bottom: 45px;
+}
+
+.home_exceptional_box {
+    border-radius: 5px;
+    box-shadow: 0 2px 19px 0 #dddddd80;
+    background-color: #ffffff;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: 135px;
+}
+.home_exceptional_content {
+    float: left;
+    width: calc(100% - 86px);
+    }
+
+.home_exceptional_box_text {
+    font-size: 16px;
+    color: #0c2b4f;
+    float: left;
+    width: 100%;
+}
+.home_exceptional_img {
+    float: left;
+    margin-right: 15px;
+}
+.home_exceptional_container {
+    box-shadow: 0 2px 19px 0 #dddddd80;
+    background-color: #f9fcff;
+    padding: 20px 0px;
+    float: left;
+    width: 100%;
+}
+.special-offer {
+    padding:  15px 0;
+    margin: 15px 0;
+}
+.home_exceptional_box_title{
+font-size: 20px;
+    color: #4c6fcf;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+}
