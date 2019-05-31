@@ -13,7 +13,7 @@
                     if you need to tail your own holiday please contact our Tailor</span>
                 </div>
                 <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                    <a href="#" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
+                    <a href="#" class="btn btn-modern btn-primary mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
                 <div class="appear-animation d-inline-block" data-appear-animation="rotateInUpRight" data-appear-animation-delay="500">
                     <span class="arrow hlt" style="top: 40px;"></span>
@@ -48,9 +48,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
+                        
                         <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                        
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
@@ -87,9 +87,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                        
+                        <a href="/"><strong>King Treasures</strong></a>
+                        
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
@@ -126,9 +126,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                        
+                        <a href="/"><strong>Queen Nefertari</strong></a>
+                        
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
@@ -164,9 +164,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
+                       
                         <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                        
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
@@ -202,9 +202,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
+                       
                         <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                        
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
@@ -241,9 +241,9 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
+                        
                         <a href="/"><strong>Test Of Egypt</strong></a>
-                        </h2>
+                       
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  

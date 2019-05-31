@@ -123,7 +123,7 @@ a:hover{
 		font-size: 16px;
 	}
 	.home_special_offer_types {
-		color:#4c6fcf;
+		color:#fc9c9c;
 	}
 	.home_special_offer#programs {
     height: 500px;
@@ -209,4 +209,8 @@ font-size: 20px;
     font-weight: bold;
     float: left;
     width: 100%;
+}
+
+.home-intro{
+    background-color: #1442c1;
 }
