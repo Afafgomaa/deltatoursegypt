@@ -14,4 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Egypt-tours-Packages', [
+   'uses' => 'frontendController@Packages',
+   'as'   => 'Packages']
+    );
+
+Route::get('/Nile-River-Cruises', [
+   'uses' => 'frontendController@Nile_River_Cruises',
+   'as'   => 'Nile-River-Cruises']
+    );
 

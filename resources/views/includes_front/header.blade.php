@@ -21,7 +21,7 @@
 									<a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Egypt Budget Tours</a>
 								</li>
                                 <li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Nile River Cruises</a>
+									<a class="nav-link pl-0" href="{{route('Nile-River-Cruises')}}"><i class="fas fa-angle-right"></i> Nile River Cruises</a>
 								</li>
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
 									<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Egypt Excursion</a>
@@ -38,13 +38,13 @@
 					        <nav class="collapse">
 						       <ul class="nav nav-pills" id="mainNav">
 									<li>
-										<a  href="index.html">Home</a>	
+										<a  href="#">Home</a>	
 									</li>
 									<li class="dropdown">
-										<a class="dropdown-item dropdown-toggle" href="elements.html">Egypt Holidays</a>        
+										<a class="dropdown-item dropdown-toggle" href="{{route('Packages')}}">Egypt Holidays</a>        
 											<ul class="dropdown-menu">
                                                 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#"> Egypt Tours</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Egypt Tours Packages</a>
                                                 </li>
 											</ul>
 									</li>

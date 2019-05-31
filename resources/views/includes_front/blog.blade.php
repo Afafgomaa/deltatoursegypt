@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <div class="col-md-12">
         <div class="featured_articles_title">Blog</div>
     </div>
