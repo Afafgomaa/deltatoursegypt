@@ -46,7 +46,7 @@
 						<div class="col-md-6 col-lg-2">
 							<h5 class="text-3 mb-3">FOLLOW US</h5>
 							<ul class="social-icons">
-							<li class="social-icons-facebook"><a href="https://www.facebook.com/DeltaToursEgypt" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="social-icons-facebook bg-fa"><a href="https://www.facebook.com/DeltaToursEgypt" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 							<li class="social-icons-twitter"><a href="https://twitter.com/deltatoursegypt" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
 							<li class="social-icons-linkedin"><a href="https://www.youtube.com/channel/UCd2xNH3yvFs609eucWNYJTg" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
                             <li class="social-icons-linkedin"><a href="https://plus.google.com/u/0/104177018030933188796/posts/p/pub" target="_blank" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>

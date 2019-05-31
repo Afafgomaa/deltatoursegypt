@@ -14,3 +14,29 @@ a:hover{
     color: #fff !important;
     font-size: 12px;
 }
+.header-social-icons{
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header-social-icons li {
+  display: block;
+  padding: 4px;
+  margin: 4px;
+  transition: all 0.3s ease;
+  
+}
+.facebook{
+    background: #3B5998 
+}
+#header .social-icons-twitter{
+     background: #55ACEE 
+     }
+#header .social-icons-linkedin{
+    background:#007bb5
+}
+#header .social-icons-google-plus{
+    background: #dd4b39;
+}
