@@ -54,6 +54,9 @@
 		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
 		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
 		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+
+
 		
 		<!-- Demo CSS -->
 
@@ -108,6 +111,7 @@
 		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
 		<script src="js/views/view.home.js"></script>
+		
 		
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
