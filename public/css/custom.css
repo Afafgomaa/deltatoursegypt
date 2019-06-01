@@ -1,3 +1,6 @@
+body{
+    background-color: #fafafa;
+}
 a:hover{
     text-decoration: none;
 }
@@ -28,18 +31,14 @@ a:hover{
   transition: all 0.3s ease;
   
 }
+
 .facebook{
     background: #3B5998 
 }
 #header .social-icons-twitter{
      background: #55ACEE 
      }
-#header .social-icons-linkedin{
-    background:#007bb5
-}
-#header .social-icons-google-plus{
-    background: #dd4b39;
-}
+
 
 
 
@@ -129,6 +128,9 @@ a:hover{
     height: 500px;
 	
 	}
+    .home_special_offer#programs:hover{
+        box-shadow: 0px 5px 10px #aaaaaa;
+    }
     .home_special_offer p {
     font-size: 14px;
 	
@@ -201,7 +203,8 @@ a:hover{
 }
 .special-offer {
     padding:  15px 0;
-    margin: 15px 0;
+    background-color: #fafafa;
+    padding: 15px;
 }
 .home_exceptional_box_title{
 font-size: 20px;
@@ -228,4 +231,19 @@ p.featured {
     margin-bottom: 20px;
     font-weight: 300;
     
+}
+.label-floating input{
+        border-radius: 5px;
+    box-shadow: 0 2px 4px 0 #b7b7b780;
+    background-image: none;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+.ui-datepicker-trigger{
+   border: 0;
+    position: absolute;
+    right: 14px;
+    bottom: 20px;
+    background: 0;
+    color: #F7B505;
 }

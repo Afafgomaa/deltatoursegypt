@@ -54,6 +54,9 @@
 		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
 		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
 		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+		<!--datebiker-->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 
 
@@ -112,7 +115,8 @@
 		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
 		<script src="js/views/view.home.js"></script>
 		
-		
+		<!-- datebiker-->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
 		
