@@ -1,7 +1,10 @@
 <div class="container">
-    <div class="col-md-12">
-        <div class="featured_articles_title">Blog</div>
-    </div>
+    <div class="row">
+        <div class="col-lg">
+        <h2 class="m-auto p-4 text-center">POSTS FROM OUR BLOG</h2>
+        <p class="p-section pb-4 text-center">From travel tips and tour updates to country guides, packing lists to little known things to do,
+         you'll find it all in our travel blog.</p>
+    
     <div class="row center">
         <div class="col-md-3">
                 <div class="featured_articles_slider_box">
@@ -40,8 +43,8 @@
                 </div>
         </div>
 
-
-
+      </div>
+     </div>
     </div><!--row-->
 </div>
 

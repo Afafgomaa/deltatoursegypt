@@ -1,5 +1,4 @@
 <div class="special-offer">
-
 <div class="home_exceptional_container">
     <div class="container">
         <div class="row">
