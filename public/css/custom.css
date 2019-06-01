@@ -212,10 +212,20 @@ font-size: 20px;
 }
 
 .home-intro{
-    background-color: #1442c1;
+    background-color:#1850EE;
 }
 .p-section {
     color: #6c6c6c;
     font-size: 16px;
     font-weight: 400;
     }
+.bg-light-rose{
+    background-color:#fbd3d3 !important;
+}
+p.featured {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 300;
+    
+}

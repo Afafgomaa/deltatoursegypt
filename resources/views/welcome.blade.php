@@ -100,8 +100,20 @@
 <div class="container">
  <div class="row center">
 	<div class="col-md-12">
-		<h1 class="text-center">STYLES OF EGYPT HOLIDAYS AND PACKAGES</h1>
-		<p class="featured lead">From guided Egypt tours or family adventures to tailor-made holiday and special Egypt tours over Christmas and the New Year, we're bound to have a travel style to Egypt that's 
+
+		<h1 class="text-center short word-rotator-title">STYLES OF EGYPT HOLIDAYS AND PACKAGES</h1>
+				<h1 class="word-rotator text-center slide font-weight-bold text-8 mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" style="animation-delay: 100ms;">
+
+								<span class="word-rotator-words bg-light-rose" style="width: 168.563px;">
+									<b class="is-hidden">Egypt Packages</b>
+									<b class="is-hidden">Luxury  Holidays</b>
+									<b class="is-visible">Cruise Holidays</b>
+									<b class="is-visible">Dahabya Cruise Holidays</b>
+									<b class="is-visible">Desert Safari</b>
+									
+								</span>
+							</h1>
+		<p class="featured lead text-center">From guided Egypt tours or family adventures to tailor-made holiday and special Egypt tours over Christmas and the New Year, we're bound to have a travel style to Egypt that's 
 		perfect for you and suits All Budgets and travellers of all ages .</p>
 	</div>
  </div>
