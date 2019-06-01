@@ -1,138 +1,177 @@
+<div class="p-5">
 
 
-<div class="container py-2">
-
-					<ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
-
-					</ul>
-
-					<div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
-						<div class="row portfolio-list sort-destination" data-sort-id="portfolio">
-							
-
-							<div class="col-md-6 col-lg-4 isotope-item brands">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
-
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Egypt-Budget-Tours</span>
-													
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
+<div class="container">
+<div class="row">
 
 
-							<div class="col-md-6 col-lg-4 isotope-item logos">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
 
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Identity</span>
-													<span class="thumb-info-type">Logo</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-
-							<div class="col-md-6 col-lg-4 isotope-item websites">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
-
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Porto Screens</span>
-													<span class="thumb-info-type">Website</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-
-							<div class="col-md-6 col-lg-4 isotope-item logos">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
-
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Three Bottles</span>
-													<span class="thumb-info-type">Logo</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-
-							<div class="col-md-6 col-lg-4 isotope-item brands">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
-
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Company T-Shirt</span>
-													<span class="thumb-info-type">Brand</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-
-							<div class="col-md-6 col-lg-4 isotope-item websites">
-								<div class="portfolio-item">
-									<a href="portfolio-single-wide-slider.html">
-										<span class="thumb-info thumb-info-lighten border-radius-0">
-											<span class="thumb-info-wrapper border-radius-0">
-												<img src="images/egypt_pramids.jpg" class="img-fluid border-radius-0" alt="">
-
-												<span class="thumb-info-title">
-													<span class="thumb-info-inner">Mobile Mockup</span>
-													<span class="thumb-info-type">Website</span>
-												</span>
-												<span class="thumb-info-action">
-													<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
-												</span>
-											</span>
-										</span>
-									</a>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container" style="background-image:url('images/abou.jpg')">
+		</div>
+		<div class="home_special_offer_content">
+			<a href="">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
 				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
 </div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container">
+			<a href="/Egypt/Excursions">
+				<img src="https://images.memphistours.com/thumbs1/1a08bc1ffc081fc3248e23fb5a562565.jpg" title="Egypt Excursions" alt="Egypt Excursions">
+			</a>
+		</div>
+		<div class="home_special_offer_content">
+			<a href="/Egypt/Excursions">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
+				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
+</div>
+
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container">
+			<a href="/Egypt/Excursions">
+				<img src="https://images.memphistours.com/thumbs1/1a08bc1ffc081fc3248e23fb5a562565.jpg" title="Egypt Excursions" alt="Egypt Excursions">
+			</a>
+		</div>
+		<div class="home_special_offer_content">
+			<a href="/Egypt/Excursions">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
+				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container">
+			<a href="/Egypt/Excursions">
+				<img src="https://images.memphistours.com/thumbs1/1a08bc1ffc081fc3248e23fb5a562565.jpg" title="Egypt Excursions" alt="Egypt Excursions">
+			</a>
+		</div>
+		<div class="home_special_offer_content">
+			<a href="/Egypt/Excursions">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
+				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container">
+			<a href="/Egypt/Excursions">
+				<img src="https://images.memphistours.com/thumbs1/1a08bc1ffc081fc3248e23fb5a562565.jpg" title="Egypt Excursions" alt="Egypt Excursions">
+			</a>
+		</div>
+		<div class="home_special_offer_content">
+			<a href="/Egypt/Excursions">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
+				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+	<div id="sub_category" class="home_special_offer">
+		<div class="img_container">
+			<a href="/Egypt/Excursions">
+				<img src="https://images.memphistours.com/thumbs1/1a08bc1ffc081fc3248e23fb5a562565.jpg" title="Egypt Excursions" alt="Egypt Excursions">
+			</a>
+		</div>
+		<div class="home_special_offer_content">
+			<a href="/Egypt/Excursions">
+				<div class="home_special_offer_title">
+					<h4 class="light-rose">Egypt Budget Tours</h4>
+				</div>
+			</a>
+			<div class="home_special_offer_description">
+				<p>Our Egypt Tours and Holidays Packages are based on the flexibility
+				 of its operation and can be adjusted according to your needs,
+				 if you need to tail your own holiday please contact our Tailor</p>
+			</div>
+			
+			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
