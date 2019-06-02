@@ -1,5 +1,8 @@
+
+
 body{
     background-color: #fafafa;
+    
 }
 a:hover{
     text-decoration: none;
@@ -8,10 +11,10 @@ a:hover{
     background:#fad3d3;
     color: #fff;
 }
-a:visited{
-    color:#1442C1;
-}
 
+ul li {
+    list-style: none
+}
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -50,25 +53,36 @@ a:visited{
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  background: #fff;;
+    overflow: hidden;
+    z-index: 1999;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    width: 50px;
+    padding: 25px 0;
+    border-radius: 0px 5px 5px 0;
+    text-align: center
 }
 .header-social-icons li {
   display: block;
   padding: 4px;
   margin: 4px;
   transition: all 0.3s ease;
+  border-radius: 0;
+  border:none;
+  font-size: 16px;
+  box-shadow: unset !important;
   
 }
 
-.facebook{
-    background: #3B5998 
+.header-social-icons li .fab{
+    font-size: large ;
 }
-#header .social-icons-twitter{
-     background: #55ACEE 
-     }
-
-
-
-
+.header-social-icons .fab:hover{
+    color: rgba(0,0,0,.2);
+}
+.social-icons .social-icons-tripadvisor a:hover{
+    background: #00af87;
+}
 .btn-blue{
    background-color:#4c6fcf; 
 }
@@ -195,7 +209,7 @@ a:visited{
     letter-spacing: -1.4px;
     text-align: center;
     color: #184161;
-    margin-bottom: 15px;
+    margin: 1em 0;
 }
 .home_exceptional_desc {
     font-size: 16px;
@@ -240,7 +254,7 @@ a:visited{
 .special-offer {
     padding:  15px 0;
     background-color: #fafafa;
-    padding: 15px;
+
 }
 .home_exceptional_box_title{
 font-size: 20px;
@@ -260,6 +274,7 @@ font-size: 20px;
     }
 .bg-light-rose{
     background-color:#fbd3d3 !important;
+    color: #fff;
 }
 .light-rose{
     color:#fbd3d3;
@@ -289,3 +304,33 @@ p.featured {
     background: 0;
     color: #F7B505;
 }
+.footer-copyright{
+    font-size: 16px;
+}
+#footer .newsletter form {
+    width: 100%;
+    max-width: 262px;
+}
+.d-btn {
+    line-height: 1.75;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #0088cc;
+    border-color: #1c48c3;
+}
+.footer_li{
+    font-size: 1.1em;
+}
+.box-shadow-gray {
+    box-shadow: 1px 2px 3px 0 #999;
+}
+
+/*
+footer
+
+
+*/
+
+/* 
+end footer
+
+*/

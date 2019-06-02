@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class frontendController extends Controller
 {
+
+    public function index(){
+        return view('welcome');
+    }
+
     public function Packages(){
         return view('Egypt-tours-Packages');
     }
@@ -17,5 +22,11 @@ class frontendController extends Controller
     }
     public function Tailor_Made(){
         return view('Tailor_Made');
+    }
+    public function Budget_Tours(){
+        return view('Egypt-Budget-Tours');
+    }
+    public function all_packeges(){
+        return view('main_packeges');
     }
 }

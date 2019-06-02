@@ -74,6 +74,7 @@
 						data-y="center"
 						data-fontsize="['50','50','50','90']"
 						data-lineheight="['55','55','55','95']">Red Sea Holidays
+						
 					</div>
 					<div class="tp-caption text-color-light"
 						data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
@@ -87,6 +88,12 @@
 			</ul>
 		</div>
 	</div>
+	<ul class="header-social-icons social-icons d-none d-sm-block">
+		<li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+		<li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+		<li class="instagram"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-instagram"></i></a></li>
+		<li class="tripadvisor"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-tripadvisor"></i></a></li>
+	</ul>
 <div class="home-intro" id="home-intro">
 	<div class="container">
 		<div class="row">
