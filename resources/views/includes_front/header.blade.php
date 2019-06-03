@@ -7,7 +7,7 @@
 					<div class="header-row">
 						<div class="header-logo">
 							<a href="{{route('home')}}">
-								<img alt="deltatoursegypt" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="{{asset('images/logodelta.fw.png')}}" style="width: 100px; height: 48px;"></a>
+								<img alt="deltatoursegypt"  width="200" height="100" data-sticky-width="100" data-sticky-height="50" data-sticky-top="50" src="{{asset('images/logodelta.fw.png')}}"></a>
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					        <nav class="collapse">
 						       <ul class="nav nav-pills" id="mainNav">
 									<li>
-										<a  href="#">Home</a>	
+										<a  href="{{route('home')}}">Home</a>	
 									</li>
                                     <li class="dropdown">
 										<a class="dropdown-item dropdown-toggle" href="{{route('all_packeges')}}">Egypt tours Packages</a>        
@@ -84,10 +84,11 @@
                                     <li>
 										<a  href="#">blog</a>	
 									</li>
+									<!--
                                     <li>
 										<a  href="#">about us</a>	
 									</li>
-                                    			
+                                    	-->		
 								</ul>
 							</nav>
 						</div>

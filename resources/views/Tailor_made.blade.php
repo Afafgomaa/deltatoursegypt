@@ -48,8 +48,8 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                     Arrival Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                        <input name="departure" value="" type="text" class="form-control datepicker "
-                         id="datepickerDeparture2" placeholder=" dd/mm/yyy " required="">
+                        <input name="departure" value="" type="text" class="form-control datepicker"
+                          placeholder=" dd/mm/yyy " required="">
                         <button type="button" class="ui-datepicker-trigger">
                         <i class="fa fa-calendar-alt"></i></button>
                     </div>
@@ -62,7 +62,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <div class="form-group label-floating">
                     <div id="Arrival2">
                         <input name="departure" value="" type="text" class="form-control datepicker"
-                         id="datepickerDeparture2" placeholder=" dd/mm/yyy " required="">
+                         placeholder=" dd/mm/yyy " required="">
                         <button type="button" class="ui-datepicker-trigger">
                         <i class="fa fa-calendar-alt"></i></button>
                     </div>

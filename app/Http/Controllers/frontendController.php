@@ -14,19 +14,19 @@ class frontendController extends Controller
     public function Packages(){
         return view('Egypt-tours-Packages');
     }
-    public function Nile_River_Cruises(){
+    public function nileRiverCruises(){
         return view('Nile-River-Cruises');
     }
-    public function Egypt_tour(){
+    public function egyptTour(){
         return view('Egypt_tour');
     }
-    public function Tailor_Made(){
+    public function tailorMade(){
         return view('Tailor_Made');
     }
-    public function Budget_Tours(){
+    public function budgetTours(){
         return view('Egypt-Budget-Tours');
     }
-    public function all_packeges(){
+    public function allPackeges(){
         return view('main_packeges');
     }
 }
