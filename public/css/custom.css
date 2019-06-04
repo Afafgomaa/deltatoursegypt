@@ -35,6 +35,16 @@ ul li {
 ::-webkit-scrollbar-thumb:hover {
   background:#fbd3d3; 
 }
+.text-orange1{
+    color: #f7b506;
+    margin: 0 auto;
+}
+.center-f{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #5778d2;
+}
 .footer-copyright{
     background:#060606 !important;
     padding: 30px 0 10px;

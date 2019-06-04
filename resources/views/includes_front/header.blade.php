@@ -16,7 +16,7 @@
 						<nav class="header-nav-top">
 							<ul class="nav nav-pills">
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link" href="#"><i class="fas fa-angle-right"></i> Egypt Budget Tours</a>
+									<a class="nav-link" href="{{route('Budget_Tours')}}"><i class="fas fa-angle-right"></i> Egypt Budget Tours</a>
 								</li>
                                 <li class="nav-item nav-item-anim-icon d-none d-md-block">
 									<a class="nav-link pl-0" href="{{route('Nile-River-Cruises')}}"><i class="fas fa-angle-right"></i> Nile River Cruises</a>
@@ -82,13 +82,13 @@
 										<a  href="#">tripe(group)</a>	
 									</li>
                                     <li>
-										<a  href="#">blog</a>	
+										<a  href="{{route('blog')}}">blog</a>	
 									</li>
-									<!--
+									
                                     <li>
 										<a  href="#">about us</a>	
 									</li>
-                                    	-->		
+                                    		
 								</ul>
 							</nav>
 						</div>

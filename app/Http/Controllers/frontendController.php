@@ -29,4 +29,10 @@ class frontendController extends Controller
     public function allPackeges(){
         return view('main_packeges');
     }
+    public function testOfEgypt(){
+        return view('egyptTours/testOfEgypt');
+    }
+    public function blog(){
+        return view('blog');
+    }
 }

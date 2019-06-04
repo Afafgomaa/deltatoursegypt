@@ -31,6 +31,17 @@ Route::get('/all_packeges',[
 'uses' => 'frontendController@allPackeges',
 'as' => 'all_packeges'
 ]);
+Route::get('/blog',[
+   'uses' => 'frontendController@blog',
+   'as' => 'blog'
+   ]);
+
+Route::group(['perfix' => 'Egypt-Tours'] , function(){
+   Route::get('/cairo-egypt-budget-holiday-tour-package',[
+      'uses' => 'frontendController@testOfEgypt',
+      'as' => 'testOfEgypt'
+      ]);
+});
 
 
 
