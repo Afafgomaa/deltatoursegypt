@@ -62,21 +62,18 @@
 										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
 									</li>
 									 <li class="dropdown">
-										<a class="dropdown-item dropdown-toggle" href="elements.html">Nile River Cruises</a>        
+										<a class="dropdown-item dropdown-toggle" href="{{route('all-Nile-River-Cruises')}}">Nile River Cruises</a>        
 											<ul class="dropdown-menu">
                                                 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#">Nile River Cruise</a>
+                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}">Nile River Cruise</a>
                                                 </li>
 												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#"> Lake Nasser Cruise</a>
+                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}"> Lake Nasser Cruise</a>
                                                 </li>
 												<li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#"> Dahabya Cruise</a>
+                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}"> Dahabya Cruise</a>
                                                 </li>
 											</ul>
-									</li>
-                                    <li>
-										<a  href="#">Egypt programs</a>	
 									</li>
                                     <li>
 										<a  href="#">tripe(group)</a>	
@@ -86,7 +83,7 @@
 									</li>
 									
                                     <li>
-										<a  href="#">about us</a>	
+										<a  href="{{route('about_us')}}">about us</a>	
 									</li>
                                     		
 								</ul>

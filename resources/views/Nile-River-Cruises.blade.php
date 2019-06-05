@@ -28,11 +28,9 @@
     </div>
 </section>
 
-
+<div class="p-5">
 <div class="container">
   <div class="row">
-
-
 
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
@@ -149,15 +147,8 @@
       </div>
 
 
-
-
-
-
-
-
     </div>
 </div>
-
-@include('includes_front.why_us')                            
+</div>                      
 
 @endsection

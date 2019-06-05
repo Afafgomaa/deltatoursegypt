@@ -14,7 +14,7 @@
                         if you need to tail your own holiday please contact our Tailor</span>
                     </div>
                     <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                        <a href="#" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
+                        <a href="{{route('Tailor_Made')}}" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                     <div class="appear-animation d-inline-block" data-appear-animation="rotateInUpRight" data-appear-animation-delay="500">
                         <span class="arrow hlt" style="top: 40px;"></span>

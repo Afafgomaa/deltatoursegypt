@@ -70,8 +70,11 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
+		
+
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
+
 
 	</head>
 	<body>
@@ -122,6 +125,8 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
+       
+
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>

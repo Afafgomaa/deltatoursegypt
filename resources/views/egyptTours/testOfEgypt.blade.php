@@ -1,1 +1,90 @@
-klnmklnkl
+@extends('layouts.front')
+
+@section('content')
+<div class="p-5">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <img id="mainImage" src="images/image_slider/cairo_pyramid-of-khefren-and-the-sphinx1.jpg" height="500" width="100%" style="border:3px solid #c3ceed">
+            <div id="divContainer">
+                <img src="images/image_slider/egypt-daily-tours1.jpg" class="slider-image">
+                <img src="images/image_slider/egypt-daily-tours1.jpg" class="slider-image">
+                <img src="images/image_slider/egypt-daily-tours1.jpg" class="slider-image">
+                <img src="images/image_slider/egypt-daily-tours1.jpg" class="slider-image">
+                <img src="images/image_slider/egypt-daily-tours1.jpg" class="slider-image">
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+            <div class="summary entry-summary">
+
+                <h1 class="short big">Test of Egypt    </h1>
+                <div class=" col-md-6 review_num">
+                        Package Type : <span style="color:black">Private</span>
+                </div>
+                <div class=" col-md-8 review_num">
+                    <h6 class="shorter" style="color:#0088cc">4 Days - 3 Nights </h6>
+                </div>
+                <div class=" col-md-8 review_num">
+                    <h6 class="shorter" style="color:orange">Cairo </h6>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="shorter"> from :  250 USD</h4>
+                </div>
+                <div class="col-md-12 ">
+                    <p class="pdetails"> 4 Days Holiday tour package  in Cairo staying in a 4 stars superior hotel and visiting the great pyramids of giza ,
+                            Egyptian museum, Old Cairo , Coptic museum as well  felucca ride on the Nile 
+                    </p> 
+                </div>
+            <div class="col-md-12">
+                <h6 class=" shorter" style="color:#0088cc">package Highlights</h6>
+		        <div class="col-md-6">
+                     <ul class="list icons list-unstyled">
+        						<li><i class="fa fa-dot-circle-o"></i> 3 Nights Cairo  .</li>
+                                <li><i class="fa fa-dot-circle-o"></i> 4 Breakfasts and 2 Lunches   .</li>
+                                <li><i class="fa fa-dot-circle-o"></i> Meet at airport Upon arrival   .</li>
+                               </ul>
+                </div>
+                 <div class="col-md-6">	   
+                        <ul class="list icons list-unstyled">
+                               <li><i class="fa fa-dot-circle-o"></i> Multi Lingua tour leader guide</li>	
+                               <li><i class="fa fa-dot-circle-o"></i> all Transfers by AC Minibus  .</li>
+                        </ul>
+                </div>
+                                
+            </div>
+            <div class="col-md-12">
+              <h5 class="shorter"> Holiday included sights</h5>
+                    <span class="label label-primary">Egyptian museum</span>
+                    <span class="label label-primary">Mohamed ali mosque</span>
+                    <span class="label label-primary">Giza Pyramids</span>
+                    <span class="label label-primary">Sakkara</span>
+                    <span class="label label-primary">Hanging Church</span>
+                    <span class="label label-primary">Coptic Museum</span>
+                    <span class="label label-primary">Nile Felucca</span>
+                    <span class="label label-primary">Khan el Khalili </span>
+								
+            </div>
+            </div>
+            <div class="col-md-12">
+          
+
+          <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#myModal">
+                                          Send inquiry 
+                                      </button>
+                                      <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+          <div id="ciFERd" style="z-index:100;position:absolute"></div><div id="scFERd" style="display:inline"><table style="display:inline;border:0px;border-collapse:collapse;border-spacing:0;"><tbody><tr><td style="padding:0px;text-align:center;border:0px;vertical-align:middle"><a href="#" onclick="psFERdow(); return false;"><img name="psFERdimage" src="http://image.providesupport.com/image/121dmhmtycqh01bsukfkahibz6/offline-1179962734.gif" border="0;display:block;margin:auto"></a></td></tr><tr><td style="padding:0px;text-align:center;border:0px;vertical-align:middle"><a href="https://admin.providesupport.com/pb/121dmhmtycqh01bsukfkahibz6" target="_blank"><img src="http://image.providesupport.com/lcbpsh.gif" style="border:0;display:block;margin:auto;width:140px;height:17px"></a></td></tr></tbody></table></div><div id="sdFERd" style="display:none"><script type="text/javascript" src="http://image.providesupport.com/js/121dmhmtycqh01bsukfkahibz6/safe-standard.js?ps_h=FERd&amp;ps_t=1559686879034"></script></div><script type="text/javascript">var seFERd=document.createElement("script");seFERd.type="text/javascript";var seFERds=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/121dmhmtycqh01bsukfkahibz6/safe-standard.js?ps_h=FERd&ps_t="+new Date().getTime();setTimeout("seFERd.src=seFERds;document.getElementById('sdFERd').appendChild(seFERd)",1)</script><noscript><div style="display:inline"><a href="http://www.providesupport.com?messenger=121dmhmtycqh01bsukfkahibz6">Live Chat</a></div></noscript>
+          <!-- END ProvideSupport.com Graphics Chat Button Code -->
+              
+              </div>
+
+
+    </div>
+    </div>
+
+    </div>
+</div>
+@include('includes_front.block_of_conten')
+@include('includes_front.simler_posts')
+
+@endsection

@@ -11,7 +11,7 @@
 		<div class="img_container" style="background-image:url('images/abou.jpg')">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="">
+			<a href="{{route('Egypt_tour')}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">Egypt Tours Packages</h4>
 				</div>
@@ -33,7 +33,7 @@
 		<div class="img_container" style="background-image:url('images/river_nile.jpg')">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="">
+			<a href="{{route('Budget_Tours')}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">Egypt Budget Tours</h4>
 				</div>
