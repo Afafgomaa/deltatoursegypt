@@ -3,10 +3,10 @@
 
     $('#divContainer img').on({
         mouseover: function() {
-            $(this).css({ 'cursor':'pointer', 'border-color':'#F7B505' })
+            $(this).css({ 'cursor':'pointer'}).addClass('img-thumbnail')
         },
         mouseleave :function(){
-            $(this).css({ 'cursor':'default', 'border-color':'#c3ceed'})
+            $(this).css({ 'cursor':'default'}).removeClass('img-thumbnail')
         },
         click : function(){
             var imageUrl = $(this).attr('src');
