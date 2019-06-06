@@ -35,6 +35,10 @@ ul li {
 ::-webkit-scrollbar-thumb:hover {
   background:#fbd3d3; 
 }
+
+.text-blue{
+	color:#1f4bc4;
+}
 .text-orange1{
     color: #f7b506;
     margin: 0 auto;
@@ -336,4 +340,28 @@ p.featured {
     width: 17%;
     margin: 1%;
 }
+/* service box*/
+
+
+.service-box{
+	text-align:center;
+	padding:35px 15px;
+	overflow:hidden;
+	position:relative;
+	background:#fff;
+	box-shadow: 0 2px 7px 0 #cfcfcf80;
+	transition: all 0.3s ease 0s;
+	
+}
+.service-box:hover{
+	background:#fbf5e3;
+}
+.service-box i {
+	font-size:5em;
+	color:#1f4bc4;
+}
+.service-box .title{
+	margin:1em;
+}
+/* service box*/
 

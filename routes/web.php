@@ -39,6 +39,9 @@ Route::get('/blog',[
 Route::view('all-Nile-River-Cruises', 'main_packeges_river')->name('all-Nile-River-Cruises');
 Route::view('cairo-egypt-budget-holiday-tour-package', 'egyptTours/testOfEgypt')->name('single_tour');
 Route::view('about-us', 'about_us')->name('about_us');
+Route::view('contact-us', 'contact_us')->name('contact_us');
+Route::view('Terms-and-conditions', 'term')->name('term');
+Route::view('egypt-faq', 'faq')->name('faq');
 
 
 

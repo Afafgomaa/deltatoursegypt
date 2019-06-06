@@ -26,19 +26,19 @@
 	  <div class="col-md">                  
 			<ul class="footer_li">
 				<li class="footer-list py-1">
-					<a href="#" class="link-gray lead footer_li">
+					<a href="{{route('about_us')}}" class="link-gray lead footer_li">
 					<i class="link-gray text-1 fas fa-chevron-circle-right "></i> About Us</a>
 				</li>
 				<li class="footer-list py-1">
-					<a href="" class="link-gray lead footer_li">
+					<a href="{{route('contact_us')}}" class="link-gray lead footer_li">
 					<i class="link-gray text-1 fas fa-chevron-circle-right"></i> Contact Us</a>
 				</li>
 				<li class="footer-list py-1">
-					<a href="" class="link-gray lead footer_li">
+					<a href="{{route('term')}}" class="link-gray lead footer_li">
 					<i class="link-gray text-1 fas fa-chevron-circle-right"></i> Terms of Use</a>
 				</li>
 				<li class="footer-list py-1">
-					<a href="" class="link-gray lead footer_li">
+					<a href="{{route('faq')}}" class="link-gray lead footer_li">
 					<i class="link-gray text-1 fas fa-chevron-circle-right"></i> Faq </a>
 				</li>
 			</ul>

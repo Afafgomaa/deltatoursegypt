@@ -81,10 +81,6 @@
                                     <li>
 										<a  href="{{route('blog')}}">blog</a>	
 									</li>
-									
-                                    <li>
-										<a  href="{{route('about_us')}}">about us</a>	
-									</li>
                                     		
 								</ul>
 							</nav>
