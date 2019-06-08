@@ -68,7 +68,7 @@
                     </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>

@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
                     <div class="overflow-hidden pb-2">
-                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Egypt Tours and Travel Packages to Egypt </h1>
+                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"> Best Tours To Egypt Packages</h1>
                     </div>
                     <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                        <span class="sub-title text-4 mt-4">Our Egypt Tours and Holidays Packages are based on the flexibility of its operation and can be adjusted according to your needs, 
-                        if you need to tail your own holiday please contact our Tailor</span>
+                        <span class="sub-title text-4 mt-4">Our Tours to Egypt Packages are based on the flexibility of its operation and can 
+                            adjusted according to your needs, if you need to tail your own holiday please contact our Tailo</span>
                     </div>
                     <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
                         <a href="{{route('Tailor_Made')}}" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
@@ -37,7 +37,7 @@
 
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -49,8 +49,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -65,7 +65,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -76,7 +76,7 @@
 
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -88,8 +88,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -104,7 +104,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -115,7 +115,7 @@
       
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -127,8 +127,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -143,7 +143,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -153,7 +153,7 @@
 
 <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -165,8 +165,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -181,7 +181,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -191,7 +191,7 @@
 
 <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -203,8 +203,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -219,7 +219,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -230,7 +230,7 @@
 
 <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="#">
+            <a href="{{route('single_tour')}}">
                 <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
@@ -242,8 +242,8 @@
             </a>
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
-                        <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <h2 class="mb-0">
+                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
@@ -258,7 +258,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_tour')}}">read more</a>
                     </div>
         </div>
        </div>

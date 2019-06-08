@@ -72,8 +72,7 @@
 		<div class="container">
 			<div class="row">
 			<div class="col-md-1">
-								<a href="{{url('/')}}" class="logo">Delta<img alt="Delta Tours Egypt" class="img-responsive" src="http://www.deltatoursegypt.com/img/logo-footer.png">
-								</a>
+								<img alt="Delta Tours Egypt" class="img-responsive" src="http://www.deltatoursegypt.com/img/logo-footer.png">
 			</div>
 				<div class="col-md-5">
 					<p>Â© Copyright 2019. All Rights Reserved at <a href="https://corpital.co/">corpital.co</a>.</p>
@@ -84,7 +83,7 @@
 							<li><a href="{{route('all_packeges')}}">Egypt tours Packages</a></li>
 							<li><a href="{{route('all-Nile-River-Cruises')}}">Nile River Cruises</a> &nbsp;|</li>
 							<li><a href="{{route('Tailor_Made')}}">Talior Made</a> &nbsp;|</li>
-							<li><a href="{{route('Tailor_Made')}}">Egypt Excurions</a> &nbsp;|</li>  
+							<li><a href="{{route('Egypt_Excursion')}}">Egypt Excurions</a> &nbsp;|</li>  
 						</ul>
 					</nav>
 				</div>

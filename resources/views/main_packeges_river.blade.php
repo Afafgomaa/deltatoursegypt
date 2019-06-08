@@ -44,7 +44,7 @@
 						<div class="home_special_offer_description">
 							<p>Experience all that Egypt has to offer with an exclusive private group holiday.</p>
 						</div>
-					<a href="/Egypt/Packages/Honeymoon-Tours-Egypt">
+					<a href="">
 						</a><div class="read_more"><a href="{{route('Nile-River-Cruises')}}"></a><a href="{{route('Nile-River-Cruises')}}">read more</a></div>
 					
 				</div>

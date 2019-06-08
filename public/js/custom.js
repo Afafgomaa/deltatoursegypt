@@ -145,24 +145,20 @@
 	});	
 
 
-    $(".trans").find("a").click(function(e) {
-        e.preventDefault();
-        var section = $(this).attr("href");
-        $("html, body").animate({
-            scrollTop: $(section).offset().top
-        },500);
-    });
-
+    /* datepiker options open and close */
     $('.datepicker').datepicker({
         duration: "slow",
         showAnim: "slideDown", 
         showOptions: {direction: "down"} 
     });
-    $('.ui-datepicker-trigger').click(function(){
+    
+    $('.ui-datepicker-trigger').click(function(e){
             $(this).siblings().focus();
+          $('#ui-datepicker-div').toggle('display');
+            
 
     });
-
+     /* datepiker options open and close */
 
 });
 

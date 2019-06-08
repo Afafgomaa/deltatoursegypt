@@ -80,7 +80,7 @@
                     <div class="col-md-12">
                       
                         <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#myModal">
-                                                        Send inquiry 
+                                <a href="{{route('Tailor_Made')}}"> Send inquiry </a>
                         </button>
                       
                                 <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
