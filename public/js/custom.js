@@ -129,14 +129,15 @@
     });
   });
 
+
 	$(window).scroll(function(){
 		var fromTop = $(window).scrollTop();
-		var progHeight = $(".program_content").height() + 460;
+		var progHeight = $(".program_content").height() + 530;
 
-		if (fromTop <= 460 ){
+		if (fromTop <= 530 ){
 			$(".program_box .navbar").css({"position":'relative', "top":'0px'});
 		}else{
-			$(".program_box .navbar").css({"position":'fixed', "top":'45px'});
+			$(".program_box .navbar").css({"position":'fixed', "top":'91px'});
 		}
 		if (fromTop >= progHeight){
 			$(".program_box .navbar").css({"position":'relative', "top":'0px'});
