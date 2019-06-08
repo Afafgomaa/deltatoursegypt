@@ -60,7 +60,7 @@
 				<ul class="social-icons">
 				<li class="social-icons-facebook bg-fa"><a href="https://www.facebook.com/DeltaToursEgypt" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 				<li class="social-icons-twitter"><a href="https://twitter.com/deltatoursegypt" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-				<li class="social-icons-instagram"><a href="https://www.instagram.com/explore/locations/405718209501462/delta-tours-egypt/" target="_blank" title="Linkedin"><i class="fab fa-instagram"></i></a></li>
+				<li class="social-icons-instagram"><a href="https://www.instagram.com/explore/locations/405718209501462/delta-tours-egypt/" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a></li>
 				<li class="social-icons-tripadvisor"><a href="https://www.tripadvisor.com" target="_blank" title="google-plus"><i class="fab fa-tripadvisor"></i></a></li>
 			
 				</ul>

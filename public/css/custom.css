@@ -2,6 +2,7 @@
 
 body{
     background-color: #fafafa;
+    position: relative;
     
 }
 a:hover{
@@ -18,6 +19,7 @@ ul li {
 ::-webkit-scrollbar {
   width: 20px;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -339,6 +341,115 @@ p.featured {
     height: 20%;
     width: 17%;
     margin: 1%;
+}
+.tag span {
+    background: #becaed;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.affix {
+    top: 96px;
+}
+
+.affix li  {
+    float: left;
+    margin-bottom: -1px;
+    position: relative;
+    display: block;
+}
+.affix li a{
+    
+    font-weight: bold;
+    color: rgb(65, 65, 65) !important;
+    text-decoration: none !important;
+    font-size: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.affix li a:hover{
+    color: rgb(255,129,0) !important;
+}
+.itinerary_title h2 {
+    margin:0 ;  
+    font-size: 18px;
+    font-weight: 500
+}
+
+/*  single tour*/
+.program_icons_all, .review_data {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+.program_top_min_price {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.47;
+    text-align: left;
+}
+.icons_contain {
+    border-left: 1px solid #b0b0b0;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+    padding-left: 15px;
+}
+.scroll_pane_new{
+    width: 100%;
+    
+    
+}
+.all_itinerary, .program_box_data, {
+    margin-top: 15px;
+}
+.program_box_title{
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.full_itinerary {
+    width: 100%;
+    float: left;
+    list-style-type: none;
+    counter-reset: div-counter;
+}
+.full_itinerary_box, .prices_box, .cruise_iti_repeat, #reviews2_boxes {
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    padding: 10px;
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.full_itinerary_box .itinerary_title {
+    float: left;
+    width: 100%;
+    color: #5c5e62;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.full_itinerary_box .itinerary_desc {
+    font-size: 15px;
+    padding: 20px 0 0 0;
+    border-top: 1px solid #e1e1e1;
+    margin: 34px 20px;
+}
+
+/*single tour*/
+
+@media only screen and (max-width: 600px){
+    .slider-image{
+        display: none;
+    } 
 }
 /* service box*/
 

@@ -74,11 +74,67 @@
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
+		<style>
 
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  #section1 {padding-top:250px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:250px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+
+
+  #myNavbar .nav-tabs {
+    border-bottom: 2px solid #DDD;
+    background: transparent;}
+	.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;}
+
+	#myNavbar .nav-tabs>li.active, #myNavbar .nav-tabs>li.active>a {
+    background-color: transparent !important;
+    color: rgb(255,129,0) !important;
+}
+#myNavbar .nav-tabs>li.active {
+    cursor: pointer;
+}
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+#myNavbar .nav-tabs>li>a {
+    font-weight: bold;
+    color: rgb(65, 65, 65) !important;
+    text-decoration: none !important;
+    font-size: 20px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+  </style>
 
 	</head>
 	<body>
-		<body>
 		<div id="ciWpkU" style="z-index:100;position:absolute"></div>
 			@include('includes_front.header')
 
@@ -96,8 +152,8 @@
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-		<script src="vendor/popper/umd/popper.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	    <script src="vendor/popper/umd/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script> 
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
 		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
@@ -118,7 +174,8 @@
 		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
 		<script src="js/views/view.home.js"></script>
 		
-		<!-- datebiker-->
+		
+		<!-- datebiker -->
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
@@ -126,8 +183,6 @@
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
        
-
-
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

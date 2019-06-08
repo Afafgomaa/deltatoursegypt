@@ -46,23 +46,24 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                             
-                            <a href="/" class="mb-0"><strong>Anubis</strong></a>
+                            <a href="{{route('single_tour')}}" class="mb-0"><strong>Anubis</strong></a>
                             
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box">
+                           Private Tour  | Childern | payment policy| Tipping
                             </div>
                             <div class="home_special_offer_types_box">
                             6 days - 5 nights  
                             </div>
                     </div>
                     <div class="home_special_offer_description">
-                        <p> <h4>CAIRO - LUXOR</h4>
+                        <p> 
                             2 nights Cairo hotel , 1 night luxor , 2 nights sleeper train visiting cairo and Luxor Higlights , valley of kings ,pyramids and more .
                         </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>
@@ -73,7 +74,7 @@
 
         <div class="col-md-4 col-xs-12">
             <div class="home_special_offer" id="programs">
-                <a href="#">
+                <a href="{{route('single_tour')}}">
                     <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                         <div class="short_info" id="home_short_info">
                             <span class="price">
@@ -86,11 +87,12 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                             
-                            <a href="/"><strong>King Treasures</strong></a>
+                            <a href="{{route('single_tour')}}"><strong>King Treasures</strong></a>
                             
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping 
                             </div>
                             <div class="home_special_offer_types_box">
                                     4 days - 3 nights  
@@ -101,7 +103,7 @@
                             Giza Pyramids , egyptian museum and more </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>
@@ -112,7 +114,7 @@
         
         <div class="col-md-4 col-xs-12">
             <div class="home_special_offer" id="programs">
-                <a href="#">
+                <a href="{{route('single_tour')}}">
                     <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                         <div class="short_info" id="home_short_info">
                             <span class="price">
@@ -125,11 +127,12 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                             
-                            <a href="/"><strong>Queen Nefertari</strong></a>
+                            <a href="{{route('single_tour')}}"><strong>Queen Nefertari</strong></a>
                             
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box"> 
+                            Private Tour  | Childern | payment policy| Tipping
                             </div>
                             <div class="home_special_offer_types_box">
                                     4 days - 3 nights  
@@ -140,7 +143,7 @@
                             Giza Pyramids , egyptian museum and more </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>
@@ -150,7 +153,7 @@
 
     <div class="col-md-4 col-xs-12">
             <div class="home_special_offer" id="programs">
-                <a href="#">
+                <a href="{{route('single_tour')}}">
                     <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                         <div class="short_info" id="home_short_info">
                             <span class="price">
@@ -163,11 +166,12 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                         
-                            <a href="/"><strong>Test Of Egypt</strong></a>
+                            <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                             
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                             </div>
                             <div class="home_special_offer_types_box">
                                     4 days - 3 nights  
@@ -178,7 +182,7 @@
                             Giza Pyramids , egyptian museum and more </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>
@@ -188,7 +192,7 @@
 
     <div class="col-md-4 col-xs-12">
             <div class="home_special_offer" id="programs">
-                <a href="#">
+                <a href="{{route('single_tour')}}">
                     <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                         <div class="short_info" id="home_short_info">
                             <span class="price">
@@ -201,11 +205,12 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                         
-                            <a href="/"><strong>Test Of Egypt</strong></a>
+                            <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                             
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                             </div>
                             <div class="home_special_offer_types_box">
                                     4 days - 3 nights  
@@ -216,7 +221,7 @@
                             Giza Pyramids , egyptian museum and more </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>
@@ -227,7 +232,7 @@
 
     <div class="col-md-4 col-xs-12">
             <div class="home_special_offer" id="programs">
-                <a href="#">
+                <a href="{{route('single_tour')}}">
                     <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
                         <div class="short_info" id="home_short_info">
                             <span class="price">
@@ -240,11 +245,12 @@
             <div class="home_special_offer_content">
                         <div class="home_special_offer_title">
                             
-                            <a href="/"><strong>Test Of Egypt</strong></a>
+                            <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
                         
                         </div>
                     <div class="home_special_offer_types">
-                            <div class="home_special_offer_types_box">Private Tour  
+                            <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                             </div>
                             <div class="home_special_offer_types_box">
                                     4 days - 3 nights  
@@ -255,7 +261,7 @@
                             Giza Pyramids , egyptian museum and more </p>
                         </div>
                         <div class="read_more">
-                            <a href="#">read more</a>
+                            <a href="{{route('single_tour')}}">read more</a>
                         </div>
             </div>
         </div>

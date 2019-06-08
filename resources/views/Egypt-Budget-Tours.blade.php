@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
                     <div class="overflow-hidden pb-2">
-                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Egypt Budget Tours </h1>
+                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">Egypt Tours and Travel Packages to Egypt . </h1>
                     </div>
                     <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
                         <span class="sub-title text-4 mt-4">Our Egypt Tours and Holidays Packages are based on the flexibility of its operation and can be adjusted according to your needs, 
@@ -55,7 +55,7 @@
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">
-                            Private Tour  
+                            Private Tour  | Childern | payment policy| Tipping
                         </div>
                         <div class="home_special_offer_types_box">
                              6 days - 5 nights  

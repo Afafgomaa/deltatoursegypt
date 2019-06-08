@@ -30,57 +30,109 @@
 
 
 
-<div class="p-5">
+<div class="p-5 bg-white">
     <div class="container">
         <div class="row">
-                <div class="col-md-6">
-                    <a href="{{route('Budget_Tours')}}">
-                      <img class="box-shadow-gray" src="{{asset('images/egypt-classical-tours.jpg')}}" style="width:100%">
-                      <div class="row">
-                        <h3 class="pl-3 pt-3 text-orange1">Classic Tours</h3>
-                            <p class="pl-3 pb-0 pb-2 lead center-f">
-                            Experience all that Egypt has to offer with an exclusive private group holiday
-                            </p>
-                      </div>
-                    </a>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div id="sub_category" class="home_special_offer">
+			<div class="img_container">
+			<a href="{{route('Budget_Tours')}}">
+				<img src="{{asset('images/egypt-classical-tours.jpg')}}" alt="classic tour" title="classic tour">
+					</a>
+				</div>
+				<div class="home_special_offer_content">
+					<a href="{{route('Budget_Tours')}}">
+						<div class="home_special_offer_title">
+							<h2 class="mb-0 text-blue font-weight-bold">Classic Tours</h2>
+						</div>
+					</a>
+						<div class="home_special_offer_description">
+							<p>Experience all that Egypt has to offer with an exclusive private group holiday.</p>
+						</div>
+					<a href="/Egypt/Packages/Honeymoon-Tours-Egypt">
+						</a><div class="read_more"><a href="{{route('Budget_Tours')}}"></a><a href="{{route('Budget_Tours')}}">read more</a></div>
+					
+				</div>
+			</div>
+		 
+		</div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div id="sub_category" class="home_special_offer">
+			<div class="img_container">
+			<a href="{{route('Budget_Tours')}}">
+				<img src="{{asset('images/travel_egypt_safari.jpg')}}" alt="safari tour" title="safari tour">
+					</a>
+				</div>
+				<div class="home_special_offer_content">
+					<a href="{{route('Budget_Tours')}}">
+						<div class="home_special_offer_title">
+							<h2 class="mb-0 text-blue font-weight-bold">ADVENTURE TOURS</h2>
+						</div>
+					</a>
+						<div class="home_special_offer_description">
+							<p>Plan a luxury tour that will take you back to a bygone era of more comfortable travel.</p>
+						</div>
+					<a href="/Egypt/Packages/Honeymoon-Tours-Egypt">
+						</a><div class="read_more"><a href="{{route('Budget_Tours')}}"></a><a href="{{route('Budget_Tours')}}">read more</a></div>
+					
+				</div>
+			</div>
+		 
+		</div>
 
-                </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div id="sub_category" class="home_special_offer">
+			<div class="img_container">
+			<a href="{{route('Budget_Tours')}}">
+				<img src="{{asset('images/luxor.jpg')}}" alt="luxor tour" title="luxor tour">
+					</a>
+				</div>
+				<div class="home_special_offer_content">
+					<a href="{{route('Budget_Tours')}}">
+						<div class="home_special_offer_title">
+							<h2 class="mb-0 text-blue font-weight-bold">EGYPT LUXURY TOURS</h2>
+						</div>
+					</a>
+						<div class="home_special_offer_description">
+							<p> Plan a luxury tour that will take you back to a bygone era of more comfortable travel.</p>
+						</div>
+					<a href="{{route('Budget_Tours')}}">
+						</a><div class="read_more"><a href="{{route('Budget_Tours')}}"></a><a href="{{route('Budget_Tours')}}">read more</a></div>
+					
+				</div>
+			</div>
+		 
+		</div>
 
-                <div class="col-md-6">
-                  <a href="{{route('Budget_Tours')}}">  
-                     <img class="box-shadow-gray" src="{{asset('images/travel_egypt_safari.jpg')}}" style="width:100%">
-                     <div class="row">
-                        <h3 class="pl-3 pt-3 text-orange1">ADVENTURE TOURS</h3>
-                            <p class="pl-3 pb-0 pb-2 lead center-f">
-                               experience what egypt has to offer in an adnenture style mixed with normal touristic sights
-                            </p>
-                     </div>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                  <a href="{{route('Budget_Tours')}}">  
-                     <img class="box-shadow-gray" src="{{asset('images/luxor.jpg')}}" style="width:100%">
-                    <div class="row">
-                        <h3 class="pl-3 pt-3 text-orange1"> EGYPT LUXURY TOURS</h3>
-                            <p class="pl-3 pb-0 pb-2 lead center-f">
-                                Plan a luxury tour that will take you back to a bygone era of more comfortable travel.
-                            </p>
-                    </div>
-                  </a>
-                </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div id="sub_category" class="home_special_offer">
+			<div class="img_container">
+			<a href="{{route('Budget_Tours')}}">
+				<img src="{{asset('images/budget_project.jpg')}}" alt="classic tour" title="classic tour">
+					</a>
+				</div>
+				<div class="home_special_offer_content">
+					<a href="{{route('Budget_Tours')}}">
+						<div class="home_special_offer_title">
+							<h2 class="mb-0 text-blue font-weight-bold">BUDGET TOURS</h2>
+						</div>
+					</a>
+						<div class="home_special_offer_description">
+							<p>great journey on a reasonable budget, and make your discovery of Egypt completely worry-free</p>
+						</div>
+					<a href="{{route('Budget_Tours')}}">
+						</a><div class="read_more"><a href="{{route('Budget_Tours')}}"></a><a href="{{route('Budget_Tours')}}">read more</a></div>
+					
+				</div>
+			</div>
+		 
+		</div>
 
-                <div class="col-md-6">
-                  <a href="{{route('Budget_Tours')}}"> 
-                     <img class="box-shadow-gray" src="{{asset('images/budget_project.jpg')}}" style="width:100%">
-                    <div class="row">
-                        <h3 class="pl-3 pt-3 text-orange1">BUDGET TOURS</h3>
-                            <p class="pl-3 pb-0 pb-2 lead center-f">
-                               great journey on a reasonable budget, and make your discovery of Egypt completely worry-free
-                            </p>
-                    </div>
-                   </a>
-                </div>
-               
+
+       
+       
+
+    
         </div>
     </div>
 </div>

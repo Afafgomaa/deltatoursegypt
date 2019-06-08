@@ -39,27 +39,33 @@
 										<a  href="{{route('home')}}">Home</a>	
 									</li>
                                     <li class="dropdown">
-										<a class="dropdown-item dropdown-toggle" href="{{route('all_packeges')}}">Egypt tours Packages</a>        
+										<a class="dropdown-item dropdown-toggle" href="{{route('all_packeges')}}">Egypt Programs </a>        
 											<ul class="dropdown-menu">
                                                 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Egypt Holldays</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Classical Tour Packages</a>
                                                 </li>
 												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Luxury Holldays</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Budget Tour Packages</a>
                                                 </li>
 												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Cruise Holidays</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Luxury Tour Packages</a>
                                                 </li>
 												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Dahabya Holiday</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}">  Nile Cruise Packages</a>
                                                 </li>
 												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Desert Safari</a>
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Nile Dahabiya Holidays</a>
+                                                </li>
+												<li class="dropdown-submenu">
+                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Egypt Adventure Tours</a>
                                                 </li>
 											</ul>
 									</li>
-                                    <li>
-										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
+									<li>
+										<a  href="#">tripe(group)</a>	
+									</li>
+									<li>
+										<a  href="#">Egypt Excurions</a>	
 									</li>
 									 <li class="dropdown">
 										<a class="dropdown-item dropdown-toggle" href="{{route('all-Nile-River-Cruises')}}">Nile River Cruises</a>        
@@ -75,9 +81,10 @@
                                                 </li>
 											</ul>
 									</li>
-                                    <li>
-										<a  href="#">tripe(group)</a>	
+									<li>
+										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
 									</li>
+
                                     <li>
 										<a  href="{{route('blog')}}">blog</a>	
 									</li>

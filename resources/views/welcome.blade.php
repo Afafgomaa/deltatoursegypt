@@ -89,10 +89,10 @@
 		</div>
 	</div>
 	<ul class="header-social-icons social-icons d-none d-sm-block">
-		<li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-		<li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-		<li class="instagram"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-instagram"></i></a></li>
-		<li class="tripadvisor"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-tripadvisor"></i></a></li>
+		<li class="facebook"><a href="https://www.facebook.com/DeltaToursEgypt" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+		<li class="twitter"><a href="https://twitter.com/deltatoursegypt" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+		<li class="instagram"><a href="https://www.instagram.com/explore/locations/405718209501462/delta-tours-egypt/" target="_blank" title="instagarm"><i class="fab fa-instagram"></i></a></li>
+		<li class="tripadvisor"><a href="https://www.tripadvisor.com" target="_blank" title="tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
 	</ul>
 <div class="home-intro" id="home-intro">
 	<div class="container">
