@@ -347,30 +347,7 @@ p.featured {
     font-size: 10px;
     cursor: pointer;
 }
-.affix {
-    top: 96px;
-}
 
-
-.affix li  {
-    float: left;
-    margin-bottom: -1px;
-    position: relative;
-    display: block;
-}
-.affix li a{
-    
-    font-weight: bold;
-    color: rgb(65, 65, 65) !important;
-    text-decoration: none !important;
-    font-size: 20px;
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-}
-.affix li a:hover{
-    color: rgb(255,129,0) !important;
-}
 #myNavbar .nav-tabs {
     border-bottom: 2px solid #DDD;
     background: transparent;}
@@ -576,10 +553,14 @@ font-weight: bold;
     text-align: center;
     margin: 10px 0 0 0;
 }
+.program_box_data_book_form {
+    width: 100%;
+    float: left;
+}
 
 /* media query */
 @media only screen and (max-width: 600px){
-    .slider-image ,#footer .footer-copyright nav{
+    .slider-image ,#footer .footer-copyright nav ,#myNavbar{
         display: none
     } 
     .footer_li{
@@ -588,6 +569,7 @@ font-weight: bold;
     #footer .footer-copyright p{
         text-align: center
     }
+
     
 }
 /* media query */

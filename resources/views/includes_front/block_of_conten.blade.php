@@ -6,15 +6,16 @@
             	<div class="program_content_summary">
 				    	<div class="col-xs-12">
 						<div class="program_box">
-							<div class="hidded-sm hidden-xs affix-top" id="myNavbar" data-spy="affix" data-offset-top="650" style="width:100%;z-index:9;max-width:700px;background-color:white">
+							<div id="myNavbar" class="myNavbar" style="width:100%;z-index:9;max-width:700px;background-color:white">
 								<ul class="nav nav-tabs" role="tablist">
 									<li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab" aria-expanded="false">Overview</a></li>
 									<li role="presentation"><a href="#itinerary" role="tab" data-toggle="tab" aria-expanded="false">Itinerary</a></li>
 									<li role="presentation"><a href="#accommodation" role="tab" data-toggle="tab" aria-expanded="false">Accommodation</a></li>
+									<li role="presentation"><a href="#faq" role="tab" data-toggle="tab" aria-expanded="false">FAQ</a></li>
 									<li role="presentation">
-                                     <a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Add On</a>
-                                    </li>
-                                </ul>
+                    <a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Add On</a>
+                  </li>
+                </ul>
 							  </div>
 							<div class="scroll_tab_new" data-spy="scroll" data-target="#myNavbar" data-offset="120">
 								<div id="overview" class="scroll_pane_new">
@@ -174,7 +175,31 @@
 											</div>
 										</div>							
 									</div>
-                  </div>   
+									</div> 
+									
+									
+									<div  class="scroll_pane_new hidden-xs active">
+										<div class="program_box">
+											<div class="program_box_title" id="faq">FAQ:</div>
+												<div class="tab-pane active" id="addon">
+													<div class="row">
+													  <h3 class="program_box_title"> </h3>
+														<div class="col-md-12">
+															<h4>is Egypt ?</h4>
+															<p>Every day when the sun sets, the bustling city of Cairo , the famous pyramids on the Giza plateau south of Cairo are absorbed in the darkness of the night, however, the great light and sound show bring them to life again. Thousands of years have passed since the Pharaohs walked on this Earth, but with your imagination and our show, we bring the history alive to you; every show provides attendees with a learning experience about ancient Egypt as of its significant beginning, the pyramids..</p>
+															<hr>
+														</div>
+														<div class="col-md-12">
+															<p>It is a fabulous way to enjoy a night on the Nile while you are in Cairo. So, you are invited to dinner on a cruise boat for two hours sailing trip on the Nile with belly dancer, folklore show, Oriental music and dinner on a 5 star cruise. All the time, you'll be delighted in our Chef's menu along with a selection of Egyptian favorites, made with the freshest ingredients, and prepared to make it a memorable dining experience...</p>
+															<hr>
+														</div>
+											</div>
+										</div>							
+									</div>
+                  </div>
+
+
+
 									 
 									
 

@@ -47,11 +47,12 @@
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
                         <h2>
-                        <a href="/"><strong>Test Of Egypt</strong></a>
+                        <a href="{{route('single_river')}}"><strong>Test Of Egypt</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
+                        <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                         </div>
                         <div class="home_special_offer_types_box">
                                 4 days - 3 nights  
@@ -62,7 +63,7 @@
                         Giza Pyramids , egyptian museum and more </p>
                     </div>
                     <div class="read_more">
-                        <a href="#">read more</a>
+                        <a href="{{route('single_river')}}">read more</a>
                     </div>
         </div>
        </div>
@@ -90,7 +91,8 @@
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
+                        <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                         </div>
                         <div class="home_special_offer_types_box">
                                 4 days - 3 nights  
@@ -129,7 +131,8 @@
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
+                        <div class="home_special_offer_types_box">
+                            Private Tour  | Childern | payment policy| Tipping
                         </div>
                         <div class="home_special_offer_types_box">
                                 4 days - 3 nights  

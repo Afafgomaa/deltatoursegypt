@@ -1,7 +1,6 @@
 
  $(document).ready(function() {
 
-
     $('#divContainer img').on({
         mouseover: function() {
             $(this).css({ 'cursor':'pointer'}).addClass('img-thumbnail')
@@ -145,15 +144,6 @@
 		}
 	});	
 
-
-
-    
-   
-
-    $('body').scrollspy({
-        target:'myNavbar',
-        offset:500
-    });
 
     $(".trans").find("a").click(function(e) {
         e.preventDefault();

@@ -42,6 +42,9 @@ Route::view('about-us', 'about_us')->name('about_us');
 Route::view('contact-us', 'contact_us')->name('contact_us');
 Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('egypt-faq', 'faq')->name('faq');
+Route::view('single_river', 'egyptTours/single_river')->name('single_river');
+Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
+
 
 
 
