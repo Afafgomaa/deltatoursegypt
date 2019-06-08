@@ -71,7 +71,11 @@
 	<div class="footer-copyright">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+			<div class="col-md-1">
+								<a href="{{url('/')}}" class="logo">Delta<img alt="Delta Tours Egypt" class="img-responsive" src="http://www.deltatoursegypt.com/img/logo-footer.png">
+								</a>
+			</div>
+				<div class="col-md-5">
 					<p>Â© Copyright 2019. All Rights Reserved at <a href="https://corpital.co/">corpital.co</a>.</p>
 				</div>
 				<div class="col-md-6">

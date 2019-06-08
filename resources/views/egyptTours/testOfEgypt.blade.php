@@ -1,51 +1,46 @@
 @extends('layouts.front')
 
 @section('content')
-<div class="pt-5">
+<div class="pt-5 pb-5">
     <div class="container">
-     <div class="row">
-
-     <!-- img section -->
-     <div class="col-lg-6 col-xs-12">
-        <div class="owl-carousel owl-theme nav-inside nav-style-1 nav-light mb-0" id="mainImage" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
-            <div>
-                <div class="img-thumbnail border-0 p-0 d-block">
-                    <img class="img-fluid border-radius-0 img-rounded" src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" alt="">
+      <div class="row">
+       <!-- img section -->
+        <div class="col-lg-6 col-xs-12">
+            <div class="owl-carousel owl-theme nav-inside nav-style-1 nav-light mb-0" id="mainImage" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+                <div>
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0 img-rounded" src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" alt="">
+                    </div>
                 </div>
             </div>
-            <div>
-                <div class="img-thumbnail border-0 p-0 d-block">
-                    <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="img-thumbnail border-0 p-0 d-block">
-                    <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="img-thumbnail border-0 p-0 d-block">
-                    <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="img-thumbnail border-0 p-0 d-block">
-                    <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" alt="">
-                </div>
+            <div id="divContainer" class="text-center">
+                    <img src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" class="slider-image img-responsive">
+                    <img src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" class="slider-image img-responsive">
+                    <img src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" class="slider-image img-responsive">
+                    <img src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" class="slider-image img-responsive">
+                    <img src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" class="slider-image img-responsive">
             </div>
         </div>
-        <div id="divContainer" class="text-center">
-                <img src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" class="slider-image img-responsive">
-                <img src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" class="slider-image img-responsive">
-                <img src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" class="slider-image img-responsive">
-                <img src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" class="slider-image img-responsive">
-                <img src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" class="slider-image img-responsive">
-        </div>
-    </div>
-	
-
-    
-
      <!-- description section -->
         <div class="col-md-6 col-xs-12">
             <div class="summary entry-summary">
@@ -105,15 +100,10 @@
                         <!-- END ProvideSupport.com Graphics Chat Button Code -->
                     
             </div><!-- summery section-->
-
-
-    </div>
-
-
-    
+       </div>
+      </div>
     </div><!-- row-->
-
-    </div><!-- container -->
+</div><!-- container -->
 </div><!-- padding-->
 @include('includes_front.block_of_conten')
 @include('includes_front.simler_posts')

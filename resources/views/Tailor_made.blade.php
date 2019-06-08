@@ -4,28 +4,22 @@
 
 <div id="sub_category_top" class="home_sites_box" style="background-image: url('images/plan.jpg');
 height: 360px;background-repeat: no-repeat;background-size:cover">
-
 </div>
  <div class="home-intro" id="home-intro">
     <div class="container">
-
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <p>
-                   Custumized Egypt Holidays .
+                     Custumized Egypt Holidays .
                     <span>Our long history enabled us to arrange all type of Egypt Holiday packages ,
                          Kindly fill the form below to enable us to customize your holiday to Egypt according to your needs . .</span>
                 </p>
             </div>
         </div>
-
     </div>
-	</div>
-
-
-
+</div>
 <div class="container">
-<form id="build_form" method="post" action="/Egypt/reservation_forms/requests/mail/" novalidate="novalidate">    
+<form id="build_form" method="post" action="">    
     <div class="container">
         <div class="row">
            <div class="col-md-4 col-xs-12">
@@ -106,10 +100,14 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                   <textarea class="form-control" cols="4" rows="5"></textarea>
                 </div>
             </div>
-
-
+            <div class="col-md-12">
+                <button class="new_btn_inquire" id="SubmitButton">
+                            Send Message  
+                </button>
+            </div>
         </div>
     </div>
+
 </form>
 </div>
 <br><br><br><br><br><br><br><br>

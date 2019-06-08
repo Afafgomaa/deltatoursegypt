@@ -2,7 +2,8 @@
 
 @section('content')
 <!--- navigation -->
-<div class="container">
+<div class="pt-5">
+ <div class="container">
 
     <h2>Delta Tours <strong>Terms and Conditions</strong></h2>
 	<div class="col-md-12 center">
@@ -14,12 +15,12 @@
 		</h2>
 	</div>
 
-<div class="row">
- <div class="col-md-12">
-  <div class="accordion pt-5 pb-5" id="accordion">
-	 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One" aria-expanded="true">
-	    Payment Policy 
-	</a>
+	<div class="row">
+	<div class="col-md-12">
+	<div class="accordion pt-5 pb-5" id="accordion">
+		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One" aria-expanded="true">
+			Payment Policy 
+		</a>
 		<section id="collapse1One">
 			<p>
 				* Reservations will be secured once we recive  a deposit of 25% of the full price.<br>
@@ -123,5 +124,6 @@
    </div><!-- accordin -->
   </div>
  </div>
+</div>
 </div>
 @endsection

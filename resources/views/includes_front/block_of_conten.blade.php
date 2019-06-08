@@ -1,9 +1,10 @@
-<div class="pt-5 bg-white">
+<div class="pt-5  pb-5 bg-white">
 <div class="program_content">
         <div class="container">
+					<div class="row">
             <div class="col-md-8">
             	<div class="program_content_summary">
-					<div class="col-xs-12">
+				    	<div class="col-xs-12">
 						<div class="program_box">
 							<div class="hidded-sm hidden-xs affix-top" id="myNavbar" data-spy="affix" data-offset-top="650" style="width:100%;z-index:9;max-width:700px;background-color:white">
 								<ul class="nav nav-tabs" role="tablist">
@@ -56,7 +57,7 @@
 								  <div class="program_box_title" id="itinerary">Itinerary:</div>
 									<div class="program_box_data" id="itinerary">
 										<div class="expand">
-											<span class="expandtext">Expand All</span>
+											<span class="expandtext btn btn-light mb-3">Expand All</span>
 											<span class="glyphicon glyphicon-menu-down btn-lg"></span>
 										</div>
 										<div class="full_itinerary">
@@ -89,34 +90,37 @@
 	                                      </div>
                                         </div>
                                         <div class="full_itinerary_box">
-											<div class="itinerary_title" id="itinerary_title_3">
-											   <h2 style="float:left;">Day 03 : Sakkara and Old Cairo </h2>
-											</div>
-											<div class="itinerary_desc" id="itinerary_desc_3" style="display: none;">
-												<p><span class="text-primary">After Breakfast</span><br>
-													Tour To Visit <span class="text-primary"> Sakkara </span>The first capital of ancient Egypt where exists the   <span class="text-primary"> Step Pyramid </span>built by king Zoser in 2700 B.C the first accomplished pyramid in Egypt and some other Toombs  <br>
-													<span class="text-primary">  Lunch at a good quality local restaurant </span>     <br>  
-													Then proceed to <span class="text-primary">Old Cairo  </span>where you can visit the <span class="text-primary"> Hanging   Church , Coptic Museum  and ben Ezra Synagogue</span><br>
-													Then Proceed  to explore  <span class="text-primary">Khan el Khalili</span> Cairo’s old bazaar  which is one of the most impressive oriental markets comprises a large number of shops which expose fabulous collection of Gold and Silver Jewelry.<br>
-													Transfer Back to your Hotel <br>
-													<strong>    Meals: Breakfast, Lunch  </strong> 
-												</p>
-	                                        </div>
-                                        </div>
-                                        <div class="full_itinerary_box">
-    										<div class="itinerary_title" id="itinerary_title_4">
-												<h2 style="float:left;">Day 4 : Departure </h2>
-											</div>
-											<div class="itinerary_desc" id="itinerary_desc_4" style="display: none;">
-												<p><span class="text-primary">After Breakfast</span><br>
-													Transfer to the airport for final Departure .<br><br>
-													<strong>Meals: Breakfast</strong> 
-												</p>
-	                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
+																				<div class="itinerary_title" id="itinerary_title_3">
+																					<h2 style="float:left;">Day 03 : Sakkara and Old Cairo </h2>
+																				</div>
+																				<div class="itinerary_desc" id="itinerary_desc_3" style="display: none;">
+																					<p><span class="text-primary">After Breakfast</span><br>
+																						Tour To Visit <span class="text-primary"> Sakkara </span>The first capital of ancient Egypt where exists the   <span class="text-primary"> Step Pyramid </span>built by king Zoser in 2700 B.C the first accomplished pyramid in Egypt and some other Toombs  <br>
+																						<span class="text-primary">  Lunch at a good quality local restaurant </span>     <br>  
+																						Then proceed to <span class="text-primary">Old Cairo  </span>where you can visit the <span class="text-primary"> Hanging   Church , Coptic Museum  and ben Ezra Synagogue</span><br>
+																						Then Proceed  to explore  <span class="text-primary">Khan el Khalili</span> Cairo’s old bazaar  which is one of the most impressive oriental markets comprises a large number of shops which expose fabulous collection of Gold and Silver Jewelry.<br>
+																						Transfer Back to your Hotel <br>
+																						<strong>    Meals: Breakfast, Lunch  </strong> 
+																					</p>
+																				</div>
+																				</div>
+																					<div class="full_itinerary_box">
+																						<div class="itinerary_title" id="itinerary_title_4">
+																						<h2 style="float:left;">Day 4 : Departure </h2>
+																					</div>
+																					<div class="itinerary_desc" id="itinerary_desc_4" style="display: none;">
+																						<p><span class="text-primary">After Breakfast</span><br>
+																							Transfer to the airport for final Departure .<br><br>
+																							<strong>Meals: Breakfast</strong> 
+																						</p>
+																					</div>
+																			</div>
+																	</div>
+															</div>
+														</div>
+
+
+
 								    <div id="accommodation" class="scroll_pane_new">
 								        <div class="program_box">
 										     <a name="Prices" id="Prices"></a>
@@ -132,7 +136,7 @@
 															</div>
 															<div class="new-hotel-boxes">
 																<div class="col-xs-4">
-																	<div class="new-hotel-boxes-img" style="background-image: url('http://deltatoursegypt.com/img/hotels/Barcelo-Hotel/small1.jpg')}})" title="hotel"></div>
+																	<img class="new-hotel-boxes-img" src="http://deltatoursegypt.com/img/hotels/Barcelo-Hotel/small1.jpg" width="300" height="200" title="hotel">
 																</div>
 																<div class="col-xs-8">
 																	<div class="new-hotel-boxes-title">  Cairo Barcelo Pyramids Hotel          
@@ -146,39 +150,139 @@
 											</div>
 										</div>
 									</div>
-									<div id="addon" class="scroll_pane_new hidden-xs active">
+                 
+									<div  class="scroll_pane_new hidden-xs active">
 										<div class="program_box">
 											<div class="program_box_title" id="reviews">Add On:</div>
 												<div class="tab-pane active" id="addon">
 													<div class="row">
-													<h3 class="program_box_title"> Enhance your trip with these amazing added extras and bolt-ons</h3>
-													<div class="col-md-12">
-													<img class="appear-animation pull-left fadeIn appear-animation-visible" src="http://www.deltatoursegypt.com/img/add-ons/soundandlightpyramids.png" width="200" height="140" data-appear-animation="fadeIn" alt="Sound and Light show at Pyramids">
-													<h4>Sound and Light show at Pyramids</h4>
-													<span class="amount" style="color:red">From 35 USD </span>
-													<p>Every day when the sun sets, the bustling city of Cairo , the famous pyramids on the Giza plateau south of Cairo are absorbed in the darkness of the night, however, the great light and sound show bring them to life again. Thousands of years have passed since the Pharaohs walked on this Earth, but with your imagination and our show, we bring the history alive to you; every show provides attendees with a learning experience about ancient Egypt as of its significant beginning, the pyramids..</p>
-													<hr>
-													</div>
-													<div class="col-md-12">
-													<img class="appear-animation pull-left fadeIn appear-animation-visible" src="http://www.deltatoursegypt.com/img/add-ons/Dinner-Cruise2.png" width="205" height="140" data-appear-animation="fadeIn" alt="Cairo Nile Dinner Cruise ">
-													<h4> Cairo Nile Dinner Cruise</h4>
-													<span class="amount" style="color:red">From 45 USD </span>
-													<p>It is a fabulous way to enjoy a night on the Nile while you are in Cairo. So, you are invited to dinner on a cruise boat for two hours sailing trip on the Nile with belly dancer, folklore show, Oriental music and dinner on a 5 star cruise. All the time, you'll be delighted in our Chef's menu along with a selection of Egyptian favorites, made with the freshest ingredients, and prepared to make it a memorable dining experience...</p>
-													<hr>
-												</div>
-                                            </div>
-												<button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#myModal">
-													Send inquiry 
-												</button>
-                                        </div>
+													  <h3 class="program_box_title"> Enhance your trip with these amazing added extras and bolt-ons</h3>
+														<div class="col-md-12">
+															<img class="appear-animation pull-left fadeIn appear-animation-visible" src="http://www.deltatoursegypt.com/img/add-ons/soundandlightpyramids.png" width="200" height="140" data-appear-animation="fadeIn" alt="Sound and Light show at Pyramids">
+															<h4>Sound and Light show at Pyramids</h4>
+															<span class="amount" style="color:red">From 35 USD </span>
+															<p>Every day when the sun sets, the bustling city of Cairo , the famous pyramids on the Giza plateau south of Cairo are absorbed in the darkness of the night, however, the great light and sound show bring them to life again. Thousands of years have passed since the Pharaohs walked on this Earth, but with your imagination and our show, we bring the history alive to you; every show provides attendees with a learning experience about ancient Egypt as of its significant beginning, the pyramids..</p>
+															<hr>
+														</div>
+														<div class="col-md-12">
+															<img class="appear-animation pull-left fadeIn appear-animation-visible" src="http://www.deltatoursegypt.com/img/add-ons/Dinner-Cruise2.png" width="205" height="140" data-appear-animation="fadeIn" alt="Cairo Nile Dinner Cruise ">
+															<h4> Cairo Nile Dinner Cruise</h4>
+															<span class="amount" style="color:red">From 45 USD </span>
+															<p>It is a fabulous way to enjoy a night on the Nile while you are in Cairo. So, you are invited to dinner on a cruise boat for two hours sailing trip on the Nile with belly dancer, folklore show, Oriental music and dinner on a 5 star cruise. All the time, you'll be delighted in our Chef's menu along with a selection of Egyptian favorites, made with the freshest ingredients, and prepared to make it a memorable dining experience...</p>
+															<hr>
+														</div>
+											</div>
+										</div>							
 									</div>
-                                    </div>   
-                              
-                                
-</div>
-</div>
-</div>
-</div>
+                  </div>   
+									 
+									
+
+         </div>
+        </div>
+			 </div>
+		</div>
+
+
+
+
+		<div class="col-md-4 col-xs-12">
+				<div class="program_content_form">
+						<div class="program_box_data_book">
+					      	<div class="program_box_data_book_title">Enquire Now</div>
+								<div class="program_box_data_book_form"> 
+                 <form id="bookform" method="post" action="">
+									 <div class="container">
+                    <div class="row">
+                       <div class="col-md-12 ">
+                         <div class="form-group label-floating is-empty">
+                           <label>Name *</label>
+                           <input name="name" type="text" id="name" value="" class="form-control" required="">
+														<span class="material-input"></span>
+													</div>
+                        </div>
+                       <div class="col-md-12">
+                         <div class="form-group label-floating is-empty">
+                           <label>E-mail *</label>
+                           <input name="UserEmail" value="" type="email" required="" class="form-control" id="UserEmail">
+													 <span class="material-input"></span>
+												 </div>
+												</div>
+
+												<div class="col-md-6">
+                          <label>
+															Arrival Date *</label>
+													<div class="form-group label-floating">
+															<div id="Arrival2">
+																	<input name="departure" value="" type="text" class="form-control datepicker"
+																		placeholder=" dd/mm/yyy " required="">
+																	<button type="button" class="ui-datepicker-trigger">
+																	<i class="fa fa-calendar-alt"></i></button>
+															</div>
+													</div>
+												 </div>
+												 
+												 <div class="col-md-6">
+                              <label>	Departure Date *</label>
+													<div class="form-group label-floating">
+															<div id="Arrival2">
+																	<input name="departure" value="" type="text" class="form-control datepicker"
+																		placeholder=" dd/mm/yyy " required="">
+																	<button type="button" class="ui-datepicker-trigger">
+																	<i class="fa fa-calendar-alt"></i></button>
+															</div>
+													</div>
+											 </div>
+											 
+											 <div class="col-md-6">
+													<label> Number Of Adults </label>
+													<br>
+													<div class="form-group label-floating is-empty">
+															<input name="" value="" type="number" class="form-control">
+													</div>
+											</div>
+
+											<div class="col-md-6">
+												<label> Promo/Referral Code </label>
+												<br>
+												<div class="form-group label-floating is-empty">
+														<input name="" value="" type="text" class="form-control">
+												</div>
+										</div>
+
+										<div class="col-md-12">
+												<label> Comments (Special)</label>
+												<br>
+												<div class="form-group label-floating is-empty">
+													<textarea class="form-control" cols="4" rows="5"></textarea>
+												</div>
+										</div>
+												
+										</div><!-- row -->
+                  </div>
+								</form>
+
+
+
+
+
+
+
+
+
+
+								</div>
+		        </div>
+        </div>
+		</div>
+		
+
+
+
+
+   </div><!-- row -->
+  </div>
+ </div>
 </div>
 
 

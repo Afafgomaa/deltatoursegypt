@@ -266,6 +266,7 @@ ul li {
 .special-offer {
     padding:  15px 0;
     background-color: #fafafa;
+    margin-top: 3em;
 
 }
 .home_exceptional_box_title{
@@ -350,6 +351,7 @@ p.featured {
     top: 96px;
 }
 
+
 .affix li  {
     float: left;
     margin-bottom: -1px;
@@ -368,6 +370,41 @@ p.featured {
 }
 .affix li a:hover{
     color: rgb(255,129,0) !important;
+}
+#myNavbar .nav-tabs {
+    border-bottom: 2px solid #DDD;
+    background: transparent;}
+	.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;}
+
+#myNavbar .nav-tabs>li.active, #myNavbar .nav-tabs>li.active>a {
+    background-color: transparent !important;
+    color: rgb(255,129,0) !important;
+}
+#myNavbar .nav-tabs>li.active {
+    cursor: pointer;
+}
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+#myNavbar .nav-tabs>li>a {
+    font-weight: bold;
+    color: rgb(65, 65, 65) !important;
+    text-decoration: none !important;
+    font-size: 20px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
 }
 .itinerary_title h2 {
     margin:0 ;  
@@ -408,6 +445,14 @@ p.featured {
     margin-top: 15px;
     font-weight: bold;
     font-size: 20px;
+  
+    width:100%;
+}
+#addon{
+    background: #fdfdfd;
+    padding: 20px 18px;
+    border-radius: 15px;
+    border: 1px solid #ebebeb;
 }
 .full_itinerary {
     width: 100%;
@@ -484,7 +529,53 @@ p.featured {
 }
 /* service box*/
 
+/* btn */
 
+.new_btn_inquire{
+background-color: #1f4bc4 ;
+border: 0;
+margin: 15px auto;
+display: table;
+color: #fff;
+font-size: 22px;
+
+border-radius: 40px;
+padding: 10px 45px;
+font-weight: bold;
+}
+.page-header{
+    margin: 0;
+}
+
+/*form inquery */
+.program_content_form {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+}
+.program_box_data_book {
+    border-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(155,155,155,0.5);
+    background-color: #fbfbfb;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ebebeb;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+    width: 100%;
+    float: left;
+    top: 0;
+    position: relative;
+}
+
+.program_box_data_book_title {
+    font-size: 20px;
+    color: #2c2c2c;
+    font-weight: bold;
+    line-height: 1.47;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
 
 /* media query */
 @media only screen and (max-width: 600px){
