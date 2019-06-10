@@ -24,7 +24,7 @@
 				</div>
 			</form>
 		</div>
-	<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">					
+	<div class="col-md-6 col-lg-2 mb-4 mb-lg-0">					
 	  <div class="col-md">                  
 			<ul class="footer_li">
 				<li class="footer-list py-1">
@@ -37,7 +37,7 @@
 				</li>
 				<li class="footer-list py-1">
 					<a href="{{route('term')}}" class="link-gray lead footer_li">
-					<i class="link-gray text-1 fas fa-chevron-circle-right"></i> Terms of Use</a>
+					<i class="link-gray text-1 fas fa-chevron-circle-right"></i>Terms of Use</a>
 				</li>
 				<li class="footer-list py-1">
 					<a href="{{route('faq')}}" class="link-gray lead footer_li">
@@ -57,13 +57,15 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-2">
+			<div class="col-md-6 col-lg-3">
 				<h5 class="text-3 mb-3">FOLLOW US</h5>
 				<ul class="social-icons">
 					<li class="social-icons-facebook bg-fa"><a href="https://www.facebook.com/DeltaToursEgypt" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 					<li class="social-icons-twitter"><a href="https://twitter.com/deltatoursegypt" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
 					<li class="social-icons-instagram"><a href="https://www.instagram.com/explore/locations/405718209501462/delta-tours-egypt/" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a></li>
-					<li class="social-icons-tripadvisor"><a href="https://www.tripadvisor.com" target="_blank" title="google-plus"><i class="fab fa-tripadvisor"></i></a></li>
+					<li class="social-icons-tripadvisor"><a href="https://www.tripadvisor.com" target="_blank" title="tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
+					<li class="social-icons-twitter"><a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F405718209501462" target="_blank" title="messenger"><i class="fab fa-facebook-messenger"></i></a></li>
+					<li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UCd2xNH3yvFs609eucWNYJTg" target="_blank" title="youtube"><i class="fab fa-youtube"></i></a></li>
 				</ul>
 			</div>
 		</div>

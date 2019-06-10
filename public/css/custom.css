@@ -1,7 +1,14 @@
 /* main style */
 body{
     background-color: #fafafa;
-    position: relative;   
+    position: relative; 
+    color: #000;  
+}
+p ,h2 {
+    color: #000!important;
+}
+h2{
+    margin-bottom: 0 ;
 }
 a:hover{
     text-decoration: none;
@@ -34,10 +41,11 @@ ul li {
 }
 
 .text-blue{
-	color:#1f4bc4;
+	color:#1f4bc4 !important;
 }
+/* custmiza pink to blue */
 .text-orange1{
-    color: #f7b506;
+    color: #1750ee;
     margin: 0 auto;
 }
 /* main style */
@@ -177,7 +185,7 @@ ul li {
 		font-size: 16px;
 	}
 	.home_special_offer_types {
-		color:#fc9c9c;
+		color:#1750ee;
 	}
 	.home_special_offer#programs {
     height: 500px;
@@ -289,12 +297,11 @@ font-size: 20px;
     background-color:#fbd3d3 !important;
     color: #fff;
 }
+/*cusmize fron pink to blue*/
 .light-rose{
-    color:#fbd3d3;
+    color:#1750ee
 }
-.light-rose:hover{
-    color:#1442C1;
-}
+
 p.featured {
     font-size: 1.8em;
     line-height: 1.5em;
@@ -332,6 +339,7 @@ p.featured {
 }
 .footer_li{
     font-size: 1.1em;
+    padding-left: 0 !important;
 }
 
 .slider-image{
@@ -474,7 +482,7 @@ p.featured {
     font-weight: bold;
     margin-bottom: 1em;
 }
-}
+
 /*single tour*/
 
 
@@ -607,14 +615,26 @@ font-weight: bold;
     color: #184161;
 }
 
+/*edit navbar link color color*/
+
+
+#footer .footer-copyright p a {
+    color: #777 !important;
+}
+#footer a:not(.btn) ,#header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span ,.social-icons li a{
+    color: #000!important;
+}
+#footer #sub-menu a ,#footer .footer-copyright p{
+    color: #fff!important;
+}
+#header .header-nav{
+    min-height: 80px;
+}
 /* media query */
 @media only screen and (max-width: 600px){
     .slider-image ,#footer .footer-copyright nav ,#myNavbar{
         display: none
     } 
-    .footer_li{
-        padding-left: 0
-    }
     #footer .footer-copyright p{
         text-align: center
     }

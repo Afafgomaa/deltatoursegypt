@@ -93,6 +93,8 @@
 		<li class="twitter"><a href="https://twitter.com/deltatoursegypt" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
 		<li class="instagram"><a href="https://www.instagram.com/explore/locations/405718209501462/delta-tours-egypt/" target="_blank" title="instagarm"><i class="fab fa-instagram"></i></a></li>
 		<li class="tripadvisor"><a href="https://www.tripadvisor.com" target="_blank" title="tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
+		<li class="messenger"><a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F405718209501462" target="_blank" title="messenger"><i class="fab fa-facebook-messenger"></i></a></li>
+		<li class="youtuob"><a href="https://www.youtube.com/channel/UCd2xNH3yvFs609eucWNYJTg" target="_blank" title="youtuob"><i class="fab fa-youtube"></i></a></li>
 	</ul>
 <div class="home-intro" id="home-intro">
 	<div class="container">

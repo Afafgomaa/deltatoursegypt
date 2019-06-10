@@ -138,7 +138,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 8 days - 7 nights 
-                                <h5 class="shorter">Cairo-Luxor-Aswan <span style="color:red  ">( Nile Cruise) </span></h5> 
+                                <h5 class="shorter">Cairo-Luxor-Aswan <span>( Nile Cruise) </span></h5> 
                         </div>
                    </div>
                    <div class="home_special_offer_description">
@@ -175,7 +175,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 9 days - 8 nights  
-                                <h5 class="shorter">Cairo-Luxor-Aswan-Cairo <span style="color:red  ">( Nile Cruise) </span> </h5>
+                                <h5 class="shorter">Cairo-Luxor-Aswan-Cairo <span>( Nile Cruise) </span> </h5>
                         </div>
                    </div>
                    <div class="home_special_offer_description">
@@ -212,7 +212,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 10 days - 9 nights  
-                                <h5 class="shorter">Cairo-Luxor-Aswan- Abu Simbel   <span style="color:red  ">( Nile Cruise) </span> </h5>
+                                <h5 class="shorter">Cairo-Luxor-Aswan- Abu Simbel   <span>( Nile Cruise) </span> </h5>
                         </div>
                    </div>
                    <div class="home_special_offer_description">
@@ -250,7 +250,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 10 days - 9 nights  
-                                <h5 class="shorter">Cairo-Luxor-Aswan-Alexandria   <span style="color:red  ">( Nile Cruise) </span> </h5>
+                                <h5 class="shorter">Cairo-Luxor-Aswan-Alexandria   <span>( Nile Cruise) </span> </h5>
                         </div>
                    </div>
                    <div class="home_special_offer_description">
@@ -287,7 +287,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 10 days - 9 nights  
-                                <h5 class="shorter">Cairo-Aswan-luxor-Hurghada-Cairo <span style="color:red  ">( Nile Cruise) </span></h5>
+                                <h5 class="shorter">Cairo-Aswan-luxor-Hurghada-Cairo <span>( Nile Cruise) </span></h5>
                         </div>
                    </div>
                    <div class="home_special_offer_description">
@@ -324,7 +324,7 @@
                         </div>
                         <div class="home_special_offer_types_box">
                                 10 days - 9 nights  
-                                <h5 class="shorter">Cairo - Aswan - Luxor - Sharm -Cairo  <span style="color:red  ">( Nile Cruise) </span></h5>
+                                <h5 class="shorter">Cairo - Aswan - Luxor - Sharm -Cairo  <span>( Nile Cruise) </span></h5>
                         </div>
                    </div>
                    <div class="home_special_offer_description">

@@ -129,7 +129,7 @@
     });
   });
 
-
+      /* scroll fixed */
 	$(window).scroll(function(){
 		var fromTop = $(window).scrollTop();
 		var progHeight = $(".program_content").height() + 530;
@@ -140,11 +140,13 @@
 			$(".program_box .navbar").css({"position":'fixed', "top":'91px'});
 		}
 		if (fromTop >= progHeight){
-			$(".program_box .navbar").css({"position":'relative', "top":'0px'});
+            $(".program_box .navbar").css({"position":'relative', "top":'0px'});
+            
 
 		}
 	});	
 
+     /* scroll fixed */
 
     /* datepiker options open and close */
     $('.datepicker').datepicker({
