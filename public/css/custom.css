@@ -665,7 +665,7 @@ td {
 }
 .btn-orange {
     background: #ed4830;
-    background-image: linear-gradient(180deg,#ee3d23,#eb5a45);
+    background-image: linear-gradient(180deg,#ee3d23,#eb5a45);}
 
 /*edit navbar link color color*/
 
@@ -680,7 +680,7 @@ td {
     color: #fff!important;
 }
 #header .header-nav{
-    min-height: 80px;
+    min-height: 80px !important;
 }
 /* media query */
 @media only screen and (max-width: 600px){
