@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
 @section('content')
-
 <section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-primary overlay-show overlay-op-8" style="background-image: url('images/budget_egypt.jpg');">
         <div class="container">
             <div class="row">
