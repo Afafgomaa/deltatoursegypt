@@ -9,8 +9,8 @@
 	<div class="col-md-12">
 		<div class="accordion pt-5 pb-5" id="accordion">
 		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#Booking" aria-expanded="true">
-		    Booking
-		</a>
+		    Booking         
+		</a>                             
 		<section id="Booking" class="collapse show">
 	   <p>
 			<strong> 1. Why book with Delta Tours Egypt ?</strong> <br>

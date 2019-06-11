@@ -13,7 +13,7 @@
                     feeling the spirit of pharaohs & the mystery of the Nile.</span>
                 </div>
                 <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                    <a href="{{route('Tailor_Made')}}" class="btn btn-modern bg-light-rose mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
+                    <a href="{{route('Tailor_Made')}}" class="btn btn-modern mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
                 </div>
                 <div class="appear-animation d-inline-block" data-appear-animation="rotateInUpRight" data-appear-animation-delay="500">
                     <span class="arrow hlt" style="top: 40px;"></span>

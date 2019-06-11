@@ -19,9 +19,17 @@
                         <span class="amount text-blue">From 45 USD </span>
                         <p>It is a fabulous way to enjoy a night on the Nile while you are in Cairo. So, you are invited to dinner on a cruise boat for two hours sailing trip on the Nile with belly dancer, folklore show, Oriental music and dinner on a 5 star cruise. All the time, you'll be delighted in our Chef's menu along with a selection of Egyptian favorites, made with the freshest ingredients, and prepared to make it a memorable dining experience...</p>
                         
+										</div>
+										<div class="col-md-12">
+										<select class="form-control">
+											<option>select Addon</option>
+											<option>Sound and Light show at Pyramids</option>
+											<option>Cairo Nile Dinner Cruise</option>
+										</select>
+										
                     </div>
-        </div>
-</div>
+                 </div>
+            </div>
 
 
 <div class="col-sm-12">

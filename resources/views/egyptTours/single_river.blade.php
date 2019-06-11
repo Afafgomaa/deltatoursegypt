@@ -4,9 +4,10 @@
 <div class="pt-5 pb-5">
     <div class="container">
       <div class="row">
-       <!-- img section -->
+              <!-- img section -->
+
         <div class="col-lg-6 col-xs-12">
-            <div class="owl-carousel owl-theme nav-inside nav-style-1 nav-light mb-0" id="mainImage" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+            <div class="owl-carousel owl-theme" id="mainImage" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 3000}">
                 <div>
                     <div class="img-thumbnail border-0 p-0 d-block">
                         <img class="img-fluid border-radius-0 img-rounded" src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" alt="">
@@ -14,7 +15,7 @@
                 </div>
                 <div>
                     <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
+                        <img class="img-fluid border-radius-0 " src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
                     </div>
                 </div>
                 <div>
@@ -33,6 +34,7 @@
                     </div>
                 </div>
             </div>
+            <!--
             <div id="divContainer" class="text-center">
                     <img src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" class="slider-image img-responsive">
                     <img src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" class="slider-image img-responsive">
@@ -40,17 +42,18 @@
                     <img src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" class="slider-image img-responsive">
                     <img src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" class="slider-image img-responsive">
             </div>
+-->
         </div>
+
      <!-- description section -->
         <div class="col-md-6 col-xs-12">
             <div class="summary entry-summary">
-                    <h1 class="short big">river nile    </h1>
+                    <h1 class="short big">River Tour  </h1>
                     <div class=" col-md-6 review_num">
                             Package Type : <span style="color:black">Private</span>
                     </div>
                     <div class=" col-md-8 review_num">
-                        <h6 class="shorter" style="color:#0088cc">4 Days - 3 Nights </h6>
-                        <h6 class="shorter" style="color:#0088cc">start From 12/3/2019</h6>
+                        <h6 class="shorter f-2" style="color:#0088cc">4 Days - 3 Nights </h6>
                     </div>
                     <div class=" col-md-8 review_num">
                         <h6 class="shorter" style="color:orange">Cairo </h6>
@@ -63,7 +66,24 @@
                                 Egyptian museum, Old Cairo , Coptic museum as well  felucca ride on the Nile 
                         </p> 
                     </div>
-                   
+                    
+                    <div class="col-xs-12 heighlieth review_num">
+                        <h4 class="shorter text-blue">package Highlights</h4>
+                        <div class="col-xs-12 review_num">
+                            <ul>
+                                <li><i class="fa fa-dot-circle text-blue"></i> 3 Nights Cairo  .</li>
+                                <li><i class="fa fa-dot-circle text-blue"></i> 4 Breakfasts and 2 Lunches   .</li>
+                                <li><i class="fa fa-dot-circle text-blue"></i> Meet at airport Upon arrival   .</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 review_num">	   
+                            <ul>
+                                <li><i class="fa fa-dot-circle text-blue"></i> Multi Lingua tour leader guide</li>	
+                                <li><i class="fa fa-dot-circle text-blue"></i> all Transfers by AC Minibus  .</li>
+                            </ul>
+                        </div>                            
+                    </div>
+                   <div style="clear:both"></div>
                     <div class="col-md-12 tag">
                         <h5 class="shorter text-blue"> Holiday included sights</h5>
                             <span class="label label-primary">Egyptian museum</span>
@@ -80,7 +100,7 @@
                     <div class="col-md-12">
                       
                         <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#myModal">
-                                <a href="{{route('Tailor_Made')}}"> Send inquiry </a>
+                                                        Send inquiry 
                         </button>
                       
                                 <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
