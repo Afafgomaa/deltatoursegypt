@@ -108,7 +108,7 @@
         </div>
     </div>
 </div>
-
+@include('includes_front.faq')
 @endsection
 
 

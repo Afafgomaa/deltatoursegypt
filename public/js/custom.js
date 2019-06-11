@@ -1,21 +1,6 @@
+$(document).ready(function() {
 
- $(document).ready(function() {
-
-    $('#divContainer img').on({
-        mouseover: function() {
-            $(this).css({ 'cursor':'pointer'}).addClass('img-thumbnail')
-        },
-        mouseleave :function(){
-            $(this).css({ 'cursor':'default'}).removeClass('img-thumbnail')
-        },
-        click : function(){
-            var imageUrl = $(this).attr('src');
-            $('#mainImage').fadeOut(500,function(){
-                $(this).attr('src',imageUrl);
-            }).fadeIn(300);
-        }
-
-    });
+  
     $(".full_itinerary_box").each(function(){		
         $(this).find(".itinerary_desc").hide();
         $(this).find("#itinerary_desc_1").show();
@@ -132,9 +117,9 @@
       /* scroll fixed */
 	$(window).scroll(function(){
 		var fromTop = $(window).scrollTop();
-		var progHeight = $(".program_content").height() + 530;
+		var progHeight = $(".program_content").height() + 680;
 
-		if (fromTop <= 530 ){
+		if (fromTop <= 680 ){
 			$(".program_box .navbar").css({"position":'relative', "top":'0px'});
 		}else{
 			$(".program_box .navbar").css({"position":'fixed', "top":'91px'});
@@ -161,7 +146,29 @@
             
 
     });
-     /* datepiker options open and close */
+         /* datepiker options open and close */
+
+    $('#divContainer img').on({
+        click : function(){
+            var imageUrl = $(this).attr('src');
+            $('.img-rounded').fadeOut(500,function(){
+                $(this).attr('src',imageUrl);
+            }).fadeIn(300);
+        },
+        mouseover: function() {
+            $(this).css({ 'cursor':'pointer'})
+        },
+        mouseleave :function(){
+            $(this).css({ 'cursor':'default'})
+        }
+        
+
+    });
+    
+
+
+
+
 
 });
 

@@ -39,11 +39,22 @@ ul li {
 ::-webkit-scrollbar-thumb:hover {
   background:#fbd3d3; 
 }
-
+/* main style */
 .text-blue{
 	color:#1f4bc4 !important;
 }
 /* custmiza pink to blue */
+.bg-light-1{
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    padding: 2em 0;
+    float: left;
+    width: 100%;
+    position: relative;
+    margin:2em 0;
+    padding: 2em;
+}
 .text-orange1{
     color: #1750ee;
     margin: 0 auto;
@@ -51,7 +62,21 @@ ul li {
 .lead strong{
     font-weight: 400 !important;
 }
-/* main style */
+.f-2{
+    font-size: 2em;
+    line-height: 32px;
+}
+.review_num{
+    margin-bottom: 12px;
+}
+.heighlieth ul {
+    display: inline-block;
+    float: left;
+}
+.heighlieth h4{
+    margin-left: 15px;
+}
+
 .center-f{
     text-align: center;
     font-style: italic;
@@ -351,7 +376,7 @@ p.featured {
     cursor: pointer;
 }
 .program_box .navbar {
- z-index: 9999;
+ z-index: 1000;
 }
 #myNavbar .nav-tabs {
     border-bottom: 2px solid #DDD;
@@ -390,8 +415,8 @@ p.featured {
 }
 .itinerary_title h2 {
     margin:0 ;  
-    font-size: 18px;
-    font-weight: 500
+    font-size: 16px;
+    font-weight: 400
 }
 
 /*  single tour*/
@@ -427,27 +452,33 @@ p.featured {
      margin: 15px;
      width:100%;
 }
-#addon{
-    background: #fdfdfd;
-    padding: 20px 18px;
-    border-radius: 15px;
+  
+.full_itinerary_box{
     border: 1px solid #ebebeb;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fdfdfd;
+
 }
 .full_itinerary {
     width: 100%;
     float: left;
     list-style-type: none;
-    counter-reset: div-counter;
+    margin:2em 0;
+    border-radius: 10px;
 }
-.full_itinerary_box, .prices_box, .cruise_iti_repeat, #reviews2_boxes {
+.prices_box, .cruise_iti_repeat, #reviews2_boxes {
     border: 1px solid #ebebeb;
     border-radius: 10px;
     background-color: #fdfdfd;
-    padding: 10px;
+    padding: 2em 0;
     float: left;
     width: 100%;
     position: relative;
-    margin-bottom: 10px;
+    margin:2em 0;
 }
 .full_itinerary_box .itinerary_title {
     float: left;
@@ -460,7 +491,6 @@ p.featured {
 .full_itinerary_box .itinerary_desc {
     font-size: 15px;
     padding: 20px 0 0 0;
-    border-top: 1px solid #e1e1e1;
     margin: 34px 20px;
 }
 
@@ -507,7 +537,9 @@ p.featured {
 	margin:1em 0;
 }
 /* service box*/
-
+#divContainer{
+    background: #000;
+}
 /* btn */
 
 .new_btn_inquire{
@@ -609,7 +641,11 @@ font-weight: bold;
     text-align: left;
     color: #184161;
 }
+.lightbox{
+    margin-bottom: 1em;
+    margin-top: 14px;
 
+}
 /* table */
 .table{
     color: #212529;
@@ -682,6 +718,11 @@ td {
 #header .header-nav{
     min-height: 80px !important;
 }
+/**edit  light box accomdation*/
+.img-thumbnail.img-thumbnail-hover-icon:after{
+    right: 2px;
+}
+
 /* media query */
 @media only screen and (max-width: 600px){
     .slider-image ,#footer .footer-copyright nav ,#myNavbar{
