@@ -133,6 +133,8 @@ $(document).ready(function() {
 
      /* scroll fixed */
 
+
+
     /* datepiker options open and close */
     $('.datepicker').datepicker({
         duration: "slow",
@@ -146,27 +148,15 @@ $(document).ready(function() {
             
 
     });
-         /* datepiker options open and close */
-
-    $('#divContainer img').on({
-        click : function(){
-            var imageUrl = $(this).attr('src');
-            $('.img-rounded').fadeOut(500,function(){
-                $(this).attr('src',imageUrl);
-            }).fadeIn(300);
-        },
-        mouseover: function() {
-            $(this).css({ 'cursor':'pointer'})
-        },
-        mouseleave :function(){
-            $(this).css({ 'cursor':'default'})
-        }
-        
-
-    });
-    
+    /* datepiker options open and close */
+  
 
 
+                       
+
+
+             
+  
 
 
 

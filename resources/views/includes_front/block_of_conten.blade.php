@@ -91,6 +91,7 @@
 						     @include('includes_front.pricing')
 									
 									@include('includes_front.addon')
+									@include('includes_front.send_enquery')
          </div>
         </div>
 			 </div>

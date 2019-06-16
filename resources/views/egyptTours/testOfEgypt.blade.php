@@ -99,7 +99,7 @@
 
                     <div class="col-md-12">
                       
-                        <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#myModal">
+                        <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#formModal">
                                                         Send inquiry 
                         </button>
                       

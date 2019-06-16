@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 	<head>
 		<!-- Basic -->
 		<meta name="msvalidate.01" content="27074DA57508D48CE2BD5339109BDD9D" />
@@ -81,7 +80,7 @@
 
 
              @yield('content')
-
+			 
 			@include('includes_front.footer')
 
 		</div>
@@ -137,3 +136,4 @@
 		 -->
 
 	</body>
+	

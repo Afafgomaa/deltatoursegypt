@@ -38,8 +38,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
             </div>
 
             <div class="col-md-2 col-xs-12">
-                <label>
-                    Arrival Date *</label>
+                <label>Arrival Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
                         <input name="departure" value="" type="text" class="form-control datepicker"
@@ -51,8 +50,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 </div>
             </div>
             <div class="col-md-2 col-xs-12">
-                <label>
-                    Departure Date *</label>
+                <label>Departure Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
                         <input name="departure" value="" type="text" class="form-control datepicker"

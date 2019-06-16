@@ -83,7 +83,6 @@
 									</li>
 									<li>
 										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
-									</li>
 
                                     <li>
 										<a  href="{{route('blog')}}">blog</a>	

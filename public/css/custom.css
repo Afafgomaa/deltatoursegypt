@@ -733,6 +733,7 @@ td {
     right: 2px;
 }
 
+
 /* media query */
 @media only screen and (max-width: 600px){
     .slider-image ,#footer .footer-copyright nav ,#myNavbar{
