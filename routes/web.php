@@ -44,7 +44,21 @@ Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('egypt-faq', 'faq')->name('faq');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
+Route::get('/profile',[
+   'uses' => 'AvatarController@index',
+   'as'   => 'profile'
+]);
+
+Route::get('admin',[
+   'uses' => 'AdminController@index',
+   'as'   => 'Admin' 
+]);
 
 
 
+Route::resource('avatar','AvatarController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

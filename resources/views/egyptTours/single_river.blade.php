@@ -102,6 +102,7 @@
                         <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#formModal">
                                                         Send inquiry 
                         </button>
+                        
     
                                 <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
                         <div id="ciFERd" style="z-index:100;position:absolute">

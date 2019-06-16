@@ -139,6 +139,7 @@ $(document).ready(function() {
     $('.datepicker').datepicker({
         duration: "slow",
         showAnim: "slideDown", 
+        dateFormat:'dd-mm-yy',
         showOptions: {direction: "down"} 
     });
     

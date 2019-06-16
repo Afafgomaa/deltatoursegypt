@@ -130,7 +130,6 @@
 
 
 @include('includes_front.programs')
-@include('includes_front.video')
 @include('includes_front.blog')
 @include('includes_front.table_latest_tour')
 @include('includes_front.why_us')
