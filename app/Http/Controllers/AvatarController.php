@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\Models\Media;
+use App\images;
+ 
 
 class AvatarController extends Controller
 {
@@ -13,7 +16,10 @@ class AvatarController extends Controller
      */
     public function index()
     {
-        $avatars = Auth()->user()->getMedia();
+
+        $avatars = images::find(1)->getMedia('tour'); 
+    
+  
         return view('admin/media', compact('avatars'));
     }
 
@@ -35,8 +41,8 @@ class AvatarController extends Controller
      */
     public function store(Request $request)
     {
-        $user = auth()->user();
-        $user->addMedia($request->avatar)->toMediaCollection();
+        $image = images::find(1); 
+        $image->addMedia($request->avatar)->toMediaCollection('tour'); 
         return redirect()->back();
     }
 
@@ -82,6 +88,9 @@ class AvatarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+      Media::where('id', $id )->delete();
+
+        return redirect()->back();
     }
 }

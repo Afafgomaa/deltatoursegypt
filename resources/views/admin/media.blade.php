@@ -41,23 +41,27 @@
         <div class="row">
 
           <p>Media gallery</p>
+      
         @foreach($avatars as $avatar)
           <div class="col-md-55">
             <div class="thumbnail">
               <div class="image view view-first">
-                <img style="width: 100%; display: block;" src="{{$avatar->getUrl()}}" alt="image">
+                <img style="width: 100%; display: block;" src="{{$avatar->getUrl() ?? ''}}">
                 <div class="mask">
                   <p>Image</p>
                   <div class="tools tools-bottom">
-                    <a href="#"><i class="fa fa-link"></i></a>
-                    <a href="#"><i class="fa fa-times"></i></a>
+                   
+                    <button class="copy" data-clipboard-target="#copy-me"><i class="fa fa-link"></i></button>
+                    <a href="{{route('media.delete',['id' =>  $avatar->id] ) }}"><i class="fa fa-times"></i></a>
                   </div>
+                  <input  value="{{$avatar->getFullUrl()}}" id="copy-me">
                 </div>
               </div>
             </div>
           </div>
         @endforeach
-          
+
+      
         </div>
       </div>
     </div>

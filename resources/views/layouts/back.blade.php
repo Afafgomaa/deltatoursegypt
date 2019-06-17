@@ -29,6 +29,7 @@
 
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">
@@ -91,8 +92,18 @@
     <script src="{{asset('vendors/moment/min/moment.min.js')}}"></script>
     <script src="{{asset('vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
-	
+<script>
+new Clipboard('.copy');
+    
+
+</script>
   </body>
 </html>

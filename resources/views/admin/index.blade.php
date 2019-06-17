@@ -695,7 +695,10 @@
             </div>
           </div>
         </div>
+
+
         <!-- /page content -->
+
 
         <!-- footer content -->
         <footer>

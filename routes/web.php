@@ -56,6 +56,10 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'AvatarController@index',
       'as'   => 'media'
    ]);
+   Route::get('/iamge/delete/{id}',[
+      'uses' => 'AvatarController@destroy',
+      'as'   => 'media.delete'
+   ]);
    
 });
 
