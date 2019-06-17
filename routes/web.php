@@ -44,16 +44,20 @@ Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('egypt-faq', 'faq')->name('faq');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
-Route::get('/profile',[
-   'uses' => 'AvatarController@index',
-   'as'   => 'profile'
-]);
 
 Route::get('admin',[
    'uses' => 'AdminController@index',
    'as'   => 'Admin' 
 ]);
 
+
+Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
+   Route::get('/media',[
+      'uses' => 'AvatarController@index',
+      'as'   => 'media'
+   ]);
+   
+});
 
 
 Route::resource('avatar','AvatarController');

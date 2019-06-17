@@ -11,6 +11,7 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
+    
     <link href="{{asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{asset('/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -30,14 +31,18 @@
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
   </head>
 
-
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
 
  
 
     @yield('content')
 
 
-
+    </div>
+  </div>
+<body>
 
 
 
