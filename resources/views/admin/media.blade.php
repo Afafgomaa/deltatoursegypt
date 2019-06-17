@@ -50,18 +50,16 @@
                 <div class="mask">
                   <p>Image</p>
                   <div class="tools tools-bottom">
-                   
-                    <button class="copy" data-clipboard-target="#copy-me"><i class="fa fa-link"></i></button>
+                    <button class="copy" data-clipboard-text="{{$avatar->getFullUrl()}}"><i class="fa fa-link"></i></button>
                     <a href="{{route('media.delete',['id' =>  $avatar->id] ) }}"><i class="fa fa-times"></i></a>
                   </div>
-                  <input  value="{{$avatar->getFullUrl()}}" id="copy-me">
                 </div>
+                
               </div>
+             <h4 class="text-center"> {{$avatar->name}} </h4>
             </div>
           </div>
         @endforeach
-
-      
         </div>
       </div>
     </div>

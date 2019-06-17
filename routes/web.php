@@ -36,6 +36,10 @@ Route::get('/blog',[
    'as' => 'blog'
    ]);
 
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
 Route::view('all-Nile-River-Cruises', 'main_packeges_river')->name('all-Nile-River-Cruises');
 Route::view('cairo-egypt-budget-holiday-tour-package', 'egyptTours/testOfEgypt')->name('single_tour');
 Route::view('about-us', 'about_us')->name('about_us');
@@ -45,12 +49,12 @@ Route::view('egypt-faq', 'faq')->name('faq');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
 
+
+
 Route::get('admin',[
    'uses' => 'AdminController@index',
    'as'   => 'Admin' 
 ]);
-
-
 Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    Route::get('/media',[
       'uses' => 'AvatarController@index',
@@ -60,13 +64,22 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'AvatarController@destroy',
       'as'   => 'media.delete'
    ]);
+   Route::resource('avatar','AvatarController');
+   Route::get('/slider', [
+      'uses' => 'HomeController@slider',
+      'as'   => 'slider'
+   ]);
+   Route::post('/slider/store', [
+      'uses' => 'HomeController@slider_store',
+      'as'   => 'slider.store'
+   ]);
+
+
    
 });
 
 
-Route::resource('avatar','AvatarController');
 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

@@ -6,7 +6,7 @@
 		<div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 670, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'parallax': { 'type': 'scroll', 'origo': 'enterpoint', 'speed': 1000, 'levels': [2,3,4,5,6,7,8,9,12,50], 'disable_onmobile': 'on' }, 'navigation' : {'arrows': { 'enable': true }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
 			<ul>
 				<li data-transition="fade">
-					<img src="images/slider_bg_1.jpg"  
+					<img src="{{$slider_1}}"  
 					alt=""
 					data-bgposition="center center" 
 					data-bgfit="cover" 
@@ -17,7 +17,7 @@
 						data-x="center"
 						data-y="center"
 						data-fontsize="['50','50','50','90']"
-						data-lineheight="['55','55','55','95']">Egypt HOLIDAYS
+						data-lineheight="['55','55','55','95']">{{strtoupper($title_1)}}
 					</div>
 					<div class="tp-caption text-color-light"
 						data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
@@ -25,11 +25,11 @@
 						data-y="center" data-voffset="['40','40','40','80']"
 						data-fontsize="['18','18','18','50']"
 						data-lineheight="['20','20','20','55']"
-						style="color: #b5b5b5;">all inclusive holidays to egypt on a budget price .
+						style="color: #b5b5b5;">{{$desc_1}}
 					</div>			
 			    </li>
 				<li class="slide-overlay" data-transition="fade">
-					<img src="images/slider_bg_2.jpg"  
+					<img src="{{$slider_2}}"  
 						alt=""
 						data-bgposition="center center" 
 						data-bgfit="cover" 
@@ -48,7 +48,7 @@
 						data-x="center"
 						data-y="center"
 						data-fontsize="['50','50','50','90']"
-						data-lineheight="['55','55','55','95']">Nile Cruise Holidays 
+						data-lineheight="['55','55','55','95']">{{strtoupper($title_2)}}
 					</div>
 					<div class="tp-caption font-weight-light ws-normal text-center"
 						data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
@@ -62,7 +62,7 @@
 								
 				</li>
 				<li class="slide-overlay slide-overlay-dark" data-transition="fade">
-					<img src="images/slider_bg_3.jpg"  
+					<img src="{{$slider_3}}"  
 						alt=""
 						data-bgposition="center center" 
 						data-bgfit="cover" 
@@ -73,7 +73,7 @@
 						data-x="center"
 						data-y="center"
 						data-fontsize="['50','50','50','90']"
-						data-lineheight="['55','55','55','95']">Red Sea Holidays
+						data-lineheight="['55','55','55','95']">{{strtoupper($title_3)}}
 						
 					</div>
 					<div class="tp-caption text-color-light"
@@ -82,7 +82,11 @@
 						data-y="center" data-voffset="['40','40','40','80']"
 						data-fontsize="['18','18','18','50']"
 						data-lineheight="['20','20','20','55']"
-						style="color: #b5b5b5;">Combine your Visit to egypt with a Relaxing stay  <br/>on the red sea Shore
+						style="color: #b5b5b5;">@if(strlen($desc_3) > 50)
+																			{{substr($desc_3 , 0, 50)}}
+																		   	<br>
+																			{{substr($desc_3 , 50 )}}
+					                        	@endif
 					</div>
 				</li>
 			</ul>
