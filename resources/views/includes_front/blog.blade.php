@@ -12,47 +12,18 @@
                         you'll find it all in our travel blog.y        
                 </div>
             </div>
+
+        @foreach($blog as $post)
         <div class="col-md-3">
             <div class="featured_articles_slider_box">
-                <a href="/blog/Things-to-know-before-traveling-to-india">
-                    <div class="featured_articles_slider_box_image" title="" style="background-image: url('images/Zahra.jpg')">
-                       <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
+                <a href="{{$post->image}}">
+                    <div class="featured_articles_slider_box_image" title="" style="background-image: url('{{$post->image}}')">
+                       <div class="featured_articles_slider_box_title">{{$post->title}}</div>
                    </div>
                 </a>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="featured_articles_slider_box">
-                <a href="/blog/Things-to-know-before-traveling-to-india">
-                    <div class="featured_articles_slider_box_image" title="" style="background-image: url('images/Zahra.jpg')">
-                       <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
-                   </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="featured_articles_slider_box">
-                <a href="/blog/Things-to-know-before-traveling-to-india">
-                    <div class="featured_articles_slider_box_image" title="" style="background-image: url('images/Zahra.jpg')">
-                       <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
-                   </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="featured_articles_slider_box">
-                <a href="/blog/Things-to-know-before-traveling-to-india">
-                    <div class="featured_articles_slider_box_image" title="" style="background-image: url('images/Zahra.jpg')">
-                       <div class="featured_articles_slider_box_title">8 Etiquette Rules to Know Before Traveling to India</div>
-                   </div>
-                </a>
-            </div>
-        </div>
-
-
-        
+        </div> 
+        @endforeach
        </div>
     </div>
 </div>

@@ -42,6 +42,12 @@
                       <li><a href="{{ route('media') }}">Media Gallery</a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-desktop"></i> Blog <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('post.create') }}">Add Post</a></li>
+                      <li><a href="{{ route('post.index') }}">Show All Post</a></li>
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="tables.html">Tables</a></li>

@@ -52,9 +52,11 @@ class HomeController extends Controller
         'description_3' => $request->slider_3_description
 
         ]);
-        return redirect()->back();
+        
 
         $sliders->save();
-      // dd($request->all());
+        
+        return redirect()->back();
+      
     }
 }

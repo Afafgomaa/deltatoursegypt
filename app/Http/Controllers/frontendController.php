@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\slider;
+use App\post;
 class frontendController extends Controller
 {
 
     public function index(){
+       
         
         return view('welcome')->with('slider_1', slider::first()->slider_1)
                               ->with('slider_2', slider::first()->slider_2)
@@ -17,7 +19,8 @@ class frontendController extends Controller
                               ->with('title_3' , slider::first()->title_3)
                               ->with('desc_1' , slider::first()->description_1)
                               ->with('desc_2' , slider::first()->description_2)
-                              ->with('desc_3' , slider::first()->description_3);
+                              ->with('desc_3' , slider::first()->description_3)
+                              ->with('blog', post::where(['add_to_home_page'=> 1])->take(4)->get());
                               
     }
 

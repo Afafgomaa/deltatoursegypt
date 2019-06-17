@@ -65,6 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'as'   => 'media.delete'
    ]);
    Route::resource('avatar','AvatarController');
+   Route::resource('post','PostController');
    Route::get('/slider', [
       'uses' => 'HomeController@slider',
       'as'   => 'slider'
