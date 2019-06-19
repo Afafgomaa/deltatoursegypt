@@ -84,6 +84,8 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'as'   => 'post.kill'
    ]);
 
+   Route::get('send', 'mailController@send');
+
 
    
 });

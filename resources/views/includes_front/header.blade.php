@@ -59,6 +59,7 @@
 												<li class="dropdown-submenu">
                                                     <a class="dropdown-item" href="{{route('Packages')}}"> Egypt Adventure Tours</a>
                                                 </li>
+
 											</ul>
 									</li>
 									<li>
@@ -87,6 +88,10 @@
                                     <li>
 										<a  href="{{route('blog')}}">blog</a>	
 									</li>
+									<li>
+										<a  style="color:#F44336" href="{{route('Admin')}}">Admin Panel</a>
+									</li>
+									
                                     		
 								</ul>
 							</nav>

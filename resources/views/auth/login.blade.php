@@ -118,11 +118,17 @@
             <div class="form-group">
               <div class="col-md-6 col-md-offset-3">
                 <button id="send" type="submit" class="btn btn-success">{{ __('Login') }}</button>
+                or
+                <a class="btn btn-success" href="{{ route('register') }}">
+                        Sing Up
+                    </a>
+                <!--
                 @if (Route::has('password.request'))
                     <a class="btn btn-link" href="{{ route('password.request') }}">
                         {{ __('Forgot Your Password?') }}
                     </a>
                 @endif
+                -->
               </div>
             </div>
         </form>
