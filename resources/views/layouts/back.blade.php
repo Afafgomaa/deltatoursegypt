@@ -29,7 +29,11 @@
 
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+<style>
 
+
+
+</style>
   </head>
 
   <body class="nav-md">
@@ -55,6 +59,7 @@
 
 
     	<!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="{{asset('/vendors/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap -->
     <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
@@ -101,8 +106,28 @@
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
 <script>
+
 new Clipboard('.copy');
-    
+
+$( document ).ready(function() {
+
+
+  
+$('.checkbox').change(function() {
+
+  if($(this).is(":checked") ){
+  $(this).attr('value', '1') ;
+}else {
+  $(this).attr('value', '0')
+}
+
+});
+
+
+});
+
+
+
 
 </script>
   </body>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use App\post;
 use Illuminate\Http\Request;
 
@@ -66,7 +67,9 @@ class PostController extends Controller
      */
     public function edit(post $post)
     {
-        //
+        $post = post::find($post->id);
+        
+        return view('admin.blog.edit')->with('post', $post);
     }
 
     /**
@@ -78,7 +81,15 @@ class PostController extends Controller
      */
     public function update(Request $request, post $post)
     {
-        //
+            
+            $post->image = $request->image;
+            $post->title = $request->title;
+            $post->desc =  $request->desc;
+            $post->add_to_home_page = $request->home;
+        $post->save();
+
+        return redirect()->route('post.index');
+        
     }
 
     /**
@@ -89,6 +100,9 @@ class PostController extends Controller
      */
     public function destroy(post $post)
     {
-        //
+       $post  = post::find($post->id);
+       $post->delete();
+      // Session::flash('success', 'The Post was Just Trashed');
+       return redirect()->back();
     }
 }
