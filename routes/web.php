@@ -66,6 +66,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    Route::resource('avatar','AvatarController');
    Route::resource('post','PostController');
+   
    Route::get('/slider', [
       'uses' => 'HomeController@slider',
       'as'   => 'slider'
@@ -73,6 +74,14 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    Route::post('/slider/store', [
       'uses' => 'HomeController@slider_store',
       'as'   => 'slider.store'
+   ]);
+   Route::get('/posts/trashed', [
+      'uses' => 'PostController@delete',
+      'as'   => 'post.trashed'
+   ]);
+   Route::get('/posts/kill/{id}', [
+      'uses' => 'PostController@kill',
+      'as'   => 'post.kill'
    ]);
 
 
