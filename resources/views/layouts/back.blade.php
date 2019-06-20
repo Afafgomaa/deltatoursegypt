@@ -29,6 +29,8 @@
 
     <!-- Custom Theme Style -->
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+    <!-- tostr notifaction -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 <style>
 
 
@@ -103,28 +105,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
 
+   <!-- tostr notifaction -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
 <script>
 
+@if(Session::has('success'))
+
+toastr.success('{{Session::get("success")}}');
+
+@endif
+
 new Clipboard('.copy');
 
-$( document ).ready(function() {
-
-
-  
-$('.checkbox').change(function() {
-
-  if($(this).is(":checked") ){
-  $(this).attr('value', '1') ;
-}else {
-  $(this).attr('value', '0')
-}
-
-});
-
-
-});
 
 
 

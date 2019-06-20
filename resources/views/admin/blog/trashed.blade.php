@@ -25,7 +25,6 @@
                     <th class="column-title">Post Image</th>
                     <th class="column-title">Post Title </th>
                     <th class="column-title">Post Description </th>
-                    <th class="column-title"> Edit</th>
                     <th class="column-title"> restore</th>
                     <th class="column-title"> destroy</th>
 
@@ -39,8 +38,7 @@
                     <td class=" "><img src="{{$post->image}}" width="100%"></td>
                     <td class=" ">{{$post->title}} </td>
                     <td class=" ">{{$post->desc}}<i class="success fa fa-long-arrow-up"></i></td>
-                    <td class=" "><a href="{{route('post.edit', ['id' => $post->id])}}"><i class="fa fa-edit fa-lg"></i></a></td>
-                    <td class=" "><button class="btn btn-success btn-xs" type="submit">Restore</button></td>
+                    <td class=" "><a href="{{route('post.restore',['id' => $post->id ])}}" class="btn btn-success btn-xs" type="submit">Restore</button></td>
                     <td class=" "><a href="{{route('post.kill', ['id' => $post->id])}}" class="btn btn-danger btn-xs">Destory</a></td>
                 </tr>
             @endforeach
