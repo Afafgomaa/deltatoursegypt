@@ -36,6 +36,8 @@ Route::get('/blog',[
    'as' => 'blog'
    ]);
 
+Route::post('send', 'mailController@send')->name('mail');
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -88,7 +90,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'as'   => 'post.restore'
    ]);
 
-   Route::get('send', 'mailController@send');
+  
 
 
    

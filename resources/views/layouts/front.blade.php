@@ -58,7 +58,7 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
 
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 		
 		<!-- Demo CSS -->
 
@@ -117,6 +117,22 @@
 		
 		<!-- datebiker -->
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		   <!-- tostr notifaction -->
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="{{asset('build/js/custom.min.js')}}"></script>
+<script>
+
+@if(Session::has('success'))
+
+toastr.success('{{Session::get("success")}}');
+
+@endif
+
+
+
+</script>
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
 		

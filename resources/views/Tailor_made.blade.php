@@ -19,21 +19,22 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
     </div>
 </div>
 <div class="container">
-<form id="build_form" method="post" action="">    
+<form id="build_form" method="post" action="{{route('mail')}}">  
+   @csrf
     <div class="container">
         <div class="row">
            <div class="col-md-4 col-xs-12">
                 <label>Your Name </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <input name="name" value="" type="text" class="form-control">
+                    <input name="name" type="text" class="form-control" required>
                </div>
            </div>
             <div class="col-md-4 col-xs-12">
                 <label> Your Email </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <input name="email" value="" type="text" class="form-control">
+                    <input name="email" type="text" class="form-control" required>
                 </div>
             </div>
 
@@ -41,9 +42,9 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label>Arrival Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                        <input name="departure" value="" type="text" class="form-control datepicker"
-                          placeholder=" dd/mm/yyy " required="">
-                        <button type="button" class="ui-datepicker-trigger">
+                        <input name="arrivel" type="text" class="form-control datepicker"
+                          placeholder=" dd/mm/yyy " required>
+                        <button type="button" class="ui-datepicker-trigger" >
                         <i class="fa fa-calendar-alt"></i></button>
                     </div>
                     
@@ -53,8 +54,8 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label>Departure Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                        <input name="departure" value="" type="text" class="form-control datepicker"
-                         placeholder=" dd/mm/yyy " required="">
+                        <input name="departure"  type="text" class="form-control datepicker"
+                         placeholder=" dd/mm/yyy " required>
                         <button type="button" class="ui-datepicker-trigger">
                         <i class="fa fa-calendar-alt"></i></button>
                     </div>
@@ -66,7 +67,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label> Number Of Adults </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <input name="" value="" type="number" class="form-control">
+                    <input name="adults"  type="number" class="form-control">
                 </div>
             </div>
 
@@ -75,10 +76,10 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label>Style </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <select class="form-control">
+                    <select name="style" class="form-control" required>
                         <option selected disabled>Select Your Style</option>
-                        <option>Private</option>
-                        <option>Public</option>
+                        <option value="private">Private</option>
+                        <option value="public">Public</option>
                     </select>
                 </div>
             </div>
@@ -87,7 +88,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label> Promo/Referral Code </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <input name="" value="" type="text" class="form-control">
+                    <input name="Promo_Referral_code"  type="text" class="form-control">
                 </div>
             </div>
 
@@ -95,11 +96,11 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 <label> Comments (Special)</label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                  <textarea class="form-control" cols="4" rows="5"></textarea>
+                  <textarea name="comment" class="form-control" cols="4" rows="5"></textarea>
                 </div>
             </div>
             <div class="col-md-12">
-                <button class="new_btn_inquire" id="SubmitButton">
+                <button type="submit" class="new_btn_inquire" id="SubmitButton">
                             Send Message  
                 </button>
             </div>

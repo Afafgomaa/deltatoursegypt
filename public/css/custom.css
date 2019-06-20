@@ -169,6 +169,7 @@ ul li {
     color: #fff;
     background-color: rgba(0,0,0,0.45);
     width: 100%;
+    text-transform: uppercase;
 }
 .featured_articles_title {
     font-size: 20px;
