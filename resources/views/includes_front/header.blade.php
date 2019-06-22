@@ -89,7 +89,7 @@
 										<a  href="{{route('blog')}}">blog</a>	
 									</li>
 									<li>
-										<a  style="color:#F44336" href="{{route('Admin')}}">Admin Panel</a>
+										<a  style="color:#F44336" target="_blank" href="{{route('Admin')}}">Admin Panel</a>
 									</li>
 									
                                     		

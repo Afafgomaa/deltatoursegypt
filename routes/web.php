@@ -89,6 +89,14 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'PostController@restore',
       'as'   => 'post.restore'
    ]);
+   Route::get('/page/add', [
+      'uses' => 'PagesController@add',
+      'as'   => 'page.add'
+   ]);
+   Route::post('/page/store', [
+      'uses' => 'PagesController@store',
+      'as'   => 'page.store'
+   ]);
 
   
 
