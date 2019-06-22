@@ -97,6 +97,10 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'PagesController@store',
       'as'   => 'page.store'
    ]);
+   Route::post('/subpage/store', [
+      'uses' => 'PagesController@substore',
+      'as'   => 'subpage.store'
+   ]);
 
   
 

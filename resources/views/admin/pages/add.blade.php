@@ -21,8 +21,13 @@
         <div class="x_content"> 
           @foreach($pages as $page)
              <ul>{{$page->name}}</ul>
+             
+             @foreach($page->subPages as $subpage)
+               
+                <li> <i class="fa fa-arrow-right"> {{$subpage->name}}</i></li>
+               
+             @endforeach
           @endforeach
-        
          </div>
     </div>
 </div>
@@ -30,7 +35,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-            <h2>Pages </h2>
+            <h2>Main Pages </h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -59,7 +64,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <input type="text" id="title" name="title" required="required" class="form-control col-md-7 col-xs-12">
-                    <small>Title shows in home page and url </small>
+                    <small>Title shows as Heading in home page and url </small>
                 </div>
                 </div>
                 <div class="form-group">
@@ -89,7 +94,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-            <h2>Pages </h2>
+            <h2>Sub Pages </h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -100,7 +105,7 @@
             </div>
             <div class="x_content">
             <br>
-            <form id="demo-form2" method="post" action="{{route('page.store')}}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+            <form id="demo-form2" method="post" action="{{route('subpage.store')}}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
                 @csrf
                  <h3 style="color:#26B99A;font-weight:bold">Add New Subpage</h3>
                  <hr>
@@ -116,10 +121,22 @@
                 <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span class="required">*</span>
                 </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" id="title" name="title" required="required" class="form-control col-md-7 col-xs-12">
-                    <small>Title shows in home page and url </small>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="title" name="title" required="required" class="form-control col-md-7 col-xs-12">
+                        <small>Title shows as Heading in home page and url </small>
+                    </div>
                 </div>
+                <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Select main Page <span class="required">*</span>
+                 </label>
+                 <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select class="form-control col-md-7 col-xs-12"  name="mainPage">
+                        <option Selected disabled>Select Main Page</option>
+                        @foreach($pages as $page)  
+                                <option value="{{$page->id}}">{{$page->name}}</option>
+                        @endforeach
+                    </select>
+                 </div>
                 </div>
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>

@@ -12,7 +12,8 @@ class PagesController extends Controller
 {
     public function add()
     {
-       $pages =  Pages::all();
+       $pages    =  Pages::where('parent_id', 0)->get(); 
+       
         return view('admin.pages.add',compact('pages'));
     }
 
@@ -32,4 +33,23 @@ class PagesController extends Controller
 
         return redirect()->back();
     }
+
+    public function substore(Request $request)
+    {
+        
+        $page = Pages::create([
+            'name' => $request->name,
+            'title' => $request->title,
+            'desc'  => $request->desc,
+            'parent_id' => $request->mainPage
+        ]);
+
+        $page->save();
+
+        Session::flash('success', 'Your SubPage Created Successuflly');
+
+        return redirect()->back();
+    }
+
+    
 }
