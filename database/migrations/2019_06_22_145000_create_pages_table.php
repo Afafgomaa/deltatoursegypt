@@ -17,9 +17,11 @@ class CreatePagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('title');
+            $table->string('slug');
             $table->text('desc');
             $table->integer('parent_id')->nullable;
-            $table->foreign('parent_id')->references('id')->on('pages')->onDelete('cascade');
+            $table->softDeletes();
+           // $table->foreign('parent_id')->references('id')->on('pages')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,5 +34,6 @@ class CreatePagesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('pages');
+        
     }
 }

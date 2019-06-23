@@ -89,6 +89,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'PostController@restore',
       'as'   => 'post.restore'
    ]);
+   // pages route 
    Route::get('/page/add', [
       'uses' => 'PagesController@add',
       'as'   => 'page.add'
@@ -101,8 +102,62 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'PagesController@substore',
       'as'   => 'subpage.store'
    ]);
+   
+   Route::get('/page/edit/{id}', [
+      'uses' => 'PagesController@editPage',
+      'as'   => 'page.edit'
+   ]);
+   Route::post('/page/update/{id}', [
+      'uses' => 'PagesController@updatePage',
+      'as'   => 'page.update'
+   ]);
+   Route::get('/page/delete/{id}', [
+      'uses' => 'PagesController@deletePage',
+      'as'   => 'page.delete'
+   ]);
 
-  
+   Route::get('/page/trashed', [
+      'uses' => 'PagesController@trashedPage',
+      'as'   => 'page.trashed'
+   ]);
+   Route::get('/page/kill/{id}', [
+      'uses' => 'PagesController@killPage',
+      'as'   => 'page.kill'
+   ]);
+   Route::get('/page/restore/{id}', [
+      'uses' => 'PagesController@restorePage',
+      'as'   => 'page.restore'
+   ]);
+   // end pages route
+
+   // start suppage route
+   
+   Route::get('/subpage/edit/{id}', [
+      'uses' => 'PagesController@editSubPage',
+      'as'   => 'subPage.edit'
+   ]);
+   Route::post('/subpage/update/{id}', [
+      'uses' => 'PagesController@updateSubPage',
+      'as'   => 'subPage.update'
+   ]);
+   Route::get('/subpage/delete/{id}', [
+      'uses' => 'PagesController@deleteSubPage',
+      'as'   => 'subPage.delete'
+   ]);
+
+   Route::get('/subpage/trashed', [
+      'uses' => 'PagesController@trashedSubPage',
+      'as'   => 'subPage.trashed'
+   ]);
+   Route::get('/subpage/kill/{id}', [
+      'uses' => 'PagesController@killSubPage',
+      'as'   => 'subPage.kill'
+   ]);
+   Route::get('/subpage/restore/{id}', [
+      'uses' => 'PagesController@restoreSubPage',
+      'as'   => 'subPage.restore'
+   ]);
+   // end suppage route
 
 
    
@@ -112,4 +167,6 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
 
 
 
-
+Route::get('/{slug}', [
+   'uses' => 'PagesController@findPage',
+]);

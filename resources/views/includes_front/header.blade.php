@@ -38,7 +38,22 @@
 									<li>
 										<a  href="{{route('home')}}">Home</a>	
 									</li>
-                                    <li class="dropdown">
+                                    
+									@foreach($pages as $page)
+									<li class="dropdown">
+									<a class="dropdown-item dropdown-toggle" href="{{str_slug($page->title)}}">{{$page->name}}</a> 
+										@if($page->subPages)
+										<ul class="dropdown-menu">
+										@foreach($page->subPages as $subpage)
+										<li class="dropdown-submenu">
+														<a class="dropdown-item" href="{{str_slug($subpage->title)}}"> {{$subpage->name}}</a>
+											</li>
+											@endforeach
+											</ul>
+										@endif
+										</li>
+									@endforeach
+									<!--
 										<a class="dropdown-item dropdown-toggle" href="{{route('all_packeges')}}">Egypt Programs </a>        
 											<ul class="dropdown-menu">
                                                 <li class="dropdown-submenu">
@@ -61,6 +76,8 @@
                                                 </li>
 
 											</ul>
+
+											
 									</li>
 									<li>
 										<a  href="#">tripe(group)</a>	
@@ -82,6 +99,7 @@
                                                 </li>
 											</ul>
 									</li>
+									-->
 									<li>
 										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
 
