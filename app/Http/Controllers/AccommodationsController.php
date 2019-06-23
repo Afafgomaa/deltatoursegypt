@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use App\Accommodations;
 use Illuminate\Http\Request;
+
 
 class AccommodationsController extends Controller
 {
@@ -35,7 +37,25 @@ class AccommodationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request->iamge_gallery);
+        
+        foreach($request->iamge_gallery as $image){
+             $data[] = $image;
+        }
+        
+        $accom = Accommodations::create([
+            'name' => $request->name,
+            'location' => $request->location,
+            'small_iamge' => $request->small_iamge,
+            'thumbnail_iamge' => $request->image_thumbnail,
+            'tripadvisor_link' => $request->tripadvisor_link,
+            'brief'            => $request->brief,
+            'gallery_image' => json_encode($data)
+
+        ]);
+        $accom->save();
+        Session::flash('success', 'Your Accommodation Created Successfully');
+        return redirect()->back();
     }
 
     /**

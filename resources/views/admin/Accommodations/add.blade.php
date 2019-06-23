@@ -39,6 +39,14 @@
                 </div>
 
                 <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="tripadvisor_link">location 
+                </label>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <input type="url" id="tripadvisor_link" name="tripadvisor_link"  class="form-control col-md-7 col-xs-12">
+                </div>
+                </div>
+
+                <div class="form-group">
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="small_iamge">Small Image Url <span class="required">*</span>
                     </label>
                     <div class="col-md-8 col-sm-8 col-xs-12">
@@ -58,6 +66,7 @@
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">Add Gallery Images <span class="required">*</span>
                     </label>
                     <div class="col-md-7 col-sm-7 col-xs-12 image_gallery">
+                      <input type="url" name="iamge_gallery[]" class="form-control col-md-12 col-xs-12 ">
                       <input type="url" name="iamge_gallery[]" class="form-control col-md-12 col-xs-12 ">
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-12">

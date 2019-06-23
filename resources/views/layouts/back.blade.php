@@ -138,7 +138,7 @@ $('#summernote').summernote();
 (function() {
     $('#gallery_iamge_add').click(function(event){
     event.preventDefault();
-    $('.image_gallery').append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="name="iamge_gallery[]">')
+    $('.image_gallery').append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">')
     
 });
   
