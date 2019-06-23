@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    Route::resource('avatar','AvatarController');
    Route::resource('post','PostController');
+   Route::resource('Accommodation','AccommodationsController');
    
    Route::get('/slider', [
       'uses' => 'HomeController@slider',

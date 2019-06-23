@@ -44,6 +44,6 @@ class frontendController extends Controller
         return view('main_packeges');
     }
     public function blog(){
-        return view('blog');
+        return view('blog')->with('blog', Post::all());
     }
 }

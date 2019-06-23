@@ -31,8 +31,18 @@
     <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
     <!-- tostr notifaction -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-<style>
 
+    <!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+
+<style>
+.mb-3 {
+margin-bottom:10px;
+}
+
+.mt-3{
+  margin-top:10px;
+}
 
 
 </style>
@@ -107,12 +117,14 @@
 
    <!-- tostr notifaction -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
 <script>
 
 @if(Session::has('success'))
-
+// toastr notifaction libiaray
 toastr.success('{{Session::get("success")}}');
 
 @endif
@@ -120,6 +132,18 @@ toastr.success('{{Session::get("success")}}');
 new Clipboard('.copy');
 
 
+// summer not libiaray 
+$('#summernote').summernote();
+
+(function() {
+    $('#gallery_iamge_add').click(function(event){
+    event.preventDefault();
+    $('.image_gallery').append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="name="iamge_gallery[]">')
+    
+});
+  
+
+  })();
 
 
 

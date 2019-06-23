@@ -184,7 +184,7 @@ class PagesController extends Controller
     {
  
         $page = Pages::where('slug', $slug )->first();
-       if($page->parent_id == 0){
+       if($page->parent_id === 0){
         return view('main_packeges', compact('page'));
        }else{
            return view('Egypt_tour', compact('page'));

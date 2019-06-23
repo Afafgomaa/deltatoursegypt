@@ -16,9 +16,9 @@
 												<li role="presentation"><a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Add On</a>	</li>
 											</ul>
 									</div><!--mynavbar-->
-              </div><!--program_box-->
-           </div><!--col-xs-12-->
-				</div><!--program_content_summary-->
+                         </div><!--program_box-->
+                    </div><!--col-xs-12-->
+			</div><!--program_content_summary-->
 
 
 <div class="scroll_tab_new" data-spy="scroll" data-target="#myNavbar" data-offset="120">
@@ -89,9 +89,9 @@
 
       			
                   @include('includes_front.accomdation')
-									@include('includes_front.intery')
-						      @include('includes_front.pricing')
-									@include('includes_front.addon')
+				  @include('includes_front.intery')
+				  @include('includes_front.pricing')
+				  @include('includes_front.addon')
 									
     </div> <!-- scroll-->
 
