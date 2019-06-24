@@ -114,7 +114,7 @@
  <div class="row center">
 	<div class="col-md-12">
 
-		<h1 class="text-center short word-rotator-title">STYLES OF EGYPT HOLIDAYS AND PACKAGES</h1>
+		<h1 class="text-center short word-rotator-title">STYLES OF EGYPT HOLIDAYS AND PACKAGES </h1>
 				<h1 class="word-rotator text-center slide font-weight-bold text-8 mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" style="animation-delay: 100ms;">
 
 								<span class="word-rotator-words blue-custom" style="width: 168.563px;">

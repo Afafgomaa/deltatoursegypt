@@ -40,66 +40,20 @@
 									</li>
                                     
 									@foreach($pages as $page)
-									<li class="dropdown">
+									<li class="{{count($page->subPages) > 0  ? 'dropdown' : ' ' }}">
 									<a class="dropdown-item dropdown-toggle" href="{{str_slug($page->title)}}">{{$page->name}}</a> 
-										@if($page->subPages)
+										@if(count($page->subPages) > 0)
 										<ul class="dropdown-menu">
-										@foreach($page->subPages as $subpage)
-										<li class="dropdown-submenu">
-														<a class="dropdown-item" href="{{str_slug($subpage->title)}}"> {{$subpage->name}}</a>
+											@foreach($page->subPages as $subpage)
+											<li class="dropdown-submenu">
+												<a class="dropdown-item" href="{{str_slug($subpage->title)}}"> {{$subpage->name}}</a>
 											</li>
 											@endforeach
-											</ul>
+										</ul>
 										@endif
 										</li>
 									@endforeach
-									<!--
-										<a class="dropdown-item dropdown-toggle" href="{{route('all_packeges')}}">Egypt Programs </a>        
-											<ul class="dropdown-menu">
-                                                <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Classical Tour Packages</a>
-                                                </li>
-												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Budget Tour Packages</a>
-                                                </li>
-												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Luxury Tour Packages</a>
-                                                </li>
-												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}">  Nile Cruise Packages</a>
-                                                </li>
-												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Nile Dahabiya Holidays</a>
-                                                </li>
-												<li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Packages')}}"> Egypt Adventure Tours</a>
-                                                </li>
-
-											</ul>
-
-											
-									</li>
-									<li>
-										<a  href="#">tripe(group)</a>	
-									</li>
-									<li>
-										<a  href="{{route('Egypt_Excursion')}}">Egypt Excurions</a>	
-									</li>
-									 <li class="dropdown">
-										<a class="dropdown-item dropdown-toggle" href="{{route('all-Nile-River-Cruises')}}">Nile River Cruises</a>        
-											<ul class="dropdown-menu">
-                                                <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}">Nile River Cruise</a>
-                                                </li>
-												 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}"> Lake Nasser Cruise</a>
-                                                </li>
-												<li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="{{route('Nile-River-Cruises')}}"> Dahabya Cruise</a>
-                                                </li>
-											</ul>
-									</li>
-									-->
+					
 									<li>
 										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
 

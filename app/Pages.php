@@ -20,15 +20,11 @@ class Pages extends Model
         return $this->hasMany('App\Pages', 'parent_id');
     }
 
+    public function mainPage()
+    {
+        return $this->belongsTo('App\Pages', 'id');
+    }
+
    
 
-    public function hasNotAnyChild($page_id)
-    {
-        
-         foreach($this->all() as $page){
-             if($page->parent_id !== $page_id){
-                 return true;
-             }
-         }
-    }
 }

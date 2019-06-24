@@ -7,7 +7,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-            <h2>Posts </h2>
+            <h2>Accommodations </h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -18,23 +18,24 @@
             </div>
             <div class="x_content">
             <br>
-            <form id="demo-form2" method="post" action="{{route('Accommodation.store')}}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+            <form id="demo-form2" method="post" action="{{route('Accommodation.update', ['id' => $accommodation->id])}}"  class="form-horizontal form-label-left" novalidate="">
                 @csrf
-                 <h3 style="color:#26B99A;font-weight:bold">Add New Hotel Or Cruises</h3>
+                @method('PUT')
+                 <h3 style="color:#26B99A;font-weight:bold">Edit Hotel Or Cruises</h3>
                  <hr>
                  <br><br>
                 <div class="form-group">
                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="name">Name <span class="required">*</span>
                 </label>
                 <div class="col-md-8 col-sm-8 col-xs-12">
-                    <input type="text" id="name" required="required" name="name" class="form-control col-md-7 col-xs-12">
+                    <input type="text" id="name" required="required" name="name" value="{{$accommodation->name}}" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="location">location <span class="required">*</span>
                 </label>
                 <div class="col-md-8 col-sm-8 col-xs-12">
-                    <input type="text" id="location" name="location" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="text" id="location" name="location" required="required" value="{{$accommodation->location}}" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
 
@@ -42,7 +43,7 @@
                 <label class="control-label col-md-2 col-sm-2 col-xs-12" for="tripadvisor_link">Tripadvisor link
                 </label>
                 <div class="col-md-8 col-sm-8 col-xs-12">
-                    <input type="url" id="tripadvisor_link" name="tripadvisor_link"  class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="tripadvisor_link" name="tripadvisor_link" value="{{$accommodation->tripadvisor_link}}"  class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
 
@@ -50,7 +51,7 @@
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="small_iamge">Small Image Url <span class="required">*</span>
                     </label>
                     <div class="col-md-8 col-sm-8 col-xs-12">
-                      <input type="url" id="small_iamge" name="small_iamge" required="required" class="form-control col-md-7 col-xs-12">
+                      <input type="url" id="small_iamge" name="small_iamge" value="{{$accommodation->small_iamge}}" required="required" class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
 
@@ -58,7 +59,7 @@
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image_thumbnail">thumbnail Image Url<span class="required">*</span>
                     </label>
                     <div class="col-md-8 col-sm-8 col-xs-12">
-                      <input type="url" id="image_thumbnail" name="image_thumbnail" required="required" class="form-control col-md-7 col-xs-12">
+                      <input type="url" id="image_thumbnail" name="image_thumbnail" value="{{$accommodation->thumbnail_iamge}}" required="required" class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
 
@@ -66,8 +67,9 @@
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">Add Gallery Images <span class="required">*</span>
                     </label>
                     <div class="col-md-7 col-sm-7 col-xs-12 image_gallery">
-                      <input type="url" name="iamge_gallery[]" class="form-control col-md-12 col-xs-12 ">
-                      
+                    @foreach(unserialize($accommodation->gallery_image) as $img)
+                      <input type="url" name="iamge_gallery[]"  value="{{$img}}" class="form-control col-md-12 col-xs-12 ">
+                      @endforeach
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-12">
                     <a id="gallery_iamge_add" class="btn btn-success">+</a>
@@ -77,7 +79,7 @@
                 <div class="form-group">
                 <label for="description" class="control-label col-md-2 col-sm-2 col-xs-12">Brief</label>
                 <div class="col-md-8 col-sm-8 col-xs-12">
-                <textarea id="summernote" class="form-control col-md-10 col-xs-12" type="text" name="brief" col="5" rows="5"></textarea>
+                <textarea id="summernote" class="form-control col-md-10 col-xs-12" type="text" name="brief" col="5" rows="5">{{$accommodation->brief}}</textarea>
                 </div>
                 </div>
                 

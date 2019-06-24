@@ -5,6 +5,9 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use App\Pages;
+use App\post;
+use App\Accommodations;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -26,5 +29,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         view()->share('pages', Pages::where('parent_id', 0)->get());
+        view()->share('posts', post::all());
+        view()->share('accommodations', Accommodations::all());
+        
+        
     }
 }

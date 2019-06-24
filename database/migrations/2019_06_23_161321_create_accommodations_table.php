@@ -17,11 +17,12 @@ class CreateAccommodationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('small_iamge');
             $table->string('thumbnail_iamge');
-            $table->string('gallery_image');
+            $table->text('gallery_image');
             $table->string('name');
             $table->string('location');
             $table->string('tripadvisor_link')->nullable();
             $table->text('brief');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

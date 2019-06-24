@@ -3,8 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\softDeletes;
 
 class Accommodations extends Model
 {
-    protected $fillable = ['small_iamge','thumbnail_iamge','gallery_image', 'name','location','tripadvisor_link','brief'];
+    use softDeletes;
+
+    protected $fillable = ['name','location','tripadvisor_link','small_iamge','thumbnail_iamge','gallery_image','brief'];
+    protected $dates = ['deleted_at'];
+
+    protected $casts = [
+        'gallery_image' => 'array',
+    ];
 }
+

@@ -11,6 +11,12 @@ class frontendController extends Controller
 
     public function index(){
        
+        $parents  = [];
+        foreach(Pages::where('parent_id', 0)->get() as $page){
+            array_push($parents, $page);
+        }
+        
+        //dd($parents);
         
         return view('welcome')->with('slider_1', slider::first()->slider_1)
                               ->with('slider_2', slider::first()->slider_2)
@@ -24,6 +30,7 @@ class frontendController extends Controller
                               ->with('blog'    , post::where(['add_to_home_page'=> 1])->take(4)->get());
                               
     }
+
 
     public function Packages(){
         return view('Egypt-tours-Packages');

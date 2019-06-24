@@ -16,7 +16,8 @@ class AccommodationsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.Accommodations.index')->with('accom',Accommodations::all() );
+        
     }
 
     /**
@@ -37,12 +38,7 @@ class AccommodationsController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->iamge_gallery);
-        
-        foreach($request->iamge_gallery as $image){
-             $data[] = $image;
-        }
-        
+    
         $accom = Accommodations::create([
             'name' => $request->name,
             'location' => $request->location,
@@ -50,9 +46,11 @@ class AccommodationsController extends Controller
             'thumbnail_iamge' => $request->image_thumbnail,
             'tripadvisor_link' => $request->tripadvisor_link,
             'brief'            => $request->brief,
-            'gallery_image' => json_encode($data)
-
+            'gallery_image' => serialize($request->iamge_gallery)
         ]);
+        
+
+
         $accom->save();
         Session::flash('success', 'Your Accommodation Created Successfully');
         return redirect()->back();
@@ -64,9 +62,11 @@ class AccommodationsController extends Controller
      * @param  \App\Accommodations  $accommodations
      * @return \Illuminate\Http\Response
      */
-    public function show(Accommodations $accommodations)
+    public function show($id)
     {
-        //
+       $accommodation = Accommodations::find($id);
+       
+        return view('admin.Accommodations.show ',compact('accommodation'));
     }
 
     /**
@@ -75,9 +75,11 @@ class AccommodationsController extends Controller
      * @param  \App\Accommodations  $accommodations
      * @return \Illuminate\Http\Response
      */
-    public function edit(Accommodations $accommodations)
+    public function edit($id)
     {
-        //
+        $accommodation = Accommodations::find($id);
+        return view('admin.Accommodations.edit', compact('accommodation'));
+        
     }
 
     /**
@@ -87,10 +89,26 @@ class AccommodationsController extends Controller
      * @param  \App\Accommodations  $accommodations
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Accommodations $accommodations)
+    public function update(Request $request,$id)
     {
-        //
+        
+       $accommodation = Accommodations::find($id);
+       //dd($accommodation);
+       $accommodation->name = $request->name;
+       $accommodation->location = $request->location;
+       $accommodation->small_iamge = $request->small_iamge;
+       $accommodation->thumbnail_iamge = $request->image_thumbnail;
+       $accommodation->tripadvisor_link = $request->tripadvisor_link;
+       $accommodation->brief        = $request->brief;
+       $accommodation->gallery_image =  serialize($request->iamge_gallery);
+
+       $accommodation->save();
+        
+        Session::flash('success', 'Your Accommodation updated Successfully');
+        return redirect()->back();
+    
     }
+  
 
     /**
      * Remove the specified resource from storage.
@@ -98,8 +116,34 @@ class AccommodationsController extends Controller
      * @param  \App\Accommodations  $accommodations
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Accommodations $accommodations)
+    public function destroy($id)
     {
-        //
+        $accommodation =  Accommodations::find($id);
+        $accommodation->delete();
+        return redirect()->back();
+    }
+
+    public function trashedAccommodation()
+    {
+        $accommodation = Accommodations::onlyTrashed()->get();
+
+        return view('admin.Accommodations.trashed', compact('accommodation'));
+
+    }
+
+
+    public function killAccommodation($id)
+    {
+        $accommodation = Accommodations::withTrashed()->where('id',$id)->first();
+        $accommodation->forceDelete();
+        return redirect()->back();
+
+    }
+    public function restoreAccommodation($id)
+    {
+        $accommodation = Accommodations::withTrashed()->where('id',$id)->first();
+        $accommodation->restore();
+        return redirect()->back();
+          
     }
 }

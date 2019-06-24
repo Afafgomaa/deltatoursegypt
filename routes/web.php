@@ -68,7 +68,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    Route::resource('avatar','AvatarController');
    Route::resource('post','PostController');
-   Route::resource('Accommodation','AccommodationsController');
+   
    
    Route::get('/slider', [
       'uses' => 'HomeController@slider',
@@ -160,6 +160,23 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    // end suppage route
 
+  // start Accommodation route
+ 
+
+  Route::get('/Accommodation/trashed', [
+   'uses' => 'AccommodationsController@trashedAccommodation',
+   'as'   => 'Accommodation.trashed'
+   ]);
+   Route::get('/Accommodation/kill/{id}', [
+      'uses' => 'AccommodationsController@killAccommodation',
+      'as'   => 'Accommodation.kill'
+   ]);
+   Route::get('/Accommodation/restore/{id}', [
+      'uses' => 'AccommodationsController@restoreAccommodation',
+      'as'   => 'Accommodation.restore'
+   ]);
+   Route::resource('Accommodation','AccommodationsController');
+   //end Accommodation route
 
    
 });

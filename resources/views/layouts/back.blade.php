@@ -35,6 +35,7 @@
     <!-- include summernote css/js -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 
+
 <style>
 .mb-3 {
 margin-bottom:10px;
@@ -69,9 +70,8 @@ margin-bottom:10px;
 
 
 
-
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     	<!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="{{asset('/vendors/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap -->
     <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
@@ -114,13 +114,14 @@ margin-bottom:10px;
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+  
 
-   <!-- tostr notifaction -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+   
     <!-- Custom Theme Scripts -->
     <script src="{{asset('build/js/custom.min.js')}}"></script>
+
+
 <script>
 
 @if(Session::has('success'))
