@@ -178,6 +178,25 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    Route::resource('Accommodation','AccommodationsController');
    //end Accommodation route
 
+
+
+   // start Programs route
+ 
+
+  Route::get('/Program/trashed', [
+   'uses' => 'ProgramsController@trashedProgram',
+   'as'   => 'Program.trashed'
+   ]);
+   Route::get('/AccommProgramodation/kill/{id}', [
+      'uses' => 'ProgramsController@killProgram',
+      'as'   => 'Program.kill'
+   ]);
+   Route::get('/Program/restore/{id}', [
+      'uses' => 'ProgramsController@restoreProgram',
+      'as'   => 'Program.restore'
+   ]);
+   Route::resource('Program','ProgramsController');
+   //end Programs route
    
 });
 
