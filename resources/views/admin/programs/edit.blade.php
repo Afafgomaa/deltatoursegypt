@@ -7,7 +7,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-          <h2>Programs</h2>
+          <h2>Edit Programs {{$program->name}}</h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2>Add New pogram</h2>
+                      
                     </div>
                     <div class="pull-right">
                         <a class="btn btn-primary" href="{{ route('Program.index') }}"> Back</a>
@@ -37,7 +37,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(array('route' => 'Program.store','files'=>true,'method'=>'POST')) !!}
+    {!! Form::model($program, ['method' => 'PATCH','route' => ['Program.update', $program->id],'files'=>true]) !!}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

@@ -187,7 +187,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    'uses' => 'ProgramsController@trashedProgram',
    'as'   => 'Program.trashed'
    ]);
-   Route::get('/AccommProgramodation/kill/{id}', [
+   Route::get('/Program/kill/{id}', [
       'uses' => 'ProgramsController@killProgram',
       'as'   => 'Program.kill'
    ]);
@@ -197,8 +197,30 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    Route::resource('Program','ProgramsController');
    //end Programs route
+
+    // start add on route
+ 
+
+    Route::get('/Addon/trashed', [
+      'uses' => 'AddOnController@trashedAddon',
+      'as'   => 'Addon.trashed'
+      ]);
+      Route::get('/Addon/kill/{id}', [
+         'uses' => 'AddOnController@killAddon',
+         'as'   => 'Addon.kill'
+      ]);
+      Route::get('/Addon/restore/{id}', [
+         'uses' => 'AddOnController@restoreProgram',
+         'as'   => 'Addon.restore'
+      ]);
+      Route::resource('Addon','AddOnController');
+      //end AddOn route
    
 });
+      
+
+      
+
 
 
 

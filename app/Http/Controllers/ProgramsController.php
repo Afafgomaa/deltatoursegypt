@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Programs;
 use Illuminate\Http\Request;
+use Session;
 
 class ProgramsController extends Controller
 {
@@ -35,7 +36,12 @@ class ProgramsController extends Controller
      */
     public function store(Request $request)
     {
-        Programs::create($request->all());
+        $requestData = $request->all();
+        $requestData['related_programs_id'] = serialize($request->related_programs_id);
+        $requestData['image_gallery'] = serialize($request->image_gallery);
+        Programs::create($requestData);
+
+        $request->flash();
         return redirect()->route('Program.index')
                         ->with('success','Program created successfully');
     }
@@ -46,9 +52,9 @@ class ProgramsController extends Controller
      * @param  \App\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function show(Programs $programs)
+    public function show($id)
     {
-        //
+        return view('admin.programs.show')->with('program', programs::find($id));
     }
 
     /**
@@ -57,9 +63,10 @@ class ProgramsController extends Controller
      * @param  \App\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function edit(Programs $programs)
+    public function edit($id)
     {
-        //
+        $program = Programs::find($id);
+        return view('admin.programs.edit',compact('program'));
     }
 
     /**
@@ -69,9 +76,15 @@ class ProgramsController extends Controller
      * @param  \App\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Programs $programs)
+    public function update(Request $request, $id)
     {
-        //
+        $requestData = $request->all();
+        $requestData['related_programs_id'] = serialize($request->related_programs_id);
+        $requestData['image_gallery'] = serialize($request->image_gallery);
+        
+        Programs::find($id)->update($requestData);
+        Session::flash('Success','Your Program Updated Successfully');
+        return redirect()->back();
     }
 
     /**
@@ -80,16 +93,19 @@ class ProgramsController extends Controller
      * @param  \App\Programs  $programs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Programs $programs)
+    public function destroy($id)
     {
-        //
+        $program = Programs::find($id);
+        $program->delete();
+        Session::flash('success', 'Program Deleted Successfully');
+        return redirect()->back();
     }
 
     public function trashedProgram()
     {
-        $Programs = Programs::onlyTrashed()->get();
+        $programs = Programs::onlyTrashed()->get();
 
-        return view('admin.Accommodations.trashed', compact('Programs'));
+        return view('admin.programs.trashed', compact('programs'));
 
     }
 

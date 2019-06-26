@@ -50,14 +50,19 @@
                     <ul class="nav child_menu">
                       <li><a href="{{ route('Program.create') }}">Add Program</a></li>
                       <li><a href="{{ route('Program.index') }}">Show All Programs</a></li>
-                      
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> Addons <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('Addon.create') }}">Add addon</a></li>
+                      <li><a href="{{ route('Addon.index') }}">Show All Addons</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Trashed <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ route('post.trashed') }}"> Posts</a></li>
                       <li><a href="{{ route('page.trashed') }}">Pages</a></li>
-                      <li><a href="{{ route('page.trashed') }}">Programs</a></li>
+                      <li><a href="{{ route('Program.trashed') }}">Programs</a></li>
                       <li><a href="{{ route('Accommodation.trashed') }}">Accommodations</a></li>
                     </ul>
                   </li>

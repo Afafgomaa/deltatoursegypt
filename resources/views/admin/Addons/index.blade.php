@@ -7,7 +7,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-          <h2>Manage Your Programs</h2>
+          <h2>Manage Your Addons</h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h4>Programs List</h4>
+                        <h4>Addons List</h4>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-success" href="{{ route('Program.create') }}">Add</a>
+                        <a class="btn btn-success" href="{{ route('Addon.create') }}">Add</a>
                     </div>
                 </div>
             </div>
@@ -37,30 +37,31 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Program Name</th>
-            <th>Program Place</th>
-            <th>Program Price</th>
-            <th>Image</th>
+            <th>Addon title</th>
+            <th>Addon price</th>
+            <th>Addon Image</th>
+            <th>Addon Description</th>
             <th width="280px">Action</th>
         </tr>
-    @foreach ($programs as $key => $program)
+    @foreach ($addons as $key => $addon)
     <tr>
         <td>0</td>
-        <td>{{ $program->name }}</td>
-        <td>{{ $program->place }}</td>
-        <td>{{ $program->price }}</td>
-        <td><img id="blah" src="{{$program->main_image}}" width="50"/></td>
+        <td>{{ $addon->title }}</td>
+        <td>{{ $addon->price }}</td>
+        <td><img id="blah" src="{{$addon->image}}" width="50"/></td>
+        <td>{!! $addon->desc !!}</td>
+        
         <td>
-            <a class="btn btn-info" href="{{ route('Program.show',$program->id) }}">Show</a>
-            <a class="btn btn-primary" href="{{ route('Program.edit',$program->id) }}">Edit</a>
-            {!! Form::open(['method' => 'DELETE','route' => ['Program.destroy', $program->id],'style'=>'display:inline']) !!}
+            <a class="btn btn-info" href="{{ route('Addon.show',$addon->id) }}">Show</a>
+            <a class="btn btn-primary" href="{{ route('Addon.edit',$addon->id) }}">Edit</a>
+            {!! Form::open(['method' => 'DELETE','route' => ['Addon.destroy', $addon->id],'style'=>'display:inline']) !!}
             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
         </td>
     </tr>
     @endforeach
     </table> 
-    {!! $programs->render() !!}
+    {!! $addons->render() !!}
 
 
         </div>
