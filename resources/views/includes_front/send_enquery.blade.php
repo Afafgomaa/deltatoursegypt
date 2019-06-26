@@ -2,20 +2,21 @@
 	<div class="modal-dialog">
 	  <div class="modal-content">
 			<div class="modal-header">
-									<h4 class="modal-title" id="formModalLabel">Send Inquery</h4>
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title" id="formModalLabel">Send Inquery</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			</div>
-								<div class="modal-body">
-								<div class="program_box_data_book_form"> 
-                 <form id="bookform" method="post" action="">
-									 <div class="container">
+				<div class="modal-body">
+				<div class="program_box_data_book_form"> 
+                 <form id="bookform" method="post" action="{{route('mail')}}">
+				 @csrf
+				 <div class="container">
                     <div class="row">
                        <div class="col-md-12 ">
                          <div class="form-group label-floating is-empty">
                            <label>Name *</label>
                            <input name="name" type="text" id="name" value="" class="form-control" required="">
-														<span class="material-input"></span>
-													</div>
+									<span class="material-input"></span>
+							</div>
                         </div>
                        <div class="col-md-12">
                          <div class="form-group label-floating is-empty">
@@ -79,7 +80,7 @@
 								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="new_btn_inquire">Save Changes</button>
+								<button type="submit" class="new_btn_inquire">Save Changes</button>
 							</div>
 							
 						</div>

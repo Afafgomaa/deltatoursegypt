@@ -72,13 +72,25 @@ strong{
 
 
 
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     	<!-- jQuery -->
+      <script>
+$( document ).ready(function() {
+    $('#addnn').click(function(event){
+      event.preventDefault();
+    $('#image_gallery')
+    .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="image_gallery[]">');
+    });
+
+    $('#add').click(function(event){
+      event.preventDefault();
+    $('#image_gallery_add')
+    .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">');
+    });
+});
+
+</script>
+ 
     <script src="{{asset('/vendors/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap -->
     <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
@@ -122,15 +134,19 @@ strong{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   
 
    
-    <!-- Custom Theme Scripts -->
-    <script src="{{asset('build/js/custom.min.js')}}"></script>
+   
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+ <!-- Custom Theme Scripts -->
+ <script src="{{asset('build/js/custom.min.js')}}"></script>
 
 <script>
+
+
 
 @if(Session::has('success'))
 // toastr notifaction libiaray
@@ -143,19 +159,10 @@ new Clipboard('.copy');
 
 // summer not libiaray 
 $('.summernote').summernote();
-
-
-(function() {
-    $('#gallery_iamge_add').click(function(event){
-    event.preventDefault();
-    $('.image_gallery').append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" placeholder="image gallery" name="iamge_gallery[]">')
-    
-});
 $('select').selectpicker();
+
+
   
-
-  })();
-
 
 
 </script>

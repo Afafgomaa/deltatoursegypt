@@ -7,7 +7,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-          <h2>Manage Your Programs</h2>
+          <h2>Manage Your Sights</h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -18,49 +18,47 @@
         </div>
         <div class="x_content">
             <div class="row">
-                <div class="col-lg-12 margin-tb">
-                    <div class="pull-left">
-                        <h4>Programs List</h4>
-                    </div>
-                    <div class="pull-right">
-                        <a class="btn btn-success" href="{{ route('Program.create') }}">Add</a>
-                    </div>
-                </div>
-            </div>
-        @if ($message = Session::get('success'))
+            @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
             </div>
         @endif
+            
+                <div class="col-lg-12 margin-tb">
+                    {!! Form::open(array('route' => 'sight.store','files'=>true,'method'=>'POST')) !!}
+                        <div class="form-group">
+                            <strong>sight Name:</strong>
+                            {!! Form::text('name', null, array('placeholder' => ' Name','class' => 'form-control')) !!}
+                    </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  {!! Form::close() !!}
+
+                   
+                </div>
+            </div>
 
 
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Program Name</th>
-            <th>Program Place</th>
-            <th>Program Price</th>
-            <th>Image</th>
+            <th>sight Name</th>
+            
             <th width="280px">Action</th>
         </tr>
-    @foreach ($programs as $key => $program)
+    @foreach ($sights as $key => $sight)
     <tr>
         <td>0</td>
-        <td>{{ $program->name }}</td>
-        <td>{{ $program->place }}</td>
-        <td>{{ $program->price }}</td>
-        <td><img id="blah" src="{{$program->main_image}}" width="50"/></td>
+        <td>{{ $sight->name }}</td>
         <td>
-            <a class="btn btn-info" href="{{ route('Program.show',$program->id) }}">Show</a>
-            <a class="btn btn-primary" href="{{ route('Program.edit',$program->id) }}">Edit</a>
-            {!! Form::open(['method' => 'DELETE','route' => ['Program.destroy', $program->id],'style'=>'display:inline']) !!}
+            <a class="btn btn-primary" href="{{ route('sight.edit',$sight->id) }}">Edit</a>
+            {!! Form::open(['method' => 'DELETE','route' => ['sight.destroy', $sight->id],'style'=>'display:inline']) !!}
             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
         </td>
     </tr>
     @endforeach
     </table> 
-    {!! $programs->render() !!}
+    {!! $sights->render() !!}
 
 
         </div>

@@ -5,15 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\softDeletes;
 
-class Programs extends Model
+class Highlight extends Model
 {
     use softDeletes;
-
-    protected $guarded = ['id'];
+    protected $fillable = ['name'];
 
     protected $dates = ['deleted_at'];
-
-   //protected $casts = [
-       // 'related_programs_id' => 'array' ];
-
 }

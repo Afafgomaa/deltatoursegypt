@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Programs;
 use Illuminate\Http\Request;
 use Session;
+use App\Highlight;
+
+
 
 class ProgramsController extends Controller
 {
@@ -25,7 +28,9 @@ class ProgramsController extends Controller
      */
     public function create()
     {
-        return view('admin.programs.add');
+         $highlights  = Highlight::orderBy('id' , 'DESC')->get();
+         
+        return view('admin.programs.add',compact('highlights'));
     }
 
     /**
@@ -36,12 +41,33 @@ class ProgramsController extends Controller
      */
     public function store(Request $request)
     {
-        $requestData = $request->all();
-        $requestData['related_programs_id'] = serialize($request->related_programs_id);
-        $requestData['image_gallery'] = serialize($request->image_gallery);
-        Programs::create($requestData);
+        
+        $program = Programs::create([
+        'main_image' => $request->main_image,
+        'price' => $request->price,
+        'name' => $request->name,
+        'kind' => $request->kind,
+        'days' => $request->days,
+        'nights' => $request->nights,
+        'brief' => $request->brief,
+        'place' => $request->place,
+        'overview' => $request->overview,
+        'pricing' => $request->pricing,
+        'price_children' => $request->price_children,
+        'page_id' => $request->page_id,
+        'package_highlights_id' => serialize($request->package_highlights_id),
+        'holiday_sights_id' => serialize($request->holiday_sights_id),
+        'image_gallery' => serialize($request->image_gallery),
+        'itinerary_heading' => serialize($request->itinerary_heading),
+        'itinerary' => serialize($request->itinerary),
+        'Accom_id' => serialize($request->Accom_id),
+        'add_on_id' => serialize($request->add_on_id),
+        'related_programs_id' => serialize($request->related_programs_id),
+        'slug' => str_slug($request->name),
 
-        $request->flash();
+        ]);
+
+$program->save();
         return redirect()->route('Program.index')
                         ->with('success','Program created successfully');
     }
@@ -79,8 +105,15 @@ class ProgramsController extends Controller
     public function update(Request $request, $id)
     {
         $requestData = $request->all();
-        $requestData['related_programs_id'] = serialize($request->related_programs_id);
+        $requestData['package_highlights_id'] = serialize($request->package_highlights_id);
+        $requestData['holiday_sights_id'] = serialize($request->holiday_sights_id);
         $requestData['image_gallery'] = serialize($request->image_gallery);
+        $requestData['itinerary_heading'] = serialize($request->itinerary_heading);
+        $requestData['itinerary'] = serialize($request->itinerary);
+        //$requestData['Accom_id'] = serialize($request->Accom_id);
+        $requestData['add_on_id'] = serialize($request->add_on_id);
+        $requestData['related_programs_id'] = serialize($request->related_programs_id);
+        $requestData['slug'] = str_slug($request->name);
         
         Programs::find($id)->update($requestData);
         Session::flash('Success','Your Program Updated Successfully');
@@ -123,5 +156,10 @@ class ProgramsController extends Controller
         $Programs->restore();
         return redirect()->back();
           
+    }
+    public function findProgram($slug)
+    {
+        $program = Programs::where('slug', $slug )->first();
+        return view('egyptTours/testOfEgypt',compact('program'))
     }
 }

@@ -7,7 +7,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-        <h2>Trashed programs</h2>
+        <h2>Trashed Sights</h2>
         <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
             </li>
@@ -22,10 +22,7 @@
             <table class="table table-striped jambo_table bulk_action">
             <thead>
                 <tr class="headings">
-                    <th class="column-title"> Image</th>
-                    <th class="column-title">name </th>
-                    <th class="column-title">Place </th>
-                    <th class="column-title">View </th>
+                    <th class="column-title"> Name</th>
                     <th class="column-title"> restore</th>
                     <th class="column-title"> destroy</th>
 
@@ -35,14 +32,12 @@
 
             <tbody>
            
-            @foreach($programs as $program)
+            @foreach($sights as $sight)
                 <tr class="even pointer">
-                    <td class=" "><img src="{{$program->main_iamge}}" width="150"></td>
-                    <td class=" "> {{$program->name}}</td>
-                    <td class=" ">{{$program->place}} </td>
-                    <td class=" "><a href="{{route('Program.show',['id' => $program->id ])}}">Show</a></td>
-                    <td class=" "><a href="{{route('Program.restore',['id' => $program->id ])}}" class="btn btn-success btn-xs" type="submit">Restore</button></td>
-                    <td class=" "><a href="{{route('Program.kill', ['id' => $program->id])}}" class="btn btn-danger btn-xs">Destory</a></td>
+                    
+                    <td class=" ">{{$sight->name}} </td>
+                    <td class=" "><a href="{{route('sight.restore',['id' => $sight->id ])}}" class="btn btn-success btn-xs" type="submit">Restore</button></td>
+                    <td class=" "><a href="{{route('sight.kill', ['id' => $sight->id])}}" class="btn btn-danger btn-xs">Destory</a></td>
                 </tr>
             @endforeach
             

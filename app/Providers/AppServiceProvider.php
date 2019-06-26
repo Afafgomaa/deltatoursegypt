@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Schema;
 use App\Pages;
 use App\post;
 use App\Accommodations;
+use App\Programs;
+use App\Add_on;
+use App\Sights;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,8 +32,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         view()->share('pages', Pages::where('parent_id', 0)->get());
+        view()->share('allPages', Pages::all());
         view()->share('posts', post::all());
         view()->share('accommodations', Accommodations::all());
+        view()->share('programs', Programs::all());
+        view()->share('addons', Add_on::all());
+        view()->share('sights', Sights::all());
         
         
     }

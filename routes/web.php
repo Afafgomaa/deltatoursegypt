@@ -5,38 +5,16 @@ Route::get('/', [
     'uses' => 'frontendController@index',
     'as' => 'home'
 ]);
-Route::get('/Egypt-tours-Packages', [
-   'uses' => 'frontendController@Packages',
-   'as'   => 'Packages'
-   ]);
-
-Route::get('/Nile-River-Cruises', [
-   'uses' => 'frontendController@nileRiverCruises',
-   'as'   => 'Nile-River-Cruises'
-   ]);
-Route::get('egyptholidays',[
-'uses' => 'frontendController@egyptTour',
-'as' => 'Egypt_tour'
-]);
-
 Route::get('/Customized_Tours_to_egypt',[
-'uses' => 'frontendController@tailorMade',
-'as' => 'Tailor_Made'
-]);
-Route::get('/Egypt-Budget-Tours',[
-'uses' => 'frontendController@budgetTours',
-'as' => 'Budget_Tours'
-]);
-Route::get('/all_packeges',[
-'uses' => 'frontendController@allPackeges',
-'as' => 'all_packeges'
-]);
+   'uses' => 'frontendController@tailorMade',
+   'as' => 'Tailor_Made'
+   ]);
 Route::get('/blog',[
    'uses' => 'frontendController@blog',
    'as' => 'blog'
    ]);
 
-Route::post('send', 'mailController@send')->name('mail');
+Route::post('send/email', 'mailController@send')->name('mail');
 
 Auth::routes();
 
@@ -215,6 +193,42 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       ]);
       Route::resource('Addon','AddOnController');
       //end AddOn route
+
+       // start Hileights on route
+ 
+
+    Route::get('/highlight/trashed', [
+      'uses' => 'HighlightController@trashedHighlight',
+      'as'   => 'highlight.trashed'
+      ]);
+      Route::get('/highlight/kill/{id}', [
+         'uses' => 'HighlightController@killHighlight',
+         'as'   => 'highlight.kill'
+      ]);
+      Route::get('/highlight/restore/{id}', [
+         'uses' => 'HighlightController@restoreHighlight',
+         'as'   => 'highlight.restore'
+      ]);
+      Route::resource('highlight','HighlightController');
+      //end highlight route
+
+      // start Sights on route
+ 
+
+    Route::get('/sight/trashed', [
+      'uses' => 'SightsController@trashedSight',
+      'as'   => 'sight.trashed'
+      ]);
+      Route::get('/highlight/kill/{id}', [
+         'uses' => 'SightsController@killSight',
+         'as'   => 'sight.kill'
+      ]);
+      Route::get('/highlight/restore/{id}', [
+         'uses' => 'SightsController@restoreSight',
+         'as'   => 'sight.restore'
+      ]);
+      Route::resource('sight','SightsController');
+      //end highlight route
    
 });
       
@@ -228,4 +242,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
 
 Route::get('/{slug}', [
    'uses' => 'PagesController@findPage',
+]);
+Route::get('/{slug}/{slug}', [
+   'uses' => 'ProgramsController@findProgram',
 ]);

@@ -82,10 +82,10 @@
 				<div class="col-md-6">
 					<nav id="sub-menu">
 						<ul>
-							<li><a href="{{route('all_packeges')}}">Egypt tours Packages</a></li>
-							<li><a href="{{route('all-Nile-River-Cruises')}}">Nile River Cruises</a> &nbsp;|</li>
-							<li><a href="{{route('Tailor_Made')}}">Talior Made</a> &nbsp;|</li>
-							<li><a href="{{route('Egypt_Excursion')}}">Egypt Excurions</a> &nbsp;|</li>  
+							<li><a href="{{url('/')}}">Egypt tours Packages</a></li>
+							<li><a href="{{url('/')}}">Nile River Cruises</a> &nbsp;|</li>
+							<li><a href="{{url('/')}}">Talior Made</a> &nbsp;|</li>
+							<li><a href="{{url('/')}}">Egypt Excurions</a> &nbsp;|</li>  
 						</ul>
 					</nav>
 				</div>

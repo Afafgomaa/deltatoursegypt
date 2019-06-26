@@ -8,7 +8,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Delta Tours Egypt</h2>
+                <a href="{{url('admin')}}"><h2>Delta Tours Egypt</h2></a>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -24,7 +24,8 @@
                     <ul class="nav child_menu">
                       <li><a href="{{route('page.add')}}">pages</a></li>
                       <li><a href="{{route('slider')}}">Slider</a></li>
-                      <li><a href="">porgram</a></li>
+                      <li><a href="{{route('highlight.index')}}">Highlights</a></li>
+                      <li><a href="{{route('sight.index')}}">Sights</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Media <span class="fa fa-chevron-down"></span></a>
@@ -63,6 +64,8 @@
                       <li><a href="{{ route('post.trashed') }}"> Posts</a></li>
                       <li><a href="{{ route('page.trashed') }}">Pages</a></li>
                       <li><a href="{{ route('Program.trashed') }}">Programs</a></li>
+                      <li><a href="{{ route('highlight.trashed') }}">Highlights</a></li>
+                      <li><a href="{{ route('sight.trashed') }}">Sights</a></li>
                       <li><a href="{{ route('Accommodation.trashed') }}">Accommodations</a></li>
                     </ul>
                   </li>
