@@ -6,6 +6,7 @@ use App\Programs;
 use Illuminate\Http\Request;
 use Session;
 use App\Highlight;
+use App\Pages;
 
 
 
@@ -55,7 +56,6 @@ class ProgramsController extends Controller
         'pricing' => $request->pricing,
         'price_children' => $request->price_children,
         'page_id' => $request->page_id,
-        'package_highlights_id' => serialize($request->package_highlights_id),
         'holiday_sights_id' => serialize($request->holiday_sights_id),
         'image_gallery' => serialize($request->image_gallery),
         'itinerary_heading' => serialize($request->itinerary_heading),
@@ -66,6 +66,7 @@ class ProgramsController extends Controller
         'slug' => str_slug($request->name),
 
         ]);
+        $program->Highlights()->attach($request->package_highlights_id);
 
 $program->save();
         return redirect()->route('Program.index')
@@ -157,9 +158,21 @@ $program->save();
         return redirect()->back();
           
     }
-    public function findProgram($program)
+    public function findProgram($mainPage,$subPage,$program)
     {
+
+        $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
+
+
+        $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
+
+        //$programs_in = Programs::where('page_id', $page->id)->get();
+       
+        //return view('Egypt_tour', compact('mainpage','page','programs_in'));
+
+
+
         $program = Programs::where('slug', $program )->first();
-        return view('egyptTours/testOfEgypt',compact('program'));
+        return view('egyptTours/testOfEgypt',compact('mainpage','page','program'));
     }
 }

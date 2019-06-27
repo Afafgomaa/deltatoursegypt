@@ -8,80 +8,51 @@
 
         <div class="col-lg-6 col-xs-12">
             <div class="owl-carousel owl-theme" id="mainImage" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 3000}">
+
+            @foreach(unserialize($program->image_gallery) as $img)
                 <div>
                     <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0 img-rounded" src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" alt="">
+                        <img class="img-fluid border-radius-0 img-rounded" src="{{$img}}" alt="">
                     </div>
                 </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0 " src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" alt="">
-                    </div>
-                </div>
+
+            @endforeach
+            
             </div>
-            <!--
-            <div id="divContainer" class="text-center">
-                    <img src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" class="slider-image img-responsive">
-            </div>
--->
+ 
         </div>
 
      <!-- description section -->
         <div class="col-md-6 col-xs-12">
             <div class="summary entry-summary">
-                    <h1 class="short big">Test of Egypt    </h1>
+                    <h1 class="short big">{{$program->name}}   </h1>
                     <div class=" col-md-6 review_num">
-                            Package Type : <span style="color:black">Private</span>
+                            Package Type : <span style="color:black">{{$program->kind}}</span>
                     </div>
                     <div class=" col-md-8 review_num">
-                        <h6 class="shorter f-2" style="color:#0088cc">4 Days - 3 Nights </h6>
+                        <h6 class="shorter f-2" style="color:#0088cc">{{$program->days}} Days - {{$program->nights}} Nights </h6>
                     </div>
                     <div class=" col-md-8 review_num">
-                        <h6 class="shorter" style="color:orange">Cairo </h6>
+                        <h6 class="shorter" style="color:orange">{{$program->place}} </h6>
                     </div>
                     <div class="col-md-6">
-                        <h4 class="shorter text-blue"> from :  250 USD</h4>
+                        <h4 class="shorter text-blue"> from :  {{$program->price}} USD</h4>
                     </div>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> 4 Days Holiday tour package  in Cairo staying in a 4 stars superior hotel and visiting the great pyramids of giza ,
-                                Egyptian museum, Old Cairo , Coptic museum as well  felucca ride on the Nile 
+                        <p class="pdetails"> {{$program->desc}} 
                         </p> 
                     </div>
                     
                     <div class="col-xs-12 heighlieth review_num">
                         <h4 class="shorter text-blue">package Highlights</h4>
-                        <div class="col-xs-12 review_num">
-                            <ul>
-                                <li><i class="fa fa-dot-circle text-blue"></i> 3 Nights Cairo  .</li>
-                                <li><i class="fa fa-dot-circle text-blue"></i> 4 Breakfasts and 2 Lunches   .</li>
-                                <li><i class="fa fa-dot-circle text-blue"></i> Meet at airport Upon arrival   .</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 review_num">	   
-                            <ul>
-                                <li><i class="fa fa-dot-circle text-blue"></i> Multi Lingua tour leader guide</li>	
-                                <li><i class="fa fa-dot-circle text-blue"></i> all Transfers by AC Minibus  .</li>
-                            </ul>
-                        </div>                            
+                        @foreach($program->Highlights as $h)
+                        
+                            <div class="col-xs-12 review_num">
+                                <ul>
+                                    <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>	
+                                </ul>
+                            </div>
+                        @endforeach             
                     </div>
                    <div style="clear:both"></div>
                     <div class="col-md-12 tag">

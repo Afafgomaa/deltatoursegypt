@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
                 <div class="overflow-hidden pb-2">
-                    <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">{{$page->title}}  </h1>
+                    <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">{{$page->title}}</h1>
                 </div>
                 <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
                     <span class="sub-title text-4 mt-4">{{$page->desc}}</span>
@@ -31,12 +31,12 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
         <div id="sub_category" class="home_special_offer">
 			<div class="img_container">
-			<a href="">
+			<a href="{{url($page->slug . '/' .$sub->slug)}}">
 				<img src="{{$sub->image}}" alt="classic tour" title="classic tour">
 					</a>
 				</div>
 				<div class="home_special_offer_content">
-					<a href="{{route('subPage',['subPage' => $sub->slug])}}">
+					<a href="{{url($page->slug . '/' .$sub->slug)}}">
 						<div class="home_special_offer_title">
 							<h2 class="mb-0 text-blue font-weight-bold">{{$sub->name}}</h2>
 						</div>
@@ -44,8 +44,8 @@
 						<div class="home_special_offer_description">
 							<p>{{$sub->desc}}</p>
 						</div>
-					<a href="{{route('subPage',['subPage' => $sub->slug])}}">
-						</a><div class="read_more"><a href="{{route('subPage',['subPage' => $sub->slug])}}"></a><a href="{{route('subPage',['subPage' => $sub->slug])}}">read more</a></div>
+					<a href="">
+						</a><div class="read_more"><a href="{{url($page->slug . '/' .$sub->slug)}}"></a><a href="{{url($page->slug . '/' .$sub->slug)}}">read more</a></div>
 					
 				</div>
 			</div>

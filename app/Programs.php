@@ -13,7 +13,14 @@ class Programs extends Model
 
     protected $dates = ['deleted_at'];
 
-   //protected $casts = [
-       // 'related_programs_id' => 'array' ];
+  public function page()
+  {
+      return $this->belongsTo('App\Pages','page_id');
+  }
+  public function Highlights()
+  {
+    return $this->belongsToMany('App\Highlight');
+  }
+
 
 }

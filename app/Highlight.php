@@ -11,4 +11,9 @@ class Highlight extends Model
     protected $fillable = ['name'];
 
     protected $dates = ['deleted_at'];
+
+    public function Programs()
+    {
+    	return $this->belongsToMany('App\Programs');
+    }
 }

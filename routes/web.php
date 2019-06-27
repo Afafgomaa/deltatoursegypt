@@ -219,16 +219,16 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'SightsController@trashedSight',
       'as'   => 'sight.trashed'
       ]);
-      Route::get('/highlight/kill/{id}', [
+      Route::get('/sight/kill/{id}', [
          'uses' => 'SightsController@killSight',
          'as'   => 'sight.kill'
       ]);
-      Route::get('/highlight/restore/{id}', [
+      Route::get('/sight/restore/{id}', [
          'uses' => 'SightsController@restoreSight',
          'as'   => 'sight.restore'
       ]);
       Route::resource('sight','SightsController');
-      //end highlight route
+      //end sigts route
    
 });
       
@@ -239,17 +239,16 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
 
  Route::get('/{mainPage}', [
       'uses' => 'PagesController@findPage',
-      Route::get('/{subPage}', [
-         'uses' => 'PagesController@findSubPage',
-         'as'   => 'subPage'
-         
-      ])
-      
-    
+      'as'   => 'mainPage'
    ]);
 
 
-Route::get('/{program}', [
+   Route::get('/{mainPage}/{subPage}', [
+      'uses' => 'PagesController@findSubPage',
+      'as'   => 'subPage'
+      
+   ]);
+   Route::get('/{mainPage}/{subPage}/{program}', [
    'uses' => 'ProgramsController@findProgram',
-]);
+   ]);
 

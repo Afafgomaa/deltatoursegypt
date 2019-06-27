@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Session;
 use App\Pages;
+use App\Programs;
 
 class PagesController extends Controller
 {
@@ -186,17 +187,19 @@ class PagesController extends Controller
         $page = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
        
         return view('main_packeges', compact('page'));
-       
-        
     }
 
 
-    public function findSubPage($subPage)
+    public function findSubPage($mainPage, $subPage)
     {
- 
-        $page = Pages::where('parent_id','!==',0)->where('slug', $subPage )->first();
+        $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
+
+
+        $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
+
+        $programs_in = Programs::where('page_id', $page->id)->get();
        
-        return view('Egypt_tour', compact('page'));
+        return view('Egypt_tour', compact('mainpage','page','programs_in'));
        
         
     }

@@ -41,12 +41,12 @@
                                     
 									@foreach($pages as $page)
 									<li class="{{count($page->subPages) > 0  ? 'dropdown' : ' ' }}">
-									<a class="dropdown-item dropdown-toggle" href="{{str_slug($page->title)}}">{{$page->name}}</a> 
+									<a class="dropdown-item dropdown-toggle" href="{{url($page->slug)}}">{{$page->name}}</a> 
 										@if(count($page->subPages) > 0)
 										<ul class="dropdown-menu">
 											@foreach($page->subPages as $subpage)
 											<li class="dropdown-submenu">
-												<a class="dropdown-item" href="{{str_slug($subpage->title)}}"> {{$subpage->name}}</a>
+												<a class="dropdown-item" href="{{url($page->slug . '/' . $subpage->slug)}}"> {{$subpage->name}}</a>
 											</li>
 											@endforeach
 										</ul>

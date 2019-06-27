@@ -11,7 +11,7 @@
 		<div class="img_container" style="background-image:url('images/abou.jpg')">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="{'{'url(/)}}">
+			<a href="{{url('/lake-nasser-cruise-title')}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">Egypt Tours Packages</h4>
 				</div>

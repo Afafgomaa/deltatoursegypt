@@ -2,16 +2,15 @@
 
 @section('content')
 
-    <section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-primary overlay-show overlay-op-8" style="background-image: url('images/budget_egypt.jpg');">
+    <section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-primary overlay-show overlay-op-8" style="background-image: url({{asset('images/budget_egypt.jpg')}});">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
                     <div class="overflow-hidden pb-2">
-                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"> Best Tours To Egypt Packages</h1>
+                        <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"> {{$page->title}}</h1>
                     </div>
                     <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                        <span class="sub-title text-4 mt-4">Our Tours to Egypt Packages are based on the flexibility of its operation and can 
-                            adjusted according to your needs, if you need to tail your own holiday please contact our Tailo</span>
+                        <span class="sub-title text-4 mt-4">{{$page->desc}}</span>
                     </div>
                     <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
                         <a href="{{route('Tailor_Made')}}" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>
@@ -33,16 +32,16 @@
 <div class="container">
   <div class="row">
 
-
+@foreach($programs_in as $program)
 
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
+            <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">
+                <div class="img_container" style="background-image: url({{asset($program->main_image)}})">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
                         <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
+                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice"> {{$program->price}} USD</span>
                             
                     </div>
                 </div>
@@ -50,219 +49,41 @@
         <div class="home_special_offer_content">
                     <div class="home_special_offer_title">
                         <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
+                        <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}"><strong> {{$program->name}}</strong></a>
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
                         <div class="home_special_offer_types_box">Private Tour  
                         </div>
                         <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
+                        {{$program->days}} days -  {{$program->nights}} nights  
                         </div>
                    </div>
                    <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
+                    <p> {!!$program->brief!!} </p>
                     </div>
                     <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
+                        <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">read more</a>
+                        
                     </div>
         </div>
        </div>
       </div>
 
 
+      @endforeach
 
-
-    <div class="col-md-4 col-xs-12">
-        <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
-                    <div class="short_info" id="home_short_info">
-                        <span class="price">
-                        <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
-                            
-                    </div>
-                </div>
-            </a>
-        <div class="home_special_offer_content">
-                    <div class="home_special_offer_title">
-                        <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
-                        </h2>
-                    </div>
-                   <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
-                        </div>
-                        <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
-                        </div>
-                   </div>
-                   <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
-                    </div>
-                    <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
-                    </div>
-        </div>
-       </div>
-      </div>
-
-
-
+    
       
-    <div class="col-md-4 col-xs-12">
-        <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
-                    <div class="short_info" id="home_short_info">
-                        <span class="price">
-                        <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
-                            
-                    </div>
-                </div>
-            </a>
-        <div class="home_special_offer_content">
-                    <div class="home_special_offer_title">
-                        <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
-                        </h2>
-                    </div>
-                   <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
-                        </div>
-                        <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
-                        </div>
-                   </div>
-                   <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
-                    </div>
-                    <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
-                    </div>
-        </div>
-       </div>
-      </div>
-
-
-
-<div class="col-md-4 col-xs-12">
-        <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
-                    <div class="short_info" id="home_short_info">
-                        <span class="price">
-                        <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
-                            
-                    </div>
-                </div>
-            </a>
-        <div class="home_special_offer_content">
-                    <div class="home_special_offer_title">
-                        <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
-                        </h2>
-                    </div>
-                   <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
-                        </div>
-                        <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
-                        </div>
-                   </div>
-                   <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
-                    </div>
-                    <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
-                    </div>
-        </div>
-       </div>
-      </div>
-
-
-
-<div class="col-md-4 col-xs-12">
-        <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
-                    <div class="short_info" id="home_short_info">
-                        <span class="price">
-                        <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
-                            
-                    </div>
-                </div>
-            </a>
-        <div class="home_special_offer_content">
-                    <div class="home_special_offer_title">
-                        <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
-                        </h2>
-                    </div>
-                   <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
-                        </div>
-                        <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
-                        </div>
-                   </div>
-                   <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
-                    </div>
-                    <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
-                    </div>
-        </div>
-       </div>
-      </div>
+    
 
 
 
 
-<div class="col-md-4 col-xs-12">
-        <div class="home_special_offer" id="programs">
-            <a href="{{route('single_tour')}}">
-                <div class="img_container" style="background-image: url('images/cairo-day-tour.jpg')">
-                    <div class="short_info" id="home_short_info">
-                        <span class="price">
-                        <span class="from">from</span>
-                            <span class="currencySign">$</span><span id="min_price1175" class="convertable" itemprop="lowPrice">250 USD</span>
-                            
-                    </div>
-                </div>
-            </a>
-        <div class="home_special_offer_content">
-                    <div class="home_special_offer_title">
-                        <h2 class="mb-0">
-                        <a href="{{route('single_tour')}}"><strong>Test Of Egypt</strong></a>
-                        </h2>
-                    </div>
-                   <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
-                        </div>
-                        <div class="home_special_offer_types_box">
-                                4 days - 3 nights  
-                        </div>
-                   </div>
-                   <div class="home_special_offer_description">
-                    <p>CAIRO ONLY 4 days cairo holiday package,staying 3 nights in Cairo Hotel, visiting all cairo higlights 
-                        Giza Pyramids , egyptian museum and more </p>
-                    </div>
-                    <div class="read_more">
-                        <a href="{{route('single_tour')}}">read more</a>
-                    </div>
-        </div>
-       </div>
-      </div>
+
+
+
+
 
 
 
