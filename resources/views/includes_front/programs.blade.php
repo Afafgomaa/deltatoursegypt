@@ -11,7 +11,7 @@
 		<div class="img_container" style="background-image:url('images/abou.jpg')">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="{{route('Egypt_tour')}}">
+			<a href="{'{'url(/)}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">Egypt Tours Packages</h4>
 				</div>
@@ -22,7 +22,7 @@
 				 if you need to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{{url('/')}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 		<div class="img_container" style="background-image:url('images/river_nile.jpg')">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="{{route('Budget_Tours')}}">
+			<a href="{{url('/')}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">Egypt Budget Tours</h4>
 				</div>
@@ -45,7 +45,7 @@
 				</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{{url('/')}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -67,7 +67,7 @@
 					according to your needs, if you need to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -88,7 +88,7 @@
 					according to your needs, if you need to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -109,7 +109,7 @@
 					can adjusted according to your needs, if you need to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -131,7 +131,7 @@
 					 to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -152,7 +152,7 @@
 					 to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>
@@ -174,7 +174,7 @@
 					 to tail your own holiday please contact our Tailor</p>
 			</div>
 			
-			<div class="read_more"><a class="light-rose" href="{{route('Egypt_tour')}}">read more</a></div>
+			<div class="read_more"><a class="light-rose" href="{'{'url(/)}}">read more</a></div>
 			
 		</div>
 	</div>

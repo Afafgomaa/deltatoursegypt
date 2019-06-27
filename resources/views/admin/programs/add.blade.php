@@ -140,19 +140,19 @@
                 </select>
             </div>
         </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Itinerary Heading:</strong>
-                 {!! Form::text('itinerary_heading', null, array('placeholder' => 'itinerary','class' => 'form-control')) !!}                
+        <div id="itinerary">
+            <div class="col-xs-12 col-sm-12 col-md-12" > 
+                <div class="form-group ">
+                    <strong>Itinerary Heading:</strong> <a id="addItinerary" href="#" class="btn btn-xs btn-success">+</a>
+                    <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
+                </div>
+                <div class="form-group">
+                    <strong>itinerary Body:</strong>
+                    <textarea  name="itinerary[]" class="form-control summernote" style="height:100px"></textarea>               
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>itinerary Body:</strong>
-                 {!! Form::textarea('itinerary', null, array('placeholder' => 'itinerary','class' => 'form-control summernote','style'=>'height:100px')) !!}                
-            </div>
-        </div>
+        <a id="addItinerary" href="#" class="btn btn-success">+</a>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Add On:</strong>

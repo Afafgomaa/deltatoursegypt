@@ -26,95 +26,26 @@
 <div class="p-5 bg-white mt-0">
     <div class="container">
         <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+   
+@foreach($page->subPages as $sub)
+<div class="col-md-4 col-sm-6 col-xs-12">
         <div id="sub_category" class="home_special_offer">
 			<div class="img_container">
-			<a href="route">
-				<img src="{{asset('images/egypt-classical-tours.jpg')}}" alt="classic tour" title="classic tour">
+			<a href="">
+				<img src="{{$sub->image}}" alt="classic tour" title="classic tour">
 					</a>
 				</div>
 				<div class="home_special_offer_content">
-					<a href="route">
+					<a href="{{route('subPage',['subPage' => $sub->slug])}}">
 						<div class="home_special_offer_title">
-							<h2 class="mb-0 text-blue font-weight-bold">Classic Tours</h2>
+							<h2 class="mb-0 text-blue font-weight-bold">{{$sub->name}}</h2>
 						</div>
 					</a>
 						<div class="home_special_offer_description">
-							<p>Experience all that Egypt has to offer with an exclusive private group holiday.</p>
+							<p>{{$sub->desc}}</p>
 						</div>
-					<a href="/Egypt/Packages/Honeymoon-Tours-Egypt">
-						</a><div class="read_more"><a href="route"></a><a href="route">read more</a></div>
-					
-				</div>
-			</div>
-		 
-		</div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-        <div id="sub_category" class="home_special_offer">
-			<div class="img_container">
-			<a href="route">
-				<img src="{{asset('images/travel_egypt_safari.jpg')}}" alt="safari tour" title="safari tour">
-					</a>
-				</div>
-				<div class="home_special_offer_content">
-					<a href="route">
-						<div class="home_special_offer_title">
-							<h2 class="mb-0 text-blue font-weight-bold">ADVENTURE TOURS</h2>
-						</div>
-					</a>
-						<div class="home_special_offer_description">
-							<p>Plan a luxury tour that will take you back to a bygone era of more comfortable travel.</p>
-						</div>
-					<a href="/Egypt/Packages/Honeymoon-Tours-Egypt">
-						</a><div class="read_more"><a href="route"></a><a href="route">read more</a></div>
-					
-				</div>
-			</div>
-		 
-		</div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-        <div id="sub_category" class="home_special_offer">
-			<div class="img_container">
-			<a href="route">
-				<img src="{{asset('images/luxor.jpg')}}" alt="luxor tour" title="luxor tour">
-					</a>
-				</div>
-				<div class="home_special_offer_content">
-					<a href="route">
-						<div class="home_special_offer_title">
-							<h2 class="mb-0 text-blue font-weight-bold">EGYPT LUXURY TOURS</h2>
-						</div>
-					</a>
-						<div class="home_special_offer_description">
-							<p> Plan a luxury tour that will take you back to a bygone era of more comfortable travel.</p>
-						</div>
-					<a href="route">
-						</a><div class="read_more"><a href="route"></a><a href="route">read more</a></div>
-					
-				</div>
-			</div>
-		 
-		</div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-        <div id="sub_category" class="home_special_offer">
-			<div class="img_container">
-			<a href="route">
-				<img src="{{asset('images/budget_project.jpg')}}" alt="classic tour" title="classic tour">
-					</a>
-				</div>
-				<div class="home_special_offer_content">
-					<a href="route">
-						<div class="home_special_offer_title">
-							<h2 class="mb-0 text-blue font-weight-bold">BUDGET TOURS</h2>
-						</div>
-					</a>
-						<div class="home_special_offer_description">
-							<p>great journey on a reasonable budget, and make your discovery of Egypt completely worry-free</p>
-						</div>
-					<a href="route">
-						</a><div class="read_more"><a href="route"></a><a href="route">read more</a></div>
+					<a href="{{route('subPage',['subPage' => $sub->slug])}}">
+						</a><div class="read_more"><a href="{{route('subPage',['subPage' => $sub->slug])}}"></a><a href="{{route('subPage',['subPage' => $sub->slug])}}">read more</a></div>
 					
 				</div>
 			</div>
@@ -122,10 +53,8 @@
 		</div>
 
 
-       
-       
+@endforeach
 
-    
         </div>
     </div>
 </div>

@@ -237,12 +237,19 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
 
 
 
+ Route::get('/{mainPage}', [
+      'uses' => 'PagesController@findPage',
+      Route::get('/{subPage}', [
+         'uses' => 'PagesController@findSubPage',
+         'as'   => 'subPage'
+         
+      ])
+      
+    
+   ]);
 
 
-
-Route::get('/{slug}', [
-   'uses' => 'PagesController@findPage',
-]);
-Route::get('/{slug}/{slug}', [
+Route::get('/{program}', [
    'uses' => 'ProgramsController@findProgram',
 ]);
+

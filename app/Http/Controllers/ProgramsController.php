@@ -157,9 +157,9 @@ $program->save();
         return redirect()->back();
           
     }
-    public function findProgram($slug)
+    public function findProgram($program)
     {
-        $program = Programs::where('slug', $slug )->first();
-        return view('egyptTours/testOfEgypt',compact('program'))
+        $program = Programs::where('slug', $program )->first();
+        return view('egyptTours/testOfEgypt',compact('program'));
     }
 }

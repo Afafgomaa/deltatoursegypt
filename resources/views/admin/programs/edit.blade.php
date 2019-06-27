@@ -126,6 +126,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Itinerary Heading:</strong>
+                 {!! Form::text('itinerary_heading', null, array('placeholder' => 'itinerary','class' => 'form-control')) !!}                
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>itinerary:</strong>
                  {!! Form::textarea('itinerary', null, array('placeholder' => 'overview','class' => 'form-control summernote','style'=>'height:100px')) !!}                
             </div>
@@ -152,6 +158,12 @@
             <div class="form-group">
                 <strong>Related Programs:</strong>
                 {!! Form::select('related_programs_id[]', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control','multiple' => 'multiple'])  !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Page:</strong>
+                {!! Form::select('page_id', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control'])  !!}
             </div>
         </div>
       

@@ -87,6 +87,11 @@ $( document ).ready(function() {
     $('#image_gallery_add')
     .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">');
     });
+    $('#addItinerary').click(function(event){
+      event.preventDefault();
+    $('#itinerary')
+    .append("<div class='col-xs-12 col-sm-12 col-md-12'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'><textarea  name='itinerary[]' class='form-control summernote' style='height:100px'></textarea>   </div> </div>");
+    });
 });
 
 </script>

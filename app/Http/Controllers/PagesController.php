@@ -180,15 +180,24 @@ class PagesController extends Controller
 **/
 
 
-    public function findpage($slug)
+    public function findpage($mainPage)
     {
  
-        $page = Pages::where('slug', $slug )->first();
-       if($page->parent_id === 0){
+        $page = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
+       
         return view('main_packeges', compact('page'));
-       }else{
-           return view('Egypt_tour', compact('page'));
-       }
+       
+        
+    }
+
+
+    public function findSubPage($subPage)
+    {
+ 
+        $page = Pages::where('parent_id','!==',0)->where('slug', $subPage )->first();
+       
+        return view('Egypt_tour', compact('page'));
+       
         
     }
 
