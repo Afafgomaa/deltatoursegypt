@@ -82,10 +82,9 @@
 				<div class="col-md-6">
 					<nav id="sub-menu">
 						<ul>
-							<li><a href="{{url('/')}}">Egypt tours Packages</a></li>
-							<li><a href="{{url('/')}}">Nile River Cruises</a> &nbsp;|</li>
-							<li><a href="{{url('/')}}">Talior Made</a> &nbsp;|</li>
-							<li><a href="{{url('/')}}">Egypt Excurions</a> &nbsp;|</li>  
+						@foreach($pages->take(4) as $page)
+							<li><a href="{{url($page->slug)}}">{{$page->name}}</a>  |</li> 
+						@endforeach
 						</ul>
 					</nav>
 				</div>

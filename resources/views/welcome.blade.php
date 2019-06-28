@@ -57,7 +57,7 @@
 						data-width="['530','530','530','1100']"
 						data-fontsize="['18','18','18','40']"
 						data-lineheight="['26','26','26','45']"
-						style="color: #b5b5b5;">the nile river <strong class="text-color-light">onboard</strong>Luxurious nile cruise 
+						style="color: #b5b5b5;">{{substr($desc_2 , 0, 13)}}<strong class="text-color-light">{{substr($desc_3 , 12, 21)}}</strong> {{substr($desc_3 ,21)}}
 					</div>
 								
 				</li>

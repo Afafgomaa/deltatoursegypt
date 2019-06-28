@@ -8,7 +8,7 @@ use App\Pages;
 use App\post;
 use App\Accommodations;
 use App\Programs;
-use App\Add_on;
+use App\Addon;
 use App\Sights;
 
 class AppServiceProvider extends ServiceProvider
@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('posts', post::all());
         view()->share('accommodations', Accommodations::all());
         view()->share('programs', Programs::all());
-        view()->share('addons', Add_on::all());
+        view()->share('addons', Addon::all());
         view()->share('sights', Sights::all());
         
         

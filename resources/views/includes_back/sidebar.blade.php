@@ -24,6 +24,7 @@
                     <ul class="nav child_menu">
                       <li><a href="{{route('page.add')}}">pages</a></li>
                       <li><a href="{{route('slider')}}">Slider</a></li>
+                      <li><a href="{{route('section.index')}}">Sections</a></li>
                       <li><a href="{{route('highlight.index')}}">Highlights</a></li>
                       <li><a href="{{route('sight.index')}}">Sights</a></li>
                     </ul>
@@ -66,6 +67,7 @@
                       <li><a href="{{ route('Program.trashed') }}">Programs</a></li>
                       <li><a href="{{ route('highlight.trashed') }}">Highlights</a></li>
                       <li><a href="{{ route('sight.trashed') }}">Sights</a></li>
+                      <li><a href="{{ route('section.trashed') }}">Sections</a></li>
                       <li><a href="{{ route('Accommodation.trashed') }}">Accommodations</a></li>
                     </ul>
                   </li>

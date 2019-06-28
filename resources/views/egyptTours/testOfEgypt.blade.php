@@ -45,26 +45,23 @@
                     
                     <div class="col-xs-12 heighlieth review_num">
                         <h4 class="shorter text-blue">package Highlights</h4>
-                        @foreach($program->Highlights as $h)
-                        
-                            <div class="col-xs-12 review_num">
+                        <div class="col-xs-12 review_num">
                                 <ul>
-                                    <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>	
-                                </ul>
-                            </div>
-                        @endforeach             
+                                @foreach($program->Highlights->take(4) as $h)                           
+                                        <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>
+
+                                @endforeach  
+                              </ul>
+                              
+                         </div>           
                     </div>
                    <div style="clear:both"></div>
                     <div class="col-md-12 tag">
                         <h5 class="shorter text-blue"> Holiday included sights</h5>
-                            <span class="label label-primary">Egyptian museum</span>
-                            <span class="label label-primary">Mohamed ali mosque</span>
-                            <span class="label label-primary">Giza Pyramids</span>
-                            <span class="label label-primary">Sakkara</span>
-                            <span class="label label-primary">Hanging Church</span>
-                            <span class="label label-primary">Coptic Museum</span>
-                            <span class="label label-primary">Nile Felucca</span>
-                            <span class="label label-primary">Khan el Khalili </span>				
+                        @foreach($program->Sights as $sight) 
+                            <span class="label label-primary">{{$sight->name}}</span>
+                            
+                        @endforeach 				
                     </div>
 
 

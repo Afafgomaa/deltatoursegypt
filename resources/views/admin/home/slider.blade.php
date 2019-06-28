@@ -27,20 +27,20 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url">Silder Image Url <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url" id="url" required="required" name="slider_1_url" class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="url" required="required" value="{{$slider_1}}" name="slider_1_url" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url" id="title" name="slider_1_title" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="title" name="slider_1_title" value="{{$title_1}}" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input id="description" class="form-control col-md-7 col-xs-12" type="text" name="slider_1_description">
+                    <input id="description" class="form-control col-md-7 col-xs-12" value="{{$desc_1}}" type="text" name="slider_1_description">
                 </div>
                 </div>
                 <br><br>
@@ -52,20 +52,20 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url"> Silder Image Url<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url" id="url"  name="slider_2_url" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="url"  name="slider_2_url" value="{{$slider_2}}" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url" id="title" name="slider_2_title" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="title" name="slider_2_title" value="{{$title_2}}" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input id="description" class="form-control col-md-7 col-xs-12" type="text" name="slider_2_description">
+                    <input id="description" class="form-control col-md-7 col-xs-12" value="{{$desc_2}}" type="text" name="slider_2_description">
                 </div>
                 </div>
                 <br><br>
@@ -77,20 +77,20 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url">Silder Image Url <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url"  id="url" name="slider_3_url" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="url"  id="url" name="slider_3_url" value="{{$slider_3}}" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="url" id="title" name="slider_3_title" required="required" class="form-control col-md-7 col-xs-12">
+                    <input type="url" id="title" name="slider_3_title" value="{{$title_3}}" required="required" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input id="description" class="form-control col-md-7 col-xs-12" type="text" name="slider_3_description">
+                    <input id="description" class="form-control col-md-7 col-xs-12" value="{{$desc_3}}" type="text" name="slider_3_description">
                 </div>
                 </div>
                 <br><br>

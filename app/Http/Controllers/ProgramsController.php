@@ -56,17 +56,18 @@ class ProgramsController extends Controller
         'pricing' => $request->pricing,
         'price_children' => $request->price_children,
         'page_id' => $request->page_id,
-        'holiday_sights_id' => serialize($request->holiday_sights_id),
         'image_gallery' => serialize($request->image_gallery),
         'itinerary_heading' => serialize($request->itinerary_heading),
         'itinerary' => serialize($request->itinerary),
-        'Accom_id' => serialize($request->Accom_id),
-        'add_on_id' => serialize($request->add_on_id),
         'related_programs_id' => serialize($request->related_programs_id),
         'slug' => str_slug($request->name),
 
         ]);
         $program->Highlights()->attach($request->package_highlights_id);
+        $program->Sights()->attach($request->holiday_sights_id);
+        $program->Accommodations()->attach($request->accom_id);
+        $program->Addons()->attach($request->add_on_id);
+
 
 $program->save();
         return redirect()->route('Program.index')
@@ -106,15 +107,17 @@ $program->save();
     public function update(Request $request, $id)
     {
         $requestData = $request->all();
-        $requestData['package_highlights_id'] = serialize($request->package_highlights_id);
-        $requestData['holiday_sights_id'] = serialize($request->holiday_sights_id);
+        
         $requestData['image_gallery'] = serialize($request->image_gallery);
         $requestData['itinerary_heading'] = serialize($request->itinerary_heading);
         $requestData['itinerary'] = serialize($request->itinerary);
-        //$requestData['Accom_id'] = serialize($request->Accom_id);
-        $requestData['add_on_id'] = serialize($request->add_on_id);
         $requestData['related_programs_id'] = serialize($request->related_programs_id);
         $requestData['slug'] = str_slug($request->name);
+        $requestData ->Highlights()->sync($request->package_highlights_id);
+        $requestData >Sights()->sync($request->holiday_sights_id);
+        $requestData ->Accommodations()->sync($request->accom_id);
+        $requestData ->Addons()->sync($request->add_on_id);
+
         
         Programs::find($id)->update($requestData);
         Session::flash('Success','Your Program Updated Successfully');

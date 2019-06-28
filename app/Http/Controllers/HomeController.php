@@ -29,7 +29,15 @@ class HomeController extends Controller
     }
 
     public function slider(){
-        return view('admin.home.slider');
+        return view('admin.home.slider')->with('slider_1', slider::first()->slider_1)
+                                        ->with('slider_2', slider::first()->slider_2)
+                                        ->with('slider_3', slider::first()->slider_3)
+                                        ->with('title_1' , slider::first()->title_1)
+                                        ->with('title_2' , slider::first()->title_2)
+                                        ->with('title_3' , slider::first()->title_3)
+                                        ->with('desc_1'  , slider::first()->description_1)
+                                        ->with('desc_2'  , slider::first()->description_2)
+                                        ->with('desc_3'  , slider::first()->description_3);
     }
 
     public function slider_store(Request $request){

@@ -25,6 +25,11 @@ class Pages extends Model
         return $this->belongsTo('App\Pages', 'id');
     }
 
+    public function section()
+    {
+        return $this->hasOne('App\Sections');
+    }
+
    
 
 }

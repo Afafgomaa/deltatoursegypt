@@ -15,5 +15,9 @@ class Accommodations extends Model
     protected $casts = [
         'gallery_image' => 'array',
     ];
+    public function Programs()
+    {
+    	return $this->belongsToMany('App\Programs');
+    }
 }
 

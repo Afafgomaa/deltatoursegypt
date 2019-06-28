@@ -111,7 +111,7 @@
             </div>
         </div>
         
-        
+        <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">Program Image Gallery: <span class="required">*</span>
                     </label>
@@ -120,10 +120,12 @@
                       
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-12">
-                    <a id="addnn" href="#" class="btn btn-success">+</a>
+                       <a id="addnn" href="#" class="btn btn-success">+</a>
                     </div>
 
+           </div>
          </div>
+         
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Overview:</strong>
@@ -140,19 +142,22 @@
                 </select>
             </div>
         </div>
-        <div id="itinerary">
+        
             <div class="col-xs-12 col-sm-12 col-md-12" > 
+              <div id="itinerary">
                 <div class="form-group ">
-                    <strong>Itinerary Heading:</strong> <a id="addItinerary" href="#" class="btn btn-xs btn-success">+</a>
-                    <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
-                </div>
-                <div class="form-group">
-                    <strong>itinerary Body:</strong>
-                    <textarea  name="itinerary[]" class="form-control summernote" style="height:100px"></textarea>               
-                </div>
+                    <div class="pull-right"><a id="addItinerary" href="#" class="btn btn-success">+</a></div>
+                        <strong>Itinerary Heading:</strong> 
+                        <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
+                    </div>
+                    <div class="form-group">
+                        <strong>itinerary Body:</strong>
+                        <textarea  name="itinerary[]" class="form-control summernote" style="height:100px"></textarea>               
+                    </div>
             </div>
+          </div>
         </div>
-        <a id="addItinerary" href="#" class="btn btn-success">+</a>
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Add On:</strong>

@@ -228,7 +228,22 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
          'as'   => 'sight.restore'
       ]);
       Route::resource('sight','SightsController');
-      //end sigts route
+      //end sections route
+
+      Route::get('/section/trashed', [
+         'uses' => 'SectionsController@trashedSection',
+         'as'   => 'section.trashed'
+         ]);
+         Route::get('/section/kill/{id}', [
+            'uses' => 'SectionsController@killSection',
+            'as'   => 'section.kill'
+         ]);
+         Route::get('/section/restore/{id}', [
+            'uses' => 'SectionsController@restoreSection',
+            'as'   => 'section.restore'
+         ]);
+         Route::resource('section','SectionsController');
+         //end sections route
    
 });
       

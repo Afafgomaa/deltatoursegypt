@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Add_on;
+use App\Addon;
 use Illuminate\Http\Request;
 use Session;
 
@@ -15,7 +15,7 @@ class AddOnController extends Controller
      */
     public function index()
     {
-        return view('admin.addons.index')->with('addons', Add_on::orderBy('id','DESC')->paginate(5));
+        return view('admin.addons.index')->with('addons', Addon::orderBy('id','DESC')->paginate(5));
     }
 
     /**
@@ -37,7 +37,7 @@ class AddOnController extends Controller
     public function store(Request $request)
     {
     
-        Add_on::create($request->all());
+        Addon::create($request->all());
 
         
         return redirect()->route('Addon.index')
@@ -47,23 +47,23 @@ class AddOnController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Add_on  $add_on
+     * @param  \App\Addon  $add_on
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return view('admin.addons.show')->with('addon', Add_on::find($id));
+        return view('admin.addons.show')->with('addon', Addon::find($id));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Add_on  $add_on
+     * @param  \App\Addon  $add_on
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $addon = Add_on::find($id);
+        $addon = Addon::find($id);
         return view('admin.addons.edit',compact('addon'));
     }
 
@@ -71,13 +71,13 @@ class AddOnController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Add_on  $add_on
+     * @param  \App\Addon  $addon
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         $requestData = $request->all();
-        Add_on::find($id)->update($requestData);
+        Addon::find($id)->update($requestData);
         Session::flash('Success','Your Add on Updated Successfully');
         return redirect()->back();
     }
@@ -85,12 +85,12 @@ class AddOnController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Add_on  $add_on
+     * @param  \App\Addon  $add_on
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $add_on = Add_on::find($id);
+        $add_on = Addon::find($id);
         
         $add_on->delete();
         Session::flash('success', 'Add on Deleted Successfully');
@@ -99,7 +99,7 @@ class AddOnController extends Controller
 
     public function trashedAddon()
     {
-        $add_on = Add_on::onlyTrashed()->get();
+        $add_on = Addon::onlyTrashed()->get();
 
         return view('admin.addons.trashed', compact('add_on'));
 
@@ -108,14 +108,14 @@ class AddOnController extends Controller
 
     public function killAddon($id)
     {
-        $add_on = PAdd_on::withTrashed()->where('id',$id)->first();
+        $add_on = Addon::withTrashed()->where('id',$id)->first();
         $add_on->forceDelete();
         return redirect()->back();
 
     }
     public function restoreAddon($id)
     {
-        $add_on = Add_on::withTrashed()->where('id',$id)->first();
+        $add_on = Addon::withTrashed()->where('id',$id)->first();
         $add_on->restore();
         return redirect()->back();
           

@@ -23,15 +23,12 @@ class CreateProgramsTable extends Migration
             $table->integer('nights');
             $table->text('brief');
             $table->string('place')->nullable();
-            $table->text('holiday_sights_id')->nullable();
             $table->text('image_gallery');
             $table->text('overview')->nullable();
             $table->string('itinerary_heading');
             $table->text('itinerary');
-            $table->text('Accom_id');
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();
-            $table->text('add_on_id')->nullable();
             $table->integer('page_id');
             $table->string('slug');
             $table->text('related_programs_id')->nullable();

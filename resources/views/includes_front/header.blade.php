@@ -15,15 +15,11 @@
 					<div class="header-row pt-3">
 						<nav class="header-nav-top">
 							<ul class="nav nav-pills">
+							@foreach($pages->take(3) as $page)
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link" href="{{url('/')}}"><i class="fas fa-angle-right"></i> Egypt Holidays</a>
+									<a class="nav-link" href="{{url('/')}}"><i class="fas fa-angle-right"></i> {{$page->name}}</a>
 								</li>
-                                <li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link pl-0" href="{{url('/')}}"><i class="fas fa-angle-right"></i> Nile River Cruises</a>
-								</li>
-								<li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link pl-0" href="{{url('/')}}"><i class="fas fa-angle-right"></i> Egypt Excursion</a>
-								</li>
+                            @endforeach
 								<li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
 										<span class="ws-nowrap"><i class="fas fa-phone"></i> (002) 0100 178 4742</span>
 								</li>

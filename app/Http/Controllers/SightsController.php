@@ -6,6 +6,7 @@ use Session;
 use App\Sights;
 use Illuminate\Http\Request;
 
+
 class SightsController extends Controller
 {
     /**

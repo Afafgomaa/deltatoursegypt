@@ -5,7 +5,7 @@
                 <div class="row">
                     <h3 class="program_box_title"></h3>
                     <div class="col-md-12">
-                       <p>NHANCE YOUR TRIP WITH THESE AMAZING ADDED EXTRAS AND BOLT-ONS</p>
+                       <p>{!!$program->pricing!!}</p>
                 </div>
         </div>
     </div>							

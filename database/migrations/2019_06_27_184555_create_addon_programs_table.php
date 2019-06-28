@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAddOnsTable extends Migration
+class CreateAddonProgramsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateAddOnsTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_ons', function (Blueprint $table) {
+        Schema::create('addon_programs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image');
-            $table->string('title');
-            $table->integer('price');
-            $table->text('desc');
-            $table->softdeletes();
+            $table->integer('addon_id');
+            $table->integer('programs_id');
+            
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateAddOnsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_ons');
+        Schema::dropIfExists('addon_programs');
     }
 }

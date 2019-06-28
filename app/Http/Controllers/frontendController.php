@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\slider;
 use App\post;
 use App\Pages;
+use App\Sections;
 class frontendController extends Controller
 {
 
@@ -27,7 +28,8 @@ class frontendController extends Controller
                               ->with('desc_1'  , slider::first()->description_1)
                               ->with('desc_2'  , slider::first()->description_2)
                               ->with('desc_3'  , slider::first()->description_3)
-                              ->with('blog'    , post::where(['add_to_home_page'=> 1])->take(4)->get());
+                              ->with('blog'    , post::where(['add_to_home_page'=> 1])->take(4)->get())
+                              ->with('sections', Sections::all());
                               
     }
 
