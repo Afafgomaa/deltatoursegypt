@@ -52,13 +52,35 @@
 					
 									<li>
 										<a  href="{{route('Tailor_Made')}}">Tailor Made</a>	
+									</li>
+									
 
-                                    <li>
-										<a  href="{{route('blog')}}">blog</a>	
+									<li class="dropdown">
+									<a class="dropdown-item dropdown-toggle" href="{{route('contact_us')}}">Contact<i class="fas fa-chevron-down"></i></a> 
+										<ul class="dropdown-menu">
+											<li class="dropdown-submenu dropdown-reverse">
+									         <a class="dropdown-item" href="{{route('blog')}}"> Blog<i class="fas fa-chevron-down"></i></a>
+								             </li>
+											<li class="dropdown-submenu dropdown-reverse">
+									       <a class="dropdown-item" href="{{route('contact_us')}}"> Contact Us<i class="fas fa-chevron-down"></i></a>
+								           </li>
+											<li class="dropdown-submenu dropdown-reverse">
+									       <a class="dropdown-item" href="{{route('about_us')}}"> About Us<i class="fas fa-chevron-down"></i></a>
+								             </li>
+										</ul>
 									</li>
-									<li>
-										<a  style="color:#F44336" target="_blank" href="{{route('Admin')}}">Admin Panel</a>
-									</li>
+
+
+
+
+
+
+
+
+                                    	
+
+                                    
+									
 									
                                     		
 								</ul>

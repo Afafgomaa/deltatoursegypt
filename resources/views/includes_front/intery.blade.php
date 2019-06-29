@@ -11,7 +11,7 @@
               @foreach(array_combine(unserialize($program->itinerary), unserialize($program->itinerary_heading))  as $b => $h  ) 
               
                     <div class="full_itinerary_box">
-                            <div class="itinerary_title toggled" id="itinerary_title_1">
+                            <div class="itinerary_title" id="itinerary_title_1">
                                 <h2 style="float:left;"><i class="fa fa-arrow-right"></i>{!!$h!!} </h2> 
                             </div>
                             <div class="itinerary_desc" id="itinerary_desc_1" style="display: none;">

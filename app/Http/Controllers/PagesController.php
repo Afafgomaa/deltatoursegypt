@@ -42,6 +42,7 @@ class PagesController extends Controller
         $page = Pages::create([
             'name' => $request->name,
             'title' => $request->title,
+            'image' => $request->image,
             'desc'  => $request->desc,
             'slug'  => str_slug($request->title),
             'parent_id' => $request->mainPage
@@ -116,6 +117,7 @@ class PagesController extends Controller
     public function editsubPage($id)
     {
         $page = Pages::find($id);
+        
         return view('admin.pages.subEdit', compact('page'));
     }
 
@@ -124,7 +126,8 @@ class PagesController extends Controller
         $page = Pages::find($id);
         $page->name = $request->name;
         $page->title = $request->title;
-        $page->desc =  $request->desc;
+        $page->image = $request->image;
+        $page->desc =  $request->breif;
         $page->slug = str_slug($request->title);
         $page->parent_id = $request->mainPage;
         

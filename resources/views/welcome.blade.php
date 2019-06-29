@@ -103,7 +103,7 @@
 <div class="home-intro" id="home-intro">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 m-s">
 				<p><em>Over 40 years in Travel Buisness</em></p>
 			</div>
 		</div>		

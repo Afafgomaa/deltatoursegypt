@@ -12,7 +12,8 @@ p ,h2 {
     color: #000!important;
 }
 .blue-custom{
-    background: #1750ee;
+    background: #0088CC;
+    color: #fff;
 }
 
 h2{
@@ -239,7 +240,7 @@ ul li {
 	
 	}
     #sub_category .home_special_offer_content .home_special_offer_description{
-    height: 80px;
+    
     width: 100%;
     overflow: hidden;
     font-size: 13px;
@@ -316,7 +317,7 @@ font-size: 20px;
 }
 
 .home-intro{
-    background-color:#1750ee;
+    background-color:#0088CC;
 }
 .p-section {
     color: #6c6c6c;
@@ -356,6 +357,9 @@ p.featured {
 }
 .footer-copyright{
     font-size: 16px;
+}
+#footer a:not(.btn){
+    color: #ffffff;
 }
 #footer .newsletter form {
     width: 100%;
@@ -712,7 +716,13 @@ td {
 }
 .btn-orange {
     background: #ed4830;
-    background-image: linear-gradient(180deg,#ee3d23,#eb5a45);}
+    background-image: linear-gradient(180deg,#ee3d23,#eb5a45);
+}
+
+.m-s{
+    margin: 0 auto;
+    text-align: center;
+}
 
 /*edit navbar link color color*/
 
@@ -720,7 +730,7 @@ td {
 #footer .footer-copyright p a {
     color: #777 !important;
 }
-#footer a:not(.btn) ,#header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span ,.social-icons li a{
+#header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span ,.social-icons li a{
     color: #000!important;
 }
 #footer #sub-menu a ,#footer .footer-copyright p{

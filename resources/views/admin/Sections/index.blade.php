@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Section Image:</strong>
-                             {!! Form::url('image', null, array('placeholder' => ' image','class' => 'form-control')) !!}
+                             {!! Form::text('image', null, array('placeholder' => ' image','class' => 'form-control')) !!}
                         </div>
                         <div class="form-group">
                             <strong>Section page:</strong>

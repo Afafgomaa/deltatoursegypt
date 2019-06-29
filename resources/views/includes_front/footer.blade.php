@@ -10,7 +10,7 @@
 		</div>
 	<div class="row py-5 my-4">
 		<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-			<p class="pr-1 footer_li">Keep up on our always evolving Tour Packages and Holidays . Enter your e-mail and subscribe to our newsletter.</p>
+			<p class="pr-1 footer_li text-light">Keep up on our always evolving Tour Packages and Holidays . Enter your e-mail and subscribe to our newsletter.</p>
 				<div class="alert alert-success d-none" id="newsletterSuccess">
 					<strong>Success!</strong> You've been added to our email list.
 				</div>
@@ -50,7 +50,7 @@
 		<div class="contact-details">
 			<h5 class="text-3 mb-3">CONTACT US</h5>
 		    <ul class="list list-icons list-icons-lg footer_li">
-			<li>
+			<li class="text-light">
 				<i class="fa fa-map-marker"></i> <strong>Address:</strong> 17  Zaghloul  Street , Giza  , Egypt</li>
 				<li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:01001784742"><strong>Phone:</strong> (00202) 338844557 - 01001784742</a></p></li>
 				<li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:info@deltatoursegypt.com"><strong>Email:</strong> info@deltatoursegypt.com</a></p></li>

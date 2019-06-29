@@ -40,21 +40,27 @@
                 </div>
                 </div>
                 <div class="form-group">
-                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Select main Page <span class="required">*</span>
-                 </label>
-                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <select class="form-control col-md-7 col-xs-12" required name="mainPage">
-                        <option value="" Selected disabled>Select Main Page</option>
-                        @foreach($pages as $page)  
-                                <option value="{{$page->id}}">{{$page->name}}</option>
-                        @endforeach
-                    </select>
-                 </div>
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Image <span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="image" name="image" required="required" value="{{$page->image}}" class="form-control col-md-7 col-xs-12">
+                        <small>image shows as main page as sections </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Select main Page <span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control col-md-7 col-xs-12" required name="mainPage">
+                            <option value="" Selected disabled>Select Main Page</option>
+                            @foreach($pages as $page)  
+                                    <option value="{{$page->id}}">{{$page->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                <textarea class="form-control col-md-7 col-xs-12" type="text" name="desc" col="5" rows="5">
+                <textarea class="form-control col-md-7 col-xs-12" type="text" name="breif" col="5" rows="5">
                 {{$page->desc}}
                 </textarea>
                 </div>

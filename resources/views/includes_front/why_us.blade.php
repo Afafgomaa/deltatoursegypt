@@ -53,10 +53,11 @@
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
-                            Inspiring tours                      
+                        High Quality Service                      
                         </div>
                         <div class="home_exceptional_box_text">
-                            We personalize your trip online before you go. Your guide tailors your experience on the spot to fit with your interests and questions.                 
+                        We do believe honestly that quality should come first and quantity 
+                        would come later and our main objective focused on (Quality before profits)
                         </div>
                        
                     </div>
@@ -70,10 +71,10 @@
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
-                            Around-the-clock support                
+                        Tailored Programs                
                         </div>
                         <div class="home_exceptional_box_text">
-                            Feel at ease traveling anywhere. Get your questions answered anytime via email, phone, or a knock on the door.
+                        Whatever your travel dreams, together we can custom-design the perfect itinerary with highly personalized services just for you
                         </div>
                     </div>
                 </div>
@@ -87,11 +88,11 @@
                     </div>
                     <div class="home_exceptional_content">
                         <div class="home_exceptional_box_title">
-                            Comfort anywhere             
+                        Qualifeid Staff
+             
                         </div>
                         <div class="home_exceptional_box_text">
-                            You'll be at home away from home in our prime accommodations. We only work with the best,
-                             most comfort-focused hotels.                        
+                        our Qualifeid Multi ligual staff will be happy to assist you in any request or informations you might need                        
                         </div>
                     </div>
                 </div>
@@ -105,10 +106,10 @@
                         </div>
                         <div class="home_exceptional_content">
                             <div class="home_exceptional_box_title">
-                                Secure Online Payment         
+                            Available 24/7        
                             </div>
                             <div class="home_exceptional_box_text">
-                                Use your debit card, credit card, or PayPal. Your transactions are protected by 3D Secure and SecureCode.                
+                            We offer Customer Support 24 hours a day, 7 days a week by phone and email for questions about our tours and services
                             </div>
                         </div>
                     </div>

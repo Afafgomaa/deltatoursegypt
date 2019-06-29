@@ -32,7 +32,7 @@
         <div id="sub_category" class="home_special_offer">
 			<div class="img_container">
 			<a href="{{url($page->slug . '/' .$sub->slug)}}">
-				<img src="{{$sub->image}}" alt="classic tour" title="classic tour">
+				<img src="{{asset($sub->image)}}" alt="classic tour" title="classic tour">
 					</a>
 				</div>
 				<div class="home_special_offer_content">
@@ -42,7 +42,7 @@
 						</div>
 					</a>
 						<div class="home_special_offer_description">
-							<p>{{$sub->desc}}</p>
+							{!!$sub->desc!!}
 						</div>
 					<a href="">
 						</a><div class="read_more"><a href="{{url($page->slug . '/' .$sub->slug)}}"></a><a href="{{url($page->slug . '/' .$sub->slug)}}">read more</a></div>

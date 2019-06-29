@@ -8,7 +8,7 @@
 @foreach($sections as $section)
 <div class="col-md-4 col-sm-6 col-xs-12">
 	<div id="sub_category" class="home_special_offer">
-		<div class="img_container" style="background-image:url({{$section->image}})">
+		<div class="img_container" style="background-image:url({{asset($section->image)}})">
 		</div>
 		<div class="home_special_offer_content">
 			<a href="/Egypt/Excursions">
