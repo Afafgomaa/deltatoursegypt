@@ -9,7 +9,7 @@ class Pages extends Model
 {
 
     use softDeletes;
-    protected $fillable = ['name','title', 'desc','slug','image', 'parent_id'];
+    protected $guarded = ['id'];
 
 
     protected $dates = ['deleted_at']; 
@@ -25,10 +25,12 @@ class Pages extends Model
         return $this->belongsTo('App\Pages', 'id');
     }
 
-    //public function section()
-   // {
-     //   return $this->hasOne('App\Sections');
-   // }
+    public function program()
+    {
+        return $this->hasMany('App\Programs');
+    }
+
+   
 
    
 

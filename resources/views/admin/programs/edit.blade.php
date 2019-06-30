@@ -1,13 +1,15 @@
 @extends('layouts.back')
 @section('content')
-
 @include('includes_back.sidebar')
 <div class="right_col" role="main" style="min-height: 3787px;">
  <div class="row">
+ <div class="col-md-12 col-sm-12 col-xs-12">
+
+
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-          <h2>Edit Programs {{$program->name}}</h2>
+          <h2>Programs</h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -20,7 +22,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                      
+                        <h2>Add New pogram</h2>
                     </div>
                     <div class="pull-right">
                         <a class="btn btn-primary" href="{{ route('Program.index') }}"> Back</a>
@@ -87,31 +89,102 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Description:</strong>
-                 {!! Form::textarea('brief', null, array('placeholder' => 'Description','class' => 'form-control summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('brief', null, array('placeholder' => 'Description','class' => 'summernote form-control ','style'=>'height:100px')) !!}                
             </div>
         </div>
+
+    </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+        
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+           <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+    <div class="row">
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Package Highlights:</strong>
-                {!! Form::select('package_highlights_id', ['0' => 'Private', '1' => 'Public'] , null, ['class' => 'form-control' ]) !!}
+                <select class="form-control" name="package_highlights_id[]" multiple= 'multiple'>
+                      @foreach($highlights as $highlight)
+                             <option value="{{ $highlight->id}}">{{$highlight->name}}</option>
+                      @endforeach 
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>holiday_sights_id:</strong>
-               {!! Form::text('holiday_sights_id' , null, array('placeholder' => 'holiday_sights_id','class' => 'form-control')) !!}
+                <strong>Holiday Sights:</strong>
+                <select class="form-control" name="holiday_sights_id[]" multiple= 'multiple'>
+                      @foreach($sights as $sight)
+                             <option value="{{ $sight->id}}">{{$sight->name}}</option>
+                      @endforeach 
+                </select>
             </div>
-            <img id="blah" src="#" alt="your image" width="150"/>
         </div>
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group image_gallery">
-                <strong>Program Image Gallery:</strong>
-                {!! Form::text('image_gallery[]', null , array('placeholder' => 'image gallery','class' => 'form-control' )) !!}
-            </div> 
-            <div class="pull-right">
-                    <a id="gallery_iamge_add" class="btn btn-success">+</a>
-            </div>               
+          <div class="form-group">
+               <strong>Program Image Gallery: </strong>
+                    
+                     <div class="row" id="image_gallery">
+                         <div class="col-md-11 col-xs-11">
+                        <input type="url" name="image_gallery[]" class="form-control  ">
+                    </div>
+                      <div class="col-md-1 col-xs-1">
+                        <a id="addnn" href="#" class="btn btn-success">+</a>
+                       </div>
+                     </div>
+                      
+           </div>
+         </div>
+         
+
+
+         </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+         
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+           <div class="clearfix"></div>
         </div>
+        <div class="x_content">
+
+    <div class="row">
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Overview:</strong>
@@ -120,34 +193,116 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Accommodations:</strong>
-                {!! Form::select('accom_id', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control' ]) !!}
+                <strong>Accommodations::</strong>
+                <select class="form-control" name="accom_id[]" multiple= 'multiple'>
+                      @foreach($accommodations as $c)
+                             <option value="{{ $c->id}}">{{$c->name}}</option>
+                      @endforeach 
+                </select>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Itinerary Heading:</strong>
-                 {!! Form::text('itinerary_heading', null, array('placeholder' => 'itinerary','class' => 'form-control')) !!}                
+
+        </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+          
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+           <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div class="row" id="itinerary">
+                <a id="addItinerary" href="#" class="btn btn-success pull-right">+</a>
+                    <div class="col-xs-12 col-sm-12 col-md-12" > 
+                    
+                            <div class="form-group ">
+                                <strong>Itinerary Heading:</strong> 
+                                <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
+                            </div>
+                                <div class="form-group">
+                                    <strong>itinerary Body:</strong>
+                                    <textarea  name="itinerary[]" class="form-control summernote" style="height:100px"></textarea>               
+                                </div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>itinerary:</strong>
-                 {!! Form::textarea('itinerary', null, array('placeholder' => 'overview','class' => 'form-control summernote','style'=>'height:100px')) !!}                
-            </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+          
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+           <div class="clearfix"></div>
         </div>
+        <div class="x_content">
+
+        <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Add On:</strong>
-                {!! Form::select('add_on_id', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control' ]) !!}
+                <select class="form-control" name="add_on_id[]" multiple= 'multiple'>
+                      @foreach($addons as $addon)
+                             <option value="{{ $addon->id}}">{{$addon->title}}</option>
+                      @endforeach 
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Price&Children:</strong>
-                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control summernote', 'id' => 'summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control ','style'=>'height:100px')) !!}                
             </div>
         </div>
+
+
+
+          
+        </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+          
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+           <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Pricing:</strong>
@@ -157,16 +312,28 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Related Programs:</strong>
-                {!! Form::select('related_programs_id[]', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control','multiple' => 'multiple'])  !!}
+                <select class="form-control" name="related_programs_id[]" multiple= 'multiple'>
+                      @foreach($programs as $program)
+                             <option value="{{ $program->id}}">{{$program->name}}</option>
+                      @endforeach 
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Page:</strong>
-                {!! Form::select('page_id', ['0' => 'Private', '1' => 'Public'] , null , ['class' => 'form-control'])  !!}
+                <select class="form-control" name="page_id">
+                      @foreach($allPages as $page)
+                             <option value="{{ $page->id}}" {{$page->parent_id === 0  ? 'disabled' : ' ' }}>{{$page->name}} </option>
+                      @endforeach 
+                </select>
             </div>
         </div>
-      
+
+
+        
+        
+
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
@@ -178,7 +345,11 @@
         </div>
        </div>
     </div>
+
+
+
   </div>
+</div>
 </div>
 
 @endsection

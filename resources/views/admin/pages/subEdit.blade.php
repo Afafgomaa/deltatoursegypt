@@ -7,7 +7,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-            <h2>{{$page->name}} </h2>
+            <h2>{{$spage->name}} </h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -18,8 +18,9 @@
             </div>
             <div class="x_content">
             <br>
-            <form id="demo-form2" method="post" action="{{route('subPage.update', ['id'=> $page->id])}}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+            <form id="demo-form2" method="post" action="{{route('subPage.update', ['id'=> $spage->id])}}"  class="form-horizontal form-label-left" >
                 @csrf
+                
                 <h3 style="color:#26B99A;font-weight:bold">Edit SubPage</h3>
                  <hr>
                  <br><br>
@@ -27,7 +28,7 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="url">name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" id="name" required="required" name="name" value="{{$page->name}}" class="form-control col-md-7 col-xs-12">
+                    <input type="text" id="name" required="required" name="name" value="{{$spage->name}}" class="form-control col-md-7 col-xs-12">
                     <small>Name shows in home page manu </small>
                 </div>
                 </div>
@@ -35,23 +36,23 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Title <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" id="title" name="title" required="required" value="{{$page->title}}" class="form-control col-md-7 col-xs-12">
+                    <input type="text" id="title" name="title" required="required" value="{{$spage->title}}" class="form-control col-md-7 col-xs-12">
                     <small>Title shows as Heading in home page and url </small>
                 </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Image <span class="required">*</span></label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="image" name="image" required="required" value="{{$page->image}}" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="image" name="image" required="required" value="{{$spage->image}}" class="form-control col-md-7 col-xs-12">
                         <small>image shows as main page as sections </small>
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Select main Page <span class="required">*</span></label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select class="form-control col-md-7 col-xs-12" required name="mainPage">
+                        <select class="form-control col-md-7 col-xs-12" required name="parent_id">
                             <option value="" Selected disabled>Select Main Page</option>
-                            @foreach($pages as $page)  
+                            @foreach($navbar_links as $page)  
                                     <option value="{{$page->id}}">{{$page->name}}</option>
                             @endforeach
                         </select>
@@ -60,8 +61,8 @@
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                <textarea class="form-control col-md-7 col-xs-12" type="text" name="breif" col="5" rows="5">
-                {{$page->desc}}
+                <textarea class="form-control col-md-7 col-xs-12 summernote" type="text" name="breif" col="5" rows="5">
+                {!!$spage->breif!!}
                 </textarea>
                 </div>
                 </div>

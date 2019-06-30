@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
 use Session;
 use App\Pages;
 use App\Programs;
@@ -25,7 +24,7 @@ class PagesController extends Controller
         $page = Pages::create([
             'name' => $request->name,
             'title' => $request->title,
-            'desc'  => $request->desc,
+            'breif'  => $request->breif,
             'slug' => str_slug($request->title),
             'parent_id' => 0
         ]);
@@ -43,7 +42,7 @@ class PagesController extends Controller
             'name' => $request->name,
             'title' => $request->title,
             'image' => $request->image,
-            'desc'  => $request->desc,
+            'breif'  => $request->breif,
             'slug'  => str_slug($request->title),
             'parent_id' => $request->mainPage
         ]);
@@ -68,7 +67,7 @@ class PagesController extends Controller
         $page = Pages::find($id);
         $page->name = $request->name;
         $page->title = $request->title;
-        $page->desc =  $request->desc;
+        $page->breif =  $request->breif;
         $page->slug = str_slug($request->title);
         $page->parent_id = 0;
         
@@ -79,6 +78,35 @@ class PagesController extends Controller
         return redirect()->back();
 
     }
+
+       // function to hadel suppages
+
+       public function editsubPage($id)
+       {
+           $spage = Pages::find($id);
+           
+           return view('admin.pages.subEdit', compact('spage'));
+       }
+   
+       public function updateSubPage(Request $request , $id)
+       {
+           $page = Pages::find($id);
+           
+            $page->name = $request->name;
+            $page->title = $request->title;
+            $page->image = $request->image;
+            $page->breif =  $request->breif;
+            $page->slug = str_slug($request->title);
+            $page->parent_id = $request->parent_id;
+            
+           
+           $page->update();
+   
+           Session::flash('success', 'Your SubPage Updated Successuflly');
+   
+           return redirect()->back();
+   
+       }
     public function deletePage($id)
     {
         $page = Pages::find($id);
@@ -112,32 +140,7 @@ class PagesController extends Controller
         return redirect()->back();
     }
 
-    // function to hadel suppages
-
-    public function editsubPage($id)
-    {
-        $page = Pages::find($id);
-        
-        return view('admin.pages.subEdit', compact('page'));
-    }
-
-    public function updateSubPage(Request $request , $id)
-    {
-        $page = Pages::find($id);
-        $page->name = $request->name;
-        $page->title = $request->title;
-        $page->image = $request->image;
-        $page->desc =  $request->breif;
-        $page->slug = str_slug($request->title);
-        $page->parent_id = $request->mainPage;
-        
-        $page->save();
-
-        Session::flash('success', 'Your SubPage Updated Successuflly');
-
-        return redirect()->back();
-
-    }
+ 
     public function deleteSubPage($id)
     {
         $page = Pages::find($id);
@@ -186,10 +189,14 @@ class PagesController extends Controller
 
     public function findpage($mainPage)
     {
- 
-        $page = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
-       
+      if($page = Pages::where('parent_id',0)->where('slug',$mainPage )->first()){
         return view('main_packeges', compact('page'));
+      }else {
+          return redirect()->route('home');
+      }
+        
+       
+        
     }
 
 

@@ -82,7 +82,7 @@
 				<div class="col-md-6">
 					<nav id="sub-menu">
 						<ul>
-						@foreach($pages->take(4) as $page)
+						@foreach($navbar_links->take(4) as $page)
 							<li><a href="{{url($page->slug)}}">{{$page->name}}</a>  |</li> 
 						@endforeach
 						</ul>

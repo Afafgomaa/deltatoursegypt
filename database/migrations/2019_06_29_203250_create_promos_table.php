@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePagesTable extends Migration
+class CreatePromosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreatePagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('promos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('title');
-            $table->string('slug');
-            $table->text('breif');
-            $table->string('image')->nullable();
-            $table->integer('parent_id')->nullable();
+            $table->string('code');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -33,7 +28,6 @@ class CreatePagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pages');
-        
+        Schema::dropIfExists('promos');
     }
 }

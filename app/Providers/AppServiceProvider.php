@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        view()->share('pages', Pages::where('parent_id', 0)->get());
+        view()->share('navbar_links', Pages::where('parent_id', 0)->get());
         view()->share('allPages', Pages::all());
         view()->share('posts', post::all());
         view()->share('accommodations', Accommodations::all());

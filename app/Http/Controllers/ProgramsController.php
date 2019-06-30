@@ -59,10 +59,12 @@ class ProgramsController extends Controller
         'image_gallery' => serialize($request->image_gallery),
         'itinerary_heading' => serialize($request->itinerary_heading),
         'itinerary' => serialize($request->itinerary),
-        'related_programs_id' => serialize($request->related_programs_id),
+        'related_programs_id' =>$request->related_programs_id,
+        
         'slug' => str_slug($request->name),
 
         ]);
+        
         $program->Highlights()->attach($request->package_highlights_id);
         $program->Sights()->attach($request->holiday_sights_id);
         $program->Accommodations()->attach($request->accom_id);
@@ -94,7 +96,8 @@ $program->save();
     public function edit($id)
     {
         $program = Programs::find($id);
-        return view('admin.programs.edit',compact('program'));
+        $highlights  = Highlight::orderBy('id' , 'DESC')->get();
+        return view('admin.programs.edit',compact('program','highlights'));
     }
 
     /**
@@ -106,20 +109,35 @@ $program->save();
      */
     public function update(Request $request, $id)
     {
-        $requestData = $request->all();
         
-        $requestData['image_gallery'] = serialize($request->image_gallery);
-        $requestData['itinerary_heading'] = serialize($request->itinerary_heading);
-        $requestData['itinerary'] = serialize($request->itinerary);
-        $requestData['related_programs_id'] = serialize($request->related_programs_id);
-        $requestData['slug'] = str_slug($request->name);
-        $requestData ->Highlights()->sync($request->package_highlights_id);
-        $requestData >Sights()->sync($request->holiday_sights_id);
-        $requestData ->Accommodations()->sync($request->accom_id);
-        $requestData ->Addons()->sync($request->add_on_id);
-
+        $program = Programs::find($id);
         
-        Programs::find($id)->update($requestData);
+        
+        $program->main_image =  $request->main_image;
+        $program->price = $request->price;
+        $program->name = $request->name;
+        $program->kind  = $request->kind;
+        $program->days = $request->days;
+        $program->nights = $request->nights;
+        $program->brief = $request->brief;
+        $program->place = $request->place;
+        $program->overview = $request->overview;
+        $program->pricing = $request->pricing;
+        $program->price_children = $request->price_children;
+        $program->page_id = $request->page_id;
+        $program->image_gallery = serialize($request->image_gallery);
+        $program->itinerary_heading = serialize($request->itinerary_heading);
+        $program->itinerary = serialize($request->itinerary);
+       
+        $program->slug = str_slug($request->name);
+    
+            $program->related_programs_id = $request->related_programs_id ;
+            $program->Highlights()->sync($request->package_highlights_id);
+            $program->Sights()->sync($request->holiday_sights_id);
+            $program->Accommodations()->sync($request->accom_id);
+            $program->Addons()->sync($request->add_on_id);
+        
+        $program->save();
         Session::flash('Success','Your Program Updated Successfully');
         return redirect()->back();
     }

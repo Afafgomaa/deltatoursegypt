@@ -17,7 +17,7 @@ class Programs extends Model
 
   public function page()
   {
-      return $this->belongsTo('App\Pages','page_id');
+      return $this->belongsTo('App\Pages');
   }
   public function Highlights()
   {
@@ -36,5 +36,6 @@ class Programs extends Model
     return $this->belongsToMany('App\Addon');
   }
 
+  
 
 }

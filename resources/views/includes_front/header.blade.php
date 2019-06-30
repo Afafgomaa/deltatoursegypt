@@ -15,7 +15,7 @@
 					<div class="header-row pt-3">
 						<nav class="header-nav-top">
 							<ul class="nav nav-pills">
-							@foreach($pages->take(3) as $page)
+							@foreach($navbar_links->take(3) as $page)
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
 									<a class="nav-link" href="{{url('/')}}"><i class="fas fa-angle-right"></i> {{$page->name}}</a>
 								</li>
@@ -35,7 +35,7 @@
 										<a  href="{{route('home')}}">Home</a>	
 									</li>
                                     
-									@foreach($pages as $page)
+									@foreach($navbar_links as $page)
 									<li class="{{count($page->subPages) > 0  ? 'dropdown' : ' ' }}">
 									<a class="dropdown-item dropdown-toggle" href="{{url($page->slug)}}">{{$page->name}}</a> 
 										@if(count($page->subPages) > 0)

@@ -42,8 +42,8 @@
                 <div class="form-group">
                 <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                <textarea class="form-control col-md-7 col-xs-12" type="text" name="desc" col="5" rows="5">
-                {{$page->desc}}
+                <textarea class="form-control col-md-7 col-xs-12" type="text" name="breif" col="5" rows="5">
+                {!!$page->breif!!}
                 </textarea>
                 </div>
                 </div>

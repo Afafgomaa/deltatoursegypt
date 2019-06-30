@@ -10,7 +10,7 @@
                         <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300"> {{$page->title}}</h1>
                     </div>
                     <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                        <span class="sub-title text-4 mt-4">{{$page->desc}}</span>
+                        <span class="sub-title text-4 mt-4">{!!$page->breif!!}</span>
                     </div>
                     <div class="appear-animation d-inline-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
                         <a href="{{route('Tailor_Made')}}" class="btn btn-modern btn-dark mt-4">Talior Made <i class="fas fa-arrow-right ml-1"></i></a>

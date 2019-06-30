@@ -8,7 +8,7 @@
                     <h1 class="text-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">{{$page->title}}</h1>
                 </div>
                 <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                    <span class="sub-title text-4 mt-4">{{$page->desc}}</span>
+                    <span class="sub-title text-4 mt-4">{!!$page->breif!!}</span>
                 </div>
 
                 <div class="appear-animation d-inline-block" data-appear-animation="rotateInUpRight" data-appear-animation-delay="500">
@@ -42,7 +42,7 @@
 						</div>
 					</a>
 						<div class="home_special_offer_description">
-							{!!$sub->desc!!}
+							{!!substr($sub->breif,0,250)!!}
 						</div>
 					<a href="">
 						</a><div class="read_more"><a href="{{url($page->slug . '/' .$sub->slug)}}"></a><a href="{{url($page->slug . '/' .$sub->slug)}}">read more</a></div>

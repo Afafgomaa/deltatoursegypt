@@ -76,10 +76,12 @@ strong{
     	<!-- jQuery -->
       <script>
 $( document ).ready(function() {
+
+ 
     $('#addnn').click(function(event){
       event.preventDefault();
     $('#image_gallery')
-    .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="image_gallery[]">');
+    .append('<div class="col-md-11 col-xs-11"><input type="url" class="form-control mb-3 mt-3" name="image_gallery[]"></div><div class="col-md-1 col-xs-1 mb-3 mt-3"><a id="remove" href="#" class="btn btn-success">-</a></div>');
     });
 
     $('#add').click(function(event){
@@ -87,11 +89,14 @@ $( document ).ready(function() {
     $('#image_gallery_add')
     .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">');
     });
+    
     $('#addItinerary').click(function(event){
       event.preventDefault();
     $('#itinerary')
-    .append("<div class='col-xs-12 col-sm-12 col-md-12'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'><textarea  name='itinerary[]' class='form-control summernote' style='height:100px'></textarea>   </div> </div>");
+    .append("<div class='col-xs-12 col-sm-12 col-md-12'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'><strong>Body</strong><textarea  name='itinerary[]' class='form-control' style='height:100px'></textarea>   </div> </div>");
     });
+
+   
 });
 
 </script>
@@ -163,7 +168,23 @@ new Clipboard('.copy');
 
 
 // summer not libiaray 
-$('.summernote').summernote();
+$('textarea').summernote({
+  height: 200,
+  toolbar: [
+      // [groume, [list of button]]
+      ['style', ['bold', 'italic', 'underline']],
+             ['fontsize', ['fontsize']],
+      ['color', ['color']],
+      ['height', ['height']],
+       ['operation', ['undo', 'redo']],
+      ['font', ['strikethrough', 'superscript', 'subscript', 'clear']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['object', ['link', 'table', 'picture', 'video']],
+      ['misc', [ 'help', 'fullscreen', 'codeview']]
+    ]
+  
+   
+ });
 $('select').selectpicker();
 
 

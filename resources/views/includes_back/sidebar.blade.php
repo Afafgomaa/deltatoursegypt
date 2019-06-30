@@ -25,8 +25,7 @@
                       <li><a href="{{route('page.add')}}">pages</a></li>
                       <li><a href="{{route('slider')}}">Slider</a></li>
                       <li><a href="{{route('section.index')}}">Sections</a></li>
-                      <li><a href="{{route('highlight.index')}}">Highlights</a></li>
-                      <li><a href="{{route('sight.index')}}">Sights</a></li>
+                     
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Media <span class="fa fa-chevron-down"></span></a>
@@ -52,12 +51,20 @@
                     <ul class="nav child_menu">
                       <li><a href="{{ route('Program.create') }}">Add Program</a></li>
                       <li><a href="{{ route('Program.index') }}">Show All Programs</a></li>
+                      <li><a href="{{route('highlight.index')}}">Highlights</a></li>
+                      <li><a href="{{route('sight.index')}}">Sights</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Addons <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ route('Addon.create') }}">Add addon</a></li>
                       <li><a href="{{ route('Addon.index') }}">Show All Addons</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i>Promo Codes/Referrals <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('promo.index') }}">Add Promo</a></li>
+                      <li><a href="{{ route('referral.index') }}">Add Referral</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Trashed <span class="fa fa-chevron-down"></span></a>
@@ -68,6 +75,8 @@
                       <li><a href="{{ route('highlight.trashed') }}">Highlights</a></li>
                       <li><a href="{{ route('sight.trashed') }}">Sights</a></li>
                       <li><a href="{{ route('section.trashed') }}">Sections</a></li>
+                      <li><a href="{{ route('promo.trashed') }}">Promo</a></li>
+                      <li><a href="{{ route('referral.trashed') }}">Referral</a></li>
                       <li><a href="{{ route('Accommodation.trashed') }}">Accommodations</a></li>
                     </ul>
                   </li>

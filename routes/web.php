@@ -5,6 +5,7 @@ Route::get('/', [
     'uses' => 'frontendController@index',
     'as' => 'home'
 ]);
+
 Route::get('/Customized_Tours_to_egypt',[
    'uses' => 'frontendController@tailorMade',
    'as' => 'Tailor_Made'
@@ -16,9 +17,9 @@ Route::get('/blog',[
 
 Route::post('send/email', 'mailController@send')->name('mail');
 
-Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 Route::view('all-Nile-River-Cruises', 'main_packeges_river')->name('all-Nile-River-Cruises');
 Route::view('cairo-egypt-budget-holiday-tour-package', 'egyptTours/testOfEgypt')->name('single_tour');
@@ -30,6 +31,10 @@ Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
 
 
+
+
+Auth::routes();
+Route::view('/register', 'auth/login');
 
 Route::get('admin',[
    'uses' => 'AdminController@index',
@@ -228,9 +233,10 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
          'as'   => 'sight.restore'
       ]);
       Route::resource('sight','SightsController');
-      //end sections route
+      //end Sights route
 
-      Route::get('/section/trashed', [
+      //end Sections route
+         Route::get('/section/trashed', [
          'uses' => 'SectionsController@trashedSection',
          'as'   => 'section.trashed'
          ]);
@@ -243,7 +249,39 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
             'as'   => 'section.restore'
          ]);
          Route::resource('section','SectionsController');
-         //end sections route
+      //end sections route
+
+      //end promo route
+         Route::get('/promo/trashed', [
+         'uses' => 'PromoController@trashedPromo',
+         'as'   => 'promo.trashed'
+         ]);
+         Route::get('/promo/kill/{id}', [
+            'uses' => 'PromoController@killPromo',
+            'as'   => 'promo.kill'
+         ]);
+         Route::get('/promo/restore/{id}', [
+            'uses' => 'PromoController@restorePromo',
+            'as'   => 'promo.restore'
+         ]);
+         Route::resource('promo','PromoController');
+      //end promo route
+
+      //end Referral route
+         Route::get('/referral/trashed', [
+         'uses' => 'ReferralController@trashedReferral',
+         'as'   => 'referral.trashed'
+         ]);
+         Route::get('/referral/kill/{id}', [
+            'uses' => 'ReferralController@killReferral',
+            'as'   => 'referral.kill'
+         ]);
+         Route::get('/referral/restore/{id}', [
+            'uses' => 'ReferralController@restoreReferral',
+            'as'   => 'referral.restore'
+         ]);
+         Route::resource('referral','ReferralController');
+      //end Referral route
    
 });
       
@@ -252,10 +290,14 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
 
 
 
- Route::get('/{mainPage}', [
+
+
+
+   Route::get('/{mainPage}', [
       'uses' => 'PagesController@findPage',
       'as'   => 'mainPage'
    ]);
+
 
 
    Route::get('/{mainPage}/{subPage}', [
@@ -266,4 +308,6 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    Route::get('/{mainPage}/{subPage}/{program}', [
    'uses' => 'ProgramsController@findProgram',
    ]);
-
+ 
+ 
+  
