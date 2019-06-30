@@ -207,7 +207,8 @@ class PagesController extends Controller
 
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
 
-        $programs_in = Programs::where('page_id', $page->id)->get();
+        $programs_in = Programs::where('pages_id', $page->id)->get();
+        
        
         return view('Egypt_tour', compact('mainpage','page','programs_in'));
        

@@ -2,10 +2,7 @@
 <div id="itinerary" class="scroll_pane_new">
     <div class="program_box_title text-blue" id="itinerary">Itinerary:</div>
         <div class="program_box_data">
-            <div class="expand">
-                <span class="expandtext btn btn-light mb-3">Expand All</span>
-                <span class="glyphicon glyphicon-menu-down btn-lg"></span>
-            </div>
+           
             <div class="full_itinerary">
            
               @foreach(array_combine(unserialize($program->itinerary), unserialize($program->itinerary_heading))  as $b => $h  ) 

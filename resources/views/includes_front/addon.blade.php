@@ -6,7 +6,7 @@
             <div class="tab-pane active">
                 <div class="row">
                     <h3 class="program_box_title"> Enhance your trip with these amazing added extras and bolt-ons</h3>
-                   @foreach($program->addons as $addon)
+                   @foreach($program->Addons as $addon)
                     <div class="col-md-12">
                         <img class="appear-animation pull-left fadeIn appear-animation-visible" src="{{$addon->image}}" width="200" height="140" data-appear-animation="fadeIn" alt="{{$addon->title}}">
                         <h4>{{$addon->title}}</h4>
@@ -30,9 +30,6 @@
 								Send Inquery
 						</button>
 						</div>
-
-
-
 		</div>
   </div> 
 </div>

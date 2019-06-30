@@ -39,7 +39,7 @@
                         <h4 class="shorter text-blue"> from :  {{$program->price}} USD</h4>
                     </div>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> {{$program->desc}} 
+                        <p class="pdetails"> {!!$program->brief!!} 
                         </p> 
                     </div>
                     

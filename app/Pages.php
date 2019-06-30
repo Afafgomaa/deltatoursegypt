@@ -27,7 +27,7 @@ class Pages extends Model
 
     public function program()
     {
-        return $this->hasMany('App\Programs');
+        return $this->hasMany('App\Programs','pages_id');
     }
 
    

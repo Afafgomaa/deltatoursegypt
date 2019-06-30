@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <strong>Section page:</strong>
                              <select name="page_id" class="form-control">
-                             @foreach($pages as $page)
+                             @foreach($pages_main as $page)
                               <option value="{{$page->id}}">{{$page->name}}</option>
                              @endforeach
                              </select>

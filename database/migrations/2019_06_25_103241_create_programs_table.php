@@ -29,9 +29,8 @@ class CreateProgramsTable extends Migration
             $table->text('itinerary')->nullable();
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();
-            $table->integer('page_id');
+            $table->integer('pages_id');
             $table->string('slug');
-            $table->text('related_programs_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-  
+
+
     $(".full_itinerary_box").each(function(){		
         $(this).find(".itinerary_desc").hide();
-        $(this).find("#itinerary_desc_1").show();
+        //$(this).find("#itinerary_desc_1").show();
         $(this).find("#itinerary_title_1").addClass("toggled");
     });
         
@@ -91,28 +92,7 @@ $(document).ready(function() {
   });
   
   
-	$(".price_info a").on('click', function(event) {
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-   	// Store hash
-    var hash = this.hash;
-
-	var body = $('html, body');
-    // Using $'s animate() method to add smooth page scroll
-    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    body.animate({
-      scrollTop: $(hash).offset().top - 150
-    }, 800, function(){
-		
-	 body.animate({
-		  scrollTop: $(hash).offset().top - 150
-	});
-	      // Add hash (#) to URL when done scrolling (default click behavior)
-      //window.location.hash = hash;
-    });
-  });
 
       /* scroll fixed */
 	$(window).scroll(function(){

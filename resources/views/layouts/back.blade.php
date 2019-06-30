@@ -166,7 +166,7 @@ toastr.success('{{Session::get("success")}}');
 
 new Clipboard('.copy');
 
-
+$("[multiple = 'multiple']").selectpicker();
 // summer not libiaray 
 $('textarea').summernote({
   height: 200,
@@ -185,7 +185,7 @@ $('textarea').summernote({
   
    
  });
-$('select').selectpicker();
+
 
 
   

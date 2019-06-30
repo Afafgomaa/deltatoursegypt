@@ -53,7 +53,7 @@
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">Private Tour  
+                        <div class="home_special_offer_types_box">{{($program->kind) ? 'public' : 'Private'}} Tour  | Childern | payment policy| Tipping 
                         </div>
                         <div class="home_special_offer_types_box">
                         {{$program->days}} days -  {{$program->nights}} nights  

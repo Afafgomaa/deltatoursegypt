@@ -6,6 +6,10 @@ Route::get('/', [
     'as' => 'home'
 ]);
 
+Route::get('/test', function(){
+   return    ;
+});
+
 Route::get('/Customized_Tours_to_egypt',[
    'uses' => 'frontendController@tailorMade',
    'as' => 'Tailor_Made'

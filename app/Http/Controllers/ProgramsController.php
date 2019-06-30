@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Highlight;
 use App\Pages;
-
+use Illuminate\Support\Facades\DB;
 
 
 class ProgramsController extends Controller
@@ -30,8 +30,9 @@ class ProgramsController extends Controller
     public function create()
     {
          $highlights  = Highlight::orderBy('id' , 'DESC')->get();
+         $pages_programs = Pages::where('parent_id','>',0)->get();
          
-        return view('admin.programs.add',compact('highlights'));
+        return view('admin.programs.add',compact('highlights','pages_programs'));
     }
 
     /**
@@ -42,7 +43,8 @@ class ProgramsController extends Controller
      */
     public function store(Request $request)
     {
-        
+       
+       
         $program = Programs::create([
         'main_image' => $request->main_image,
         'price' => $request->price,
@@ -55,20 +57,19 @@ class ProgramsController extends Controller
         'overview' => $request->overview,
         'pricing' => $request->pricing,
         'price_children' => $request->price_children,
-        'page_id' => $request->page_id,
         'image_gallery' => serialize($request->image_gallery),
         'itinerary_heading' => serialize($request->itinerary_heading),
         'itinerary' => serialize($request->itinerary),
-        'related_programs_id' =>$request->related_programs_id,
-        
+        'pages_id' => $request->pages_id,
         'slug' => str_slug($request->name),
 
         ]);
-        
+        $program->related()->attach($request->related_programs_id);
         $program->Highlights()->attach($request->package_highlights_id);
         $program->Sights()->attach($request->holiday_sights_id);
         $program->Accommodations()->attach($request->accom_id);
         $program->Addons()->attach($request->add_on_id);
+       
 
 
 $program->save();
@@ -97,7 +98,8 @@ $program->save();
     {
         $program = Programs::find($id);
         $highlights  = Highlight::orderBy('id' , 'DESC')->get();
-        return view('admin.programs.edit',compact('program','highlights'));
+        $pages_programs = Pages::where('parent_id','>',0)->get();
+        return view('admin.programs.edit',compact('program','highlights','pages_programs'));
     }
 
     /**
@@ -124,20 +126,20 @@ $program->save();
         $program->overview = $request->overview;
         $program->pricing = $request->pricing;
         $program->price_children = $request->price_children;
-        $program->page_id = $request->page_id;
+        $program->pages_id = $request->pages_id;
         $program->image_gallery = serialize($request->image_gallery);
         $program->itinerary_heading = serialize($request->itinerary_heading);
         $program->itinerary = serialize($request->itinerary);
        
         $program->slug = str_slug($request->name);
     
-            $program->related_programs_id = $request->related_programs_id ;
+            $program->related()->sync($request->related_programs_id);
             $program->Highlights()->sync($request->package_highlights_id);
             $program->Sights()->sync($request->holiday_sights_id);
             $program->Accommodations()->sync($request->accom_id);
             $program->Addons()->sync($request->add_on_id);
         
-        $program->save();
+        $program->update();
         Session::flash('Success','Your Program Updated Successfully');
         return redirect()->back();
     }
@@ -187,13 +189,8 @@ $program->save();
 
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
 
-        //$programs_in = Programs::where('page_id', $page->id)->get();
-       
-        //return view('Egypt_tour', compact('mainpage','page','programs_in'));
-
-
-
         $program = Programs::where('slug', $program )->first();
-        return view('egyptTours/testOfEgypt',compact('mainpage','page','program'));
+        $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
+        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection'));
     }
 }

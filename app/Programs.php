@@ -13,12 +13,7 @@ class Programs extends Model
 
     protected $dates = ['deleted_at'];
 
-   
-
-  public function page()
-  {
-      return $this->belongsTo('App\Pages');
-  }
+  
   public function Highlights()
   {
     return $this->belongsToMany('App\Highlight');
@@ -35,6 +30,18 @@ class Programs extends Model
   {
     return $this->belongsToMany('App\Addon');
   }
+
+  public function related()
+  {
+    return $this->belongsToMany('App\related');
+  }
+
+  public function page()
+  {
+    return $this->belongsTo('App\Pages','pages_id');
+  }
+
+  
 
   
 
