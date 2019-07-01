@@ -47,13 +47,17 @@
                         <h4 class="shorter text-blue">package Highlights</h4>
                         <div class="col-xs-12 review_num">
                                 <ul>
-                                @foreach($program->Highlights->take(4) as $h)                           
+                                @foreach($pular_items  as  $h)                      
                                         <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>
-
                                 @endforeach  
                               </ul>
-                              
-                         </div>           
+                              <ul>
+                                @foreach($single_items as  $h)                      
+                                        <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>
+                                @endforeach  
+                              </ul>
+                         </div>   
+                                 
                     </div>
                    <div style="clear:both"></div>
                     <div class="col-md-12 tag">

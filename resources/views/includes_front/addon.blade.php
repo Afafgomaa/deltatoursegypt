@@ -25,11 +25,7 @@
                     </div>
                  </div>
             </div>
-						<div class="col-sm-12">
-						<button class="new_btn_inquire" data-toggle="modal" data-target="#formModal">
-								Send Inquery
-						</button>
-						</div>
+					
 		</div>
   </div> 
 </div>

@@ -9,7 +9,7 @@
     @foreach($related_programs_collection as  $program_from_releated)
     @foreach($programs->where('id' , $program_from_releated->related_id) as $program_from_related_programs )
     <div class="col-md-4 col-xs-12" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
-        <a href="">
+        <a href="{{url($mainpage->slug . '/' . $page->slug . '/' . $program_from_related_programs->slug)}}">
           <div class="new_related_tours" style="background-image: url({{asset($program_from_related_programs->main_image)}})">
                                                                    
             <div class="new_related_tours_title">
@@ -19,7 +19,7 @@
                 <span class="price">
                 <span class="from">from</span>
                     <span class="currencySign">$</span><span id="min_price515" class="convertable" itemprop="lowPrice">{{$program_from_related_programs->price}}</span>
-                <input type="hidden" id="hmin_price515" value="515">
+                
                 </span>
            </div>                                        
          </div>

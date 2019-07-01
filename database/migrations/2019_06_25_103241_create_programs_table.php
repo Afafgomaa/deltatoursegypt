@@ -25,7 +25,7 @@ class CreateProgramsTable extends Migration
             $table->string('place');
             $table->text('image_gallery');
             $table->text('overview')->nullable();
-            $table->string('itinerary_heading')->nullable();
+            $table->text('itinerary_heading')->nullable();
             $table->text('itinerary')->nullable();
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();

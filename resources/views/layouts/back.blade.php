@@ -77,12 +77,6 @@ strong{
       <script>
 $( document ).ready(function() {
 
- 
-    $('#addnn').click(function(event){
-      event.preventDefault();
-    $('#image_gallery')
-    .append('<div class="col-md-11 col-xs-11"><input type="url" class="form-control mb-3 mt-3" name="image_gallery[]"></div><div class="col-md-1 col-xs-1 mb-3 mt-3"><a id="remove" href="#" class="btn btn-success">-</a></div>');
-    });
 
     $('#add').click(function(event){
       event.preventDefault();
@@ -90,13 +84,45 @@ $( document ).ready(function() {
     .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">');
     });
     
-    $('#addItinerary').click(function(event){
-      event.preventDefault();
-    $('#itinerary')
-    .append("<div class='col-xs-12 col-sm-12 col-md-12'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'><strong>Body</strong><textarea  name='itinerary[]' class='form-control' style='height:100px'></textarea>   </div> </div>");
-    });
+  
 
-   
+
+
+function add_new_componente(w,b,a){
+
+var max_fields = 20; //maximum input boxes allowed
+//var wrapper = $("#items"); //Fields wrapper
+//var add_button = $(".add_field_button"); //Add button
+var x = 1; //initlal text box count
+$(b).click(function(e){ //on add input button click
+e.preventDefault();
+if(x < max_fields){ //max input box allowed
+x++; //text box increment
+$(w).append(a); //add input box
+}
+
+});
+$(w).on("click",".remove_field", function(e){ //user click on remove field
+e.preventDefault(); $(this).parent('div').remove(); x--;
+});
+
+
+}
+ 
+var w =  $("#items");
+var b =  $(".add_field_button");
+
+var a = '<div class="form-group"><label for="title">Image:</label><input class="form-control col-md-11"  type="text" name="image_gallery[]"/><a href="#" class="remove_field"><i class="fa fa-times"></a></div>';
+
+add_new_componente(w,b,a);
+
+var intery =  $("#itinerary");
+var btn =  $(".add_itinerary_button");
+
+var append_item = "<div id='itinerary'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'><strong>Body</strong><textarea  name='itinerary[]' class='form-control' style='height:100px'></textarea></div> <a href='#' class='remove_field'><i class='fa fa-times'></a></div></div>";
+
+add_new_componente(intery,btn,append_item);
+
 });
 
 </script>

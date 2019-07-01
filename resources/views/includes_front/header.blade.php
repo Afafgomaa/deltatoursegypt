@@ -17,7 +17,7 @@
 							<ul class="nav nav-pills">
 							@foreach($navbar_links->take(3) as $page)
 								<li class="nav-item nav-item-anim-icon d-none d-md-block">
-									<a class="nav-link" href="{{url('/')}}"><i class="fas fa-angle-right"></i> {{$page->name}}</a>
+									<a class="nav-link" href="{{url($page->slug)}}"><i class="fas fa-angle-right"></i> {{$page->name}}</a>
 								</li>
                             @endforeach
 								<li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">

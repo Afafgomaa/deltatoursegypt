@@ -191,6 +191,18 @@ $program->save();
 
         $program = Programs::where('slug', $program )->first();
         $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
-        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection'));
+
+
+        $single_items = [];
+        $pular_items =  [];
+        foreach( $program->Highlights as $key =>  $value){
+            if($key >= 3 ){
+                array_push($single_items,$value);
+            }else {
+                array_push($pular_items,$value);
+            }
+        }
+       
+        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection','single_items','pular_items'));
     }
 }

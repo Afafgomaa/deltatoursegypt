@@ -111,25 +111,27 @@
             </div>
         </div>
         
-        <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">Program Image Gallery: <span class="required">*</span>
-                    </label>
-                    <div class="col-md-7 col-sm-7 col-xs-12" id="image_gallery">
-                      <input type="url" name="image_gallery[]" class="form-control col-md-12 col-xs-12 ">
-                      
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12">
-                       <a id="addnn" href="#" class="btn btn-success">+</a>
-                    </div>
 
-           </div>
+        
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div id="items">
+ 
+            <div class="form-group"><label>Program Image Gallery:</label>
+              <input  class="form-control" name="image_gallery[]" required="required" type="text" />
+            
+            </div>
+            
+        </div>
+            
+            <button type="button" class="add_field_button">Add Field</button>
+       
          </div>
          
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Overview:</strong>
-                 {!! Form::textarea('overview', null, array('placeholder' => 'overview','class' => 'summernote form-control', 'style'=>'height:100px')) !!}                
+                 {!! Form::textarea('overview', null, array('placeholder' => 'overview','class' => ' form-control', 'style'=>'height:100px')) !!}                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -146,16 +148,18 @@
             <div class="col-xs-12 col-sm-12 col-md-12" > 
               <div id="itinerary">
                 <div class="form-group ">
-                    <div class="pull-right"><a id="addItinerary" href="#" class="btn btn-success">+</a></div>
                         <strong>Itinerary Heading:</strong> 
                         <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
                     </div>
                     <div class="form-group">
                         <strong>itinerary Body:</strong>
-                        <textarea  name="itinerary[]" class="form-control summernote" style="height:100px"></textarea>               
+                        <textarea  name="itinerary[]" class="form-control" style="height:100px"></textarea> 
+                                   
                     </div>
+                    
             </div>
           </div>
+          <button type="button" class="add_itinerary_button">Add Field</button>   
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -171,13 +175,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Price&Children:</strong>
-                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control summernote', 'id' => 'summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control','style'=>'height:100px')) !!}                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Pricing:</strong>
-                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing', 'id' => 'summernote','class' => 'form-control summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing','class' => 'form-control','style'=>'height:100px')) !!}                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

@@ -5,16 +5,17 @@
 <div class="right_col" role="main" style="min-height: 1054px;">
 <div class="">
 <div class="title_left">
-     <h3> Media Gallery <small> gallery design</small> </h3>
+     <h3> Media Gallery </h3>
  </div>
+
  <div class="title_right">
     <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
     <form method="post" action="{{route('avatar.store')}}" enctype="multipart/form-data">
       @csrf
       <div class="input-group">
        <div class="input-group-prepend"> 
-         <div class="custom-file">
-          <input type="file" name="avatar" class="custom-file-input" id="customFile" aria-describedby="inputGroupFileAddon01">
+         <div class="custom-file" style="display:inline">
+          <input type="file" name="avatar" class="custom-file-input" id="customFile" style="display:inline">
          </div>
          <button class="btn btn-success" type="submit">Go</button>
        </div>
@@ -50,7 +51,7 @@
                 <div class="mask">
                   <p>Image</p>
                   <div class="tools tools-bottom">
-                    <button class="copy" data-clipboard-text="{{$avatar->getFullUrl()}}"><i class="fa fa-link"></i></button>
+                    <button class="copy" data-clipboard-text="{{$avatar->getUrl()}}"><i class="fa fa-link"></i></button>
                     <a href="{{route('media.delete',['id' =>  $avatar->id] ) }}"><i class="fa fa-times"></i></a>
                   </div>
                 </div>
