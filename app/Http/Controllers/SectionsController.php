@@ -19,7 +19,7 @@ class SectionsController extends Controller
            
         return view('admin.Sections.index')
                                    ->with('sections',Sections::orderBy('id','DESC')->paginate(5))
-                                   ->with('pages_main', Pages::where('id',0)->get());
+                                   ->with('allPages_main', Pages::where('parent_id',0)->get());
                                   
     }
 
