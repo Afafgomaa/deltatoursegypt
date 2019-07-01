@@ -87,12 +87,14 @@
 
 
 
-				<!-- Vendor -->
+				<!-- 	Vendor -->
 		<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 		<script src="{{asset('vendor/jquery.appear/jquery.appear.min.js')}}"></script>
 		<script src="{{asset('vendor/jquery.easing/jquery.easing.min.js')}}"></script>
 		<script src="{{asset('vendor/jquery.cookie/jquery.cookie.min.js')}}"></script>
+		
 	    <script src="{{asset('vendor/popper/umd/popper.min.js')}}"></script>
+	
 		<script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script> 
 		<script src="{{asset('vendor/common/common.min.js')}}"></script>
 		<script src="{{asset('vendor/jquery.validation/jquery.validate.min.js')}}"></script>

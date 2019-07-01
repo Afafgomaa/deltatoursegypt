@@ -11,7 +11,7 @@
 		<div class="img_container" style="background-image:url({{asset($section->image)}})">
 		</div>
 		<div class="home_special_offer_content">
-			<a href="/Egypt/Excursions">
+			<a href="{{$section->page->slug}}">
 				<div class="home_special_offer_title">
 					<h4 class="light-rose">{{$section->name}} </h4>
 				</div>

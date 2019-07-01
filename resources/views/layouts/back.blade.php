@@ -11,32 +11,16 @@
     <title>Admin | deltatoursegypt</title>
 
     <!-- Bootstrap -->
-    
-    <link href="{{asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+   <link href="{{asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{asset('/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="{{asset('vendors/nprogress/nprogress.css')}}" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="{{asset('vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
-	
-    <!-- bootstrap-progressbar -->
-    <link href="{{asset('vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="{{asset('vendors/jqvmap/dist/jqvmap.min.css')}}" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="{{asset('vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
-
-    
-  
-    <!-- tostr notifaction -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-
-    <!-- include summernote css/js -->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
-<!-- Custom Theme Style -->
+   <link href="{{asset('/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <!-- tostr notifaction -->
+  <link href="{{asset('build/css/toastr.css')}}" rel="stylesheet">
+  <!-- include summernote css/js -->
+ <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+<!-- Custom Theme Style -->
 <link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
 
 
@@ -69,30 +53,21 @@ strong{
   </div>
 <body>
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-
-
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    	<!-- jQuery -->
-      <script>
+<script>
 $( document ).ready(function() {
-
-
     $('#add').click(function(event){
       event.preventDefault();
     $('#image_gallery_add')
     .append('<input type="url" class="form-control col-md-12 col-xs-12 mb-3 mt-3" name="iamge_gallery[]">');
     });
     
-  
-
-
 
 function add_new_componente(w,b,a){
 
-var max_fields = 20; //maximum input boxes allowed
-//var wrapper = $("#items"); //Fields wrapper
-//var add_button = $(".add_field_button"); //Add button
+var max_fields = 50; //maximum input boxes allowed
 var x = 1; //initlal text box count
 $(b).click(function(e){ //on add input button click
 e.preventDefault();
@@ -127,57 +102,21 @@ add_new_componente(intery,btn,append_item);
 
 </script>
  
-    <script src="{{asset('/vendors/jquery/dist/jquery.min.js')}}"></script>
+   
     <!-- Bootstrap -->
     <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <!-- FastClick -->
-    <script src="{{asset('vendors/fastclick/lib/fastclick.js')}}"></script>
-    <!-- NProgress -->
-    <script src="{{asset('vendors/nprogress/nprogress.js')}}"></script>
-    <!-- Chart.js -->
-    <script src="{{asset('vendors/Chart.js/dist/Chart.min.js')}}"></script>
-    <!-- gauge.js -->
-    <script src="{{asset('vendors/gauge.js/dist/gauge.min.js')}}"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="{{asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')}}"></script>
-    <!-- iCheck -->
-    <script src="{{asset('vendors/iCheck/icheck.min.js')}}"></script>
-     <!-- Skycons -->
-    <script src="{{asset('vendors/skycons/skycons.js')}}"></script>
-    <!-- Flot -->
-    <script src="{{asset('vendors/Flot/jquery.flot.js')}}"></script>
-    <script src="{{asset('vendors/Flot/jquery.flot.pie.js')}}"></script>
-    <script src="{{asset('vendors/Flot/jquery.flot.time.js')}}"></script>
-    <script src="{{asset('vendors/Flot/jquery.flot.stack.js')}}"></script>
-    <script src="{{asset('vendors/Flot/jquery.flot.resize.js')}}"></script>
-    <!-- Flot plugins -->
-    <script src="{{asset('vendors/flot.orderbars/js/jquery.flot.orderBars.js')}}"></script>
-    <script src="{{asset('vendors/flot-spline/js/jquery.flot.spline.min.js')}}"></script>
-    <script src="{{asset('vendors/flot.curvedlines/curvedLines.js')}}"></script>
-    <!-- DateJS -->
-    <script src="{{asset('vendors/DateJS/build/date.js')}}"></script>
-    <!-- JQVMap -->
-    <script src="{{asset('vendors/jqvmap/dist/jquery.vmap.js')}}"></script>
-    <script src="{{asset('vendors/jqvmap/dist/maps/jquery.vmap.world.js')}}"></script>
-    <script src="{{asset('vendors/jqvmap/examples/js/jquery.vmap.sampledata.js')}}"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="{{asset('vendors/moment/min/moment.min.js')}}"></script>
-    <script src="{{asset('vendors/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>-->
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  
-
-   
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
    
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<script src="{{asset('build/js/toastr.js')}}"></script>
  <!-- Custom Theme Scripts -->
+
  <script src="{{asset('build/js/custom.min.js')}}"></script>
 
 <script>
