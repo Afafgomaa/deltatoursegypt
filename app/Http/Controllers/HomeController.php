@@ -42,27 +42,28 @@ class HomeController extends Controller
 
     public function slider_store(Request $request){
 
+
         //dd($request);
-        $sliders  = slider::create([
+        $sliders  = slider::find(1);
             //first slider image
-        'slider_1' => $request->slider_1_url,
-        'title_1' =>$request->slider_1_title,
-        'description_1' => $request->slider_1_description,
+        $sliders->slider_1 = $request->slider_1_url;
+        $sliders->title_1 = $request->slider_1_title;
+        $sliders->description_1 = $request->slider_1_description;
 
         //second slider image
-        'slider_2' => $request->slider_2_url,
-        'title_2' => $request->slider_2_title,
-        'description_2' => $request->slider_2_description,
+        $sliders->slider_2 = $request->slider_2_url;
+        $sliders->title_2 = $request->slider_2_title;
+        $sliders->description_2 = $request->slider_2_description;
 
         //thired slider image
-        'slider_3' => $request->slider_3_url,
-        'title_3' => $request->slider_3_title,
-        'description_3' => $request->slider_3_description
+        $sliders->slider_3  = $request->slider_3_url;
+        $sliders->title_3 =$request->slider_3_title;
+        $sliders->description_3  = $request->slider_3_description;
 
-        ]);
+        
         
 
-        $sliders->save();
+        $sliders->update();
         
         return redirect()->back();
       

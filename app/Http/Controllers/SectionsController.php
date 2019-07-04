@@ -73,7 +73,8 @@ class SectionsController extends Controller
     public function edit($id)
     {
         return view('admin.Sections.edit')
-                                    ->with('section',Sections::find($id));
+                                    ->with('section',Sections::find($id))
+                                    ->with('pages_for_section',Pages::whrere('parent_id',0)->get());
                                     
     }
 

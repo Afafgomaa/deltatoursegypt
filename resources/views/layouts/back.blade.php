@@ -11,17 +11,17 @@
     <title>Admin | deltatoursegypt</title>
 
     <!-- Bootstrap -->
-   <link href="{{asset('/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+   <link href="{{url('/')}}/public//vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-   <link href="{{asset('/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+   <link href="{{url('/')}}/public//vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- tostr notifaction -->
-  <link href="{{asset('build/css/toastr.css')}}" rel="stylesheet">
+  <link href="{{url('/')}}/public/build/css/toastr.css" rel="stylesheet">
   <!-- include summernote css/js -->
  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 <!-- Custom Theme Style -->
-<link href="{{asset('build/css/custom.min.css')}}" rel="stylesheet">
+<link href="{{url('/')}}/public/build/css/custom.min.css" rel="stylesheet">
 
 
 <style>
@@ -104,7 +104,7 @@ add_new_componente(intery,btn,append_item);
  
    
     <!-- Bootstrap -->
-    <script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{url('/')}}/public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 
@@ -114,10 +114,10 @@ add_new_componente(intery,btn,append_item);
    
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-<script src="{{asset('build/js/toastr.js')}}"></script>
+<script src="{{url('/')}}/public/build/js/toastr.js"></script>
  <!-- Custom Theme Scripts -->
 
- <script src="{{asset('build/js/custom.min.js')}}"></script>
+ <script src="{{url('/')}}/public/build/js/custom.min.js"></script>
 
 <script>
 

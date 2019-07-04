@@ -183,13 +183,15 @@ $program->save();
     }
     public function findProgram($mainPage,$subPage,$program)
     {
-
+        
         $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
 
 
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
 
         $program = Programs::where('slug', $program )->first();
+
+        if(!empty($mainpage) && !empty($page) && !empty( $program)){
         $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
 
 
@@ -205,5 +207,8 @@ $program->save();
         $divide_heighlights_2 = array_slice($all_heighlights,$count_of_heighlights / 2);
 
         return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection','divide_heighlights_1','divide_heighlights_2')); 
+    }else{
+        return redirect()->back();
+    }
     }
 }

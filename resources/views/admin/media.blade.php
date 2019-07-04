@@ -47,11 +47,11 @@
           <div class="col-md-55">
             <div class="thumbnail">
               <div class="image view view-first">
-                <img style="width: 100%; display: block;" src="{{$avatar->getUrl() ?? ''}}">
+                <img style="width: 100%; display: block;" src="{{$avatar->getFullUrl() ?? ''}}">
                 <div class="mask">
                   <p>Image</p>
                   <div class="tools tools-bottom">
-                    <button class="copy" data-clipboard-text="{{$avatar->getUrl()}}"><i class="fa fa-link"></i></button>
+                    <button class="copy" data-clipboard-text="{{$avatar->getFullUrl()}}"><i class="fa fa-link"></i></button>
                     <a href="{{route('media.delete',['id' =>  $avatar->id] ) }}"><i class="fa fa-times"></i></a>
                   </div>
                 </div>

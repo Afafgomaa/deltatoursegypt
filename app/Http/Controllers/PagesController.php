@@ -192,7 +192,7 @@ class PagesController extends Controller
       if($page = Pages::where('parent_id',0)->where('slug',$mainPage )->first()){
         return view('main_packeges', compact('page'));
       }else {
-          return redirect()->route('home');
+          return redirect()->back();
       }
         
        
@@ -202,15 +202,23 @@ class PagesController extends Controller
 
     public function findSubPage($mainPage, $subPage)
     {
+
         $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
-
-
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
+        if(!empty($mainPage)  && !empty($page) ){
+            
+        
 
         $programs_in = Programs::where('pages_id', $page->id)->get();
         
        
         return view('Egypt_tour', compact('mainpage','page','programs_in'));
+
+        }else {
+            return redirect()->back();
+        }
+
+
        
         
     }
