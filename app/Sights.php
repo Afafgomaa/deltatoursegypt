@@ -3,11 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\softDeletes;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Sights extends Model
 {
-    use softDeletes;
+    use SoftDeletes;
     protected $fillable = ['name'];
 
     protected $dates = ['deleted_at'];

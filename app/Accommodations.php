@@ -3,11 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\softDeletes;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Accommodations extends Model
 {
-    use softDeletes;
+    use SoftDeletes;
 
     protected $fillable = ['name','location','tripadvisor_link','small_iamge','thumbnail_iamge','gallery_image','brief'];
     protected $dates = ['deleted_at'];
