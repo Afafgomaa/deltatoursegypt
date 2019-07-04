@@ -53,10 +53,32 @@ strong{
   </div>
 <body>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="{{url('/')}}/public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>-->
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+   
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<script src="{{url('/')}}/public/build/js/toastr.js"></script>
+ <!-- Custom Theme Scripts -->
+
+ <script src="{{url('/')}}/public/build/js/custom.min.js"></script>
 
 <script>
+
+
+
+
+
+
 $( document ).ready(function() {
     $('#add').click(function(event){
       event.preventDefault();
@@ -100,26 +122,6 @@ add_new_componente(intery,btn,append_item);
 
 });
 
-</script>
- 
-   
-    <!-- Bootstrap -->
-    <script src="{{url('/')}}/public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-
-  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>-->
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
-   
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
-<script src="{{url('/')}}/public/build/js/toastr.js"></script>
- <!-- Custom Theme Scripts -->
-
- <script src="{{url('/')}}/public/build/js/custom.min.js"></script>
-
-<script>
 
 
 

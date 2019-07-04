@@ -74,7 +74,7 @@ class SectionsController extends Controller
     {
         return view('admin.Sections.edit')
                                     ->with('section',Sections::find($id))
-                                    ->with('pages_for_section',Pages::whrere('parent_id',0)->get());
+                                    ->with('pages_for_section',Pages::where('parent_id',0)->get());
                                     
     }
 
