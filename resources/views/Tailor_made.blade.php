@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="sub_category_top" class="home_sites_box" style="background-image: url('images/plan.jpg');
+<div id="sub_category_top" class="home_sites_box" style="background-image: url('{{url('/')}}/public/images/plan.jpg');
 height: 360px;background-repeat: no-repeat;background-size:cover">
 </div>
  <div class="home-intro" id="home-intro">

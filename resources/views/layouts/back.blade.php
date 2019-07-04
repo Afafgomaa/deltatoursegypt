@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<link rel="icon" href="{{url('/')}}/public/images/favicon.ico" type="image/ico" />
 
     <title>Admin | deltatoursegypt</title>
 
@@ -20,6 +20,8 @@
  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+
 <!-- Custom Theme Style -->
 <link href="{{url('/')}}/public/build/css/custom.min.css" rel="stylesheet">
 
@@ -54,7 +56,7 @@ strong{
 <body>
 
     <!-- jQuery -->
-     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="{{url('/')}}/public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -67,6 +69,8 @@ strong{
    
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+
 <script src="{{url('/')}}/public/build/js/toastr.js"></script>
  <!-- Custom Theme Scripts -->
 

@@ -45,14 +45,11 @@
                 </div>
                 
                <div class="form-group">
-               <div class="radio">
-            <label class="hover">
-                <div class="iradio_flat-green hover" style="position: relative;">
-                <input type="checkbox" class="flat" value="1"  name="home" style="position: absolute; opacity: 0;">
-                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-                </div> Add To Home Page
-                </label>
-                 </div>
+              
+                <div class="">
+                <input type="checkbox" class="flat" value="1"  name="home">  Add To Home Page
+                </div>
+               
                
                </div>
                 <br><br>

@@ -35,9 +35,9 @@
             <tbody>
             @foreach($posts as $post)
                 <tr class="even pointer">
-                    <td class=" "><img src="{{$post->image}}" width="100%"></td>
+                    <td class=" "><img src="{{$post->image}}" width="250" height="150"></td>
                     <td class=" ">{{$post->title}} </td>
-                    <td class=" ">{{$post->desc}}<i class="success fa fa-long-arrow-up"></i></td>
+                    <td class=" ">{!!$post->desc!!}</td>
                     <td class=" "><a href="{{route('post.edit', ['id' => $post->id])}}"><i class="fa fa-edit fa-lg"></i></a></td>
                     <td class=" "><form method="post" action="{{route('post.destroy',['post' => $post->id ] )}}">
                       @csrf

@@ -37,7 +37,7 @@
     <div class="col-md-4 col-xs-12">
         <div class="home_special_offer" id="programs">
             <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">
-                <div class="img_container" style="background-image: url({{asset($program->main_image)}})">
+                <div class="img_container" style="background-image: url({{$program->main_image}})">
                     <div class="short_info" id="home_short_info">
                         <span class="price">
                         <span class="from">from</span>

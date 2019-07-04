@@ -14,7 +14,7 @@
                 <div class="col-md-6 col-xs-12">
                     <div class="home_exceptional_box">
                         <div class="home_exceptional_img">
-                            <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-bolt.svg" alt="" 
+                            <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-bolt.svg" alt="" 
                             data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                         </div>
                         <div class="home_exceptional_content">
@@ -31,7 +31,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-cards-diamonds.svg" alt="" 
+                        <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-cards-diamonds.svg" alt="" 
 							data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
@@ -48,7 +48,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-cup.svg" 
+                        <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-cup.svg" 
 						alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
@@ -66,7 +66,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                       <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-display.svg" 
+                       <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-display.svg" 
 						alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
@@ -83,7 +83,7 @@
             <div class="col-md-6 col-xs-12">
                 <div class="home_exceptional_box">
                     <div class="home_exceptional_img">
-                        <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-heart.svg" 
+                        <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-heart.svg" 
 						alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                     </div>
                     <div class="home_exceptional_content">
@@ -101,7 +101,7 @@
                 <div class="col-md-6 col-xs-12">
                     <div class="home_exceptional_box">
                         <div class="home_exceptional_img">
-                            <img class="icon-animated" width="60" src="vendor/linea-icons/linea-basic/icons/basic-ipod.svg" 
+                            <img class="icon-animated" width="60" src="{{url('/')}}/public/vendor/linea-icons/linea-basic/icons/basic-ipod.svg" 
                              alt="" data-icon data-plugin-options="{'color': '#444', 'animated': true, 'delay': 600, 'strokeBased': true}" />
                         </div>
                         <div class="home_exceptional_content">
