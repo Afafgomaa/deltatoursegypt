@@ -47,15 +47,18 @@
                         <h4 class="shorter text-blue">package Highlights</h4>
                         <div class="col-xs-12 review_num">
                                 <ul>
-                                @foreach($pular_items  as  $h)                      
+
+                                @foreach($divide_heighlights_2  as  $h)                      
                                         <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>
                                 @endforeach  
                               </ul>
+                              
                               <ul>
-                                @foreach($single_items as  $h)                      
+                                @foreach($divide_heighlights_1 as  $h)                      
                                         <li><i class="fa fa-dot-circle text-blue"></i> {{$h->name}}</li>
                                 @endforeach  
                               </ul>
+                            
                          </div>   
                                  
                     </div>

@@ -193,16 +193,17 @@ $program->save();
         $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
 
 
-        $single_items = [];
-        $pular_items =  [];
-        foreach( $program->Highlights as $key =>  $value){
-            if($key >= 3 ){
-                array_push($single_items,$value);
-            }else {
-                array_push($pular_items,$value);
-            }
+        $all_heighlights = [];
+        foreach($program->Highlights as $h){
+        array_push($all_heighlights, $h); 
         }
-       
-        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection','single_items','pular_items'));
+
+        $count_of_heighlights = count($all_heighlights) - count($all_heighlights) %2 ;
+
+
+        $divide_heighlights_1 = array_slice($all_heighlights,0,$count_of_heighlights / 2);
+        $divide_heighlights_2 = array_slice($all_heighlights,$count_of_heighlights / 2);
+
+        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection','divide_heighlights_1','divide_heighlights_2')); 
     }
 }
