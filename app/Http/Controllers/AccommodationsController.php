@@ -38,6 +38,15 @@ class AccommodationsController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'location' => 'required',
+            'small_iamge' => 'required',
+            'thumbnail_iamge' => 'required',
+            'brief'     => 'required',
+            'gallery_image' => 'required'
+            ,
+        ]);
     
         $accom = Accommodations::create([
             'name' => $request->name,

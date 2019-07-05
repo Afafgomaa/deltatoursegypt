@@ -115,17 +115,12 @@
         
 
         <div class="col-xs-12 col-sm-12 col-md-12">
-        <div id="items">
- 
-            <div class="form-group"><label>Program Image Gallery:</label>
-              <input  class="form-control" name="image_gallery[]" required="required" type="text" />
-            
+            <div id="items">
+                <div class="form-group"><label>Program Image Gallery:</label>
+                <input  class="form-control" name="image_gallery[]" required="required" type="text" />
+                </div>
             </div>
-            
-        </div>
-            
             <button type="button" class="add_field_button">Add Field</button>
-       
          </div>
          
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -147,20 +142,19 @@
         
             <div class="col-xs-12 col-sm-12 col-md-12" > 
               <div id="itinerary">
-                <div class="form-group ">
+                   <div class="form-group">
                         <strong>Itinerary Heading:</strong> 
                         <input type="text" class="form-control itinerary_h" name="itinerary_heading[]">               
                     </div>
                     <div class="form-group">
                         <strong>itinerary Body:</strong>
-                        <textarea  name="itinerary[]" class="form-control" style="height:100px"></textarea> 
-                                   
-                    </div>
-                    
+                        <textarea  name="itinerary[]" class="form-control" style="height:100px"></textarea>             
+                    </div> 
             </div>
+            <button type="button" class="add_itinerary_button">Add another Itinerary</button>  
           </div>
-          <button type="button" class="add_itinerary_button">Add Field</button>   
-        </div>
+           
+       
         
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

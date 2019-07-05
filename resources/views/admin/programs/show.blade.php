@@ -66,12 +66,46 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image:</strong>
+                <strong> Main Image:</strong>
                 <img id="blah" src="{{$program->main_image}}" alt="your image" width="150"/>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Kind:</strong>
+                {{$program->kind  > 0 ? 'Public' : 'Private'}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Dyas:</strong>
+                {{$program->days}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Nights:</strong>
+                {{$program->nights}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <strong>Image Gellery:</strong>
+        @foreach(unserialize($program->image_gallery) as $img)
+                
+                    <div class="img-thumbnail border-0 p-0 d-block">
+                        <img class="img-fluid border-radius-0 img-rounded" src="{{$img}}" width="50" height="50" alt="">
+                    </div>
+            @endforeach
  
- 
+        </div>
+        </div>
+
+
+ <hr>
+
+
+
     </div>
 
 

@@ -2,7 +2,7 @@
 @section('content')
 
 @include('includes_back.sidebar')
-<div class="right_col" role="main" style="min-height: 3787px;">
+<div class="right_col" role="main" style="min-height: 37127px;">
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
@@ -17,69 +17,86 @@
             <div class="clearfix"></div>
             </div>
             <div class="x_content">
+            <div class="row">
+                <div class="col-lg-12 margin-tb">
+                    <div class="pull-left">
+                    <h3 style="color:#26B99A;font-weight:bold">Edit Hotel Or Cruises</h3>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="{{ route('Accommodation.index') }}"> Back</a>
+                    </div>
+                </div>
+            </div>
+            @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
             <br>
-            <form id="demo-form2" method="post" action="{{route('Accommodation.update', ['id' => $accommodation->id])}}"  class="form-horizontal form-label-left" novalidate="">
+            <form id="demo-form2" method="post" action="{{route('Accommodation.update', ['id' => $accommodation->id])}}"  class="form-horizontal form-label-left">
                 @csrf
                 @method('PUT')
-                 <h3 style="color:#26B99A;font-weight:bold">Edit Hotel Or Cruises</h3>
-                 <hr>
-                 <br><br>
+                 
+                
+                 
                 <div class="form-group">
-                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="name">Name <span class="required">*</span>
-                </label>
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                    <input type="text" id="name" required="required" name="name" value="{{$accommodation->name}}" class="form-control col-md-7 col-xs-12">
+               <strong> Name</strong>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" id="name" required  name="name" value="{{$accommodation->name}}" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
                 <div class="form-group">
-                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="location">location <span class="required">*</span>
-                </label>
-                <div class="col-md-8 col-sm-8 col-xs-12">
+                
+                        <strong>location</strong>
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <input type="text" id="location" name="location" required="required" value="{{$accommodation->location}}" class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
 
                 <div class="form-group">
-                <label class="control-label col-md-2 col-sm-2 col-xs-12" for="tripadvisor_link">Tripadvisor link
-                </label>
-                <div class="col-md-8 col-sm-8 col-xs-12">
+                <strong>Tripadvisor link</strong>
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <input type="url" id="tripadvisor_link" name="tripadvisor_link" value="{{$accommodation->tripadvisor_link}}"  class="form-control col-md-7 col-xs-12">
                 </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="small_iamge">Small Image Url <span class="required">*</span>
-                    </label>
-                    <div class="col-md-8 col-sm-8 col-xs-12">
+                    <strong>Small Image Url</strong>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                       <input type="url" id="small_iamge" name="small_iamge" value="{{$accommodation->small_iamge}}" required="required" class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image_thumbnail">thumbnail Image Url<span class="required">*</span>
-                    </label>
-                    <div class="col-md-8 col-sm-8 col-xs-12">
+                    <strong>thumbnail Image Url</strong>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                       <input type="url" id="image_thumbnail" name="image_thumbnail" value="{{$accommodation->thumbnail_iamge}}" required="required" class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="image">Add Gallery Images <span class="required">*</span>
-                    </label>
-                    <div class="col-md-7 col-sm-7 col-xs-12 image_gallery">
-                    @foreach(unserialize($accommodation->gallery_image) as $img)
-                      <input type="url" name="iamge_gallery[]"  value="{{$img}}" class="form-control col-md-12 col-xs-12 ">
-                      @endforeach
+                    <div id="edit_accom">
+                       <strong>Add Gallery Images</strong>
+                        <div class="col-md-12 col-sm-12 col-xs-12 image_gallery">
+                            @foreach(unserialize($accommodation->gallery_image) as $img)
+                                <div class="form-group">
+                                <input type="url" name="iamge_gallery[]"  value="{{$img}}" class="form-control col-md-12 col-xs-12">
+                                <button class="remove_this_filed" type="button">remove</button>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12">
-                    <a id="gallery_iamge_add" class="btn btn-success">+</a>
-                    </div>
-
+                    <button type="button" class="gallery_iamge_add">Add New Image</button>
                 </div>
                 <div class="form-group">
-                <label for="description" class="control-label col-md-2 col-sm-2 col-xs-12">Brief</label>
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                <textarea id="summernote" class="form-control col-md-10 col-xs-12" type="text" name="brief" col="5" rows="5">{{$accommodation->brief}}</textarea>
+                <strong>Brief<strong>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <textarea class="form-control col-md-12 col-xs-12" type="text" name="brief" col="5" rows="5">{{$accommodation->brief}}</textarea>
                 </div>
                 </div>
                 
