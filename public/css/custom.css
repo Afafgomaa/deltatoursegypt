@@ -358,13 +358,12 @@ p.featured {
 .footer-copyright{
     font-size: 16px;
 }
-#footer a:not(.btn){
-    color: #ffffff;
-}
+
 #footer .newsletter form {
     width: 100%;
     max-width: 262px;
 }
+
 .d-btn {
     line-height: 1.75;
     border-radius: 0px 5px 5px 0px;
@@ -727,14 +726,14 @@ td {
 /*edit navbar link color color*/
 
 
-#footer .footer-copyright p a {
-    color: #777 !important;
-}
 #header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span ,.social-icons li a{
     color: #000!important;
 }
 #footer #sub-menu a ,#footer .footer-copyright p{
     color: #fff!important;
+}
+#footer a:not(.btn){
+    color: #ffffff !important;
 }
 #header .header-nav{
     min-height: 80px !important;
