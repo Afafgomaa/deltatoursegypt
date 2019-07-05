@@ -66,7 +66,7 @@
                         <td>
 
                             <a href="" data-fancybox="tourgallery 48474367" data-caption="Morocco on a Shoestring Map" class="tour-table-image">
-                                <img alt="Morocco on a Shoestring" class="map-rounded lazy" src="images/slider_bg_3.jpg" style="">
+                                <img alt="Morocco on a Shoestring" class="map-rounded lazy" src="{{url('/')}}public/images/slider_bg_3.jpg" style="">
                             </a>
                         </td>
                         <td valign="middle" data-label="Offer Price">
