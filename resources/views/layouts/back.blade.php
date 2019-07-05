@@ -75,13 +75,36 @@ strong{
  <!-- Custom Theme Scripts -->
 
  <script src="{{url('/')}}/public/build/js/custom.min.js"></script>
- <script src="{{url('/')}}/public/build/js/back.js"></script>
+ 
 <script>
  @if(Session::has('success'))
 // toastr notifaction libiaray
 toastr.success('{{Session::get("success")}}');
 
 @endif
+  // summer not libiaray 
+  $("textarea").summernote({
+  height: 200,
+ 
+  toolbar: [
+      // [groume, [list of button]]
+      ['style', ['bold', 'italic', 'underline']],
+             ['fontsize', ['fontsize']],
+      ['color', ['color']],
+      ['height', ['height']],
+       ['operation', ['undo', 'redo']],
+      ['font', ['strikethrough', 'superscript', 'subscript', 'clear']],
+      ['para', ['ul', 'ol', 'paragraph']],
+      ['object', ['link', 'table', 'picture', 'video']],
+      ['misc', [ 'help', 'fullscreen', 'codeview']]
+    ]
+  
+   
+ });
+
+ $("[multiple = 'multiple']").selectpicker(); 
+ 
+ <script src="{{url('/')}}/public/build/js/back.js"></script>  
 
 new Clipboard('.copy');
 </script>

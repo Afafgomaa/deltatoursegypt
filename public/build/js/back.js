@@ -1,29 +1,6 @@
 
 $( document ).ready(function() {
 
-
-  // summer not libiaray 
-$("textarea").summernote({
-  height: 200,
- 
-  toolbar: [
-      // [groume, [list of button]]
-      ['style', ['bold', 'italic', 'underline']],
-             ['fontsize', ['fontsize']],
-      ['color', ['color']],
-      ['height', ['height']],
-       ['operation', ['undo', 'redo']],
-      ['font', ['strikethrough', 'superscript', 'subscript', 'clear']],
-      ['para', ['ul', 'ol', 'paragraph']],
-      ['object', ['link', 'table', 'picture', 'video']],
-      ['misc', [ 'help', 'fullscreen', 'codeview']]
-    ]
-  
-   
- });
-
- $("[multiple = 'multiple']").selectpicker();   
-
 function add_new_componente(w,b,a){
 
 var max_fields = 50; //maximum input boxes allowed

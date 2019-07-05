@@ -16,7 +16,7 @@ class AddOnController extends Controller
     public function index()
     {
 
-        return view('admin.addons.index')->with('addons', Addon::orderBy('id','DESC')->paginate(5));
+        return view('admin.Addons.index')->with('addons', Addon::orderBy('id','DESC')->paginate(5));
     }
 
     /**
@@ -26,7 +26,7 @@ class AddOnController extends Controller
      */
     public function create()
     {
-        return view('admin.addons.add');
+        return view('admin.Addons.add');
     }
 
     /**
@@ -53,7 +53,7 @@ class AddOnController extends Controller
      */
     public function show($id)
     {
-        return view('admin.addons.show')->with('addon', Addon::find($id));
+        return view('admin.Addons.show')->with('addon', Addon::find($id));
     }
 
     /**
@@ -65,7 +65,7 @@ class AddOnController extends Controller
     public function edit($id)
     {
         $addon = Addon::find($id);
-        return view('admin.addons.edit',compact('addon'));
+        return view('admin.Addons.edit',compact('addon'));
     }
 
     /**
@@ -102,7 +102,7 @@ class AddOnController extends Controller
     {
         $addons = Addon::onlyTrashed()->get();
 
-        return view('admin.addons.trashed', compact('addons'));
+        return view('admin.Addons.trashed', compact('addons'));
 
     }
 
