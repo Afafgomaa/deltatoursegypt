@@ -127,18 +127,20 @@
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Program Image Gallery: </strong>
-                    <div class="col-md-11 col-sm-11 col-xs-11" id="image_gallery">
-                        @foreach(unserialize($program->image_gallery ) as $img)
-                      <input type="url" name="image_gallery[]" value="{{$img}}" class="form-control mb-3 mt-3">
-                      @endforeach
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-12">
-                       <a id="addnn" href="#" class="btn btn-success">+</a>
-                    </div>
 
-           </div>
+                <div id="items">
+                    <strong>Program Image Gallery: </strong>
+                      
+                        @foreach(unserialize($program->image_gallery ) as $img)
+                        <div class="from-group">
+                         <input type="url" name="image_gallery[]" value="{{$img}}" class="form-control mb-3 mt-3">
+                        <button type="button" class="remove_this_filed">Remove</button>
+                        </div>
+                      @endforeach
+                   
+                   
+                </div>
+                <button type="button" class="add_field_button">Add New Image</button>
          </div>
          
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -166,22 +168,25 @@
         </div>
         
             <div class="col-xs-12 col-sm-12 col-md-12" id="itinerary" > 
-            <div class="pull-right"><a id="addItinerary" href="#" class="btn btn-success">+</a></div>
-            @foreach(array_combine(unserialize($program->itinerary), unserialize($program->itinerary_heading))  as $b => $h  ) 
-              
-                    <div class="form-group">
-                        <strong>Itinerary Heading:</strong> 
-                        <input type="text" class="form-control itinerary_h" name="itinerary_heading[]" value="{{$h}}">               
+            @if(!empty(unserialize($program->itinerary) ) && !empty(unserialize($program->itinerary_heading) ))
+                @foreach(array_combine(unserialize($program->itinerary), unserialize($program->itinerary_heading))  as $b => $h  ) 
+                <div class="itinerary">
+                        <div class="form-group">
+                            <strong>Itinerary Heading:</strong> 
+                            <input type="text" class="form-control itinerary_h" name="itinerary_heading[]" value="{{$h}}">               
+                        </div>
+                        <div class="form-group">
+                            <strong>itinerary Body:</strong>
+                            <textarea  name="itinerary[]" class="form-control" style="height:100px">{{$b}}</textarea>               
+                        </div>
+                        <button type="button" class="remove_this_filed">remove</button>
                     </div>
-                    <div class="form-group">
-                        <strong>itinerary Body:</strong>
-                        <textarea  name="itinerary[]" class="form-control" style="height:100px">{{$b}}</textarea>               
-                    </div>
-              
-           
-           @endforeach
+            
+            @endforeach
+           @endif
+
         </div>
-        
+        <button type="button" class="add_itinerary_button">Add another Itinerary</button> 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Add On:</strong>
@@ -202,13 +207,15 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Price&Children:</strong>
-                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control summernote', 'id' => 'summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control ', 'style'=>'height:100px')) !!} 
+                 <button class="remove_this_filed" type="button">remove</button>               
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Pricing:</strong>
-                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing', 'id' => 'summernote','class' => 'form-control summernote','style'=>'height:100px')) !!}                
+                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing','class' => 'form-control','style'=>'height:100px')) !!}  
+                 <button class="remove_this_filed" type="button">remove</button>               
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -217,11 +224,16 @@
                 <select class="form-control" name="related_programs_id[]" multiple= 'multiple'>
                       @foreach($programs->where('id' ,'!==' , $program->id) as $p)
                              <option value="{{ $p->id}}" 
-                                 @foreach($program->related as $related_pro)
-                                      @if($related_pro === $p->id)
-                                 {{'selected'}}
-                                 @endif
-                                @endforeach
+                                 
+                             @foreach($related_programs_collection as  $program_from_releated)
+                              @foreach($programs->where('id' , $program_from_releated->related_id) as $program_from_related_programs )
+                                         @if($program_from_related_programs->id === $p->id)
+
+                                           {{'selected'}}
+                                         @endif
+                              @endforeach
+                             @endforeach
+                                
                                  >{{$p->name}}</option>
                       @endforeach 
                 </select>

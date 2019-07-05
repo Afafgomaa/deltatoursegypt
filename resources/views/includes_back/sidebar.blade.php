@@ -77,6 +77,7 @@
                       <li><a href="{{ route('section.trashed') }}">Sections</a></li>
                       <li><a href="{{ route('promo.trashed') }}">Promo</a></li>
                       <li><a href="{{ route('referral.trashed') }}">Referral</a></li>
+                      <li><a href="{{ route('Addon.trashed') }}">Addons</a></li>
                       <li><a href="{{ route('Accommodation.trashed') }}">Accommodations</a></li>
                     </ul>
                   </li>
@@ -113,6 +114,7 @@
                     <i class="fa fa-sign-out pull-right"></i>
                     
                      </a></li>
+                     <li><a href="{{ url('/') }}">vist website</a></li>
                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                       </form>

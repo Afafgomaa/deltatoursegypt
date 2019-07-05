@@ -73,6 +73,7 @@ class ProgramsController extends Controller
 
 
 $program->save();
+Session::flash('Success','Your Program created Successfully');
         return redirect()->route('Program.index')
                         ->with('success','Program created successfully');
     }
@@ -99,7 +100,8 @@ $program->save();
         $program = Programs::find($id);
         $highlights  = Highlight::orderBy('id' , 'DESC')->get();
         $pages_programs = Pages::where('parent_id','>',0)->get();
-        return view('admin.programs.edit',compact('program','highlights','pages_programs'));
+        $related_programs_collection = DB::table('programs_related')->where('programs_id', $id)->get();
+        return view('admin.programs.edit',compact('program','highlights','pages_programs','related_programs_collection'));
     }
 
     /**
@@ -139,7 +141,7 @@ $program->save();
             $program->Accommodations()->sync($request->accom_id);
             $program->Addons()->sync($request->add_on_id);
         
-        $program->update();
+        $program->save();
         Session::flash('Success','Your Program Updated Successfully');
         return redirect()->back();
     }

@@ -42,10 +42,9 @@ class AccommodationsController extends Controller
             'name' => 'required',
             'location' => 'required',
             'small_iamge' => 'required',
-            'thumbnail_iamge' => 'required',
-            'brief'     => 'required',
-            'gallery_image' => 'required'
-            ,
+            'brief'     => 'required'
+           
+            
         ]);
     
         $accom = Accommodations::create([

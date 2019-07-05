@@ -43,7 +43,7 @@
             <th>Addon Description</th>
             <th width="280px">Action</th>
         </tr>
-    @foreach ($addons as $key => $addon)
+    @foreach ($addons as  $addon)
     <tr>
         <td>0</td>
         <td>{{ $addon->title }}</td>

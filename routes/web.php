@@ -6,14 +6,9 @@ Route::get('/', [
     'as' => 'home'
 ]);
 
-Route::get('/test', function(){
-   return    ;
-});
 
-Route::get('/Customized_Tours_to_egypt',[
-   'uses' => 'frontendController@tailorMade',
-   'as' => 'Tailor_Made'
-   ]);
+
+
 Route::get('/blog',[
    'uses' => 'frontendController@blog',
    'as' => 'blog'
@@ -33,6 +28,7 @@ Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('egypt-faq', 'faq')->name('faq');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
+Route::view('Customized_Tours_to_egypt','Tailor_made')->name('Tailor_Made');
 
 
 
@@ -197,7 +193,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
          'as'   => 'Addon.kill'
       ]);
       Route::get('/Addon/restore/{id}', [
-         'uses' => 'AddOnController@restoreProgram',
+         'uses' => 'AddOnController@restoreAddon',
          'as'   => 'Addon.restore'
       ]);
       Route::resource('Addon','AddOnController');

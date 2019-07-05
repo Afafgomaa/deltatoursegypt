@@ -15,6 +15,7 @@ class AddOnController extends Controller
      */
     public function index()
     {
+
         return view('admin.addons.index')->with('addons', Addon::orderBy('id','DESC')->paginate(5));
     }
 
@@ -99,9 +100,9 @@ class AddOnController extends Controller
 
     public function trashedAddon()
     {
-        $add_on = Addon::onlyTrashed()->get();
+        $addons = Addon::onlyTrashed()->get();
 
-        return view('admin.addons.trashed', compact('add_on'));
+        return view('admin.addons.trashed', compact('addons'));
 
     }
 

@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('image');
             $table->string('title');
             $table->text('desc');
-            $table->boolean('add_to_home_page')->default(0);
+            $table->boolean('add_to_home_page')->unllable();
             $table->softDeletes();
             $table->timestamps();
         });

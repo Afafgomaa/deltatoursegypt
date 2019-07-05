@@ -35,9 +35,9 @@
             <tbody>
             @foreach($posts as $post)
                 <tr class="even pointer">
-                    <td class=" "><img src="{{$post->image}}" width="100%"></td>
+                    <td class=" "><img src="{{$post->image}}" width="150" height="100"></td>
                     <td class=" ">{{$post->title}} </td>
-                    <td class=" ">{{$post->desc}}<i class="success fa fa-long-arrow-up"></i></td>
+                    <td class=" ">{!!$post->desc!!}<i class="success fa fa-long-arrow-up"></i></td>
                     <td class=" "><a href="{{route('post.restore',['id' => $post->id ])}}" class="btn btn-success btn-xs" type="submit">Restore</button></td>
                     <td class=" "><a href="{{route('post.kill', ['id' => $post->id])}}" class="btn btn-danger btn-xs">Destory</a></td>
                 </tr>

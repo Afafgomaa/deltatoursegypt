@@ -117,12 +117,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div id="items">
                 <div class="form-group"><label>Program Image Gallery:</label>
-                <input  class="form-control" name="image_gallery[]" required="required" type="text" />
+                   <input class="form-control" name="image_gallery[]" required="required" type="text" />
                 </div>
             </div>
             <button type="button" class="add_field_button">Add Field</button>
          </div>
          
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Overview:</strong>

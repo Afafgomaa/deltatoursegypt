@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                    <h3 style="color:#26B99A;font-weight:bold">Edit Hotel Or Cruises</h3>
+                    <h3 style="color:#26B99A;font-weight:bold">Add New Hotel Or Cruises</h3>
                     </div>
                     <div class="pull-right">
                         <a class="btn btn-primary" href="{{ route('Accommodation.index') }}"> Back</a>
@@ -39,9 +39,8 @@
     @endif
             <form id="demo-form2" method="post" action="{{route('Accommodation.store')}}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
                 @csrf
-                 <h3 style="color:#26B99A;font-weight:bold">Add New Hotel Or Cruises</h3>
-                 <hr>
-                 <br><br>
+                
+                 
                 <div class="form-group">
                 <strong>Name</strong>
                 

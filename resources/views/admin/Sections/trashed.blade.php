@@ -36,7 +36,7 @@
             @foreach($sections as $section)
                 <tr class="even pointer">
                     
-                    <td class=" ">{{$section->image}} </td>
+                    <td class=" "><img src="{{$section->image}}" width="150" height="100"> </td>
                     <td class=" ">{{$section->name}} </td>
                     <td class=" "><a href="{{route('section.restore',['id' => $section->id ])}}" class="btn btn-success btn-xs" type="submit">Restore</button></td>
                     <td class=" "><a href="{{route('section.kill', ['id' => $section->id])}}" class="btn btn-danger btn-xs">Destory</a></td>

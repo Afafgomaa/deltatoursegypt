@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group">
                 
-                        <strong>location</strong>
+                <strong>location</strong>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <input type="text" id="location" name="location" required="required" value="{{$accommodation->location}}" class="form-control col-md-7 col-xs-12">
                 </div>
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="form-group">
-                    <div id="edit_accom">
+                    <div id="accommodation">
                        <strong>Add Gallery Images</strong>
                         <div class="col-md-12 col-sm-12 col-xs-12 image_gallery">
                             @foreach(unserialize($accommodation->gallery_image) as $img)
@@ -91,7 +91,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <button type="button" class="gallery_iamge_add">Add New Image</button>
+                    <button type="button" class="add_accommodation">Add New Image</button>
                 </div>
                 <div class="form-group">
                 <strong>Brief<strong>
