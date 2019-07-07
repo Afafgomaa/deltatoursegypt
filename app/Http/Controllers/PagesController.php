@@ -38,12 +38,24 @@ class PagesController extends Controller
 
     public function substore(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'title' => 'required',
+            'image' => 'required|url',
+            'breif' => 'required',
+            'bg_image' => 'required|url',
+            'mainPage' => 'required'
+
+        ]);
+        
         $page = Pages::create([
             'name' => $request->name,
             'title' => $request->title,
             'image' => $request->image,
             'breif'  => $request->breif,
             'slug'  => str_slug($request->title),
+            'bg_image' => $request->bg_image,
+            'overlay' => $request->overlay,
             'parent_id' => $request->mainPage
         ]);
 
@@ -90,13 +102,27 @@ class PagesController extends Controller
    
        public function updateSubPage(Request $request , $id)
        {
+        
+
            $page = Pages::find($id);
+           $validatedData = $request->validate([
+            'name' => 'required',
+            'title' => 'required',
+            'image' => 'required|url',
+            'breif' => 'required',
+            'bg_image' => 'required|url',
+            'parent_id' => 'required|integer'
+
+        ]);
+          
            
             $page->name = $request->name;
             $page->title = $request->title;
             $page->image = $request->image;
             $page->breif =  $request->breif;
             $page->slug = str_slug($request->title);
+            $page->bg_image  = $request->bg_image;
+            $page->overlay = $request->overlay;
             $page->parent_id = $request->parent_id;
             
            
@@ -110,10 +136,17 @@ class PagesController extends Controller
     public function deletePage($id)
     {
         $page = Pages::find($id);
-        $page->delete();
-        Session::flash('success', 'Your Page Deleted Successuflly');
+        if($page->Section){
+            return redirect()->back()->withErrors('Your can not delete page becuse this page has section  SO Change or Delete section first');
+           
+        }else {
+            $page->delete();
+            Session::flash('success', 'Your Page Deleted Successuflly');
 
         return redirect()->back();
+
+        }
+        
 
     }
 

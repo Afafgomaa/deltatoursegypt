@@ -7,7 +7,7 @@
 					<div class="header-row">
 						<div class="header-logo">
 							<a href="{{route('home')}}">
-								<img alt="deltatoursegypt"  width="200" height="100" data-sticky-width="100" data-sticky-height="50" data-sticky-top="50" src="{{asset('images/output-onlinepngtools.png')}}"></a>
+								<img alt="deltatoursegypt"  width="200" height="100" data-sticky-width="100" data-sticky-height="50" data-sticky-top="50" src="{{url('/')}}/public/images/output-onlinepngtools.png"></a>
 						</div>
 					</div>
 				</div>

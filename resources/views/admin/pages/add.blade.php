@@ -10,6 +10,8 @@
 <div class="x_panel">
 <div class="x_title">
 <h2>All Pages </h2>
+
+
 <ul class="nav navbar-right panel_toolbox">
 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 </li>
@@ -19,6 +21,15 @@
 <div class="clearfix"></div>
 </div>
 <div class="x_content" style="display: block;">
+<div class="row">
+@if($errors->any())
+    @foreach($errors->all() as $error)
+            <div class="alert alert-danger">
+                <p>{{$error}}</p>
+            </div>
+    @endforeach
+@endif
+</div>
 <table class="table">
 <thead>
 <tr>
@@ -159,8 +170,14 @@
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Image <span class="required">*</span>
                 </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="image" name="image" required  class="form-control col-md-7 col-xs-12">
+                        <input type="url" id="image" name="image" required  class="form-control col-md-7 col-xs-12">
                         <small>image shows as main page as sections </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Back Ground Image <span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="url" name="bg_image" required  class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
                 <div class="form-group">
@@ -180,6 +197,16 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                 <textarea class="form-control col-md-7 col-xs-12" required  type="text" name="breif" col="5" rows="5"></textarea>
                 </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Overlay <span class="required">*</span>
+                </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <strong class="text-primary">Blue</strong> &nbsp;
+                            <input type="checkbox" name="overlay" value="0"> &nbsp; &nbsp; &nbsp;
+                        <strong style="color:black">Black</strong> &nbsp;
+                            <input type="checkbox" name="overlay" value="1">
+                    </div>
                 </div>
 
                 <br><br>

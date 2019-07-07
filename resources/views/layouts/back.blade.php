@@ -75,6 +75,7 @@ strong{
  <!-- Custom Theme Scripts -->
 
  <script src="{{url('/')}}/public/build/js/custom.min.js"></script>
+ <script src="{{url('/')}}/public/build/js/back.js"></script>  
  
 <script>
  @if(Session::has('success'))
@@ -104,7 +105,7 @@ toastr.success('{{Session::get("success")}}');
 
  $("[multiple = 'multiple']").selectpicker(); 
  
- <script src="{{url('/')}}/public/build/js/back.js"></script>  
+ 
 
 new Clipboard('.copy');
 </script>

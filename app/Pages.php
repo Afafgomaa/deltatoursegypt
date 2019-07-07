@@ -29,6 +29,10 @@ class Pages extends Model
     {
         return $this->hasMany('App\Programs','pages_id');
     }
+    public function section()
+    {
+        return $this->hasMany('App\Sections','page_id');
+    }
 
    
 

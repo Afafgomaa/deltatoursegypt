@@ -17,6 +17,15 @@
             <div class="clearfix"></div>
             </div>
             <div class="x_content">
+            <div class="row">
+@if($errors->any())
+    @foreach($errors->all() as $error)
+            <div class="alert alert-danger">
+                <p>{{$error}}</p>
+            </div>
+    @endforeach
+@endif
+</div>
             <br>
             <form id="demo-form2" method="post" action="{{route('subPage.update', ['id'=> $spage->id])}}"  class="form-horizontal form-label-left" >
                 @csrf
@@ -51,11 +60,17 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Select main Page <span class="required">*</span></label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <select class="form-control col-md-7 col-xs-12" required name="parent_id">
-                            <option value="" Selected disabled>Select Main Page</option>
+                            <option value="" disabled>Select Main Page</option>
                             @foreach($navbar_links as $page)  
-                                    <option value="{{$page->id}}">{{$page->name}}</option>
+                                    <option value="{{$page->id}}" {{$page->id === $spage->parent_id ? 'Selected': ''}}>{{$page->name}}</option>
                             @endforeach
                         </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Back Ground Image <span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="url" name="bg_image" required value="{{$spage->bg_image}}"  class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
                 <div class="form-group">
@@ -65,6 +80,16 @@
                 {!!$spage->breif!!}
                 </textarea>
                 </div>
+                </div>
+
+                <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Overlay <span class="required">*</span></label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <strong class="text-primary">Blue</strong> &nbsp;
+                            <input type="checkbox" name="overlay"  {{$spage->overlay === 0 ?  "checked" : '' }} value="0"> &nbsp; &nbsp; &nbsp;
+                        <strong style="color:black">Black</strong> &nbsp;
+                            <input type="checkbox" name="overlay" {{$spage->overlay === 1 ? 'checked' : ''}} value="1">
+                    </div>
                 </div>
 
                 <br><br>
