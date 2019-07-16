@@ -518,10 +518,10 @@ p.featured {
     display: block;
     border-radius: 5px;
     padding: 3px 8px;
-    color: #8676ad;
+    color: #250e5d;
     font-weight: bold;
     margin-bottom: 1em;
-    border: 1px solid #8676ad;
+    border: 1px solid  #250e5d;
 }
 
 /*single tour*/

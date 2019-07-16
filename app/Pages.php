@@ -33,6 +33,10 @@ class Pages extends Model
     {
         return $this->hasMany('App\Sections','page_id');
     }
+    public function faq()
+    {
+        return $this->belongsToMany('App\faqs');
+    }
 
    
 

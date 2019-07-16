@@ -7,16 +7,17 @@ use Illuminate\Http\Request;
 use Session;
 use App\Pages;
 use App\Programs;
-use Illuminate\Support\Facades\DB;
+use App\faqs;
 
 class PagesController extends Controller
 {
     public function add()
     {
        $pages    =  Pages::where('parent_id', 0)->get(); 
+       $faqs     =  faqs::all();
       
        
-        return view('admin.pages.add',compact('pages'));
+        return view('admin.pages.add',compact('pages','faqs'));
     }
 
     public function store(Request $request)
@@ -29,6 +30,7 @@ class PagesController extends Controller
             'slug' => str_slug($request->title),
             'parent_id' => 0
         ]);
+        $page->faq()->attach($request->faq);
 
         $page->save();
 
@@ -72,7 +74,8 @@ class PagesController extends Controller
     public function editPage($id)
     {
         $page = Pages::find($id);
-        return view('admin.pages.edit', compact('page'));
+        $faqs     =  faqs::all();
+        return view('admin.pages.edit', compact('page','faqs'));
     }
 
     public function updatePage(Request $request , $id)
@@ -83,6 +86,7 @@ class PagesController extends Controller
         $page->breif =  $request->breif;
         $page->slug = str_slug($request->title);
         $page->parent_id = 0;
+        $page->faq()->sync($request->faq);
         
         $page->save();
 
@@ -137,16 +141,19 @@ class PagesController extends Controller
     public function deletePage($id)
     {
         $page = Pages::find($id);
-        if($page->Section){
-            return redirect()->back()->withErrors('Your can not delete page becuse this page has section  SO Change or Delete section first');
+        
+        //if(!empty($page->section()) ){
+           // return redirect()->back()->withErrors('Your can not delete page becuse this page has section  SO Change or Delete section first');
            
-        }else {
+       // }else {
+            $page->faq()->detach($page);
             $page->delete();
+            
             Session::flash('success', 'Your Page Deleted Successuflly');
 
         return redirect()->back();
 
-        }
+        //}
         
 
     }
@@ -224,7 +231,8 @@ class PagesController extends Controller
     public function findpage($mainPage)
     {
       if($page = Pages::where('parent_id',0)->where('slug',$mainPage )->first() ){
-        return view('main_packeges', compact('page'));
+          $faqs = $page->faq;
+        return view('main_packeges', compact('page','faqs'));
     
       }else{
         return redirect()->back();
@@ -245,6 +253,7 @@ class PagesController extends Controller
         
 
         $programs_in = Programs::where('pages_id', $page->id)->get();
+        
         
        
         return view('Egypt_tour', compact('mainpage','page','programs_in'));

@@ -7,6 +7,7 @@ use App\slider;
 use App\post;
 use App\Pages;
 use App\Sections;
+use App\faqs;
 class frontendController extends Controller
 {
 
@@ -37,5 +38,8 @@ class frontendController extends Controller
    
     public function blog(){
         return view('blog')->with('blog', Post::all());
+    }
+    public function faqs(){
+        return view('faq')->with('faqs', faqs::all());
     }
 }

@@ -13,6 +13,10 @@ Route::get('/blog',[
    'uses' => 'frontendController@blog',
    'as' => 'blog'
    ]);
+Route::get('/faqs',[
+   'uses' => 'frontendController@faqs',
+   'as' => 'faq'
+]);
 
 Route::post('send/email', 'mailController@send')->name('mail');
 
@@ -25,7 +29,6 @@ Route::view('cairo-egypt-budget-holiday-tour-package', 'egyptTours/testOfEgypt')
 Route::view('about-us', 'about_us')->name('about_us');
 Route::view('contact-us', 'contact_us')->name('contact_us');
 Route::view('Terms-and-conditions', 'term')->name('term');
-Route::view('egypt-faq', 'faq')->name('faq');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
 Route::view('Customized_Tours_to_egypt','Tailor_made')->name('Tailor_Made');

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+    
 
     $(".full_itinerary_box").each(function(){		
         $(this).find(".itinerary_desc").hide();

@@ -47,6 +47,24 @@
                         </textarea>
                     </div>
                 </div>
+                <div class="form-group">
+                  <label for="faq" required  class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                 <select name="faq[]"  class="form-control col-md-7 col-xs-12"  multiple= 'multiple'>
+                 @foreach($faqs as $faq)
+                      <option value="{{$faq->id}}" 
+                      @foreach($page->faq as $q)
+                         @if($q->id === $faq->id)
+                                   {{'selected'}} 
+                         @endif
+                      @endforeach
+                      
+                      
+                      >{{$faq->question}}</option>
+                 @endforeach
+                 </select>
+                   </div>
+                </div>
                
 
                 <br><br>

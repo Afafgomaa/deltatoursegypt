@@ -40,7 +40,7 @@ class FaqsController extends Controller
        
         $faqs = faqs::create([
              
-            'question' => $request->question,
+            'question' => str_slug($request->question),
             'answer'  => $request->answer,
         ]);
         $faqs->save();
@@ -72,7 +72,7 @@ class FaqsController extends Controller
     {
             
           
-            $faq->question =  $request->question;
+            $faq->question = str_slug($request->question);
             $faq->answer =  $request->answer;
            
         $faq->save();

@@ -12,4 +12,9 @@ class faqs extends Model
     protected $guarded = ['id'];
 
     protected $dates = ['deleted_at'];
+
+    public function page()
+    {
+        return $this->belongsToMany('App\Pages');
+    }
 }

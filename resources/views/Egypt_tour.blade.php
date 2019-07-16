@@ -65,7 +65,7 @@
                         </div>
                    </div>
                    <div class="home_special_offer_description">
-                  {!!substr($program->brief,0,250)!!}...
+                      <p>  {!!substr($program->brief , 0 ,250)!!} ...</p>
                     </div>
                     <div class="read_more">
                         <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">read more</a>

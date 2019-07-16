@@ -56,7 +56,7 @@
 									
 
 									<li class="dropdown">
-									<a class="dropdown-item dropdown-toggle" href="{{route('contact_us')}}">Contact<i class="fas fa-chevron-down"></i></a> 
+									<a class="dropdown-item dropdown-toggle" href="{{route('contact_us')}}">More<i class="fas fa-chevron-down"></i></a> 
 										<ul class="dropdown-menu">
 											<li class="dropdown-submenu dropdown-reverse">
 									         <a class="dropdown-item" href="{{route('blog')}}"> Blog<i class="fas fa-chevron-down"></i></a>
@@ -66,6 +66,9 @@
 								           </li>
 											<li class="dropdown-submenu dropdown-reverse">
 									       <a class="dropdown-item" href="{{route('about_us')}}"> About Us<i class="fas fa-chevron-down"></i></a>
+								             </li>
+											 <li class="dropdown-submenu dropdown-reverse">
+									       <a class="dropdown-item" href="{{route('faq')}}"> FAQ<i class="fas fa-chevron-down"></i></a>
 								             </li>
 										</ul>
 									</li>
