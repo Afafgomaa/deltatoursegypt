@@ -51,7 +51,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    ]);
    Route::resource('avatar','AvatarController');
    Route::resource('post','PostController');
-   
+  
    
    Route::get('/slider', [
       'uses' => 'HomeController@slider',
@@ -61,6 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'HomeController@slider_store',
       'as'   => 'slider.store'
    ]);
+      // blog route 
    Route::get('/posts/trashed', [
       'uses' => 'PostController@delete',
       'as'   => 'post.trashed'
@@ -73,6 +74,20 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
       'uses' => 'PostController@restore',
       'as'   => 'post.restore'
    ]);
+       // faqs route 
+       Route::get('/faqs/trashed', [
+         'uses' => 'FaqsController@delete',
+         'as'   => 'faqs.trashed'
+      ]);
+      Route::get('/faqs/kill/{id}', [
+         'uses' => 'FaqsController@kill',
+         'as'   => 'faqs.kill'
+      ]);
+      Route::get('/faqs/restore/{id}', [
+         'uses' => 'FaqsController@restore',
+         'as'   => 'faqs.restore'
+      ]);
+      Route::resource('faqs','FaqsController');
    // pages route 
    Route::get('/page/add', [
       'uses' => 'PagesController@add',

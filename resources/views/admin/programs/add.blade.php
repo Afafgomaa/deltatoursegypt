@@ -47,6 +47,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Start Day:</strong>
+                {!! Form::date('start_day', null, array('placeholder' => 'start day','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Program Price From:</strong>
                 {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
             </div>
@@ -197,6 +203,12 @@
                              <option value="{{ $pages_program->id}}" {{$pages_program->parent_id === 0  ? 'disabled' : ' ' }}>{{$pages_program->name}} </option>
                       @endforeach 
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Small Group:</strong>
+                <input type="checkbox" value="1" name="small_group">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

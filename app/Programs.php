@@ -40,6 +40,7 @@ class Programs extends Model
   {
     return $this->belongsTo('App\Pages','pages_id');
   }
+  
 
   
 

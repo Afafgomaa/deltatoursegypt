@@ -18,6 +18,7 @@ class CreateProgramsTable extends Migration
             $table->string('main_image');
             $table->integer('price');
             $table->string('name');
+            $table->date('start_day');
             $table->integer('kind')->nullable();
             $table->integer('days')->nullable();
             $table->integer('nights')->nullable();
@@ -30,6 +31,7 @@ class CreateProgramsTable extends Migration
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();
             $table->integer('pages_id');
+            $table->integer('small_group')->default(0);
             $table->string('slug');
             $table->softDeletes();
             $table->timestamps();

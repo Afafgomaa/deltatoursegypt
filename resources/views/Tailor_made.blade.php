@@ -23,20 +23,44 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
    @csrf
     <div class="container">
         <div class="row">
-           <div class="col-md-4 col-xs-12">
-                <label>Your Name </label>
-                <br>
-                <div class="form-group label-floating is-empty">
-                    <input name="name" type="text" class="form-control" required>
-               </div>
-           </div>
-            <div class="col-md-4 col-xs-12">
-                <label> Your Email </label>
-                <br>
-                <div class="form-group label-floating is-empty">
-                    <input name="email" type="text" class="form-control" required>
+         
+                    <div class="col-md-4 col-xs-12">
+                            <label>Your Name </label>
+                            <br>
+                            <div class="form-group label-floating is-empty">
+                                <input name="name" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <label> Your Email </label>
+                        <br>
+                        <div class="form-group label-floating is-empty">
+                            <input name="email" type="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <label>Mobile *</label>
+                        <div class="form-group label-floating">
+                            <div id="Arrival2">
+                                    <input name="Mobile" value="" type="number" class="form-control"
+                                        placeholder="" required="">
+                            </div>
+                        </div>
+                    </div>
+                                                        
+                <div class="col-md-2 col-xs-12">
+                        <label>	Nationality *</label>
+                    <div class="form-group label-floating">
+                            <div id="Arrival2">
+                                    <input name="Nationality" value="" type="text" class="form-control"
+                                            required="">
+                            </div>
+                    </div>
                 </div>
-            </div>
+      
+
+
+
 
             <div class="col-md-2 col-xs-12">
                 <label>Arrival Date *</label>
@@ -62,12 +86,86 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                     
                 </div>
             </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Dates are flexible*</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                       <select class="form-control">
+                           <option>yes</option>
+                           <option>no</option>
+                       </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Trip duration (1 to 20) Days</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                    <input name="Trip_duration" value="" type="number" class="form-control"required="" pattern="{1,20}">
+                    </div>
+                    
+                </div>
+            </div>
 
-             <div class="col-md-4 col-xs-12">
+             <div class="col-md-2 col-xs-12">
                 <label> Number Of Adults </label>
                 <br>
                 <div class="form-group label-floating is-empty">
                     <input name="adults"  type="number" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <label> Number Of infants </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="infants"  type="number" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Type category *</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                       <select class="form-control">
+                           <option>budget</option>
+                           <option>Classical</option>
+                           <option>Luxury</option>
+                           <option>Adventure</option>
+
+                       </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Domestic transportation *</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                       <select class="form-control">
+                           <option>Flight</option>
+                           <option>sleeper train</option>
+                           <option>Coach</option>
+                       </select>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Cities of interest*</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                       <select class="form-control">
+                           <option>Alex</option>
+                           <option>Cairo</option>
+                           <option>Aswan</option>
+                           <option>Sharm</option>
+                           <option>Luxor</option>
+                           <option>Hurghada</option>
+                           <option>Dahab</option>
+                           <option>Oasis</option>
+
+                       </select>
+                    </div>
+                    
                 </div>
             </div>
 

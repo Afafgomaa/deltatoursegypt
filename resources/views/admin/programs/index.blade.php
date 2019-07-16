@@ -36,17 +36,18 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
+            
             <th>Program Name</th>
             <th>Program Place</th>
             <th>Program Price</th>
             <th>Image</th>
             <th width="280px">Action</th>
         </tr>
+       
     @foreach ($programs as $key => $program)
     <tr>
-        <td>0</td>
-        <td>{{ $program->name }}</td>
+        
+        <td {{$program->small_group === 1 ? "style=color:#ed4830 " : ''}}>{{ $program->name }} </td>
         <td>{{ $program->place }}</td>
         <td>{{ $program->price }}</td>
         <td><img id="blah" src="{{$program->main_image}}" width="50"/></td>

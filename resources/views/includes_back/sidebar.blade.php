@@ -47,6 +47,13 @@
                       
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-desktop"></i> FAQ <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('faqs.create') }}">Add faq</a></li>
+                      <li><a href="{{ route('faqs.index') }}">Show All faqs</a></li>
+                      
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-desktop"></i> Programs <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ route('Program.create') }}">Add Program</a></li>
@@ -71,6 +78,7 @@
                     <ul class="nav child_menu">
                       <li><a href="{{ route('post.trashed') }}"> Posts</a></li>
                       <li><a href="{{ route('page.trashed') }}">Pages</a></li>
+                      <li><a href="{{ route('faqs.trashed') }}">FAQS</a></li>
                       <li><a href="{{ route('Program.trashed') }}">Programs</a></li>
                       <li><a href="{{ route('highlight.trashed') }}">Highlights</a></li>
                       <li><a href="{{ route('sight.trashed') }}">Sights</a></li>

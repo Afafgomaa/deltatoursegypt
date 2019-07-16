@@ -1,16 +1,14 @@
 
-
 <!--- navigation -->
-
 <div class="container">
-<h1 class="mt-5">Egypt Holidays Frequently Asked Questions</h1>
+<h1 class="mt-5">FAQS</h1>
 	<div class="row">
-		
 	<div class="col-md-12">
 		<div class="accordion pt-5 pb-5" id="accordion">
 		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#Booking" aria-expanded="true">
-		    Booking         
-		</a>                             
+		    Booking         <i class="fa fa-home float-right pt-1"></i>    
+		</a>   
+		                        
 		<section id="Booking" class="collapse show">
 	   <p>
 			<strong> 1. Why book with Delta Tours Egypt ?</strong> <br>

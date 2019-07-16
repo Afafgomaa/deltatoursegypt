@@ -49,6 +49,7 @@ class ProgramsController extends Controller
         'main_image' => $request->main_image,
         'price' => $request->price,
         'name' => $request->name,
+        'start_day' => $request->start_day,
         'kind' => $request->kind,
         'days' => $request->days,
         'nights' => $request->nights,
@@ -61,6 +62,7 @@ class ProgramsController extends Controller
         'itinerary_heading' => serialize($request->itinerary_heading),
         'itinerary' => serialize($request->itinerary),
         'pages_id' => $request->pages_id,
+        'small_group' => $request->small_group,
         'slug' => str_slug($request->name),
 
         ]);
@@ -114,12 +116,14 @@ Session::flash('Success','Your Program created Successfully');
     public function update(Request $request, $id)
     {
         
+        
         $program = Programs::find($id);
         
         
         $program->main_image =  $request->main_image;
         $program->price = $request->price;
         $program->name = $request->name;
+        $program->start_day = $request->start_day;
         $program->kind  = $request->kind;
         $program->days = $request->days;
         $program->nights = $request->nights;
@@ -129,6 +133,7 @@ Session::flash('Success','Your Program created Successfully');
         $program->pricing = $request->pricing;
         $program->price_children = $request->price_children;
         $program->pages_id = $request->pages_id;
+        $program->small_group = $request->small_group;
         $program->image_gallery = serialize($request->image_gallery);
         $program->itinerary_heading = serialize($request->itinerary_heading);
         $program->itinerary = serialize($request->itinerary);

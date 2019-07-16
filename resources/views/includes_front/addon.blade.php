@@ -2,7 +2,7 @@
 <div class="bg-light-1">
 
 <div  class="scroll_pane_new hidden-xs active ">
-    <div class="program_box"> 
+    <div class="program_box center-on-mobile"> 
             <div class="tab-pane active">
                 <div class="row">
                     <h3 class="program_box_title"> Enhance your trip with these amazing added extras and bolt-ons</h3>

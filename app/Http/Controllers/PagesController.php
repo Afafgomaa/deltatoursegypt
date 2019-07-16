@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Pages;
 use App\Programs;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -222,10 +223,11 @@ class PagesController extends Controller
 
     public function findpage($mainPage)
     {
-      if($page = Pages::where('parent_id',0)->where('slug',$mainPage )->first()){
+      if($page = Pages::where('parent_id',0)->where('slug',$mainPage )->first() ){
         return view('main_packeges', compact('page'));
-      }else {
-          return redirect()->back();
+    
+      }else{
+        return redirect()->back();
       }
         
        

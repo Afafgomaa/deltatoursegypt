@@ -58,14 +58,14 @@
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">{{($program->kind) ? 'public' : 'Private'}} Tour  | Childern | payment policy| Tipping 
+                        <div class="home_special_offer_types_box">{{($program->kind) ? 'public' : 'Private'}} Tour  
                         </div>
                         <div class="home_special_offer_types_box">
                         {{$program->days}} days -  {{$program->nights}} nights  
                         </div>
                    </div>
                    <div class="home_special_offer_description">
-                    <p> {!!$program->brief!!} </p>
+                  {!!substr($program->brief,0,250)!!}...
                     </div>
                     <div class="read_more">
                         <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">read more</a>
