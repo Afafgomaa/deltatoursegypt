@@ -27,7 +27,7 @@
                                         </ul>
                                   </div>
                             </div>
-                            <div class="col-md-6 col-md-offset-2 center-on-mobile">
+                            <div class="col-md-6 col-md-offset-2">
                                     <h4 class="mb-0">{{$accom->name}} </h4>
                                     <p class="mb-1 mt-1  text-blue font-weight-bold"> <i class="fas fa-info-circle"></i>  Our Location :{{$accom->location}} </p>
                                     <p class="text-justify"> 

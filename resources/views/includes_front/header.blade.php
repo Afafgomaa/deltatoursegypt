@@ -7,7 +7,7 @@
 					<div class="header-row">
 						<div class="header-logo">
 							<a href="{{route('home')}}">
-								<img alt="deltatoursegypt"  width="200" height="100" data-sticky-width="100" data-sticky-height="50" data-sticky-top="50" src="{{url('/')}}/public/images/output-onlinepngtools3.png"></a>
+								<img alt="deltatoursegypt"  width="200" height="100" data-sticky-width="100" data-sticky-height="50" data-sticky-top="50" src="{{url('/')}}/public/images/output-onlinepngtools.png"></a>
 						</div>
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 									
 
 									<li class="dropdown">
-									<a class="dropdown-item dropdown-toggle" href="{{route('contact_us')}}">More<i class="fas fa-chevron-down"></i></a> 
+									<a class="dropdown-item dropdown-toggle" href="{{route('contact_us')}}">Contact<i class="fas fa-chevron-down"></i></a> 
 										<ul class="dropdown-menu">
 											<li class="dropdown-submenu dropdown-reverse">
 									         <a class="dropdown-item" href="{{route('blog')}}"> Blog<i class="fas fa-chevron-down"></i></a>
@@ -67,11 +67,21 @@
 											<li class="dropdown-submenu dropdown-reverse">
 									       <a class="dropdown-item" href="{{route('about_us')}}"> About Us<i class="fas fa-chevron-down"></i></a>
 								             </li>
-											 <li class="dropdown-submenu dropdown-reverse">
-									       <a class="dropdown-item" href="{{route('faq')}}"> FAQ<i class="fas fa-chevron-down"></i></a>
-								             </li>
 										</ul>
 									</li>
+
+
+
+
+
+
+
+
+                                    	
+
+                                    
+									
+									
                                     		
 								</ul>
 							</nav>

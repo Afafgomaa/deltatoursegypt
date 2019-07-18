@@ -384,7 +384,7 @@ p.featured {
     margin: 1%;
 }
 .tag span {
-    background: #becaed;
+    background: #0a2677;
     color: white;
     padding: 5px 12px;
     border-radius: 5px;
@@ -465,7 +465,7 @@ p.featured {
 }
 .program_box_title{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
      margin: 15px;
      width:100%;
 }
@@ -747,7 +747,12 @@ td {
 .social-icons li a {
     color: #000 !important;
 }
-
+ul.thumbnail-gallery li {
+    margin: unset;
+}
+.program_description{
+    padding-left: 20px;
+}
 /* media query */
 @media only screen and (max-width: 600px){
     .slider-image ,#footer .footer-copyright nav ,#myNavbar{

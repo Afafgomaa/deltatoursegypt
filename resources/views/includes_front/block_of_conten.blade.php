@@ -69,12 +69,9 @@
 							<div class="program_box_title text-blue" id="PriceAndChildrenPolicy">
 								Price&Children
 							</div>
-								<div class="tab-pane">
+								<div class="tab-pane active">
 									<div class="row">
-									<div class="home_special_offer_content ">
-                       <p>{!!$program->price_children!!}</p>
-                                                </div>
-									
+									{!!$program->price_children!!}
 									</div><!-- row -->
 								</div>	<!-- tab-pane -->						
 							</div>  <!-- program_box -->	
@@ -124,46 +121,27 @@
                        <div class="col-md-12">
                          <div class="form-group label-floating is-empty">
                            <label>E-mail *</label>
-                                       <input name="UserEmail" value="" type="email" required="" class="form-control" id="UserEmail">
-											 <span class="material-input"></span>
-							</div>
-						</div>
-						<div class="col-md-6">
-                          <label>Mobile *</label>
-								<div class="form-group label-floating">
-										<div id="Arrival2">
-												<input name="Mobile" value="" type="number" class="form-control datepicker"
-													placeholder="" required="">
-										</div>
-								</div>
-								</div>
-												 
-						<div class="col-md-6">
-                              <label>	Nationality *</label>
-							<div class="form-group label-floating">
-									<div id="Arrival2">
-											<input name="Nationality" value="" type="text" class="form-control"
-												 required="">
-									</div>
-							</div>
-						</div>
+                           <input name="UserEmail" value="" type="email" required="" class="form-control" id="UserEmail">
+													 <span class="material-input"></span>
+												 </div>
+												</div>
 
 												<div class="col-md-6">
-                          <label>From *</label>
+                          <label>Arrival Date *</label>
 													<div class="form-group label-floating">
 															<div id="Arrival2">
-																	<input name="departure" value="" type="data" class="form-control datepicker"
+																	<input name="departure" value="" type="date" class="form-control datepicker"
 																		placeholder=" dd/mm/yyy " required="">
-																
+																	
 															</div>
 													</div>
 												 </div>
 												 
 												 <div class="col-md-6">
-                              <label>To *</label>
+                              <label>	Departure Date *</label>
 													<div class="form-group label-floating">
 															<div id="Arrival2">
-																	<input name="departure" value="" type="data" class="form-control datepicker"
+																	<input name="departure" value="" type="date" class="form-control datepicker"
 																		placeholder=" dd/mm/yyy " required="">
 																	
 															</div>
@@ -172,20 +150,6 @@
 											 
 											 <div class="col-md-6">
 													<label> Number Of Adults </label>
-													<br>
-													<div class="form-group label-floating is-empty">
-															<input name="" value="" type="number" class="form-control">
-													</div>
-											</div>
-											<div class="col-md-6">
-													<label> Number Of child </label>
-													<br>
-													<div class="form-group label-floating is-empty">
-															<input name="" value="" type="number" class="form-control">
-													</div>
-											</div>
-											<div class="col-md-6">
-													<label> Number Of infants</label>
 													<br>
 													<div class="form-group label-floating is-empty">
 															<input name="" value="" type="number" class="form-control">
@@ -201,19 +165,10 @@
 										</div>
 
 										<div class="col-md-12">
-												<label>  Special comments</label>
+												<label> Comments (Special)</label>
 												<br>
 												<div class="form-group label-floating is-empty">
 													<textarea class="form-control" cols="4" rows="5"></textarea>
-												</div>
-										</div>
-										<div class="col-md-12">
-												<label>  Add on</label>
-												<br>
-												<div class="form-group label-floating is-empty">
-													<select class="form-control">
-														<option>add on 1</option>
-													</select>
 												</div>
 										</div>
 												

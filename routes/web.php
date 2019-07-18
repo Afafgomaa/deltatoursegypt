@@ -18,9 +18,9 @@ Route::get('/faqs',[
    'as' => 'faq'
 ]);
 
-Route::post('send/email', 'mailController@send')->name('mail');
+Route::post('send/tailerMade', 'MailController@send')->name('mail');
 
-
+Route::post('send/Inquery', 'MailController@Inquery')->name('Inquery');
 
 
 
@@ -32,6 +32,7 @@ Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
 Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
 Route::view('Customized_Tours_to_egypt','Tailor_made')->name('Tailor_Made');
+Route::view('Egypt-Travel-Guide','egypt')->name('egypt');
 
 
 

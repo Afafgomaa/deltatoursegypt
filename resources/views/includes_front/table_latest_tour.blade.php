@@ -49,41 +49,42 @@
                     </tr>
                 </thead>
                 <tbody class="repeatregion" data-numberofrecords="10">
-                @foreach(App\Programs::where('small_group', 1)->get() as $smallGroup)
                     <tr data-sdate="2019-06-15" class="tourdepartures showmore-data animated fadeIn">
                         <!-- tour Name -->
                        
                         <td valign="middle" data-label="Tour name">
-                            <a href="" title="Morocco on a Shoestring" class="red-lnk">{{$smallGroup->name}}</a>
+                            <a href="" title="Morocco on a Shoestring" class="red-lnk">Morocco on a Shoestring</a>
                         </td>
                         <!-- Country -->
                         <td valign="middle" data-label="Tour type">
-                            <a href="" title="Shoestring Tour Type" class="red-lnk">{{$smallGroup->place}}</a>
+                            <a href="" title="Shoestring Tour Type" class="red-lnk">Morocco</a>
                         </td>
-                        <td valign="middle" data-label="Days">{{$smallGroup->days}}</td>
+                        <td valign="middle" data-label="Days">8</td>
                         <td valign="middle" data-label="Start Date">
-                        {{$smallGroup->start_day}}
+                            15th of Jun 2019
                         </td>
                         <td>
 
                             <a href="" data-fancybox="tourgallery 48474367" data-caption="Morocco on a Shoestring Map" class="tour-table-image">
-                                <img alt="Morocco on a Shoestring" class="map-rounded lazy" src="{{$smallGroup->main_image}}" style="">
+                                <img alt="Morocco on a Shoestring" class="map-rounded lazy" src="{{url('/')}}public/images/slider_bg_3.jpg" style="">
                             </a>
                         </td>
                         <td valign="middle" data-label="Offer Price">
-                        
-                            US${{$smallGroup->price}}
-                          
+                            <strike><del>US$749<del></del></del></strike><br>
+                            <strong style="color: #ff0000">US$569<br>25% Off</strong>
                         </td>
                         <td valign="middle" data-label="Book">
-                        
-                       
-                            <a href="{{ App\Pages::where('id', $smallGroup->page->parent_id)->first()->slug }}/{{$smallGroup->page->slug}}/{{$smallGroup->slug}} " class="btn btn-orange booknow-btn" title="View Tour">View Tour</a>
+                            <a href="" class="btn btn-orange booknow-btn" title="View Tour">View Tour</a>
                         </td>
                     </tr>
-                    @endforeach
            </tbody>
-           
+           <tfoot>
+                    <tr data-numberofrecords="10">
+                        <td colspan="7" align="center" style="text-align: center !important">
+                            <button id="showmoretours" class="btn btn-orange booknow-btn m-auto showmorerecords" title="Show More" data-numberofrecords="0">Show More</button>
+                        </td>
+                    </tr>
+                </tfoot>
     </table>
     
 
