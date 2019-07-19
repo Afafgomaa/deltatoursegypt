@@ -35,11 +35,16 @@ add_new_componente(w,b,a);
 var intery =  $("#itinerary");
 var btn =  $(".add_itinerary_button");
 
-var append_item = "<div class='itinerary'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading[]'></div><div class='form-group'><strong></strong><textarea name='itinerary[]' class='form-control' style='height:100px'></textarea></div> <a href='#' class='remove_field'><i class='fa fa-times'></a></div></div>";
+var append_item = "<div class='itinerary'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading_1[]'></div><div class='form-group'><strong></strong><textarea name='itinerary_body_1[]' class='form-control' style='height:100px'></textarea></div> <a href='#' class='remove_field'><i class='fa fa-times'></a></div></div>";
 
 add_new_componente(intery,btn,append_item );
 
+var intery_2 =  $("#itinerary_2");
+var btn_2 =  $(".add_itinerary_button_2");
 
+var append_item_2 = "<div class='itinerary'><div class='form-group'><strong>Itinerary Heading:</strong><input type='text' class='form-control itinerary_h' name='itinerary_heading_2[]'></div><div class='form-group'><strong></strong><textarea name='itinerary_body_2[]' class='form-control' style='height:100px'></textarea></div> <a href='#' class='remove_field'><i class='fa fa-times'></a></div></div>";
+
+add_new_componente(intery_2,btn_2,append_item_2 );
 
 
 var acco_id =  $("#accommodation");

@@ -200,6 +200,30 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function(){
    Route::resource('Program','ProgramsController');
    //end Programs route
 
+
+
+
+    // start Programs route
+ 
+
+  Route::get('/river_excursion/trashed', [
+   'uses' => 'RiverExcursionController@trashedProgram',
+   'as'   => 'river_excursion.trashed'
+   ]);
+   Route::get('/river_excursion/kill/{id}', [
+      'uses' => 'RiverExcursionController@killProgram',
+      'as'   => 'river_excursion.kill'
+   ]);
+   Route::get('/river_excursion/restore/{id}', [
+      'uses' => 'RiverExcursionController@restoreProgram',
+      'as'   => 'river_excursion.restore'
+   ]);
+   Route::resource('river_excursion','RiverExcursionController');
+   //end Programs route
+
+
+
+
     // start add on route
  
 

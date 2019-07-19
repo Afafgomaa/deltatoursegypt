@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Highlight;
 use App\Pages;
+use App\river_excursion;
 use Illuminate\Support\Facades\DB;
 
 

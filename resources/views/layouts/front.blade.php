@@ -5,7 +5,8 @@
         <meta name="alexaVerifyID" content="0eb2isrg71d6cCcid89zQb85CrI"/>
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Tours to egypt | Budget Tours to egypt | Luxury Tours to egypt</title>		
+		
+		<title>{{$title}}</title>		
 		<meta name="keywords" content="Egypt Tour Operator, tour operator in egypt , nile cruises ,egypt nile cruises , nile river cruises , egypt cruise holidays , nile cruise ship , nile cruise holiday, nile cruise boat , egypt nile river cruises, tour nile  cruise ,luxury nile river cruises,  all inclusive nile cruises ,  egypt travel , budget travel to egypt , egypt budget packages, egypt adventure tours, egypt tour package , egypt vacation package , budget tour to egypt , egypt tour operator , backpackers tour egypt ,  felucca tour egypt , cheap egypt tour , online tour egypt , egypt felucca tour , escorted egypt tour , tour from usa to egypt , aswan luxor felucca luxor , group tour egypt , egypt land tour vacation , egypt backpacker tour, egypt informations, holidays in egypt , holiday in egypt , egypt holiday packages , egypt hotel reservation , egypt budget hotel , cheap hotels in egypt , budget hotels in cairo , cairo budget hotels , hotels in luxor , budget resorts in hurghada, egypt desert safari , safari in egypt, red sea holidays ,">
 		<meta name="description" content="Leading  egypt tour operator  established in  1974, we deal with every single client with personal attention , specialist in budget tours to egypt , nile river cuises , egypt adventure tours , egypt desert safari , red sea holidays , nile cruise holiday,egypt adventure tours, egypt hotel reservation ,egypt budget hotel , red sea holidays , egypt travel , budget travel to egypt , egypt budget packages, egypt adventure tours, egypt tour package , egypt vacation package">
 		<meta name="author" content="deltatoursegypt.com">

@@ -47,6 +47,13 @@
                       
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-desktop"></i> River&Excursion <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('river_excursion.create') }}">Add River&Excursion</a></li>
+                      <li><a href="{{ route('river_excursion.index') }}">Show All River&Excursion</a></li>
+                      
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-desktop"></i> Programs <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ route('Program.create') }}">Add Program</a></li>
@@ -72,6 +79,7 @@
                       <li><a href="{{ route('post.trashed') }}"> Posts</a></li>
                       <li><a href="{{ route('page.trashed') }}">Pages</a></li>
                       <li><a href="{{ route('Program.trashed') }}">Programs</a></li>
+                      <li><a href="{{ route('river_excursion.trashed') }}">River&Excursion</a></li>
                       <li><a href="{{ route('highlight.trashed') }}">Highlights</a></li>
                       <li><a href="{{ route('sight.trashed') }}">Sights</a></li>
                       <li><a href="{{ route('section.trashed') }}">Sections</a></li>

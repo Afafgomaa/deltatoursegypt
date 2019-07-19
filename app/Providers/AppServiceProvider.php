@@ -38,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('programs', Programs::all());
         view()->share('addons', Addon::all());
         view()->share('sights', Sights::all());
+        view()->share('title','Tours to egypt | Budget Tours to egypt | Luxury Tours to egypt');
         
         
     }

@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-
+<?php $title = "Custumized Egypt Holidays"?>
 <div id="sub_category_top" class="home_sites_box" style="background-image: url('{{url('/')}}/public/images/plan.jpg');
 height: 360px;background-repeat: no-repeat;background-size:cover">
 </div>
