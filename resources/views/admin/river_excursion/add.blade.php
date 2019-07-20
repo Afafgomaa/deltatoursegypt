@@ -37,63 +37,61 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(array('route' => 'Program.store','files'=>true,'method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'river_excursion.store','files'=>true,'method'=>'POST')) !!}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Name:</strong>
                 {!! Form::text('name', null, array('placeholder' => 'Program Name','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Price From:</strong>
-                {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Start Day:</strong>
-                {!! Form::number('strat_day', null, array('placeholder' => 'Start Day','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program duration 1:</strong>
-                {!! Form::text('day_1', null, array('placeholder' => ' duration 1','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program duration 2:</strong>
-                {!! Form::text('day_2', null, array('placeholder' => ' duration 2','class' => 'form-control')) !!}
-            </div>
-        </div>
- 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Small Brief:</strong>
-                {!! Form::text('small_brief', null, array('placeholder' => 'Small Brief','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Main Image:</strong>
                 {!! Form::text('main_image', null, array('placeholder' => 'Main Image Url','class' => 'form-control')) !!}
             </div>
         </div>
-        
- 
+        <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="form-group">
+                <strong>Program Price From:</strong>
+                {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="form-group">
+                <strong>Program Start Day:</strong>
+                {!! Form::date('start_day', null, array('placeholder' => 'Start Day','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Program Small Brief:</strong>
+                {!! Form::text('small_brief', null, array('placeholder' => 'Small Brief','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Program duration 1:</strong>
+                {!! Form::text('day_1', null, array('placeholder' => ' duration 1','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Program duration 2:</strong>
+                {!! Form::text('day_2', null, array('placeholder' => ' duration 2','class' => 'form-control')) !!}
+            </div>
+        </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>include:</strong>
-                {!! Form::textarea('include', null, array('placeholder' => 'include','class' => 'summernote form-control ','style'=>'height:100px')) !!}
+                {!! Form::textarea('include', null, array('placeholder' => 'sperate your include by comma ','class' => 'noSummernote form-control ','style'=>'height:100px')) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>exclude:</strong>
-                {!! Form::textarea('exclude', null, array('placeholder' => 'exclude','class' => 'summernote form-control ','style'=>'height:100px')) !!}
+                {!! Form::textarea('exclude', null, array('placeholder' => 'sperate your exclude by comma ','class' => 'noSummernote form-control ','style'=>'height:100px')) !!}
             </div>
         </div>
  
@@ -118,7 +116,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>facilitis:</strong>
-                 {!! Form::textarea('facilitis', null, array('placeholder' => 'facilitis','class' => ' form-control', 'style'=>'height:100px')) !!}                
+                 {!! Form::textarea('facilitis', null, array('placeholder' => 'sperate your faciliti by comma ','class' => ' form-control noSummernote', 'style'=>'height:100px')) !!}                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -185,7 +183,7 @@
             <div class="form-group">
                 <strong>Related Programs:</strong>
                 <select class="form-control" name="related_programs_id[]" multiple='multiple'>
-                      @foreach($programs as $program)
+                      @foreach($river_excursions as $program)
                              <option value="{{ $program->id}}">{{$program->name}}</option>
                       @endforeach 
                 </select>
@@ -199,6 +197,12 @@
                              <option value="{{ $pages_program->id}}" {{$pages_program->parent_id === 0  ? 'disabled' : ' ' }}>{{$pages_program->name}} </option>
                       @endforeach 
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Small Group:</strong>
+                     <input type="checkbox" name="small_group" value="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

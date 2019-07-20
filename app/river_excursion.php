@@ -14,8 +14,12 @@ class river_excursion extends Model
     protected $dates = ['deleted_at'];
 
 
-    public function related()
+  public function related()
   {
     return $this->belongsToMany('App\related');
+  }
+  public function page()
+  {
+    return $this->belongsTo('App\Pages','pages_id');
   }
 }

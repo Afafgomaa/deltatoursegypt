@@ -8,6 +8,7 @@ use Session;
 use App\Pages;
 use App\Programs;
 use App\faqs;
+use App\river_excursion;
 
 class PagesController extends Controller
 {
@@ -248,21 +249,44 @@ class PagesController extends Controller
 
         $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
+
+
+     
+        $programs_in = river_excursion::where('pages_id', $page->id)->get();
+        if(count($programs_in) > 0){
+            return view('Egypt_tour', compact('mainpage','page','programs_in'));
+
+        }else{
+            $programs_in = Programs::where('pages_id', $page->id)->get();
+            return view('Egypt_tour', compact('mainpage','page','programs_in'));
+        }
+       
+/*
         if(!empty($mainPage)  && !empty($page) ){
             
-        
 
-        $programs_in = Programs::where('pages_id', $page->id)->get();
+            
         
+        $programs_in;
+
+         if(!empty(Programs::where('pages_id', $page->id)->get() ) ){
+            $programs_in = Programs::where('pages_id', $page->id)->get();
+            return view('Egypt_tour', compact('mainpage','page','programs_in'));
+         }elseif(!empty(river_excursion::where('pages_id', $page->id)->get() ) ){
+            $programs_in = river_excursion::where('pages_id', $page->id)->get();
+            return view('Egypt_tour', compact('mainpage','page','programs_in'));
+         }
         
        
-        return view('Egypt_tour', compact('mainpage','page','programs_in'));
 
         }else {
             return redirect()->back();
         }
 
-
+           
+            */
+            
+ 
        
         
     }

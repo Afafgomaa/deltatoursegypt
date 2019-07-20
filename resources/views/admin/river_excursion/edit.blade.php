@@ -23,7 +23,7 @@
                         
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('Program.index') }}"> Back</a>
+                        <a class="btn btn-primary" href="{{ route('river_excursion.index') }}"> Back</a>
                     </div>
                 </div>
             </div>
@@ -37,95 +37,83 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($program, ['method' => 'PATCH','route' => ['Program.update', $program->id],'files'=>true]) !!}
+    {!! Form::model($program, ['method' => 'PATCH','route' => ['river_excursion.update', $program->id],'files'=>true]) !!}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Name:</strong>
                 {!! Form::text('name', null, array('placeholder' => 'Program Name','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Price From:</strong>
-                {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Days:</strong>
-                {!! Form::number('days', null, array('placeholder' => 'Days','class' => 'form-control')) !!}
-            </div>
-        </div>
- 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Nights:</strong>
-                {!! Form::number('nights', null, array('placeholder' => 'Nights','class' => 'form-control')) !!}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Main Image:</strong>
                 {!! Form::text('main_image', null, array('placeholder' => 'Main Image Url','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
-                <strong>Program Type:</strong>
-                {!! Form::select('kind', ['0' => 'Private', '1' => 'Public'],null,['class' => 'form-control' ]) !!}
+                <strong>Program Price From:</strong>
+                {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <strong>Program Start Day:</strong>
+                {!! Form::date('start_day', null, array('placeholder' => 'start_day','class' => 'form-control')) !!}
             </div>
         </div>
  
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
-                <strong>Place:</strong>
-                {!! Form::text('place', null, array('placeholder' => 'Place','class' => 'form-control')) !!}
+                <strong>Program duration 1:</strong>
+                {!! Form::text('days_1', null, array('placeholder' => ' duration 1','class' => 'form-control')) !!}
             </div>
         </div>
- 
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <strong>Program duration 2:</strong>
+                {!! Form::text('days_2', null, array('placeholder' => ' duration 2','class' => 'form-control')) !!}
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Program Small Brief:</strong>
+                {!! Form::text('small_brief', null, array('placeholder' => 'Small Brief','class' => 'form-control')) !!}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>include:</strong>
+                {!! Form::textarea('include', null, array('placeholder' => 'sperate your include by comma','class' => 'noSummernote form-control ','style'=>'height:100px')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>exclude:</strong>
+                {!! Form::textarea('exclude', null, array('placeholder' => 'sperate your exclude by comma','class' => 'noSummernote form-control ','style'=>'height:100px')) !!}
+            </div>
+        </div>
+     <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Description:</strong>
                  {!! Form::textarea('brief', null, array('placeholder' => 'Description','class' => 'summernote form-control ','style'=>'height:100px')) !!}                
             </div>
         </div>
+       
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Package Highlights:</strong>
-                <select class="form-control" name="package_highlights_id[]" multiple= 'multiple'>
-                      @foreach($highlights as $highlight)
-                             <option value="{{ $highlight->id}}" 
-                                 @foreach($program->Highlights as $h)
-                                   @if($highlight->id === $h->id)
-                                   {{'selected'}}
-                                   @endif
-                                 @endforeach
-                            
-                            > {{$highlight->name}}</option>
-                      @endforeach 
-                </select>
+                <strong>facilitis:</strong>
+                 {!! Form::textarea('facilitis', null, array('placeholder' => 'sperate your facilitis by comma','class' => ' form-control noSummernote', 'style'=>'height:100px')) !!}                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Holiday Sights:</strong>
-                <select class="form-control" name="holiday_sights_id[]" multiple= 'multiple'>
-                      @foreach($sights as $sight)
-                             <option value="{{ $sight->id}}" 
-                                 
-                             @foreach($program->Sights as $s)
-                               @if($sight->id ===  $s->id)
-                               {{'selected'}}
-                               @endif
-                             @endforeach
-
-                             >{{$sight->name}}</option>
-                      @endforeach 
-                </select>
+                <strong>General:</strong>
+                 {!! Form::textarea('general', null, array('placeholder' => 'general','class' => ' form-control', 'style'=>'height:100px')) !!}                
             </div>
         </div>
-        
         <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <div id="items">
@@ -142,42 +130,62 @@
                 </div>
                 <button type="button" class="add_field_button">Add New Image</button>
          </div>
-         
-        <div class="col-xs-12 col-sm-12 col-md-12">
+           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Overview:</strong>
-                 {!! Form::textarea('overview', null, array('placeholder' => 'overview','class' => 'summernote form-control', 'style'=>'height:100px')) !!}                
+                <strong>label Itinerary duration 1 :</strong>
+                {!! Form::text('itinerary_label_1', null, array('placeholder' => 'label duration 1 ','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Accommodations::</strong>
-                <select class="form-control" name="accom_id[]" multiple= 'multiple'>
-                      @foreach($accommodations as $c)
-                             <option value="{{ $c->id}}"
-                             @foreach($program->Accommodations as $accom)
-                               @if($c->id ===  $accom->id)
-                               {{'selected'}}
-                               @endif
-                             @endforeach
-                             
-                             >{{$c->name}}</option>
-                      @endforeach 
-                </select>
-            </div>
-        </div>
+
+      
         
             <div class="col-xs-12 col-sm-12 col-md-12" id="itinerary" > 
-            @if(!empty(unserialize($program->itinerary) ) && !empty(unserialize($program->itinerary_heading) ))
-                @foreach(array_combine(unserialize($program->itinerary), unserialize($program->itinerary_heading))  as $b => $h  ) 
+
+            @if(!empty(unserialize($program->itinerary_heading_1) ) && !empty(unserialize($program->itinerary_body_1) ))
+                @foreach(array_combine(unserialize($program->itinerary_heading_1), unserialize($program->itinerary_body_1))  as $b => $h  ) 
                 <div class="itinerary">
                         <div class="form-group">
                             <strong>Itinerary Heading:</strong> 
-                            <input type="text" class="form-control itinerary_h" name="itinerary_heading[]" value="{{$h}}">               
+                            <input name="itinerary_heading_1[]" type="text" class="form-control itinerary_h"  value="{{$b}}">               
                         </div>
                         <div class="form-group">
                             <strong>itinerary Body:</strong>
-                            <textarea  name="itinerary[]" class="form-control" style="height:100px">{{$b}}</textarea>               
+                            <textarea  name="itinerary_body_1[]" class="form-control" style="height:100px">{{$h}}</textarea>               
+                        </div>
+                        <button type="button" class="remove_this_filed">remove</button>
+                    </div>
+            
+            @endforeach
+           @endif
+          
+        </div>
+        <button type="button" class="add_itinerary_button">Add another Itinerary 2</button> 
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong><hr style="border:1px solid #000"> </strong>
+            </div>
+        </div>
+<br>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>label Itinerary duration 2 :</strong>
+                {!! Form::text('itinerary_label_2', null, array('placeholder' => 'label duration 2 ','class' => 'form-control')) !!}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12" id="itinerary_2" > 
+            @if(!empty(unserialize($program->itinerary_heading_2) ) && !empty(unserialize($program->itinerary_body_2) ))
+                @foreach(array_combine(unserialize($program->itinerary_heading_2), unserialize($program->itinerary_body_2))  as $b => $h  ) 
+                <div class="itinerary">
+                        <div class="form-group">
+                            <strong>Itinerary Heading:</strong> 
+                            <input name="itinerary_heading_2[]" type="text" class="form-control itinerary_h"  value="{{$b}}">               
+                        </div>
+                        <div class="form-group">
+                            <strong>itinerary Body:</strong>
+                            <textarea name="itinerary_body_2[]" class="form-control" style="height:100px">{{$h}}</textarea>               
                         </div>
                         <button type="button" class="remove_this_filed">remove</button>
                     </div>
@@ -186,31 +194,9 @@
            @endif
 
         </div>
-        <button type="button" class="add_itinerary_button">Add another Itinerary</button> 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Add On:</strong>
-                <select class="form-control" name="add_on_id[]" multiple= 'multiple'>
-                      @foreach($addons as $a)
-                             <option value="{{ $a->id}}" 
-                                 @foreach($program->Addons as $add)
-                                 @if($a->id === $add->id)
-                                        {{'selected'}}
-                                 @endif
-                             
-                             @endforeach
-                             >{{$a->title}}</option>
-                      @endforeach 
-                </select>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Price&Children:</strong>
-                 {!! Form::textarea('price_children', null, array('placeholder' => 'Price&Children','class' => 'form-control ', 'style'=>'height:100px')) !!} 
-                 <button class="remove_this_filed" type="button">remove</button>               
-            </div>
-        </div>
+        <button type="button" class="add_itinerary_button_2">Add another Itinerary </button> 
+
+      <!-- intanery 2-->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Pricing:</strong>
@@ -218,13 +204,13 @@
                  <button class="remove_this_filed" type="button">remove</button>               
             </div>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Related Programs:</strong>
                 <select class="form-control" name="related_programs_id[]" multiple= 'multiple'>
-                      @foreach($programs->where('id' ,'!==' , $program->id) as $p)
+                      @foreach($river_excursions->where('id' ,'!==' , $program->id) as $p)
                              <option value="{{ $p->id}}" 
-                                 
                              @foreach($related_programs_collection as  $program_from_releated)
                               @foreach($programs->where('id' , $program_from_releated->related_id) as $program_from_related_programs )
                                          @if($program_from_related_programs->id === $p->id)
@@ -237,6 +223,7 @@
                                  >{{$p->name}}</option>
                       @endforeach 
                 </select>
+               
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -247,6 +234,12 @@
                              <option value="{{ $pages_program->id}}"{{$program->pages_id  === $pages_program->id ?  'selected' : ''}} {{$pages_program->parent_id === 0  ? 'disabled' : ' ' }}>{{$pages_program->name}} </option>
                       @endforeach 
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Small Group:</strong>
+                     <input type="checkbox" name="small_group" value="1" {{$program->small_group  == 1 ? 'checked' : ''}} >
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

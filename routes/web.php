@@ -23,14 +23,11 @@ Route::post('send/tailerMade', 'MailController@send')->name('mail');
 Route::post('send/Inquery', 'MailController@Inquery')->name('Inquery');
 
 
-
-Route::view('all-Nile-River-Cruises', 'main_packeges_river')->name('all-Nile-River-Cruises');
-Route::view('cairo-egypt-budget-holiday-tour-package', 'egyptTours/testOfEgypt')->name('single_tour');
 Route::view('about-us', 'about_us')->name('about_us');
 Route::view('contact-us', 'contact_us')->name('contact_us');
 Route::view('Terms-and-conditions', 'term')->name('term');
 Route::view('single_river', 'egyptTours/single_river')->name('single_river');
-Route::view('Egypt_Excursion', 'excursion')->name('Egypt_Excursion');
+
 Route::view('Customized_Tours_to_egypt','Tailor_made')->name('Tailor_Made');
 Route::view('Egypt-Travel-Guide','egypt')->name('egypt');
 

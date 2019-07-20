@@ -8,93 +8,52 @@
 
         <div class="col-lg-6 col-xs-12">
             <div class="owl-carousel owl-theme" id="mainImage" data-plugin-options="{'items': 1, 'autoplay': true, 'autoplayTimeout': 3000}">
+
+            @foreach(unserialize($program->image_gallery) as $img)
                 <div>
                     <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0 img-rounded" src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" alt="">
+                        <img class="img-fluid border-radius-0 img-rounded" src="{{$img}}" alt="">
                     </div>
                 </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0 " src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" alt="">
-                    </div>
-                </div>
-                <div>
-                    <div class="img-thumbnail border-0 p-0 d-block">
-                        <img class="img-fluid border-radius-0" src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" alt="">
-                    </div>
-                </div>
+
+            @endforeach
+            
             </div>
-            <!--
-            <div id="divContainer" class="text-center">
-                    <img src="{{asset('images/egyptbduget/cairo-day-tour.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/karnak-temple.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/Aswan-Day-tour.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/Karnak-Temple-Egypt.jpg')}}" class="slider-image img-responsive">
-                    <img src="{{asset('images/egyptbduget/abu-simbel.jpg')}}" class="slider-image img-responsive">
-            </div>
--->
+ 
         </div>
 
      <!-- description section -->
         <div class="col-md-6 col-xs-12">
             <div class="summary entry-summary">
-                    <h1 class="short big">River Tour  </h1>
+                    <h1 class="short big">{{$program->name}}   </h1>
                     <div class=" col-md-6 review_num">
-                            Package Type : <span style="color:black">Private</span>
+                           <span style="color:black">{{$program->samll_breif}}</span>
                     </div>
-                    <div class=" col-md-8 review_num">
-                        <h6 class="shorter f-2" style="color:#0088cc">4 Days - 3 Nights </h6>
-                    </div>
-                    <div class=" col-md-8 review_num">
-                        <h6 class="shorter" style="color:orange">Cairo </h6>
-                    </div>
+                    
+                   
                     <div class="col-md-6">
-                        <h4 class="shorter text-blue"> from :  250 USD</h4>
+                        <h4 class="shorter text-blue"> from :  {{$program->price}} USD</h4>
                     </div>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> 4 Days Holiday tour package  in Cairo staying in a 4 stars superior hotel and visiting the great pyramids of giza ,
-                                Egyptian museum, Old Cairo , Coptic museum as well  felucca ride on the Nile 
+                        <p class="pdetails"> start day {{$program->start_day}} 
+                        </p> 
+                    </div>
+                    <div class="col-md-12 ">
+                        <p class="pdetails"> {!!$program->brief!!} 
+                        </p> 
+                    </div>
+                    <div class="col-md-12 ">
+                        <p class="pdetails"> {{$program->days_1}} 
+                        </p> 
+                    </div>
+                    <hr>
+                    <div class="col-md-12 ">
+                        <p class="pdetails"> {{$program->days_2}} 
                         </p> 
                     </div>
                     
-                    <div class="col-xs-12 heighlieth review_num">
-                        <h4 class="shorter text-blue">package Highlights</h4>
-                        <div class="col-xs-12 review_num">
-                            <ul>
-                                <li><i class="fa fa-dot-circle text-blue"></i> 3 Nights Cairo  .</li>
-                                <li><i class="fa fa-dot-circle text-blue"></i> 4 Breakfasts and 2 Lunches   .</li>
-                                <li><i class="fa fa-dot-circle text-blue"></i> Meet at airport Upon arrival   .</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 review_num">	   
-                            <ul>
-                                <li><i class="fa fa-dot-circle text-blue"></i> Multi Lingua tour leader guide</li>	
-                                <li><i class="fa fa-dot-circle text-blue"></i> all Transfers by AC Minibus  .</li>
-                            </ul>
-                        </div>                            
-                    </div>
-                   <div style="clear:both"></div>
-                    <div class="col-md-12 tag">
-                        <h5 class="shorter text-blue"> Holiday included sights</h5>
-                            <span class="label label-primary">Egyptian museum</span>
-                            <span class="label label-primary">Mohamed ali mosque</span>
-                            <span class="label label-primary">Giza Pyramids</span>
-                            <span class="label label-primary">Sakkara</span>
-                            <span class="label label-primary">Hanging Church</span>
-                            <span class="label label-primary">Coptic Museum</span>
-                            <span class="label label-primary">Nile Felucca</span>
-                            <span class="label label-primary">Khan el Khalili </span>				
-                    </div>
+                   
+                  
 
 
                     <div class="col-md-12">
@@ -102,8 +61,8 @@
                         <button class="btn btn-primary btn-lg push-top push-bottom" data-toggle="modal" data-target="#formModal">
                                                         Send inquiry 
                         </button>
-                        
-    
+                       
+					
                                 <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
                         <div id="ciFERd" style="z-index:100;position:absolute">
                             </div><div id="scFERd" style="display:inline">
@@ -126,8 +85,220 @@
       </div>
     </div><!-- row-->
 </div><!-- container -->
+
+<div class="container ">
+<div class="row">
+
+<div id="itinerary" class="scroll_pane_new mt-5">
+<h1 class="short"> Itineraries </h1>
+        <div class="program_box_data">
+           
+        @if($program->itinerary_label_1)
+            <div class="full_itinerary m-0">
+            <div class="expand_2 iten">{{$program->itinerary_label_1}}
+           
+           @foreach(array_combine(unserialize($program->itinerary_heading_1), unserialize($program->itinerary_body_1))  as $h => $b  ) 
+           
+                 <div class="full_itinerary_box" style="display: none; border:none;background:none">
+                         <div class="itinerary_title col-md-12  iten1" id="itinerary_title_1">
+                             <h2 style="float:left;">&nbsp;&nbsp;&nbsp; {{$h}} </h2> 
+                         </div>
+                         <div class="itinerary_desc" id="itinerary_desc_1" style="display: none;">
+                         {!!$b!!} 
+                         </div>
+                 </div>
+                 
+                 @endforeach
+        
+
+         </div>
+        </div>  <!-- full_itinerary-->
+
+        @endif
+            @if($program->itinerary_label_2)
+            <div class="full_itinerary m-0">
+            <div class="expand_2 iten">{{$program->itinerary_label_2}}
+           
+           @foreach(array_combine(unserialize($program->itinerary_heading_2), unserialize($program->itinerary_body_2))  as $h => $b  ) 
+           
+                 <div class="full_itinerary_box" style="display: none; border:none;background:none">
+                         <div class="itinerary_title col-md-12  iten1" id="itinerary_title_1">
+                             <h2 style="float:left;">&nbsp;&nbsp;&nbsp; {{$h}} </h2> 
+                         </div>
+                         <div class="itinerary_desc" id="itinerary_desc_1" style="display: none;">
+                         {!!$b!!} 
+                         </div>
+                 </div>
+                 
+                 @endforeach
+        
+
+         </div>
+        </div>  <!-- full_itinerary-->
+
+        @endif
+        </div>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <h1 class="short"> Cruise </h1>
+    <div class="col-md-12">
+      <div class="all_itinerary">
+      <div class="col-md-12 expand_4 iten">
+           <h4 class="text-blue2">Cruise Facilitis </h4>
+            <div align="left" class="iten_desc full_itinerary_box" style="border:none;background:none ;margin-top: 10px; margin-bottom: 20px; clear: both; overflow: hidden; display: none;">
+                    <div class="col-md-12 full_itinerary" style="display:flex">
+                       @if(!empty($allFacilitis_vidided[0]) > 0)
+                            <div class="col-md-4">
+                                <ul class="list icons list-unstyled">
+                                    @foreach($allFacilitis_vidided[0]  as $facility)
+                                       <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$facility}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        @if(!empty($allFacilitis_vidided[1]) > 0)
+                            <div class="col-md-4">
+                                <ul class="list icons list-unstyled">
+                                @foreach($allFacilitis_vidided[1] as $facility)
+                                       <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$facility}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        @if(!empty($allFacilitis_vidided[2]))
+                            <div class="col-md-4">
+                                <ul class="list icons list-unstyled">
+                                @foreach($allFacilitis_vidided[2] as $facility)
+                                       <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$facility}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        </div>
+                    </div>
+                </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="all_itinerary">
+      <div class="col-md-12 expand_3 iten">
+           <h4 class="text-blue2">Cruise Program include</h4>
+            <div align="left" class="iten_desc full_itinerary_box" style="border:none;background:none ;margin-top: 10px; margin-bottom: 20px; clear: both; overflow: hidden; display: none;">
+                     <div class="col-md-12 full_itinerary " style="display:flex">
+                          <div class="col-md-6">
+                                <ul class="list icons list-unstyled">
+                                    @foreach($allIncludesDvided[0]  as $include)
+                                       <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$include}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list icons list-unstyled">
+                                @foreach($allIncludesDvided[1] as $include)
+                                       <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$include}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                     </div>
+            </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="all_itinerary">
+
+      <div class="col-md-12 expand_5 iten">
+           <h4 class="text-blue2">Cruise Program Exclude   </h4>
+            <div align="left" class="iten_desc full_itinerary_box" style="border:none;background:none ;margin-top: 10px; margin-bottom: 20px; clear: both; overflow: hidden; display: none;">
+                         <div class="col-md-12 full_itinerary " style="display:flex">
+                                <div class="col-md-6">
+                                        <ul class="list icons list-unstyled">
+                                            @foreach($allExcludesDvided[0]  as $exclude)
+                                            <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$exclude}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list icons list-unstyled">
+                                        @foreach($allExcludesDvided[1] as $exclude)
+                                            <li><i class="fa fa-circle-notch" style="color:#0088cc"></i> {{$exclude}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                            </div>   
+            </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12">
+      <h1 class="short"> Prices </h1>
+      <p style="color:#ffa500 !important">Prices are quoted in US Dollars per person   per trip </p>
+      <table class="table table-striped push-top">
+        <tbody>
+            <tr><th></th><td> <strong>5 Days Program</strong></td><td><strong>4 Days Program</strong></td></tr>
+            @foreach($allPricing as $p)
+            <tr>
+                <td>{{$p}}</td>
+            </tr>
+            @endforeach
+            
+        </tbody>
+    </table>
+      </div>
+  </div>
+
+</div>  <!--  container -->
+
 </div><!-- padding-->
-@include('includes_front.block_of_conten')
-@include('includes_front.simler_posts')
+<div class="special-offer">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+               <h4 class="top-destination"> You Might Also Like </h4>
+       </div>
+
+    @foreach($related_programs_collection as  $program_from_releated)
+    @foreach($river_excursions->where('id' , $program_from_releated->related_id) as $program_from_related_programs )
+    <div class="col-md-4 col-xs-12" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+        <a href="{{url($mainpage->slug . '/' . $page->slug . '/' . $program_from_related_programs->slug)}}">
+          <div class="new_related_tours" style="background-image: url({{asset($program_from_related_programs->main_image)}})">
+                                                                   
+            <div class="new_related_tours_title">
+                <h4 class="mb-0">{{$program_from_related_programs->name}}</h4>
+            </div> 
+            <div class="new_related_tours_price">
+                <span class="price">
+                <span class="from">from</span>
+                    <span class="currencySign">$</span><span id="min_price515" class="convertable" itemprop="lowPrice">{{$program_from_related_programs->price}}</span>
+                
+                </span>
+           </div>                                        
+         </div>
+        </a>
+     </div>
+     @endforeach
+ @endforeach
+
+    
+        
+        </div>
+    </div>
+</div>
+@include('includes_front.send_enquery')
 
 @endsection

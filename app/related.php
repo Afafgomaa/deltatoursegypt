@@ -10,4 +10,8 @@ class related extends Model
     {
          return $this->belongsToMany('App\programs');
     }
+    public function river_excursion()
+    {
+         return $this->belongsToMany('App\river_excursion');
+    }
 }

@@ -52,6 +52,9 @@ ul li {
 .text-blue{
 	color:#1750ee !important;
 }
+.text-blue2 {
+    color:#0088cc !important;
+}
 .btn-modern{
     background: #fff;
 }
@@ -663,18 +666,17 @@ font-weight: bold;
 
 }
 /* table */
-.table{
+.align-items-center .table{
     color: #212529;
-}
-table{
     border-collapse:collapse;
 }
 
-.table thead th {
+
+.align-items-center .table thead th {
         vertical-align: bottom;
         border-bottom: 2px solid #dee2e6;
 }
-.table th {
+.align-items-center .table th {
     padding: .75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
@@ -691,12 +693,12 @@ table{
     height: 64px;
     border-radius: 64px;
 }
-.table td, .table th {
+.align-items-center .table td, .table th {
     padding: .75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
-td {
+.align-items-center td {
     text-align: left;
     vertical-align: middle!important;
     font-size: 16px;
@@ -752,6 +754,22 @@ ul.thumbnail-gallery li {
 }
 .program_description{
     padding-left: 20px;
+}
+.iten {
+    background-image: url(http://localhost/deltatoursegypt/storage/app/public/16/plus1.fw.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.iten1 {
+    background-image: url(http://localhost/deltatoursegypt/storage/app/public/17/minus1.fw.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 /* media query */
 @media only screen and (max-width: 600px){

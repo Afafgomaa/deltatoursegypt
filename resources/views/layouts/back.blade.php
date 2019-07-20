@@ -84,7 +84,7 @@ toastr.success('{{Session::get("success")}}');
 
 @endif
   // summer not libiaray 
-  $("textarea").summernote({
+  $("textarea:not(.noSummernote)").summernote({
   height: 200,
  
   toolbar: [

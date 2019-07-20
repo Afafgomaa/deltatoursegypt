@@ -39,29 +39,41 @@
     @endif
     {!! Form::open(array('route' => 'Program.store','files'=>true,'method'=>'POST')) !!}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Name:</strong>
                 {!! Form::text('name', null, array('placeholder' => 'Program Name','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Place:</strong>
+                {!! Form::text('place', null, array('placeholder' => 'Place','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
                 <strong>Program Price From:</strong>
                 {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
                 <strong>Program Days:</strong>
                 {!! Form::number('days', null, array('placeholder' => 'Days','class' => 'form-control')) !!}
             </div>
         </div>
  
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
                 <strong>Program Nights:</strong>
                 {!! Form::number('nights', null, array('placeholder' => 'Nights','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <strong>Program Type:</strong>
+                {!! Form::select('kind', ['0' => 'Private', '1' => 'Public'],null,['class' => 'form-control' ]) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -70,19 +82,9 @@
                 {!! Form::text('main_image', null, array('placeholder' => 'Main Image Url','class' => 'form-control')) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Program Type:</strong>
-                {!! Form::select('kind', ['0' => 'Private', '1' => 'Public'],null,['class' => 'form-control' ]) !!}
-            </div>
-        </div>
+        
  
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Place:</strong>
-                {!! Form::text('place', null, array('placeholder' => 'Place','class' => 'form-control')) !!}
-            </div>
-        </div>
+       
  
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -197,6 +199,12 @@
                              <option value="{{ $pages_program->id}}" {{$pages_program->parent_id === 0  ? 'disabled' : ' ' }}>{{$pages_program->name}} </option>
                       @endforeach 
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Small Group:</strong>
+                     <input type="checkbox" name="small_group" value="1">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

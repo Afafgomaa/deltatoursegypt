@@ -57,14 +57,25 @@
                         </h2>
                     </div>
                    <div class="home_special_offer_types">
-                        <div class="home_special_offer_types_box">{{($program->kind) ? 'public' : 'Private'}} Tour  | Childern | payment policy| Tipping 
+                       @if($program->kind)
+                        <div class="home_special_offer_types_box">{{ $program->kind == 1  ? 'public' : 'Private'}} Tour  
                         </div>
+                        @else
+                        <div class="home_special_offer_types_box"> 
+                       {{ $program->small_brief}}
+                        </div>
+                        @endif
                         <div class="home_special_offer_types_box">
-                        {{$program->days}} days -  {{$program->nights}} nights  
+                        Strat Day : {{$program->start_day}} 
                         </div>
+                        @if($program->days && $program->nights)
+                            <div class="home_special_offer_types_box">
+                            {{$program->days}} days -  {{$program->nights}} nights  
+                            </div>
+                        @endif
                    </div>
                    <div class="home_special_offer_description">
-                    <p> {!!$program->brief!!} </p>
+                    <p> {!!substr($program->brief,0,250)!!}... </p>
                     </div>
                     <div class="read_more">
                         <a href="{{url($mainpage->slug . '/'.$program->page->slug . '/' . $program->slug )}}">read more</a>

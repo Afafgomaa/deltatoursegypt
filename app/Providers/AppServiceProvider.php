@@ -10,6 +10,7 @@ use App\Accommodations;
 use App\Programs;
 use App\Addon;
 use App\Sights;
+use App\river_excursion;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -36,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('posts', post::all());
         view()->share('accommodations', Accommodations::all());
         view()->share('programs', Programs::all());
+        view()->share('river_excursions', river_excursion::all());
         view()->share('addons', Addon::all());
         view()->share('sights', Sights::all());
         view()->share('title','Tours to egypt | Budget Tours to egypt | Luxury Tours to egypt');

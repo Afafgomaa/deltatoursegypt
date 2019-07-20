@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    
+    $('#label_1').css('display','none');
 
     $(".full_itinerary_box").each(function(){		
         $(this).find(".itinerary_desc").hide();
@@ -18,13 +18,13 @@ $(document).ready(function() {
     var expanded = false;
     $(".expand").click(function() {
         if(!expanded){
-            $(".itinerary_desc").show();		
+            $(".full_itinerary_box").show();		
             $(".expand").addClass("toggled");
             $(".itinerary_title").addClass("toggled");
             $(".expandtext").text("Close All");
             expanded = true;
         }else{
-            $(".itinerary_desc").hide();		
+            $(".full_itinerary_box").hide();		
             $(".expand").removeClass("toggled");
             $(".itinerary_title").removeClass("toggled");
             $(".expandtext").text("Expand All");
@@ -34,7 +34,25 @@ $(document).ready(function() {
         return false;
     });
 
+      $('.expand_1').click(function(){
+          $('#dd').toggle();
+          
+      });
+      $(".expand_2").click(function(){
+        $( '.expand_2 > div').toggle();
+    });
+      $(".expand_3").click(function(){
+          $( '.expand_3 > div').toggle();
+      });
+      $(".expand_4").click(function(){
+        $( '.expand_4 > div').toggle();
+    });
+    $(".expand_5").click(function(){
+        $( '.expand_5 > div').toggle();
+    });
 
+
+    
 	var progWidth = $(".program_box").width();
 	
 	$("#myNavbar").css({"max-width":progWidth});

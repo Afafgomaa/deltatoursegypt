@@ -40,20 +40,20 @@ class RiverExcursionController extends Controller
      */
     public function store(Request $request)
     {
-        $program = Programs::create([
+        $program = river_excursion::create([
             'main_image' => $request->main_image,
             'price' => $request->price,
             'name' => $request->name,
             'start_day' => $request->start_day,
-            'day_1' => $request->day_1,
-            'day_2' => $request->day_2,
+            'days_1' => $request->day_1,
+            'days_2' => $request->day_2,
             'small_brief' => $request->small_brief,
             'brief' => $request->brief,
             'pricing' => $request->pricing,
             'image_gallery' => serialize($request->image_gallery),
             'itinerary_label_1' => $request->itinerary_label_1,
-            'itinerary_heading_1' => serialize($request->itinerary_heading),
-            'itinerary_body_1' => serialize($request->itinerary_body),
+            'itinerary_heading_1' => serialize($request->itinerary_heading_1),
+            'itinerary_body_1' => serialize($request->itinerary_body_1),
             'itinerary_label_2' => $request->itinerary_label_2,
             'itinerary_heading_2' => serialize($request->itinerary_heading_2),
             'itinerary_body_2' => serialize($request->itinerary_body_2),
@@ -101,7 +101,7 @@ class RiverExcursionController extends Controller
         $program = river_excursion::find($id);
         
         $pages_programs = Pages::where('parent_id','>',0)->get();
-        $related_programs_collection = DB::table('programs_related')->where('programs_id', $id)->get();
+        $related_programs_collection = DB::table('related_river_excursion')->where('river_excursion_id', $id)->get();
         return view('admin.river_excursion.edit',compact('program','pages_programs','related_programs_collection'));
     }
 
@@ -114,15 +114,15 @@ class RiverExcursionController extends Controller
      */
     public function update(Request $request , $id)
     {
-        $program = Programs::find($id);
+        $program = river_excursion::find($id);
         
         
         $program->main_image =  $request->main_image;
         $program->price = $request->price;
         $program->name = $request->name;
         $program->start_day = $request->start_day;
-        $program->day_1 = $request->day_1;
-        $program->day_2 = $request->day_2;
+        $program->days_1 = $request->days_1;
+        $program->days_2 = $request->days_2;
         $program->small_brief = $request->small_brief;
         $program->brief = $request->brief;
         $program->include = $request->include;
@@ -143,7 +143,7 @@ class RiverExcursionController extends Controller
        
         $program->slug = str_slug($request->name);
     
-            $program->related()->sync($request->related_programs_id);
+        $program->related()->sync($request->related_programs_id);
            
         
         $program->save();

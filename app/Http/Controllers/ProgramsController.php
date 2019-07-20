@@ -191,32 +191,105 @@ Session::flash('Success','Your Program created Successfully');
     }
     public function findProgram($mainPage,$subPage,$program)
     {
-        
+
         $mainpage = Pages::where('parent_id',0)->where('slug',$mainPage )->first();
 
 
         $page =  Pages::where('parent_id', $mainpage->id )->where('slug', $subPage)->first();
 
-        $program = Programs::where('slug', $program )->first();
+        
+        if(!empty(river_excursion::where('slug', $program )->first())){
 
-        if(!empty($mainpage) && !empty($page) && !empty( $program)){
-        $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
+           
 
+            $program = river_excursion::where('slug', $program )->first();
+            
+             $allFacilitis = explode(',' , $program->facilitis);
+             $allFacilitis_vidided = array_chunk($allFacilitis,3);
+             $allIncludes  = explode(',',  $program->include);
+             $allIncludesDvided = array_chunk($allIncludes,2);
+             $allExcludes  = explode(',',  $program->exclude);
+             $allExcludesDvided = array_chunk($allExcludes,2);
+             $allPricing  = explode(',',  $program->pricing);
+             $related_programs_collection = DB::table('related_river_excursion')->where('river_excursion_id', $program->id)->get();
+            return view('egyptTours/single_river', compact('mainpage',
+                                                          'page','program',
+                                                          'allFacilitis',
+                                                          'allIncludes',
+                                                          'allFacilitis_vidided',
+                                                          'allIncludesDvided',
+                                                          'allExcludesDvided',
+                                                          'allPricing',
+                                                          'related_programs_collection'));
 
-        $all_heighlights = [];
-        foreach($program->Highlights as $h){
-        array_push($all_heighlights, $h); 
+           }elseif(!empty(Programs::where('slug', $program )->first()) ){
+
+            $program = Programs::where('slug', $program )->first();
+
+            if(!empty($mainpage) && !empty($page) && !empty( $program)){
+
+                $related_programs_collection = DB::table('programs_related')->where('programs_id', $program->id)->get();
+
+               $all_heighlights  =  $this->division($program->Highlights);
+     
+        
+                $count_of_heighlights = $this->divied($all_heighlights,2);
+    
+        
+        
+                $divide_heighlights_1 = array_slice($all_heighlights,0,$count_of_heighlights / 2);
+                $divide_heighlights_2 = array_slice($all_heighlights,$count_of_heighlights / 2);
+               
+               
+                return view('egyptTours/testOfEgypt',compact('mainpage',
+                                                             'page',
+                                                             'program',
+                                                             'related_programs_collection',
+                                                             'divide_heighlights_1',
+                                                             'divide_heighlights_2')); 
+        }else {
+            return redirect()->back();
         }
 
-        $count_of_heighlights = count($all_heighlights) - count($all_heighlights) %2 ;
-
-
-        $divide_heighlights_1 = array_slice($all_heighlights,0,$count_of_heighlights / 2);
-        $divide_heighlights_2 = array_slice($all_heighlights,$count_of_heighlights / 2);
-
-        return view('egyptTours/testOfEgypt',compact('mainpage','page','program','related_programs_collection','divide_heighlights_1','divide_heighlights_2')); 
-    }else{
-        return redirect()->back();
+       
     }
+
+     
     }
+
+/**
+* Alogrithm divied array of recoured
+* Input : array of data
+* Output : data divided
+* return data divided
+**/
+
+
+    protected function division($array)
+    {
+        $all_data = [];
+        
+        foreach($array as $data){
+
+            array_push($all_data, $data); 
+         }
+            return $all_data;
+    }
+
+/**
+* Alogrithm divied half of array 
+* Input : array of data, number of divied
+* Output : data divided for number of section
+* quarter or Half or One third 
+* return data divided
+**/
+
+
+protected function divied($array,$n)
+{
+   $data_divided =  count($array) - count($array) % $n ;
+    return $data_divided ;
+}
+
+
 }
