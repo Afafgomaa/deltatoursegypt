@@ -30,6 +30,7 @@ class CreateProgramsTable extends Migration
             $table->text('itinerary')->nullable();
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();
+            $table->text('general')->nullable();
             $table->integer('pages_id');
             $table->integer('small_group')->nullable();
             $table->string('slug');

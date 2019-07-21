@@ -58,6 +58,7 @@ class ProgramsController extends Controller
         'place' => $request->place,
         'overview' => $request->overview,
         'pricing' => $request->pricing,
+        'general' => $request->general,
         'price_children' => $request->price_children,
         'image_gallery' => serialize($request->image_gallery),
         'itinerary_heading' => serialize($request->itinerary_heading),
@@ -132,6 +133,7 @@ Session::flash('Success','Your Program created Successfully');
         $program->place = $request->place;
         $program->overview = $request->overview;
         $program->pricing = $request->pricing;
+        $program->general = $request->general;
         $program->price_children = $request->price_children;
         $program->pages_id = $request->pages_id;
         $program->small_group = $request->small_group;
@@ -237,7 +239,8 @@ Session::flash('Success','Your Program created Successfully');
      
         
                 $count_of_heighlights = $this->divied($all_heighlights,2);
-    
+                $allPricing  = explode(',',  $program->pricing);
+                $allPricingsDvided = array_chunk($allPricing,2);
         
         
                 $divide_heighlights_1 = array_slice($all_heighlights,0,$count_of_heighlights / 2);
@@ -249,7 +252,8 @@ Session::flash('Success','Your Program created Successfully');
                                                              'program',
                                                              'related_programs_collection',
                                                              'divide_heighlights_1',
-                                                             'divide_heighlights_2')); 
+                                                             'divide_heighlights_2',
+                                                             'allPricingsDvided')); 
         }else {
             return redirect()->back();
         }

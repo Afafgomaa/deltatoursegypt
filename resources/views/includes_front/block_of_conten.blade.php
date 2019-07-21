@@ -28,7 +28,9 @@
 							@if(count($program->Addons)  > 0)
 								<li role="presentation"><a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Add On</a></li>
 							@endif
-							<li role="presentation"><a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Ceneral</a></li>
+              @if(strlen($program->general)  > 0)
+								<li role="presentation"><a href="#general" role="tab" data-toggle="tab" aria-expanded="true">General</a></li>
+							@endif
 							</ul>
 						</div><!--mynavbar-->
 					</div><!--program_box-->
@@ -70,9 +72,26 @@
 							<div class="program_box_title text-blue" id="PriceAndChildrenPolicy">
 								Price&Children
 							</div>
-								<div class="tab-pane active">
+								<div class="tab-pane prices_box active p-4">
 									<div class="row">
-									{!!$program->price_children!!}
+								<div>	{!!$program->price_children!!}</div>
+									</div><!-- row -->
+								</div>	<!-- tab-pane -->						
+							</div>  <!-- program_box -->	
+						</div>  <!-- scroll_pane_new-->
+
+								<!-- PriceAndChildrenPolicy -->
+				  @endif
+          @if(strlen($program->general)  > 0)
+								<!-- PriceAndChildrenPolicy -->
+					<div class="scroll_pane_new hidden-xs active">
+						<div class="program_box">
+							<div class="program_box_title text-blue" id="general">
+               General
+							</div>
+								<div class="tab-pane prices_box active p-4">
+									<div class="row">
+									{!!$program->general!!}
 									</div><!-- row -->
 								</div>	<!-- tab-pane -->						
 							</div>  <!-- program_box -->	

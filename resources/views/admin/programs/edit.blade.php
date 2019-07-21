@@ -220,7 +220,14 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Pricing:</strong>
-                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing','class' => 'form-control','style'=>'height:100px')) !!}  
+                 {!! Form::textarea('pricing', null, array('placeholder' => 'Pricing','class' => 'form-control noSummernote','style'=>'height:100px')) !!}  
+                 <button class="remove_this_filed" type="button">remove</button>               
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>General:</strong>
+                 {!! Form::textarea('general', null, array('placeholder' => 'general','class' => 'form-control','style'=>'height:100px')) !!}  
                  <button class="remove_this_filed" type="button">remove</button>               
             </div>
         </div>
