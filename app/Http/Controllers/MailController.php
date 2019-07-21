@@ -18,4 +18,5 @@ class MailController extends Controller
       Session::flash('success', 'Your Email Sent Successfully We Will get In Touch With ASAP');
        return redirect()->back();
    }
+  
 }

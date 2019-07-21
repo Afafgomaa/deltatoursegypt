@@ -420,7 +420,7 @@ p.featured {
 }
 .nav>li {
     position: relative;
-    display: inline-flex;
+    display: block;
 }
 #myNavbar .nav-tabs>li>a {
     font-weight: bold;

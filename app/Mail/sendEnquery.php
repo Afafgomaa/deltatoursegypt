@@ -28,6 +28,6 @@ class sendEnquery extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email')->to('gomaamohamedzidan@gmail.com');
+        return $this->markdown('send_enquery')->to('gomaamohamedzidan@gmail.com');
     }
 }

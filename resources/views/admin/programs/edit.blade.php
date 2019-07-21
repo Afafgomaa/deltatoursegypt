@@ -88,9 +88,6 @@
                 {!! Form::text('main_image', null, array('placeholder' => 'Main Image Url','class' => 'form-control')) !!}
             </div>
         </div>
-       
- 
-       
  
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

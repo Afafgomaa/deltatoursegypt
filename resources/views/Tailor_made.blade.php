@@ -23,33 +23,30 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
    @csrf
     <div class="container">
         <div class="row">
-         
-                    <div class="col-md-4 col-xs-12">
-                            <label>Your Name </label>
-                            <br>
-                            <div class="form-group label-floating is-empty">
-                                <input name="name" type="text" class="form-control" required>
-                        </div>
+            <div class="col-md-4 col-xs-12">
+                <label>Your Name *</label>
+                    <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="name" type="text" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <label> Your Email *</label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="email" type="email" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <label>Mobile *</label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                        <input name="Mobile" value="" type="number" class="form-control" placeholder="" required="">
                     </div>
-                    <div class="col-md-4 col-xs-12">
-                        <label> Your Email </label>
-                        <br>
-                        <div class="form-group label-floating is-empty">
-                            <input name="email" type="email" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-xs-12">
-                        <label>Mobile *</label>
-                        <div class="form-group label-floating">
-                            <div id="Arrival2">
-                                    <input name="Mobile" value="" type="number" class="form-control"
-                                        placeholder="" required="">
-                            </div>
-                        </div>
-                    </div>
-                                                        
-                <div class="col-md-2 col-xs-12">
-                        <label>	Nationality *</label>
+                </div>
+            </div>                                         
+            <div class="col-md-2 col-xs-12">
+                 <label>Nationality </label>
                     <div class="form-group label-floating">
                             <div id="Arrival2">
                             <select name="Country" class="form-control"> 
@@ -299,42 +296,33 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                             </div>
                     </div>
                 </div>
-      
-
-
-
-
-            <div class="col-md-2 col-xs-12">
-                <label>Arrival Date *</label>
-                <div class="form-group label-floating">
-                    <div id="Arrival2">
-                        <input name="arrivel" type="text" class="form-control datepicker"
-                          placeholder=" dd/mm/yyy " required>
-                        <button type="button" class="ui-datepicker-trigger" >
-                        <i class="fa fa-calendar-alt"></i></button>
+                <div class="col-md-2 col-xs-12">
+                    <label>Arrival Date *</label>
+                    <div class="form-group label-floating">
+                        <div id="Arrival2">
+                            <input name="arrivel" type="text" class="form-control datepicker" placeholder=" dd/mm/yyy " required>
+                            <button type="button" class="ui-datepicker-trigger" >
+                            <i class="fa fa-calendar-alt"></i></button>
+                        </div>
                     </div>
-                    
                 </div>
-            </div>
             <div class="col-md-2 col-xs-12">
                 <label>Departure Date *</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                        <input name="departure"  type="text" class="form-control datepicker"
-                         placeholder=" dd/mm/yyy " required>
+                        <input name="departure"  type="text" class="form-control datepicker" placeholder=" dd/mm/yyy " required>
                         <button type="button" class="ui-datepicker-trigger">
                         <i class="fa fa-calendar-alt"></i></button>
                     </div>
-                    
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <label>Dates are flexible*</label>
+                <label>Dates are flexible</label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                       <select class="form-control">
-                           <option>yes</option>
-                           <option>no</option>
+                       <select class="form-control" name="flexible">
+                           <option value="yes">yes</option>
+                           <option value="no">no</option>
                        </select>
                     </div>
                     
@@ -343,10 +331,7 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
             <div class="col-md-4 col-xs-12">
                 <label>Trip duration (1 to 20) Days</label>
                 <div class="form-group label-floating">
-                    <div id="Arrival2">
-                    <input name="Trip_duration" value="" type="number" class="form-control"required="" pattern="{1,20}">
-                    </div>
-                    
+                    <div id="Arrival2"><input name="Trip_duration" type="number" class="form-control"  min="1" max="20"></div>
                 </div>
             </div>
 
@@ -365,14 +350,14 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <label>Type category *</label>
+                <label>Type category </label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                       <select class="form-control">
-                           <option>budget</option>
-                           <option>Classical</option>
-                           <option>Luxury</option>
-                           <option>Adventure</option>
+                       <select class="form-control" name="category">
+                           <option value="budget">budget</option>
+                           <option value="Classical">Classical</option>
+                           <option value="Luxury">Luxury</option>
+                           <option value="Adventure">Adventure</option>
 
                        </select>
                     </div>
@@ -380,34 +365,40 @@ height: 360px;background-repeat: no-repeat;background-size:cover">
                 </div>
             </div>
             <div class="col-md-4 col-xs-12">
-                <label>Domestic transportation *</label>
+                <label>Domestic transportation </label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                       <select class="form-control">
-                           <option>Flight</option>
-                           <option>sleeper train</option>
-                           <option>Coach</option>
+                       <select class="form-control" name="transportation">
+                           <option value="Flight">Flight</option>
+                           <option value="sleeper_train">sleeper train</option>
+                           <option value="Coach">Coach</option>
                        </select>
                     </div> 
                 </div>
             </div>
-            <div class="col-md-4 col-xs-12">
-                <label>Cities of interest*</label>
+            <div class="col-md-2 col-xs-12">
+                <label>Cities of interest </label>
                 <div class="form-group label-floating">
                     <div id="Arrival2">
-                       <select class="form-control">
-                           <option>Alex</option>
-                           <option>Cairo</option>
-                           <option>Aswan</option>
-                           <option>Sharm</option>
-                           <option>Luxor</option>
-                           <option>Hurghada</option>
-                           <option>Dahab</option>
-                           <option>Oasis</option>
-
+                       <select class="form-control" name="interest">
+                           <option value="Alex">Alex</option>
+                           <option value="Cairo">Cairo</option>
+                           <option value="Aswan">Aswan</option>
+                           <option value="Sharm">Sharm</option>
+                           <option value="Luxor">Luxor</option>
+                           <option value="Hurghada">Hurghada</option>
+                           <option value="Dahab">Dahab</option>
+                           <option value="Oasis">Oasis</option>
                        </select>
                     </div>
                     
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <label> Number Of Childs </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="child"  type="number" class="form-control">
                 </div>
             </div>
 

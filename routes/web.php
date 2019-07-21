@@ -18,9 +18,9 @@ Route::get('/faqs',[
    'as' => 'faq'
 ]);
 
-Route::post('send/tailerMade', 'MailController@send')->name('mail');
+Route::post('send', 'MailController@send')->name('mail');
 
-Route::post('send/Inquery', 'MailController@Inquery')->name('Inquery');
+//Route::post('send/Inquery', 'MailController@Inquery')->name('Inquery');
 
 
 Route::view('about-us', 'about_us')->name('about_us');
