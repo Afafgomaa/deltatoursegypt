@@ -211,6 +211,9 @@ Session::flash('Success','Your Program created Successfully');
              $allExcludes  = explode(',',  $program->exclude);
              $allExcludesDvided = array_chunk($allExcludes,2);
              $allPricing  = explode(',',  $program->pricing);
+             $allPricingsDvided = array_chunk($allPricing,3);
+             
+
              $related_programs_collection = DB::table('related_river_excursion')->where('river_excursion_id', $program->id)->get();
             return view('egyptTours/single_river', compact('mainpage',
                                                           'page','program',
@@ -219,7 +222,7 @@ Session::flash('Success','Your Program created Successfully');
                                                           'allFacilitis_vidided',
                                                           'allIncludesDvided',
                                                           'allExcludesDvided',
-                                                          'allPricing',
+                                                          'allPricingsDvided',
                                                           'related_programs_collection'));
 
            }elseif(!empty(Programs::where('slug', $program )->first()) ){

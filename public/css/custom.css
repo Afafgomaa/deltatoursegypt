@@ -786,7 +786,9 @@ ul.thumbnail-gallery li {
     .center-on-mobile{
         text-align: center
     }
-    
+    #home-intro{
+        padding: 10px 0 !important;
+    }
 
 
     

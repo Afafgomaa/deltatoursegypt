@@ -250,12 +250,34 @@
       <p style="color:#ffa500 !important">Prices are quoted in US Dollars per person   per trip </p>
       <table class="table table-striped push-top">
         <tbody>
-            <tr><th></th><td> <strong>5 Days Program</strong></td><td><strong>4 Days Program</strong></td></tr>
-            @foreach($allPricing as $p)
             <tr>
-                <td>{{$p}}</td>
+               <td>Program </td>
+               <td> <strong>{{$program->days_1}} Program</strong></td>
+              <td><strong>{{$program->days_2}} Program</strong></td>
             </tr>
+            <tr>
+            @foreach($allPricingsDvided[0] as $p)
+                 <td> {{$p}} </td>
             @endforeach
+            </tr>
+            <tr>
+            @foreach($allPricingsDvided[1] as $p)
+                 <td> {{$p}} </td>
+            @endforeach
+            </tr>
+            
+            <tr>
+            @foreach($allPricingsDvided[2] as $p)
+                 <td> {{$p}} </td>
+            @endforeach
+            </tr>
+            
+            
+           
+           
+            
+            
+            
             
         </tbody>
     </table>
