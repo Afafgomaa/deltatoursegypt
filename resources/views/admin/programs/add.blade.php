@@ -76,7 +76,13 @@
                 {!! Form::select('kind', ['0' => 'Private', '1' => 'Public'],null,['class' => 'form-control' ]) !!}
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Program Strat Day:</strong>
+                {!! Form::date('start_day', null, array('placeholder' => 'Start day','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Program Main Image:</strong>
                 {!! Form::text('main_image', null, array('placeholder' => 'Main Image Url','class' => 'form-control')) !!}

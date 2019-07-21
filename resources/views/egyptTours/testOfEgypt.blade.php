@@ -27,7 +27,7 @@
             <div class="summary entry-summary">
                     <h1 class="short big">{{$program->name}}   </h1>
                     <div class=" col-md-6 review_num">
-                            Package Type : <span style="color:black">{{$program->kind}}</span>
+                            Package Type : <span style="color:black">{{$program->kind == 0 ? 'Private': 'Public'}}</span>
                     </div>
                     <div class=" col-md-8 review_num">
                         <h6 class="shorter f-2" style="color:#0088cc">{{$program->days}} Days - {{$program->nights}} Nights </h6>
@@ -37,6 +37,10 @@
                     </div>
                     <div class="col-md-6">
                         <h4 class="shorter text-blue"> from :  {{$program->price}} USD</h4>
+                    </div>
+                    <div class="col-md-12 ">
+                        <p class="pdetails"> start day <strong style="color: #ffa500">{{$program->start_day}} </strong>
+                        </p> 
                     </div>
                     <div class="col-md-12 ">
                         <p class="pdetails"> {!!$program->brief!!} 

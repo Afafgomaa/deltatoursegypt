@@ -1,45 +1,45 @@
 <section class="section section-height-3  m-0 border-0">
 	<div class="container">
 		<div class="row align-items-center justify-content-center">
-           <h2 class="m-auto p-4 text-center">LAST MINUTE DEALS</h2>
+           <h2 class="m-auto p-4 text-center">SMALL GROUP TOURS</h2>
         </div>
         <div class="row">
             <table class="table table-hover table-striped table-responsive-sm bg-white">
                 <thead>
                     <tr>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>Tour name</strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>Country</strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>Days</strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>Start Date</strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                         <span class="lead">
                                 <strong>
                                     Image
                                 </strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>Offer Price</strong>
                             </span>
                         </th>
-                        <th>
+                        <th valign="middle">
                             <span class="lead">
                                 <strong>
                                     
@@ -62,7 +62,8 @@
                         </td>
                         <td valign="middle" data-label="Days">{{$smallGroup->days}}</td>
                         <td valign="middle" data-label="Start Date">
-                        {{$smallGroup->start_day}}
+                        
+                        {{date('d-M-Y', strtotime($smallGroup->start_day)) }}
                         </td>
                         <td>
 
@@ -72,7 +73,7 @@
                         </td>
                         <td valign="middle" data-label="Offer Price">
                         
-                            US${{$smallGroup->price}}
+                        <strong style="color: #ff0000">USD${{$smallGroup->price}}</strong>
                           
                         </td>
                         <td valign="middle" data-label="Book">
@@ -91,11 +92,11 @@
                         </td>
                         <!-- Country -->
                         <td valign="middle" data-label="Tour type">
-                            <a href="" title="Shoestring Tour Type" class="red-lnk">{{$smallGroup->place}}</a>
+                            <a href="" title="Shoestring Tour Type" class="red-lnk">{{$smallGroup->place_1}} / {{$smallGroup->place_2}}</a>
                         </td>
                         <td valign="middle" data-label="Days">{{$smallGroup->days}}</td>
                         <td valign="middle" data-label="Start Date">
-                        {{$smallGroup->start_day}}
+                        {{date('d-M-Y', strtotime($smallGroup->start_day)) }}
                         </td>
                         <td>
 
@@ -104,8 +105,8 @@
                             </a>
                         </td>
                         <td valign="middle" data-label="Offer Price">
-                        
-                            US${{$smallGroup->price}}
+                        <strong style="color: #ff0000">USD${{$smallGroup->price}}</strong>
+                            
                           
                         </td>
                         <td valign="middle" data-label="Book">

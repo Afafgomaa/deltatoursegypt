@@ -130,13 +130,18 @@
                 </div>
                 <button type="button" class="add_field_button">Add New Image</button>
          </div>
-           <div class="col-xs-12 col-sm-12 col-md-12">
+           <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
-                <strong>label Itinerary duration 1 :</strong>
-                {!! Form::text('itinerary_label_1', null, array('placeholder' => 'label duration 1 ','class' => 'form-control')) !!}
+                <strong>Place 1 :</strong>
+                {!! Form::text('place_1', null, array('placeholder' => 'place 1 ','class' => 'form-control')) !!}
             </div>
         </div>
-
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Place 2 :</strong>
+                {!! Form::text('place_2', null, array('placeholder' => 'place 2 ','class' => 'form-control')) !!}
+            </div>
+        </div>
       
         
             <div class="col-xs-12 col-sm-12 col-md-12" id="itinerary" > 
@@ -168,12 +173,7 @@
             </div>
         </div>
 <br>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>label Itinerary duration 2 :</strong>
-                {!! Form::text('itinerary_label_2', null, array('placeholder' => 'label duration 2 ','class' => 'form-control')) !!}
-            </div>
-        </div>
+       
 
         <div class="col-xs-12 col-sm-12 col-md-12" id="itinerary_2" > 
             @if(!empty(unserialize($program->itinerary_heading_2) ) && !empty(unserialize($program->itinerary_body_2) ))

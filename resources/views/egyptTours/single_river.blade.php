@@ -35,7 +35,7 @@
                         <h4 class="shorter text-blue"> from :  {{$program->price}} USD</h4>
                     </div>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> start day {{$program->start_day}} 
+                        <p class="pdetails"> start day <strong style="color: #ffa500">{{$program->start_day}} </strong>
                         </p> 
                     </div>
                     <div class="col-md-12 ">
@@ -43,12 +43,12 @@
                         </p> 
                     </div>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> {{$program->days_1}} 
+                        <p class="pdetails"> <h4 class="text-blue2">{{$program->days_1}} - <span style="color:#ffa500">{{$program->place_1}} </span></h4>
                         </p> 
                     </div>
                     <hr>
                     <div class="col-md-12 ">
-                        <p class="pdetails"> {{$program->days_2}} 
+                        <p class="pdetails"> <h4 class="text-blue2">{{$program->days_2}} - <span style="color:#ffa500">{{$program->place_2}} </span></h4>  
                         </p> 
                     </div>
                     
@@ -89,13 +89,15 @@
 <div class="container ">
 <div class="row">
 
-<div id="itinerary" class="scroll_pane_new mt-5">
+<div id="itinerary" class="scroll_pane_new m-3">
 <h1 class="short"> Itineraries </h1>
         <div class="program_box_data">
            
-        @if($program->itinerary_label_1)
+        
             <div class="full_itinerary m-0">
-            <div class="expand_2 iten">{{$program->itinerary_label_1}}
+            <div class="expand_3 iten"><h4 class="text-blue2">{{$program->days_1}} - <span style="color:#ffa500">{{$program->place_1}} </span></h4>
+ 
+            @if(!empty($program->itinerary_heading_1 && $program->itinerary_body_1) )
            
            @foreach(array_combine(unserialize($program->itinerary_heading_1), unserialize($program->itinerary_body_1))  as $h => $b  ) 
            
@@ -110,15 +112,15 @@
                  
                  @endforeach
         
-
+            @endif
          </div>
         </div>  <!-- full_itinerary-->
 
-        @endif
-            @if($program->itinerary_label_2)
+        
+          
             <div class="full_itinerary m-0">
-            <div class="expand_2 iten">{{$program->itinerary_label_2}}
-           
+            <div class="expand_2 iten"><h4 class="text-blue2">{{$program->days_2}} - <span style="color:#ffa500">{{$program->place_2}} </span></h4>
+            @if(!empty($program->itinerary_heading_2  && $program->itinerary_body_2) )
            @foreach(array_combine(unserialize($program->itinerary_heading_2), unserialize($program->itinerary_body_2))  as $h => $b  ) 
            
                  <div class="full_itinerary_box" style="display: none; border:none;background:none">
@@ -130,13 +132,13 @@
                          </div>
                  </div>
                  
+                
                  @endforeach
-        
-
+                 @endif
          </div>
         </div>  <!-- full_itinerary-->
 
-        @endif
+       
         </div>
     </div>
 
@@ -144,9 +146,9 @@
   </div>
 
   <div class="row">
-    <h1 class="short"> Cruise </h1>
+    <h1 class="short ml-3"> Cruise </h1>
     <div class="col-md-12">
-      <div class="all_itinerary">
+      <div class="all_itinerary m-3">
       <div class="col-md-12 expand_4 iten">
            <h4 class="text-blue2">Cruise Facilitis </h4>
             <div align="left" class="iten_desc full_itinerary_box" style="border:none;background:none ;margin-top: 10px; margin-bottom: 20px; clear: both; overflow: hidden; display: none;">
@@ -188,7 +190,7 @@
 
   <div class="row">
     <div class="col-md-12">
-      <div class="all_itinerary">
+      <div class="all_itinerary m-3">
       <div class="col-md-12 expand_3 iten">
            <h4 class="text-blue2">Cruise Program include</h4>
             <div align="left" class="iten_desc full_itinerary_box" style="border:none;background:none ;margin-top: 10px; margin-bottom: 20px; clear: both; overflow: hidden; display: none;">
@@ -216,7 +218,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="all_itinerary">
+      <div class="all_itinerary m-3">
 
       <div class="col-md-12 expand_5 iten">
            <h4 class="text-blue2">Cruise Program Exclude   </h4>
@@ -246,8 +248,8 @@
 
   <div class="row">
       <div class="col-md-12">
-      <h1 class="short"> Prices </h1>
-      <p style="color:#ffa500 !important">Prices are quoted in US Dollars per person   per trip </p>
+      <h1 class="short m-3"> Prices </h1>
+      <p class="m-3" style="color:#ffa500 !important">Prices are quoted in US Dollars per person  per trip </p>
       <table class="table table-striped push-top">
         <tbody>
             <tr>
@@ -256,20 +258,26 @@
               <td><strong>{{$program->days_2}} Program</strong></td>
             </tr>
             <tr>
+         @if(!empty($allPricingsDvided[0]))
             @foreach($allPricingsDvided[0] as $p)
                  <td> {{$p}} </td>
             @endforeach
+        @endif
             </tr>
             <tr>
+          @if(!empty($allPricingsDvided[1]))
             @foreach($allPricingsDvided[1] as $p)
                  <td> {{$p}} </td>
             @endforeach
+          @endif
             </tr>
             
             <tr>
+         @if(!empty($allPricingsDvided[2]))
             @foreach($allPricingsDvided[2] as $p)
                  <td> {{$p}} </td>
             @endforeach
+        @endif
             </tr>
             
             

@@ -51,10 +51,10 @@ class RiverExcursionController extends Controller
             'brief' => $request->brief,
             'pricing' => $request->pricing,
             'image_gallery' => serialize($request->image_gallery),
-            'itinerary_label_1' => $request->itinerary_label_1,
+            'place_1' => $request->place_1,
             'itinerary_heading_1' => serialize($request->itinerary_heading_1),
             'itinerary_body_1' => serialize($request->itinerary_body_1),
-            'itinerary_label_2' => $request->itinerary_label_2,
+            'place_2' => $request->place_2,
             'itinerary_heading_2' => serialize($request->itinerary_heading_2),
             'itinerary_body_2' => serialize($request->itinerary_body_2),
             'include' => $request->include,
@@ -134,10 +134,10 @@ class RiverExcursionController extends Controller
         $program->small_group = $request->small_group;
         $program->image_gallery = serialize($request->image_gallery);
 
-        $program->itinerary_label_1 = $request->itinerary_label_1;
+        $program->place_1 = $request->place_1;
         $program->itinerary_heading_1 = serialize($request->itinerary_heading_1);
         $program->itinerary_body_1 = serialize($request->itinerary_body_1);
-        $program->itinerary_label_2 = $request->itinerary_label_2;
+        $program->place_2 = $request->place_2;
         $program->itinerary_heading_2 = serialize($request->itinerary_heading_2);
         $program->itinerary_body_2 = serialize($request->itinerary_body_2);
        

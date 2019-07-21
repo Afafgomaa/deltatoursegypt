@@ -9,7 +9,7 @@
 						<div id="myNavbar" class="navbar" style="width:100%;max-width:700px;background-color:white">
 							<ul class="nav nav-tabs" role="tablist">
 							@if (strlen($program->overview) > 0 )
-							<li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab" aria-expanded="false">Overview</a></li>
+							<li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab" aria-expanded="false">includes&excludes(Overview)</a></li>
                             @endif
 							
 							
@@ -28,6 +28,7 @@
 							@if(count($program->Addons)  > 0)
 								<li role="presentation"><a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Add On</a></li>
 							@endif
+							<li role="presentation"><a href="#addon" role="tab" data-toggle="tab" aria-expanded="true">Ceneral</a></li>
 							</ul>
 						</div><!--mynavbar-->
 					</div><!--program_box-->

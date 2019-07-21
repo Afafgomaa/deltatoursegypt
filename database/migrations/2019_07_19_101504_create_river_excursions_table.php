@@ -18,6 +18,8 @@ class CreateRiverExcursionsTable extends Migration
             $table->string('main_image');
             $table->integer('price');
             $table->string('name');
+            $table->string('place_1');
+            $table->string('place_2');
             $table->date('start_day')->nullable();
             $table->string('days_1')->nullable();
             $table->string('days_2')->nullable();
@@ -26,17 +28,15 @@ class CreateRiverExcursionsTable extends Migration
             $table->text('image_gallery');
             $table->text('include')->nullable();
             $table->text('exclude')->nullable();
-            $table->text('itinerary_label_1')->nullable();
             $table->text('itinerary_heading_1')->nullable();
             $table->text('itinerary_body_1')->nullable();
-            $table->text('itinerary_label_2')->nullable();
             $table->text('itinerary_heading_2')->nullable();
             $table->text('itinerary_body_2')->nullable();
             $table->text('pricing')->nullable();
             $table->text('facilitis')->nullable();
             $table->text('general')->nullable();
             $table->integer('pages_id');
-            $table->integer('small_group')->default(0);
+            $table->integer('small_group')->nullable();
             $table->string('slug');
             $table->softDeletes();
             $table->timestamps();

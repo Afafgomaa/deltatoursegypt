@@ -125,10 +125,16 @@
                  {!! Form::textarea('general', null, array('placeholder' => 'general','class' => ' form-control', 'style'=>'height:100px')) !!}                
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
-                <strong>label Itinerary duration 1 :</strong>
-                {!! Form::text('itinerary_label_1', null, array('placeholder' => 'label duration 1 ','class' => 'form-control')) !!}
+                <strong>Place 1 :</strong>
+                {!! Form::text('place_1', null, array('placeholder' => ' place 1 ','class' => 'form-control')) !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
+                <strong>Place 2 :</strong>
+                {!! Form::text('place_2', null, array('placeholder' => 'place 2 ','class' => 'form-control')) !!}
             </div>
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12" > 
@@ -152,12 +158,7 @@
         </div>
           
 
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>label Itinerary duration 2 :</strong>
-                {!! Form::text('itinerary_label_2', null, array('placeholder' => 'label duration 2 ','class' => 'form-control')) !!}
-            </div>
-        </div>
+         
 
             <div class="col-xs-12 col-sm-12 col-md-12" > 
               <div id="itinerary_2">

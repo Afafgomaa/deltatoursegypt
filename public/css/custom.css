@@ -420,13 +420,13 @@ p.featured {
 }
 .nav>li {
     position: relative;
-    display: block;
+    display: inline-flex;
 }
 #myNavbar .nav-tabs>li>a {
     font-weight: bold;
     color: rgb(65, 65, 65) !important;
     text-decoration: none !important;
-    font-size: 20px;
+    font-size: 14px;
 }
 .nav>li>a {
     position: relative;
@@ -770,6 +770,16 @@ ul.thumbnail-gallery li {
     padding-left: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.red-lnk {
+    font-family: Open Sans,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .1px;
+    word-spacing: 0;
+    text-align: center;
+    display: inline-block;
+    color: #999;
 }
 /* media query */
 @media only screen and (max-width: 600px){

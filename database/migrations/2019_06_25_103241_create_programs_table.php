@@ -31,7 +31,7 @@ class CreateProgramsTable extends Migration
             $table->text('pricing')->nullable();
             $table->text('price_children')->nullable();
             $table->integer('pages_id');
-            $table->integer('small_group')->default(0);
+            $table->integer('small_group')->nullable();
             $table->string('slug');
             $table->softDeletes();
             $table->timestamps();
