@@ -136,29 +136,29 @@
                            <label>Name *</label>
                            <input name="name" type="text" id="name" value="" class="form-control" required="">
 									<span class="material-input"></span>
-									<input type="hidden" name="page_name" value="{{$page}}">
+									<input type="hidden" name="page_name" value="{{$page->name}}">
 									<input type="hidden" name="program_name" value="{{$program->name}}">
 							</div>
                         </div>
                        <div class="col-md-12">
                          <div class="form-group label-floating is-empty">
                            <label>E-mail *</label>
-                           <input name="UserEmail" value="" type="email" required="" class="form-control" id="UserEmail">
-													 <span class="material-input"></span>
-												 </div>
-												</div>
-												<div class="col-md-6 col-xs-12">
+                           <input name="email" value="" type="email" required="" class="form-control" id="UserEmail">
+									<span class="material-input"></span>
+								</div>
+							</div>
+							<div class="col-md-6 col-xs-12">
                         <label>Mobile *</label>
                         <div class="form-group label-floating">
                             <div id="Arrival2">
                                     <input name="Mobile" value="" type="number" class="form-control"
-                                        placeholder="" required="">
+                                         required="">
                             </div>
                         </div>
                     </div>
                                                         
                 <div class="col-md-6 col-xs-12">
-                        <label>	Nationality *</label>
+                        <label>	Nationality </label>
                     <div class="form-group label-floating">
                             <div id="Arrival2">
                             <select name="Country" class="form-control"> 
@@ -408,11 +408,25 @@
                             </div>
                     </div>
                 </div>
-				<div class="col-md-6 col-xs-12">
-                <label> Number Of child’s </label>
+			<div class="col-md-6 col-xs-12">
+                <label> Number Of child’s (0 to 2) </label>
                 <br>
                 <div class="form-group label-floating is-empty">
-                    <input name="child"  type="number" class="form-control">
+                    <input name="child0"  type="number" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <label> Number Of child’s (2 to 11) </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="child2"  type="number" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <label> Number Of child’s (+12 years) </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                    <input name="child12"  type="number" class="form-control">
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
@@ -423,60 +437,72 @@
                 </div>
             </div>
 
-												<div class="col-md-6">
-                          <label>Arrival Date *</label>
-													<div class="form-group label-floating">
-															<div id="Arrival2">
-																	<input name="departure" value="" type="date" class="form-control datepicker"
-																		placeholder=" dd/mm/yyy " required="">
-																	
-															</div>
-													</div>
-												 </div>
+            <div class="col-md-6">
+                    <label>Arrival Date *</label>
+                <div class="form-group label-floating">
+                        <div id="Arrival2">
+                                <input name="departure"  type="date" class="form-control datepicker"
+                                    placeholder=" dd/mm/yyy " required="">
+                               
+                        </div>
+                </div>
+                </div>
 												 
-												 <div class="col-md-6">
-                              <label>	Departure Date *</label>
-													<div class="form-group label-floating">
-															<div id="Arrival2">
-																	<input name="departure" value="" type="date" class="form-control datepicker"
-																		placeholder=" dd/mm/yyy " required="">
-																	
-															</div>
-													</div>
-											 </div>
+                <div class="col-md-6">
+                <label>	Departure Date *</label>
+                <div class="form-group label-floating">
+                        <div id="Arrival2">
+                                <input name="departure" value="" type="date" class="form-control datepicker"placeholder=" dd/mm/yyy " required="">
+                               
+                        </div>
+                </div>
+            </div>
 											 
-											 <div class="col-md-6">
-													<label> Number Of Adults </label>
-													<br>
-													<div class="form-group label-floating is-empty">
-															<input name="" value="" type="number" class="form-control">
-													</div>
-											</div>
+            <div class="col-md-6">
+                <label> Number Of Adults </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                        <input name="adults" type="number" class="form-control">
+                </div>
+           </div>
 
-											<div class="col-md-6">
-												<label> Promo/Referral Code </label>
-												<br>
-												<div class="form-group label-floating is-empty">
-														<input name="" value="" type="text" class="form-control">
-												</div>
-										</div>
+            <div class="col-md-6">
+                <label> Promo/Referral Code </label>
+                <br>
+                <div class="form-group label-floating is-empty">
+                        <input name="Promo_Referral_code"  type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12 col-xs-12">
+                <label>Add ons </label>
+                <div class="form-group label-floating">
+                    <div id="Arrival2">
+                       <select class="form-control" name="Addons">
+                       @foreach($program->Addons as $addon)
+                           <option value="{{$addon->title}}">{{$addon->title}}</option>
+                       @endforeach
+                           
+                       </select>
+                    </div> 
+                </div>
+            </div>
 
-										<div class="col-md-12">
-												<label> Comments (Special)</label>
-												<br>
-												<div class="form-group label-floating is-empty">
-													<textarea class="form-control" cols="4" rows="5"></textarea>
-												</div>
-										</div>
-												
-										</div>
-                  </div>
-				          <div class="modal-footer">
-								<button type="submit" class="new_btn_inquire">Save Changes</button>
-							</div>
-								</form>
-								</div>
-							</div>
+                    <div class="col-md-12">
+                        <label> Comments (Special)</label>
+                        <br>
+                        <div class="form-group label-floating is-empty">
+                            <textarea name="comment" class="form-control" cols="4" rows="5"></textarea>
+                        </div>
+                    </div>
+                        
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="submit" class="new_btn_inquire">Save Changes</button>
+                    </div>
+                    </form>
+                    </div>
+                    </div>
 						
 							
 						</div>
